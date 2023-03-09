@@ -61,8 +61,30 @@
     }
   ],
   "page": {
-    "pageNo": 2,
-    "pageSize": 0
+    "pageNo": 1,
+    "pageSize": 10
   }
 }
+```
+
+### C# Include child tables
+
+```c#
+var users = context.Users
+    .Include(u => u.Address)
+    .Include(u => u.Profile)
+    .Select(u => new {
+        u.Id,
+        u.Name,
+        Address = new {
+            u.Address.Street,
+            u.Address.City
+        },
+        Profile = new {
+            u.Profile.Bio,
+            u.Profile.Age
+        }
+    })
+    .ToList();
+
 ```
