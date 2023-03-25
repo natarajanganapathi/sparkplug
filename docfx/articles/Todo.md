@@ -21,4 +21,4 @@
 
 ## Common
 1. Common string extenstion for string Case chagse. ex. camelCase, Snake_Case, PascalCase, etc.
-2. 
+2. Github Actions for CICD

@@ -2,7 +2,7 @@ name: SAST With Sonar Cloud
 
 on:
   push:
-    branches: [ "main", "development", "feature/*" ]
+    branches: [ "development", "feature/*" ]
   pull_request:
     branches: [ "main"]
 
