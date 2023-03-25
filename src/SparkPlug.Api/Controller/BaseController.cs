@@ -15,11 +15,16 @@ public abstract class BaseController<TId, TEntity> : ControllerBase where TEntit
     [NonAction]
     public OkObjectResult Ok([ActionResultObjectValue] IEnumerable<TEntity> data, [ActionResultObjectValue] IPageContext? pagecontext)
     {
-        return Ok(new QueryResponse<TEntity>(data.ToArray(), pagecontext));
+        return Ok(new QueryResponse(data, pagecontext));
+    }
+    [NonAction]
+    public OkObjectResult Ok([ActionResultObjectValue] IEnumerable<JObject> data, [ActionResultObjectValue] IPageContext? pagecontext)
+    {
+        return Ok(new QueryResponse(data, pagecontext));
     }
     [NonAction]
     public OkObjectResult Ok([ActionResultObjectValue] TEntity data)
     {
-        return Ok(new CommandResponse<TEntity>(data));
+        return Ok(new CommandResponse(data));
     }
 }

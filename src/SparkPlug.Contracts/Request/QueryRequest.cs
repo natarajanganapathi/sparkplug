@@ -8,16 +8,18 @@ public class QueryRequest : ApiRequest, IQueryRequest
     {
         Select = select;
         Where = where;
+        Includes = default; //include;
         Sort = sort;
         Page = page;
     }
     public string[]? Select { get; set; }
     public Filter? Where { get; set; }
+    public Include[]? Includes{ get; set; }
     public Order[]? Sort { get; set; }
     public PageContext? Page { get; set; }
 }
 
-public static partial class Extensions
+public static class IQueryRequestExtensions
 {
     #region Select
     public static IQueryRequest Select(this IQueryRequest request, params string[] fields)

@@ -26,20 +26,20 @@ public class MongoRepository<TId, TEntity> : IRepository<TId, TEntity> where TEn
         _logger = serviceProvider.GetRequiredService<ILogger<MongoRepository<TId, TEntity>>>();
         _requestContext = serviceProvider.GetRequiredService<IRequestContext<TId>>();
     }
-    public async Task<IEnumerable<TEntity>> ListAsync(IQueryRequest? request, CancellationToken cancellationToken)
+    public async Task<IEnumerable<TEntity>> FindAsync(IQueryRequest? request, CancellationToken cancellationToken)
     {
         var projection = GetProjection(request?.Select);
         var sort = GetSort(request?.Sort);
         var pc = request?.Page ?? new PageContext(1, 100);
         var filter = GetFilterDefinition(request?.Where);
-        return await GetAsync(projection, filter, sort, pc).ConfigureAwait(false);
+        return await GetAsync(projection, filter, sort, pc, cancellationToken).ConfigureAwait(false);
     }
-    public async Task<(IEnumerable<TEntity>, long)> ListWithCountAsync(IQueryRequest? request, CancellationToken cancellationToken)
+    public async Task<ListResult<JObject>> QueryAsync(IQueryRequest? request, CancellationToken cancellationToken)
     {
-        var entitiesTask = ListAsync(request, cancellationToken);
+        var entitiesTask = FindAsync(request, cancellationToken);
         var countTask = GetCountAsync(request, cancellationToken);
         await Task.WhenAll(entitiesTask, countTask).ConfigureAwait(false);
-        return (entitiesTask.Result, countTask.Result);
+        return new ListResult<JObject>(entitiesTask.Result.Select(JObject.FromObject), countTask.Result);
     }
 
     public async Task<TEntity> GetAsync(TId id, CancellationToken cancellationToken)
@@ -47,7 +47,7 @@ public class MongoRepository<TId, TEntity> : IRepository<TId, TEntity> where TEn
         var filter = GetIdFilterDefinition(id);
         return await GetByFilter(filter).FirstOrDefaultAsync(cancellationToken);
     }
-    public async Task<IEnumerable<TEntity>> GetAsync(ProjectionDefinition<TEntity>? projection, FilterDefinition<TEntity>? filter = default, SortDefinition<TEntity>? sorts = default, IPageContext? pc = default)
+    public async Task<IEnumerable<TEntity>> GetAsync(ProjectionDefinition<TEntity>? projection, FilterDefinition<TEntity>? filter = default, SortDefinition<TEntity>? sorts = default, IPageContext? pc = default, CancellationToken cancellationToken = default)
     {
         pc ??= new PageContext();
         filter ??= GetFilterBuilder().Empty;
@@ -60,9 +60,9 @@ public class MongoRepository<TId, TEntity> : IRepository<TId, TEntity> where TEn
         {
             query.Sort(sorts);
         }
-        return await query.Skip(pc.Skip).Limit(pc.PageSize).ToListAsync();
+        return await query.Skip(pc.Skip).Limit(pc.PageSize).ToListAsync(cancellationToken);
     }
-    public async Task<TEntity[]> GetManyAsync(TId[] ids, CancellationToken cancellationToken)
+    public async Task<IEnumerable<TEntity>> GetManyAsync(TId[] ids, CancellationToken cancellationToken)
     {
         var filter = GetFilterBuilder().In(x => x.Id, ids);
         var result = await GetByFilter(filter).ToListAsync(cancellationToken);
@@ -74,7 +74,7 @@ public class MongoRepository<TId, TEntity> : IRepository<TId, TEntity> where TEn
         await Collection.InsertOneAsync(entity.Auditable(_requestContext.UserId, DateTime.UtcNow, true), cancellationToken: cancellationToken);
         return entity;
     }
-    public async Task<TEntity[]> CreateManyAsync(ICommandRequest<TEntity[]> requests, CancellationToken cancellationToken)
+    public async Task<IEnumerable<TEntity>> CreateManyAsync(ICommandRequest<TEntity[]> requests, CancellationToken cancellationToken)
     {
         var entities = requests.Data ?? throw new CreateEntityException("Entities are null");
         await Collection.InsertManyAsync(entities.Select(x => x.Auditable(_requestContext.UserId, DateTime.UtcNow, true)), cancellationToken: cancellationToken);
@@ -84,7 +84,7 @@ public class MongoRepository<TId, TEntity> : IRepository<TId, TEntity> where TEn
     {
         id = id ?? throw new ArgumentNullException(nameof(id));
         var entity = request.Data ?? throw new UpdateEntityException("Entity is null");
-        entity = entity.Auditable<TId, TEntity>(_requestContext.UserId, DateTime.UtcNow);
+        entity = entity.Auditable(_requestContext.UserId, DateTime.UtcNow);
         var filter = GetIdFilterDefinition(id);
         var update = GetUpdateDef(entity);
         await UpdateAsync(filter, update);
@@ -214,7 +214,7 @@ public class MongoRepository<TId, TEntity> : IRepository<TId, TEntity> where TEn
         var builder = GetFilterBuilder();
         return filter == null ? builder.Empty : filter.GetFilterDefinition(builder);
     }
-    # endregion
+    #endregion
 }
 
 public static class Extention

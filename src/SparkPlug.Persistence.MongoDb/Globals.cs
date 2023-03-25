@@ -14,6 +14,7 @@ global using Microsoft.Extensions.Diagnostics.HealthChecks;
 global using Microsoft.AspNetCore.Builder;
 global using Microsoft.AspNetCore.JsonPatch;
 global using Microsoft.Extensions.Options;
+global using Newtonsoft.Json.Linq;
 
 global using MongoDB.Driver;
 global using MongoDB.Bson;

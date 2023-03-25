@@ -1,6 +1,10 @@
 namespace SparkPlug.Contracts;
 
-public enum Direction { Ascending, Descending }
+public enum Direction
+{
+    [EnumMember(Value = "ASC")] Ascending,
+    [EnumMember(Value = "DESC")] Descending
+}
 
 public interface IOrder
 {

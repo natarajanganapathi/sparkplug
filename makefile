@@ -6,3 +6,9 @@ tests:
 
 samples:
 	dotnet build ./sample/WebApi/WebApi.csproj
+
+docs:
+	docfx --header-file yamlheader.yml docfx/docfx.json
+
+serve:
+	docfx --header-file yamlheader.yml docfx/docfx.json --serve

@@ -8,21 +8,17 @@ public sealed class ApiController<TId, TEntity> : BaseController<TId, TEntity> w
     [HttpGet]
     public async Task<IActionResult> List([FromQuery] int? pageNo, [FromQuery] int? pageSize, CancellationToken cancellationToken)
     {
-        return await GetData(new QueryRequest(new PageContext(pageNo ?? 1, pageSize ?? 25)), cancellationToken);
+        var request = new QueryRequest(new PageContext(pageNo ?? 1, pageSize ?? 25));
+        var result = await _repository.FindAsync(request, cancellationToken);
+        return Ok(result);
     }
 
     [HttpPost("search")]
-    public async Task<IActionResult> Search([FromBody, Newtonsoft.Json.JsonConverter(typeof(FilterConverter))] QueryRequest request, CancellationToken cancellationToken)
+    public async Task<IActionResult> Search([FromBody] QueryRequest request, CancellationToken cancellationToken)
     {
-        return await GetData(request, cancellationToken);
-    }
-
-    [NonAction]
-    private async Task<IActionResult> GetData(QueryRequest request, CancellationToken cancellationToken)
-    {
-        var tuple = await _repository.ListWithCountAsync(request, cancellationToken);
+        var result = await _repository.QueryAsync(request, cancellationToken);
         var pc = request?.Page ?? new PageContext();
-        return Ok(tuple.Item1, pc.SetTotal(tuple.Item2));
+        return Ok(result.Items, pc.SetTotal(result.Count));
     }
 
     [HttpPost]

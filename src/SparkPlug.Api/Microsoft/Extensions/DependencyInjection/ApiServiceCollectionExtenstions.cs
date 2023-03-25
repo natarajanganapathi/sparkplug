@@ -1,3 +1,6 @@
+using System.Text.Json;
+using System.Text.Json.Serialization;
+
 namespace Microsoft.Extensions.DependencyInjection;
 
 public static class ApiServiceCollectionExtenstions
@@ -19,10 +22,16 @@ public static class ApiServiceCollectionExtenstions
                 {
                     options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles;
                     options.JsonSerializerOptions.DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull;
+                    // options.JsonSerializerOptions.PropertyNamingPolicy = JsonNamingPolicy.CamelCase;
                 });
         // .SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         services.AddControllers(options => options.Filters.Add<ApiExceptionFilterAttribute>())
-                .AddNewtonsoftJson(options => options.SerializerSettings.NullValueHandling = NullValueHandling.Ignore);
+        .AddNewtonsoftJson(options =>
+        {
+            // options.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore;
+            options.SerializerSettings.NullValueHandling = NullValueHandling.Ignore;
+            // options.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
+        });
 
         if (setupAction != null) services.Configure(setupAction);
         services.AddSwagger();

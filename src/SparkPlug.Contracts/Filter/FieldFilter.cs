@@ -2,14 +2,18 @@ namespace SparkPlug.Contracts;
 
 public enum FieldOperator
 {
-    Equal,
-    NotEqual,
-    GreaterThan,
-    GreaterThanOrEqual,
-    LessThan,
-    LessThanOrEqual,
-    In,
-    NotIn
+    [EnumMember(Value = "eq")] Equal,
+    [EnumMember(Value = "ne")] NotEqual,
+    [EnumMember(Value = "gt")] GreaterThan,
+    [EnumMember(Value = "ge")] GreaterThanOrEqual,
+    [EnumMember(Value = "lt")] LessThan,
+    [EnumMember(Value = "le")] LessThanOrEqual,
+    [EnumMember] In,
+    [EnumMember] NotIn,
+    [EnumMember] Contains,
+    [EnumMember(Value = "starts")] StartsWith,
+    [EnumMember(Value = "ends")] EndsWith,
+    [EnumMember(Value = "bw")] Between,
 }
 
 public class FieldFilter : ConditionFilter, IFieldFilter
@@ -21,4 +25,5 @@ public class FieldFilter : ConditionFilter, IFieldFilter
     }
     public FieldOperator Op { get; set; }
     public object? Value { get; set; }
+    public FilterValueType? Type { get; set; }
 }

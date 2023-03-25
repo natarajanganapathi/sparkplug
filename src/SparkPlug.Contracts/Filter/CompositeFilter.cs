@@ -2,13 +2,13 @@ namespace SparkPlug.Contracts;
 
 public enum CompositeOperator
 {
-    And,
-    Or
+    [EnumMember] And,
+    [EnumMember] Or
 }
 
 public class CompositeFilter : Filter, ICompositeFilter
 {
-   public CompositeFilter(CompositeOperator op = CompositeOperator.And, params Filter[]? filters):base(FilterType.Composite)
+    public CompositeFilter(CompositeOperator op = CompositeOperator.And, params Filter[]? filters) : base(FilterType.Composite)
     {
         Op = op;
         Filters = filters;

@@ -1,0 +1,75 @@
+{
+  "metadata": [
+    {
+      "src": [
+        {
+          "files": [
+            "src/SparkPlug.Contracts/SparkPlug.Contracts.csproj",
+            "src/SparkPlug.Persistence.Abstractions/SparkPlug.Persistence.Abstractions.csproj"
+          ]
+        }
+      ],
+      "dest": "api",
+      "noDefaultInherit": true,
+      "includePrivateMembers": false,
+      "disableGitFeatures": false,
+      "disableDefaultFilter": false,
+      "noRestore": false,
+      "namespaceLayout": "flattened"
+    }
+  ],
+  "build": {
+    "content": [
+      {
+        "files": [
+          "api/**.yml",
+          "api/index.md"
+        ]
+      },
+      {
+        "files": [
+          "articles/**.md",
+          "articles/**/toc.yml",
+          "examples/**.md",
+          "examples/**/toc.yml",
+          "toc.yml",
+          "*.md"
+        ]
+      }
+    ],
+    "resource": [
+      {
+        "files": [
+          "images/**"
+        ]
+      }
+    ],
+    "overwrite": [
+      {
+        "files": [
+          "apidoc/**.md"
+        ],
+        "exclude": [
+          "obj/**",
+          "_site/**"
+        ]
+      }
+    ],
+    "dest": "_site",
+    "globalMetadata": {
+      "_enableSearch": "true"
+    },
+    "globalMetadataFiles": [],
+    "fileMetadataFiles": [],
+    "template": [
+      "default",
+      "templates/mathew"
+    ],
+    "postProcessors": [
+      "ExtractSearchIndex"
+    ],
+    "noLangKeyword": false,
+    "keepFileLink": false,
+    "disableGitFeatures": false
+  }
+}

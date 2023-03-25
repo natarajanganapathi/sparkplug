@@ -27,13 +27,11 @@
 
   <ItemGroup Condition="'$(Configuration)' == 'Release'">
     <PackageReference Include="SparkPlug.Contracts" Version="0.0.1-alpha1" />
-    <PackageReference Include="SparkPlug.Api.Abstractions" Version="0.0.1-alpha2" />
     <PackageReference Include="SparkPlug.Persistence.Abstractions" Version="0.0.1-alpha1" />
   </ItemGroup>
 
   <ItemGroup Condition="'$(Configuration)' == 'Debug'">
     <ProjectReference Include="..\SparkPlug.Contracts\SparkPlug.Contracts.csproj" />
-    <ProjectReference Include="..\SparkPlug.Api.Abstractions\SparkPlug.Api.Abstractions.csproj" />
     <ProjectReference Include="..\SparkPlug.Persistence.Abstractions\SparkPlug.Persistence.Abstractions.csproj" />
   </ItemGroup>
  

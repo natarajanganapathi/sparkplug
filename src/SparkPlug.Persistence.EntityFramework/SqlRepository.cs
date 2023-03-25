@@ -27,21 +27,22 @@ public class SqlRepository<TId, TEntity> : IRepository<TId, TEntity> where TEnti
         logger = serviceProvider.GetRequiredService<ILogger<SqlRepository<TId, TEntity>>>();
         requestContext = serviceProvider.GetRequiredService<IRequestContext<TId>>();
     }
-    public async Task<(IEnumerable<TEntity>, long)> ListWithCountAsync(IQueryRequest? request, CancellationToken cancellationToken)
+    public async Task<ListResult<JObject>> QueryAsync(IQueryRequest? request, CancellationToken cancellationToken)
     {
-        var query = GetQuery(request);
+        var query = new QueryBuilder<TEntity>(DbSet, request).Project();
 #if DEBUG
         logger.LogInformation("Search Query: {query}", query.ToQueryString());
 #endif
-        return (await query.ToListAsync(cancellationToken), await query.LongCountAsync(cancellationToken));
+        return new ListResult<JObject>(await query.ToListAsync(cancellationToken), await query.LongCountAsync(cancellationToken));
     }
-    public async Task<IEnumerable<TEntity>> ListAsync(IQueryRequest? request, CancellationToken cancellationToken)
+    public async Task<IEnumerable<TEntity>> FindAsync(IQueryRequest? request, CancellationToken cancellationToken)
     {
-        return await GetQuery(request).ToListAsync(cancellationToken);
+        return await new QueryBuilder<TEntity>(DbSet, request).Select().ToListAsync(cancellationToken);
     }
-    public IQueryable<TEntity> GetQuery(IQueryRequest? request)
+
+    public async Task<long> GetCountAsync(IQueryRequest? request, CancellationToken cancellationToken)
     {
-        return new QueryBuilder<TEntity>(GetDbSet(), request).Build();
+        return await new QueryBuilder<TEntity>(DbSet, request).Count(cancellationToken);
     }
     public async Task<TEntity> GetAsync(TId id, CancellationToken cancellationToken)
     {
@@ -49,7 +50,7 @@ public class SqlRepository<TId, TEntity> : IRepository<TId, TEntity> where TEnti
         var result = await DbSet.FindAsync(new object[] { tid }, cancellationToken).ConfigureAwait(false);
         return result ?? throw new QueryEntityException("Id is not found");
     }
-    public async Task<TEntity[]> GetManyAsync(TId[] ids, CancellationToken cancellationToken)
+    public async Task<IEnumerable<TEntity>> GetManyAsync(TId[] ids, CancellationToken cancellationToken)
     {
         var tids = ids ?? throw new QueryEntityException("Ids are null or empty");
         return await DbSet.Where(x => ids.Contains(x.Id)).ToArrayAsync(cancellationToken);
@@ -61,7 +62,7 @@ public class SqlRepository<TId, TEntity> : IRepository<TId, TEntity> where TEnti
         await DbContext.SaveChangesAsync(requestContext.UserId, cancellationToken);
         return entityEntry.Entity;
     }
-    public async Task<TEntity[]> CreateManyAsync(ICommandRequest<TEntity[]> requests, CancellationToken cancellationToken)
+    public async Task<IEnumerable<TEntity>> CreateManyAsync(ICommandRequest<TEntity[]> requests, CancellationToken cancellationToken)
     {
         var entities = requests.Data ?? throw new CreateEntityException("Entities are null");
         await DbSet.AddRangeAsync(entities, cancellationToken);
@@ -89,10 +90,7 @@ public class SqlRepository<TId, TEntity> : IRepository<TId, TEntity> where TEnti
         if (entityToDelete is IDeletableEntity obj) { obj.Status = Status.Deleted; }
         return await UpdateAsync(entityToDelete, cancellationToken);
     }
-    public async Task<long> GetCountAsync(IQueryRequest? request, CancellationToken cancellationToken)
-    {
-        return await GetQuery(request).LongCountAsync(cancellationToken).ConfigureAwait(false);
-    }
+
     public async Task<TEntity> PatchAsync(TId id, ICommandRequest<JsonPatchDocument<TEntity>> request, CancellationToken cancellationToken)
     {
         var patchDocument = request.Data ?? throw new UpdateEntityException("Entity is null");
