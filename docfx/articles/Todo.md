@@ -14,6 +14,7 @@
 2. In QueryRequeset, add Exclude[] property to exclude properties in response. If we provide Exclude[] without select, It returns all the columns except Exclude properties. 
 3. Filter criteria need to add in all the QueryRequest for each entity.
 4. Filter criteria for included entity add in QueryRequest.
+5. Support Not Filter for all cobinations. Like NotIn, NotEq, NotNull, etc.
 
 ## Sample Projects 
 1. Azure Authentication integration

@@ -2,8 +2,8 @@ namespace SparkPlug.Contracts;
 
 public enum UnaryOperator
 {
-    [EnumMember(Value = "nl")] IsNull,
-    [EnumMember(Value = "nnl")] IsNotNull
+    [EnumMember(Value = "null")] IsNull,
+    [EnumMember(Value = "notnull")] IsNotNull
 }
 
 public class UnaryFilter : ConditionFilter, IUnaryFilter
