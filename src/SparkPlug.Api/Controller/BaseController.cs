@@ -1,13 +1,30 @@
 namespace SparkPlug.Api.Controllers;
 
-public class BaseController<TRepo, TEntity, TId> : ControllerBase where TRepo : IRepository<TId, TEntity> where TEntity : IBaseModel<TId>
+public abstract class BaseController<TId, TEntity> : ControllerBase where TEntity : class, IBaseEntity<TId>, new()
 {
-    protected readonly TRepo _repository;
-    protected readonly ILogger<BaseController<TRepo, TEntity, TId>> _logger;
+    protected readonly Repository<TId, TEntity> _repository;
+    protected readonly ILogger<BaseController<TId, TEntity>> _logger;
+    protected readonly IServiceProvider _serviceProvider;
 
-    public BaseController(ILogger<BaseController<TRepo, TEntity, TId>> logger, TRepo repository)
+    protected BaseController(IServiceProvider serviceProvider)
     {
-        _logger = logger;
-        _repository = repository;
+        _serviceProvider = serviceProvider;
+        _repository = serviceProvider.GetRequiredService<Repository<TId, TEntity>>();
+        _logger = serviceProvider.GetRequiredService<ILogger<BaseController<TId, TEntity>>>();
+    }
+    [NonAction]
+    public OkObjectResult Ok([ActionResultObjectValue] IEnumerable<TEntity> data, [ActionResultObjectValue] IPageContext? pagecontext)
+    {
+        return Ok(new QueryResponse(data, pagecontext));
+    }
+    [NonAction]
+    public OkObjectResult Ok([ActionResultObjectValue] IEnumerable<JObject> data, [ActionResultObjectValue] IPageContext? pagecontext)
+    {
+        return Ok(new QueryResponse(data, pagecontext));
+    }
+    [NonAction]
+    public OkObjectResult Ok([ActionResultObjectValue] TEntity data)
+    {
+        return Ok(new CommandResponse(data));
     }
 }

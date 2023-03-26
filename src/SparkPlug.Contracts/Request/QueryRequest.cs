@@ -2,22 +2,24 @@ namespace SparkPlug.Contracts;
 
 public class QueryRequest : ApiRequest, IQueryRequest
 {
-    public QueryRequest(string[]? select = null, IFilter? where = null, IOrder[]? sort = null, IPageContext? page = null)
+    public QueryRequest() { }
+    public QueryRequest(PageContext page) { Page = page; }
+    public QueryRequest(string[] select, Filter? where = default, Order[]? sort = default, PageContext? page = default)
     {
         Select = select;
         Where = where;
+        Includes = default; //include;
         Sort = sort;
         Page = page;
     }
     public string[]? Select { get; set; }
-    public IFilter? Where { get; set; }
-    public IFilter? Having { get; set; }
-    public string[]? Group { get; set; }
-    public IOrder[]? Sort { get; set; }
-    public IPageContext? Page { get; set; }
+    public Filter? Where { get; set; }
+    public Include[]? Includes{ get; set; }
+    public Order[]? Sort { get; set; }
+    public PageContext? Page { get; set; }
 }
 
-public static partial class Extensions
+public static class IQueryRequestExtensions
 {
     #region Select
     public static IQueryRequest Select(this IQueryRequest request, params string[] fields)
@@ -26,13 +28,7 @@ public static partial class Extensions
         return request;
     }
     #endregion
-    #region Gorup
-    public static IQueryRequest GroupBy(this IQueryRequest request, params string[] fields)
-    {
-        request.Group = request.Group?.Concat(fields).ToArray() ?? fields;
-        return request;
-    }
-    #endregion
+
     #region Where
     public static IQueryRequest AndWhere(this IQueryRequest request, Func<CompositeFilter, CompositeFilter> filterAction)
     {
@@ -48,7 +44,7 @@ public static partial class Extensions
     }
     public static IQueryRequest Where(this IQueryRequest request, IFilter filter)
     {
-        request.Where = request.Where == null ? filter : new CompositeFilter(CompositeOperator.And, request.Where, filter);
+        request.Where = request.Where == null ? (Filter)filter : new CompositeFilter(CompositeOperator.And, request.Where, (Filter)filter);
         return request;
     }
     #endregion
@@ -72,7 +68,7 @@ public static partial class Extensions
     {
         return request.Page(new PageContext(pageNo, pageSize));
     }
-    public static IQueryRequest Page(this IQueryRequest request, IPageContext page)
+    public static IQueryRequest Page(this IQueryRequest request, PageContext page)
     {
         request.Page = page;
         return request;

@@ -1,21 +1,23 @@
 namespace SparkPlug.Persistence.MongoDb.Context;
 
-public class MongoDbContext : IMongoDbContext
+public class MongoDbClient
 {
+    private string DatabaseName { get; set; } = string.Empty;
     public IMongoDatabase Database { get; }
-    public MongoDbContext(SparkPlugMongoDbOptions options)
+    public MongoDbClient(ITenantOptions<TenantConfig> options)
     {
-        var _mongoClient = GetClient(options.ConnectionString);
-        Database = _mongoClient.GetDatabase(options.DatabaseName);
+        var _mongoClient = GetClient(options.Value.ConnectionString);
+        Database = _mongoClient.GetDatabase(DatabaseName);
     }
     public IMongoCollection<TEntity> GetCollection<TEntity>(string collectionName)
     {
         return Database.GetCollection<TEntity>(collectionName);
     }
-
     public MongoClient GetClient(string connectionString)
     {
-        var settings = MongoClientSettings.FromUrl(new MongoUrl(connectionString));
+        var url = new MongoUrl(connectionString);
+        DatabaseName = url.DatabaseName;
+        var settings = MongoClientSettings.FromUrl(url);
         settings.SslSettings = new SslSettings() { EnabledSslProtocols = SslProtocols.Tls12 };
         return new MongoClient(settings);
     }

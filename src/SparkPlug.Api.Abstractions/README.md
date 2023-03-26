@@ -1,1 +1,0 @@
-# SparkPlug Api Abstraction Library

@@ -2,17 +2,23 @@ namespace SparkPlug.Contracts;
 
 public interface IApiRequest
 {
-    public string[]? Depends { get; set; }
+    public string[]? Deps { get; set; }
+}
+
+public interface IInclude
+{
+    public string Name { get; set; }
+    public string[] Select { get; set; }
+    public Include[] Includes {get;set;}
 }
 
 public interface IQueryRequest : IApiRequest
 {
     string[]? Select { get; set; }
-    IFilter? Where { get; set; }
-    IFilter? Having { get; set; }
-    string[]? Group { get; set; }
-    IOrder[]? Sort { get; set; }
-    IPageContext? Page { get; set; }
+    Include[]? Includes { get; set; }
+    Filter? Where { get; set; }
+    Order[]? Sort { get; set; }
+    PageContext? Page { get; set; }
 }
 
 public interface ICommandRequest<TEntity> : IApiRequest

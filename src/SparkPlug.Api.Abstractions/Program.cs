@@ -1,1 +1,0 @@
-namespace SparkPlug.Api.Abstractions;

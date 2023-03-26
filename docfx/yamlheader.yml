@@ -1,0 +1,35 @@
+# yamlheader.yml
+
+# Exclude default object related methods
+exclude:
+  - '*.#ctor'
+  - '*.#cctor'
+  - '*.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)'
+  - '*.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)~*'
+  - '*.#ctor(System.String,System.String)'
+  - '*.#ctor(System.String)'
+  - '*.#ctor(System.*.IFormatProvider)'
+  - '*.#ctor(System.*.IFormatProvider,System.Boolean)'
+  - '*.#ctor(System.*.IFormatProvider,System.Int32)'
+  - '*.#ctor(System.*.IFormatProvider,System.Decimal)'
+  - '*.#ctor(System.*.IFormatProvider,System.Double)'
+  - '*.#ctor(System.*.IFormatProvider,System.Int64)'
+  - '*.#ctor(System.*.IFormatProvider,System.Object[])'
+  - '*.#ctor(System.*.IFormatProvider,System.String,System.Exception)'
+  - '*.#ctor(System.*.IFormatProvider,System.String,System.Object[])'
+  - '*.#ctor(System.*.IFormatProvider,System.String,System.Object[],System.Exception)'
+  - '*.#ctor(System.Reflection.Emit.DynamicMethod)'
+  - '*.#ctor(System.Runtime.CompilerServices.RuntimeFieldHandle)'
+  - '*.#ctor(System.Runtime.CompilerServices.RuntimeTypeHandle)'
+
+# Exclude other resources
+resource:
+  - '**.png'
+  - '**.jpg'
+  - '**.jpeg'
+  - '**.gif'
+  - '**.ico'
+  - '**.pdf'
+  - '**.md'
+  - '**/bin/**'
+  - '**/obj/**'

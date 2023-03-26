@@ -46,7 +46,7 @@ public class PersonRepository : MongoRepository<ObjectId, Person>
 }
 
 [SparkPlug.Persistence.MongoDb.Attributes.CollectionAttribute("Persons")]
-public class Person : BaseModel<ObjectId>
+public class Person : BaseEntity<ObjectId>
 {
     public string? PersonName { get; set; }
     public string? Department { get; set; }

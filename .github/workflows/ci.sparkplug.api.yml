@@ -1,0 +1,40 @@
+name: Dotnet 7 Build
+
+on:
+  push:
+    paths:
+      - src/SparkPlug.Api
+    # paths-ignore:
+    #   - '.vscode/**'
+    #   - 'sample/**'
+    #   - 'test/**'
+    #   - 'README.md'
+    #   - 'makefile'
+    #   - '.gitignore'
+    branches: [ "feature/*" ]
+  pull_request:
+    paths:
+      - src/SparkPlug.Api
+    branches: [ "main" ]
+
+env:
+  PROJECT: src/SparkPlug.Api/SparkPlug.Api.csproj
+
+jobs:
+  build:
+    name: Build SparkPlug.Api App
+    runs-on: ${{ matrix.os }}
+    strategy:
+        matrix:
+            os: [ubuntu-latest, windows-latest]
+            dotnet-version: [7.0.x]
+    steps:
+    - uses: actions/checkout@v3
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: ${{ matrix.dotnet-version }}
+    - name: Restore dependencies
+      run: dotnet restore $PROJECT
+    - name: Build
+      run: dotnet build $PROJECT --no-restore

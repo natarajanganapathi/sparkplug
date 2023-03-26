@@ -26,6 +26,6 @@ public class Test_PageContext
         var pc = new PageContext();
         pc.NextPage();
         Assert.Equal(2, pc.PageNo);
-        Assert.Equal(10, pc.Skip);
+        Assert.Equal(25, pc.Skip);
     }
 }

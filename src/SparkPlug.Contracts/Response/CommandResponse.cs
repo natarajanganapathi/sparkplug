@@ -1,10 +1,14 @@
 namespace SparkPlug.Contracts;
 
-public class CommandResponse<TEntity> : ApiResponse, ICommandResponse<TEntity>
+public class CommandResponse : ApiResponse, ICommandResponse
 {
-    public CommandResponse(string? code = null, string? message = null, TEntity? data = default) : base(code, message)
+    public CommandResponse(JObject data)
     {
         Data = data;
     }
-    public TEntity? Data { get; set; }
+    public CommandResponse(object? data = default)
+    {
+        Data = data == null ? new JObject() : JObject.FromObject(data);
+    }
+    public JObject Data { get; set; }
 }

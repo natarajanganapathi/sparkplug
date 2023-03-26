@@ -1,6 +1,6 @@
 namespace SparkPlug.Persistence.MongoDb.Test.Context;
 
-public class TestModel : BaseModel<string>
+public class TestModel : BaseEntity<string>
 {
     public string? Name { get; set; }
 }

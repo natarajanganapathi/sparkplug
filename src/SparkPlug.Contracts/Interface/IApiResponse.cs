@@ -11,16 +11,15 @@ public interface IErrorResponse : IApiResponse
     string? StackTrace { get; set; }
 }
 
-public interface IQueryResponse<TEntity> : IApiResponse
+public interface IQueryResponse : IApiResponse
 {
-    int? Total { get; set; }
     IPageContext? Page { get; set; }
-    TEntity[]? Data { get; set; }
+    JArray? Data { get; set; }
 }
 
-public interface ICommandResponse<TEntity> : IApiResponse
+public interface ICommandResponse : IApiResponse
 {
-    TEntity? Data { get; set; }
+    JObject Data { get; set; }
 }
 
 public interface ICompositeResponse : IApiResponse

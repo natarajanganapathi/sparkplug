@@ -1,38 +1,38 @@
 namespace SparkPlug.Contracts;
 
-public class QueryResponse<TEntity> : ApiResponse, IQueryResponse<TEntity>
+public class QueryResponse : ApiResponse, IQueryResponse
 {
-    public QueryResponse(string? code = null, string? message = null, TEntity[]? data = default, PageContext? pc = null, int? total = null) : base(code, message)
+    public QueryResponse(JArray? data = default, IPageContext? pc = null)
     {
         Data = data;
         Page = pc;
-        Total = total;
     }
-    public int? Total { get; set; }
+    public QueryResponse(object data, IPageContext? pc)
+    {
+        Data = JArray.FromObject(data);
+        Page = pc;
+    }
     public IPageContext? Page { get; set; }
-    public TEntity[]? Data { get; set; }
+    public JArray? Data { get; set; }
 }
 
 public static partial class Extensions
 {
     #region QueryResponse
-    public static IQueryResponse<TEntity> AddResponse<TEntity>(this IQueryResponse<TEntity> source, TEntity data)
+    public static IQueryResponse AddResponse(this IQueryResponse source, JArray data)
     {
-        return source.AddResponse(new TEntity[] { data });
-    }
-    public static IQueryResponse<TEntity> AddResponse<TEntity>(this IQueryResponse<TEntity> source, TEntity[] data)
-    {
-        source.Data = source.Data?.Concat(data).ToArray() ?? data;
+        source.Data = data;
         return source;
     }
-    public static IQueryResponse<TEntity> AddPageContext<TEntity>(this IQueryResponse<TEntity> source, IPageContext pc)
+    // public static IQueryResponse AddResponse(this IQueryResponse source, object[] data)
+    // {
+    //     var jdata = JArray.FromObject(data);
+    //     source.Data = source.Data?.Concat(jdata);
+    //     return source;
+    // }
+    public static IQueryResponse AddPageContext(this IQueryResponse source, IPageContext pc)
     {
         source.Page = pc;
-        return source;
-    }
-    public static IQueryResponse<TEntity> AddTotalRecord<TEntity>(this IQueryResponse<TEntity> source, int total)
-    {
-        source.Total = total;
         return source;
     }
     #endregion

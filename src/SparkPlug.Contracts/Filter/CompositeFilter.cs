@@ -2,19 +2,19 @@ namespace SparkPlug.Contracts;
 
 public enum CompositeOperator
 {
-    And,
-    Or
+    [EnumMember] And,
+    [EnumMember] Or
 }
 
-public class CompositeFilter : ICompositeFilter
+public class CompositeFilter : Filter, ICompositeFilter
 {
-    public CompositeFilter(CompositeOperator op = CompositeOperator.And, params IFilter[]? filters)
+    public CompositeFilter(CompositeOperator op = CompositeOperator.And, params Filter[]? filters) : base(FilterType.Composite)
     {
         Op = op;
         Filters = filters;
     }
     public CompositeOperator Op { get; set; }
-    public IFilter[]? Filters { get; set; }
+    public Filter[]? Filters { get; set; }
 }
 
 public static partial class Extensions
@@ -52,7 +52,7 @@ public static partial class Extensions
     {
         return source.And(new FieldFilter(field, op, value));
     }
-    public static CompositeFilter And(this CompositeFilter source, IConditionFilter filter)
+    public static CompositeFilter And(this CompositeFilter source, ConditionFilter filter)
     {
         return (source.Op == CompositeOperator.And)
             ? AddConditionFilter(source, filter)
@@ -103,7 +103,7 @@ public static partial class Extensions
     {
         return source.Or(new FieldFilter(field, op, value));
     }
-    public static CompositeFilter Or(this CompositeFilter source, IConditionFilter filter)
+    public static CompositeFilter Or(this CompositeFilter source, ConditionFilter filter)
     {
         return (source.Op == CompositeOperator.Or)
             ? AddConditionFilter(source, filter)
@@ -130,7 +130,7 @@ public static partial class Extensions
         }
         return source;
     }
-    private static CompositeFilter AddConditionFilter(this CompositeFilter source, IConditionFilter filter)
+    private static CompositeFilter AddConditionFilter(this CompositeFilter source, ConditionFilter filter)
     {
         source.Filters = source.Filters?.Prepend(filter).ToArray() ?? new[] { filter };
         return source;

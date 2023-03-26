@@ -8,8 +8,7 @@ global using Microsoft.Extensions.Logging;
 global using SparkPlug.Persistence.MongoDb;
 global using SparkPlug.Persistence.MongoDb.Configuration;
 global using SparkPlug.Persistence.MongoDb.Context;
-global using SparkPlug.Persistence.MongoDb.Model;
-global using SparkPlug.Persistence.MongoDb.Repository;
+global using SparkPlug.Persistence.MongoDb.Models;
 global using SparkPlug.Contracts;
 
 global using SparkPlug.Persistence.Abstractions;

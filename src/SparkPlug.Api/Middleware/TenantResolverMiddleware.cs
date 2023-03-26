@@ -3,20 +3,16 @@ namespace SparkPlug.Api.Middleware;
 public class TenantResolverMiddleware
 {
     private readonly RequestDelegate _next;
-    private readonly ITenantResolver _tenantResolver;
 
-    public TenantResolverMiddleware(RequestDelegate next, ITenantResolver tenantResolver)
+    public TenantResolverMiddleware(RequestDelegate next)
     {
         _next = next;
-        _tenantResolver = tenantResolver;
     }
 
-    public async Task InvokeAsync(HttpContext context)
+    public async Task InvokeAsync(HttpContext context, ITenantResolver tenantResolver, IOptions<WebApiOptions> options)
     {
         // var tenantId = context.Request.Headers["TenantId"]; // Read form header
         // var tenantId = context.Request.Query["TenantId"]; // Read from QueryString
-        var tenantId = context.GetRouteValue("tenantId")?.ToString();
-
         // Get Tenent Id from Payload message.
         // string tenantId = null;
         // if (context.Request.Method == HttpMethod.Post.Method || context.Request.Method == HttpMethod.Put.Method)
@@ -30,8 +26,13 @@ public class TenantResolverMiddleware
         //     context.Items["TenantId"] = tenantId;
         // }
 
-        context.Items["Tenant"] = _tenantResolver.ResolveAsync(tenantId);
-        // context.Request.Path = new PathString(path);
+        var tenantId = context.GetRouteValue(WebApiConstants.Tenant)?.ToString();
+        context.Items["Tenant"] = await tenantResolver.ResolveAsync(tenantId);
+        var segments = context.Request.Path.Value?.Split('/');
+        if (options.Value.IsMultiTenant && segments?.Length > 0)
+        {
+            context.Request.Path = $"/{string.Join("/", segments.Skip(0))}";
+        }
         await _next(context);
     }
 }

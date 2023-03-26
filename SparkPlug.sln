@@ -13,13 +13,17 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SparkPlug.Contracts.Test", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SparkPlug.Persistence.MongoDb", "src\SparkPlug.Persistence.MongoDb\SparkPlug.Persistence.MongoDb.csproj", "{1F617F16-921C-4B1D-9E26-0ABCA9E281CD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SparkPlug.Api.Abstractions", "src\SparkPlug.Api.Abstractions\SparkPlug.Api.Abstractions.csproj", "{01206D80-5BE8-49EA-B069-8D8B652703CD}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SparkPlug.Api", "src\SparkPlug.Api\SparkPlug.Api.csproj", "{F9CCA94A-5CFE-4F5A-9315-FF4B74C1FBEC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SparkPlug.Persistence.Abstraction", "src\SparkPlug.Persistence.Abstraction\SparkPlug.Persistence.Abstraction.csproj", "{24D45019-BFAE-4262-8989-50BCCA6BADD0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SparkPlug.Persistence.Abstractions", "src\SparkPlug.Persistence.Abstractions\SparkPlug.Persistence.Abstractions.csproj", "{24D45019-BFAE-4262-8989-50BCCA6BADD0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SparkPlug.Persistence.PostgreSQL", "src\SparkPlug.Persistence.PostgreSQL\SparkPlug.Persistence.PostgreSQL.csproj", "{F2CA5B64-1F90-4A45-ADE6-59D6942655DF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SparkPlug.Persistence.EntityFramework", "src\SparkPlug.Persistence.EntityFramework\SparkPlug.Persistence.EntityFramework.csproj", "{F2CA5B64-1F90-4A45-ADE6-59D6942655DF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "samples", "samples", "{B51C31C4-3BAD-4A42-9B59-D972A7E9DB41}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Api.Mongo", "samples\Api.Mongo\Api.Mongo.csproj", "{89D6CDEF-9B73-48EA-84C1-E21FFD919904}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Api.EntityFramework", "samples\Api.EntityFramework\Api.EntityFramework.csproj", "{E41D721B-0EF1-479A-A19D-C8344E4C91A2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -42,10 +46,6 @@ Global
 		{1F617F16-921C-4B1D-9E26-0ABCA9E281CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1F617F16-921C-4B1D-9E26-0ABCA9E281CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1F617F16-921C-4B1D-9E26-0ABCA9E281CD}.Release|Any CPU.Build.0 = Release|Any CPU
-		{01206D80-5BE8-49EA-B069-8D8B652703CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{01206D80-5BE8-49EA-B069-8D8B652703CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{01206D80-5BE8-49EA-B069-8D8B652703CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{01206D80-5BE8-49EA-B069-8D8B652703CD}.Release|Any CPU.Build.0 = Release|Any CPU
 		{F9CCA94A-5CFE-4F5A-9315-FF4B74C1FBEC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{F9CCA94A-5CFE-4F5A-9315-FF4B74C1FBEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F9CCA94A-5CFE-4F5A-9315-FF4B74C1FBEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -58,14 +58,23 @@ Global
 		{F2CA5B64-1F90-4A45-ADE6-59D6942655DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F2CA5B64-1F90-4A45-ADE6-59D6942655DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F2CA5B64-1F90-4A45-ADE6-59D6942655DF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{89D6CDEF-9B73-48EA-84C1-E21FFD919904}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{89D6CDEF-9B73-48EA-84C1-E21FFD919904}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{89D6CDEF-9B73-48EA-84C1-E21FFD919904}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{89D6CDEF-9B73-48EA-84C1-E21FFD919904}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E41D721B-0EF1-479A-A19D-C8344E4C91A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E41D721B-0EF1-479A-A19D-C8344E4C91A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E41D721B-0EF1-479A-A19D-C8344E4C91A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E41D721B-0EF1-479A-A19D-C8344E4C91A2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{FE5A7D9C-4AB2-4FC1-8636-AB608EFEB4A3} = {CFADE13C-C9D7-4567-BBAA-5696A78F4C32}
 		{0EA1FECE-28D0-4785-9D57-D3B3FE004423} = {6BE0AD2B-4D15-47BB-B8A0-4C556B44314D}
 		{1F617F16-921C-4B1D-9E26-0ABCA9E281CD} = {CFADE13C-C9D7-4567-BBAA-5696A78F4C32}
-		{01206D80-5BE8-49EA-B069-8D8B652703CD} = {CFADE13C-C9D7-4567-BBAA-5696A78F4C32}
 		{F9CCA94A-5CFE-4F5A-9315-FF4B74C1FBEC} = {CFADE13C-C9D7-4567-BBAA-5696A78F4C32}
 		{24D45019-BFAE-4262-8989-50BCCA6BADD0} = {CFADE13C-C9D7-4567-BBAA-5696A78F4C32}
 		{F2CA5B64-1F90-4A45-ADE6-59D6942655DF} = {CFADE13C-C9D7-4567-BBAA-5696A78F4C32}
+		{89D6CDEF-9B73-48EA-84C1-E21FFD919904} = {B51C31C4-3BAD-4A42-9B59-D972A7E9DB41}
+		{E41D721B-0EF1-479A-A19D-C8344E4C91A2} = {B51C31C4-3BAD-4A42-9B59-D972A7E9DB41}
 	EndGlobalSection
 EndGlobal

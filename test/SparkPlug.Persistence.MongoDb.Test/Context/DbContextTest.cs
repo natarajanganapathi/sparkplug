@@ -18,8 +18,7 @@ public class DbContextTest
         IConfiguration config = new ConfigurationBuilder()
             .AddInMemoryCollection(new Dictionary<string, string?>
             {
-                {"SparkPlug:MongoDb:ConnectionString", "mongodb://localhost:27017"},
-                {"SparkPlug:MongoDb:DatabaseName", "test"}
+                {"SparkPlug:MongoDb:ConnectionString", "mongodb://localhost:27017/test"}
             })
             .Build();
 

@@ -7,17 +7,16 @@
   </PropertyGroup>
 
   <ItemGroup>
-      <FrameworkReference Include="Microsoft.AspNetCore.App" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore" Version="2.2.0" />
     <PackageReference Include="Microsoft.AspNetCore.Authorization.Policy" Version="2.2.0" />
     <PackageReference Include="Microsoft.AspNetCore.Hosting" Version="2.2.7" />
     <PackageReference Include="Microsoft.AspNetCore.Http" Version="2.2.2" />
     <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.2.0" />
     <PackageReference Include="Microsoft.AspNetCore.Http.Extensions" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.JsonPatch" Version="7.0.2" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Analyzers" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="7.0.2" />
     <PackageReference Include="Microsoft.AspNetCore.Routing" Version="2.2.2" />
     <PackageReference Include="Microsoft.Extensions.Diagnostics.HealthChecks" Version="7.0.2" />
     <PackageReference Include="Microsoft.Extensions.Logging" Version="7.0.0" />
@@ -28,14 +27,12 @@
 
   <ItemGroup Condition="'$(Configuration)' == 'Release'">
     <PackageReference Include="SparkPlug.Contracts" Version="0.0.1-alpha1" />
-    <PackageReference Include="SparkPlug.Api.Abstractions" Version="0.0.1-alpha2" />
-    <PackageReference Include="SparkPlug.Persistence.Abstraction" Version="0.0.1-alpha1" />
+    <PackageReference Include="SparkPlug.Persistence.Abstractions" Version="0.0.1-alpha1" />
   </ItemGroup>
 
   <ItemGroup Condition="'$(Configuration)' == 'Debug'">
     <ProjectReference Include="..\SparkPlug.Contracts\SparkPlug.Contracts.csproj" />
-    <ProjectReference Include="..\SparkPlug.Api.Abstractions\SparkPlug.Api.Abstractions.csproj" />
-    <ProjectReference Include="..\SparkPlug.Persistence.Abstraction\SparkPlug.Persistence.Abstraction.csproj" />
+    <ProjectReference Include="..\SparkPlug.Persistence.Abstractions\SparkPlug.Persistence.Abstractions.csproj" />
   </ItemGroup>
  
 </Project>

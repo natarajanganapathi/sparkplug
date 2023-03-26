@@ -5,15 +5,13 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SparkPlug.Api", "SparkPlug.Api\SparkPlug.Api.csproj", "{D6A5DFCC-A8A6-4790-8868-799567DEA82B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SparkPlug.Api.Abstractions", "SparkPlug.Api.Abstractions\SparkPlug.Api.Abstractions.csproj", "{FF3B9889-B795-4CA3-811E-2B65E35CB898}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SparkPlug.Contracts", "SparkPlug.Contracts\SparkPlug.Contracts.csproj", "{FA9B87ED-D556-4176-8115-3004F1761E53}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SparkPlug.Persistence.Abstraction", "SparkPlug.Persistence.Abstraction\SparkPlug.Persistence.Abstraction.csproj", "{E46EAE01-3C7B-4B8C-82B5-B56E26D496C6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SparkPlug.Persistence.Abstractions", "SparkPlug.Persistence.Abstractions\SparkPlug.Persistence.Abstractions.csproj", "{E46EAE01-3C7B-4B8C-82B5-B56E26D496C6}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SparkPlug.Persistence.MongoDb", "SparkPlug.Persistence.MongoDb\SparkPlug.Persistence.MongoDb.csproj", "{C578D0D2-52CC-4182-B219-E73181C35539}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SparkPlug.Persistence.PostgreSQL", "SparkPlug.Persistence.PostgreSQL\SparkPlug.Persistence.PostgreSQL.csproj", "{11C73BEE-3E9E-4A82-B9F3-485F1C1DE915}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SparkPlug.Persistence.EntityFramework", "SparkPlug.Persistence.EntityFramework\SparkPlug.Persistence.EntityFramework.csproj", "{11C73BEE-3E9E-4A82-B9F3-485F1C1DE915}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -28,10 +26,6 @@ Global
 		{D6A5DFCC-A8A6-4790-8868-799567DEA82B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D6A5DFCC-A8A6-4790-8868-799567DEA82B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D6A5DFCC-A8A6-4790-8868-799567DEA82B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{FF3B9889-B795-4CA3-811E-2B65E35CB898}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FF3B9889-B795-4CA3-811E-2B65E35CB898}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FF3B9889-B795-4CA3-811E-2B65E35CB898}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FF3B9889-B795-4CA3-811E-2B65E35CB898}.Release|Any CPU.Build.0 = Release|Any CPU
 		{FA9B87ED-D556-4176-8115-3004F1761E53}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{FA9B87ED-D556-4176-8115-3004F1761E53}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FA9B87ED-D556-4176-8115-3004F1761E53}.Release|Any CPU.ActiveCfg = Release|Any CPU
