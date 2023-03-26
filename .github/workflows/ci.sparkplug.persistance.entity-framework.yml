@@ -11,7 +11,7 @@ on:
       - 'test/SparkPlug.Persistence.EntityFramework.Test/**'
 
 env:
-  PROJECT: $(System.DefaultWorkingDirectory)/src/SparkPlug.Persistence.EntityFramework/SparkPlug.Persistence.EntityFramework.csproj
+  PROJECT: ./src/SparkPlug.Persistence.EntityFramework/SparkPlug.Persistence.EntityFramework.csproj
 
 jobs:
   build:

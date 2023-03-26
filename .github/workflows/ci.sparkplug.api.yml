@@ -11,7 +11,7 @@ on:
       - 'test/SparkPlug.Api.Test/**'
 
 env:
-  PROJECT: $(System.DefaultWorkingDirectory)/src/SparkPlug.Api/SparkPlug.Api.csproj
+  PROJECT: ./src/SparkPlug.Api/SparkPlug.Api.csproj
 
 jobs:
   build:

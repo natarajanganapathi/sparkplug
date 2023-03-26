@@ -11,7 +11,7 @@ on:
       - 'test/SparkPlug.Contracts.Test/**'
 
 env:
-  PROJECT: $(System.DefaultWorkingDirectory)/src/SparkPlug.Contracts/SparkPlug.Contracts.csproj
+  PROJECT: ./src/SparkPlug.Contracts/SparkPlug.Contracts.csproj
 
 jobs:
   build:
