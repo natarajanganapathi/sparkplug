@@ -24,12 +24,6 @@ public static partial class Extensions
         source.Data = data;
         return source;
     }
-    // public static IQueryResponse AddResponse(this IQueryResponse source, object[] data)
-    // {
-    //     var jdata = JArray.FromObject(data);
-    //     source.Data = source.Data?.Concat(jdata);
-    //     return source;
-    // }
     public static IQueryResponse AddPageContext(this IQueryResponse source, IPageContext pc)
     {
         source.Page = pc;

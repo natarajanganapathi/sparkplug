@@ -7,19 +7,6 @@ public class MongoDbHealthCheck : IHealthCheck
     private readonly MongoClientSettings _mongoClientSettings;
     private readonly string? _specifiedDatabase;
 
-    // public MongoDbHealthCheck(string connectionString, string? databaseName = default) : this(MongoClientSettings.FromUrl(MongoUrl.Create(connectionString)), databaseName)
-    // {
-    //     if (databaseName == default)
-    //     {
-    //         _specifiedDatabase = MongoUrl.Create(connectionString)?.DatabaseName;
-    //     }
-    // }
-
-    // public MongoDbHealthCheck(MongoClientSettings clientSettings, string? databaseName = default)
-    // {
-    //     _specifiedDatabase = databaseName;
-    //     _mongoClientSettings = clientSettings;
-    // }
     public MongoDbHealthCheck(IOptions<MongoDbOptions> options)
     {
         var connectionString = options.Value.ConnectionString;

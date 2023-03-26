@@ -19,7 +19,6 @@ public class MongoRepository<TId, TEntity> : IRepository<TId, TEntity> where TEn
         }
         return collectionName;
     }
-    // protected MongoRepository(IMongoDbContext context, ILogger<MongoRepository<TEntity>> logger)
     public MongoRepository(IServiceProvider serviceProvider)
     {
         _context = serviceProvider.GetRequiredService<MongoDbClient>();
@@ -74,9 +73,9 @@ public class MongoRepository<TId, TEntity> : IRepository<TId, TEntity> where TEn
         await Collection.InsertOneAsync(entity.Auditable(_requestContext.UserId, DateTime.UtcNow, true), cancellationToken: cancellationToken);
         return entity;
     }
-    public async Task<IEnumerable<TEntity>> CreateManyAsync(ICommandRequest<TEntity[]> requests, CancellationToken cancellationToken)
+    public async Task<IEnumerable<TEntity>> CreateManyAsync(ICommandRequest<TEntity[]> request, CancellationToken cancellationToken)
     {
-        var entities = requests.Data ?? throw new CreateEntityException("Entities are null");
+        var entities = request.Data ?? throw new CreateEntityException("Entities are null");
         await Collection.InsertManyAsync(entities.Select(x => x.Auditable(_requestContext.UserId, DateTime.UtcNow, true)), cancellationToken: cancellationToken);
         return entities;
     }

@@ -52,7 +52,7 @@ public class SqlRepository<TId, TEntity> : IRepository<TId, TEntity> where TEnti
     }
     public async Task<IEnumerable<TEntity>> GetManyAsync(TId[] ids, CancellationToken cancellationToken)
     {
-        var tids = ids ?? throw new QueryEntityException("Ids are null or empty");
+        if (ids == null) throw new QueryEntityException("Ids are null or empty");
         return await DbSet.Where(x => ids.Contains(x.Id)).ToArrayAsync(cancellationToken);
     }
     public async Task<TEntity> CreateAsync(ICommandRequest<TEntity> request, CancellationToken cancellationToken)
@@ -62,9 +62,9 @@ public class SqlRepository<TId, TEntity> : IRepository<TId, TEntity> where TEnti
         await DbContext.SaveChangesAsync(requestContext.UserId, cancellationToken);
         return entityEntry.Entity;
     }
-    public async Task<IEnumerable<TEntity>> CreateManyAsync(ICommandRequest<TEntity[]> requests, CancellationToken cancellationToken)
+    public async Task<IEnumerable<TEntity>> CreateManyAsync(ICommandRequest<TEntity[]> request, CancellationToken cancellationToken)
     {
-        var entities = requests.Data ?? throw new CreateEntityException("Entities are null");
+        var entities = request.Data ?? throw new CreateEntityException("Entities are null");
         await DbSet.AddRangeAsync(entities, cancellationToken);
         await DbContext.SaveChangesAsync(requestContext.UserId, cancellationToken);
         return entities;
@@ -96,8 +96,6 @@ public class SqlRepository<TId, TEntity> : IRepository<TId, TEntity> where TEnti
         var patchDocument = request.Data ?? throw new UpdateEntityException("Entity is null");
         var tid = id ?? throw new UpdateEntityException("Id is null");
         TEntity original = await GetAsync(tid, cancellationToken);
-        // patchDocument.Operations.Add(new Operation<TEntity>("replace", $"/{nameof(IAuditableEntity.ModifiedBy)}", null, _user.UserId));
-        // patchDocument.Operations.Add(new Operation<TEntity>("replace", $"/{nameof(IAuditableEntity.ModifiedAt)}", null, DateTime.UtcNow));
         patchDocument.ApplyTo(original);
         return await UpdateAsync(original, cancellationToken);
     }

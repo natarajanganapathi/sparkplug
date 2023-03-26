@@ -89,8 +89,6 @@ public static class QueryExtentions
     {
         var intValueExpression = Expression.Convert(propAccessExpression, typeof(int));
         return Expression.Convert(intValueExpression, typeof(JToken));
-        // var stringExpression = Expression.Call(intValueExpression, "ToString", null);
-        // return Expression.Call(typeof(JToken), "FromObject", null, stringExpression);
     }
 
     public static Expression GetJObjectValueExpression(Type elementType, Expression sourceParameter, string[]? select, Include[]? includes)
@@ -101,7 +99,7 @@ public static class QueryExtentions
         var jPropertiesExpressions = select.Select(property =>
         {
             var properties = property.Split(" ", StringSplitOptions.RemoveEmptyEntries).ToArray();
-            if (properties.Length > 2) throw new Exception(new StringBuilder().Append(property).Append(" should not have more than 2 keywords").ToString());
+            if (properties.Length > 2) throw new QueryEntityException(new StringBuilder().Append(property).Append(" should not have more than 2 keywords").ToString());
             string source = properties[0];
             var propInfo = elementType.GetProperty(source, BindingFlags.IgnoreCase | BindingFlags.Public | BindingFlags.Instance)
                         ?? throw new ArgumentException(new StringBuilder().Append(source).Append(" is not a valid property of type ").Append(elementType).ToString());

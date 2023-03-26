@@ -1,5 +1,8 @@
 global using Xunit;
 global using Moq;
+global using System.Reflection;
+global using Microsoft.AspNetCore.Mvc;
+global using Microsoft.AspNetCore.Mvc.ApplicationModels;
 
 global using Microsoft.Extensions.Logging;
 global using System.Collections.Generic;
@@ -15,5 +18,8 @@ global using SparkPlug.Persistence.MongoDb.Models;
 global using SparkPlug.Persistence.MongoDb.Context;
 global using SparkPlug.Persistence.MongoDb.Configuration;
 global using SparkPlug.Persistence.MongoDb.HealthCheck;
+global using SparkPlug.Persistence.Abstractions;
+
 global using SparkPlug.Contracts;
+global using SparkPlug.Api.Controllers;
 

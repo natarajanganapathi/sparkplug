@@ -17,21 +17,21 @@ public class Startup
         services.AddSingleton<IModelConfigurationProvider, ModelConfigurationProvider>();
         services.AddScoped<ITenantResolver, TenantResolver>();
         services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
-                .AddMicrosoftIdentityWebApi((bearerOptions) =>
-                {
-                    Configuration.Bind("SparkPlug:Api:AzureAd", bearerOptions);
-                    // bearerOptions.TokenValidationParameters.NameClaimType = "name";
-                }, (identityOptions) => Configuration.Bind("SparkPlug:Api:AzureAd", identityOptions));
+                .AddMicrosoftIdentityWebApi(
+                    (bearerOptions) => Configuration.Bind("SparkPlug:Api:AzureAd", bearerOptions),
+                    (identityOptions) => Configuration.Bind("SparkPlug:Api:AzureAd", identityOptions));
+
         // builder.Services.AddAuthentication().AddMicrosoftAccount((options) =>
         //     {
         //         options.ClientId = "";
         //         options.ClientSecret = "";
         //     });
+
         services.AddCors(options =>
         {
             options.AddDefaultPolicy(builder =>
             {
-                builder.AllowAnyOrigin()
+                builder.WithOrigins("http://localhost:*", "http://127.0.0.1:*")
                        .AllowAnyHeader()
                        .AllowAnyMethod();
             });
