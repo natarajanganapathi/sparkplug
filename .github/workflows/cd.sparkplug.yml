@@ -20,7 +20,7 @@ jobs:
       with:
         dotnet-version: ${{ matrix.dotnet-version }}
     - name: Install Versionize
-      run: dotnet tool install -g versionize-dotnet-cli
+      run: dotnet tool install -g versionize
     - name: Restore dependencies
       run: dotnet restore ${{ env.PROJECT }}
     - name: Build

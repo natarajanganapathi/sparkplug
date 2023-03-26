@@ -16,5 +16,5 @@ dotnet-format            5.1.250801      dotnet-format
 dotnet-monitor           6.3.0           dotnet-monitor
 dotnet-sonarscanner      5.11.0          dotnet-sonarscanner
 dotnet-version-cli       2.3.1           dotnet-version
+versionize               1.18.0          versionize
 ```
-
