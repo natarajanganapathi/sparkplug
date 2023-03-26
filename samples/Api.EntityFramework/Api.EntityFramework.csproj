@@ -29,7 +29,7 @@
     <ProjectReference Include="..\..\src\SparkPlug.Persistence.EntityFramework\SparkPlug.Persistence.EntityFramework.csproj" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="appsettings.json">
+    <Content Include="appsettings.json" Condition="Exists('appsettings.json')">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

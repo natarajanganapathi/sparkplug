@@ -1,10 +1,5 @@
 name: Publish to Nuget
 on:
-  push:
-    paths:
-      - src/SparkPlug.Contracts
-    branches:
-      - release
   workflow_dispatch:
     
 env:
@@ -25,17 +20,17 @@ jobs:
       with:
         dotnet-version: ${{ matrix.dotnet-version }}
     - name: Restore dependencies
-      run: dotnet restore $PROJECT
+      run: dotnet restore ${{ env.PROJECT }}
     - name: Build
-      run: dotnet build -c release $PROJECT --no-restore
+      run: dotnet build -c release ${{ env.PROJECT }} --no-restore
     - name: Bump versions
       uses: SiqiLu/dotnet-bump-version@2.1.0
       with:
-          version_files: $PROJECT
-          version_mask: 0.0.1.0
+          version_files: ${{ env.PROJECT }}
+          version_mask: 0.0.0.1
           version_overwrite: "*.*.*.*"
           github_token: ${{ secrets.GITHUB_TOKEN }}      
     - name: Pack
-      run: dotnet pack --no-build -c release $PROJECT -o .
+      run: dotnet pack --no-build -c release ${{ env.PROJECT }} -o .
     - name: Publish
       run: dotnet nuget push *.nupkg -s https://api.nuget.org/v3/index.json -k ${{secrets.NUGET_API_KEY}} --skip-duplicate --no-symbols

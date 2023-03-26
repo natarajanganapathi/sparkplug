@@ -29,6 +29,6 @@ jobs:
       with:
         dotnet-version: ${{ matrix.dotnet-version }}
     - name: Restore dependencies
-      run: dotnet restore $PROJECT
+      run: dotnet restore ${{ env.PROJECT }}
     - name: Build
-      run: dotnet build $PROJECT --no-restore
+      run: dotnet build ${{ env.PROJECT }} --no-restore
