@@ -9,6 +9,7 @@ on:
     paths:
       - 'src/SparkPlug.Contracts/**'
       - 'test/SparkPlug.Contracts.Test/**'
+  workflow_dispatch:
 
 env:
   PROJECT: ./src/SparkPlug.Contracts/SparkPlug.Contracts.csproj

@@ -9,6 +9,7 @@ on:
     paths:
       - 'src/SparkPlug.Persistence.EntityFramework/**'
       - 'test/SparkPlug.Persistence.EntityFramework.Test/**'
+  workflow_dispatch:
 
 env:
   PROJECT: ./src/SparkPlug.Persistence.EntityFramework/SparkPlug.Persistence.EntityFramework.csproj

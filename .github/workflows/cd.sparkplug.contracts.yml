@@ -5,6 +5,8 @@ on:
       - src/SparkPlug.Contracts
     branches:
       - release
+  workflow_dispatch:
+    
 env:
   PROJECT: src/SparkPlug.Contracts/SparkPlug.Contracts.csproj
         

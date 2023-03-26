@@ -9,6 +9,7 @@ on:
     paths:
       - 'src/SparkPlug.Persistence.MongoDb/**'
       - 'test/SparkPlug.Persistence.MongoDb.Test/**'
+  workflow_dispatch:
 
 env:
   PROJECT: ./src/SparkPlug.Persistence.MongoDb/SparkPlug.Persistence.MongoDb.csproj

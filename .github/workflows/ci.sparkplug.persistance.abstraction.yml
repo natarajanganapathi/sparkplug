@@ -9,6 +9,7 @@ on:
     paths:
       - 'src/SparkPlug.Persistence.Abstractions/**'
       - 'test/SparkPlug.Persistence.Abstractions.Test/**'
+  workflow_dispatch:
 
 env:
   PROJECT: ./src/SparkPlug.Persistence.Abstractions/SparkPlug.Persistence.Abstractions.csproj
