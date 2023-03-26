@@ -24,7 +24,7 @@ jobs:
     - name: Build
       run: dotnet build -c release ${{ env.PROJECT }} --no-restore
     - name: Bump versions
-      uses: SiqiLu/dotnet-bump-version@2.1.0
+      uses: SiqiLu/dotnet-bump-version@2.0.0
       with:
           version_files: ${{ env.PROJECT }}
           version_mask: 0.0.0.1
