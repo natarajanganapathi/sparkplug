@@ -18,7 +18,7 @@ public class Test_QueryRequest
     [Fact]
     public void Create_QueryRequest_With_Constructor_Perameter()
     {
-        var ar = new QueryRequest(new string[] { "id", "name" }, new FieldFilter("id", FieldOperator.Equal, "1"), new Order[] { new Order("id", Direction.Ascending) }, new PageContext(10, 100));
+        var ar = new QueryRequest(new string[] { "id", "name" }, null, new FieldFilter("id", FieldOperator.Equal, "1"), new Order[] { new Order("id", Direction.Ascending) }, new PageContext(10, 100));
         Assert.NotNull(ar);
         var where = ar.Where as FieldFilter;
         Assert.Equal(new string[] { "id", "name" }, ar.Select);

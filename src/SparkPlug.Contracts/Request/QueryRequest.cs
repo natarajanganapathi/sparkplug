@@ -4,11 +4,11 @@ public class QueryRequest : ApiRequest, IQueryRequest
 {
     public QueryRequest() { }
     public QueryRequest(PageContext page) { Page = page; }
-    public QueryRequest(string[] select, Filter? where = default, Order[]? sort = default, PageContext? page = default)
+    public QueryRequest(string[] select, Include[]? includes = default, Filter? where = default, Order[]? sort = default, PageContext? page = default)
     {
         Select = select;
         Where = where;
-        Includes = default; //include;
+        Includes = includes;
         Sort = sort;
         Page = page;
     }
