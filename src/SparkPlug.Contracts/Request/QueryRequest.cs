@@ -14,7 +14,7 @@ public class QueryRequest : ApiRequest, IQueryRequest
     }
     public string[]? Select { get; set; }
     public Filter? Where { get; set; }
-    public Include[]? Includes{ get; set; }
+    public Include[]? Includes { get; set; }
     public Order[]? Sort { get; set; }
     public PageContext? Page { get; set; }
 }

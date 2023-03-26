@@ -28,7 +28,7 @@ jobs:
       with:
           version_files: ${{ env.PROJECT }}
           version_mask: 0.0.0.1
-          version_overwrite: "*.*.*.*"
+          version_overwrite: "*.*.*-alpha.*"
           github_token: ${{ secrets.GITHUB_TOKEN }}      
     - name: Pack
       run: dotnet pack --no-build -c release ${{ env.PROJECT }} -o .

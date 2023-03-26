@@ -4,8 +4,16 @@
     <TargetFramework>net7.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <AssemblyVersion>0.0.0.1</AssemblyVersion>
+    <FileVersion>0.0.0.1</FileVersion>
+    <Version>0.0.1-alpha.1</Version>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
   </PropertyGroup>
-
+  <ItemGroup>
+      <None Include="README.md" Pack="true" PackagePath="README.md" />
+      <None Include="LICENSE.txt" Pack="true" PackagePath="LICENSE.txt" />
+  </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Diagnostics.HealthChecks" Version="2.2.0" />
     <PackageReference Include="Microsoft.AspNetCore.Hosting.Abstractions" Version="2.2.0" />
@@ -33,10 +41,5 @@
   <ItemGroup Condition="'$(Configuration)' == 'Debug'">
     <ProjectReference Include="..\SparkPlug.Contracts\SparkPlug.Contracts.csproj" />
     <ProjectReference Include="..\SparkPlug.Persistence.Abstractions\SparkPlug.Persistence.Abstractions.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-      <None Include="README.md" Pack="true" PackagePath="README.md" />
-      <None Include="LICENSE.txt" Pack="true" PackagePath="LICENSE.txt" />
   </ItemGroup>
 </Project>

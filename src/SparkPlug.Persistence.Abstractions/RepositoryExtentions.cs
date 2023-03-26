@@ -10,7 +10,7 @@ public static class RepositoryExtentions
                 obj.CreatedAt = currentTime;
                 obj.CreatedBy = userId;
             }
-            obj.ModifiedAt = DateTime.UtcNow;
+            obj.ModifiedAt = currentTime;
             obj.ModifiedBy = userId;
         }
         return entity;

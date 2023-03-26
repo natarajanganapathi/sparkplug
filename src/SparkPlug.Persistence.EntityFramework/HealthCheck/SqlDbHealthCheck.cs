@@ -18,7 +18,7 @@ public class SqlDbHealthCheck : IHealthCheck
             await _options.Connection.CloseAsync();
             return HealthCheckResult.Healthy();
         }
-        catch(Exception ex)
+        catch (Exception ex)
         {
             return HealthCheckResult.Unhealthy(ex.Message, ex);
         }
