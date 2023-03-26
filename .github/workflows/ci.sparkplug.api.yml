@@ -1,24 +1,17 @@
-name: Dotnet 7 Build
+name: SparkPlug.Api Build
 
 on:
   push:
     paths:
-      - src/SparkPlug.Api
-    # paths-ignore:
-    #   - '.vscode/**'
-    #   - 'sample/**'
-    #   - 'test/**'
-    #   - 'README.md'
-    #   - 'makefile'
-    #   - '.gitignore'
-    branches: [ "feature/*" ]
+      - 'src/SparkPlug.Api/**'
+      - 'test/SparkPlug.Api.Test/**'
   pull_request:
     paths:
-      - src/SparkPlug.Api
-    branches: [ "main" ]
+      - 'src/SparkPlug.Api/**'
+      - 'test/SparkPlug.Api.Test/**'
 
 env:
-  PROJECT: src/SparkPlug.Api/SparkPlug.Api.csproj
+  PROJECT: $(System.DefaultWorkingDirectory)/src/SparkPlug.Api/SparkPlug.Api.csproj
 
 jobs:
   build:

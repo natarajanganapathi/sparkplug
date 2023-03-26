@@ -1,24 +1,17 @@
-name: Dotnet 7 Build
+name: SparkPlug.Persistance.Abstraction Build
 
 on:
   push:
     paths:
-      - src/SparkPlug.Persistence.Abstractions
-    # paths-ignore:
-    #   - '.vscode/**'
-    #   - 'sample/**'
-    #   - 'test/**'
-    #   - 'README.md'
-    #   - 'makefile'
-    #   - '.gitignore'
-    branches: [ "feature/*" ]
+      - 'src/SparkPlug.Persistence.Abstractions/**'
+      - 'test/SparkPlug.Persistence.Abstractions.Test/**'
   pull_request:
     paths:
-      - src/SparkPlug.Persistence.Abstractions
-    branches: [ "main" ]
+      - 'src/SparkPlug.Persistence.Abstractions/**'
+      - 'test/SparkPlug.Persistence.Abstractions.Test/**'
 
 env:
-  PROJECT: src/SparkPlug.Persistence.Abstractions/SparkPlug.Persistence.Abstractions.csproj
+  PROJECT: $(System.DefaultWorkingDirectory)/src/SparkPlug.Persistence.Abstractions/SparkPlug.Persistence.Abstractions.csproj
 
 jobs:
   build:
