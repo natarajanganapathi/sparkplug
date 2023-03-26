@@ -15,6 +15,12 @@ jobs:
             dotnet-version: [7.0.x]
     steps:
     - uses: actions/checkout@v3
+      with:
+        fetch-depth: 0
+    - name: Set up Git configuration
+      run: |
+        git config --global user.name "Natarajan Ganapathi"
+        git config --global user.email natarajanmca11@outlook.com
     - name: Setup .NET
       uses: actions/setup-dotnet@v3
       with:
