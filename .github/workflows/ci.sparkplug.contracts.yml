@@ -1,21 +1,12 @@
-name: Dotnet 7 Build
+name: SparkPlug.Contracts Build
 
 on:
   push:
     paths:
-      - src/SparkPlug.Contracts
-    # paths-ignore:
-    #   - '.vscode/**'
-    #   - 'sample/**'
-    #   - 'test/**'
-    #   - 'README.md'
-    #   - 'makefile'
-    #   - '.gitignore'
-    branches: [ "feature/*" ]
+      - 'src/SparkPlug.Contracts/**'
   pull_request:
     paths:
-      - src/SparkPlug.Contracts
-    branches: [ "main" ]
+      - 'src/SparkPlug.Contracts/**'
 
 env:
   PROJECT: src/SparkPlug.Contracts/SparkPlug.Contracts.csproj
