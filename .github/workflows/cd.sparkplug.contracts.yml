@@ -19,17 +19,14 @@ jobs:
       uses: actions/setup-dotnet@v3
       with:
         dotnet-version: ${{ matrix.dotnet-version }}
+    - name: Install Versionize
+      run: dotnet tool install -g versionize-dotnet-cli
     - name: Restore dependencies
       run: dotnet restore ${{ env.PROJECT }}
     - name: Build
       run: dotnet build -c release ${{ env.PROJECT }} --no-restore
     - name: Bump versions
-      uses: SiqiLu/dotnet-bump-version@2.0.0
-      with:
-          version_files: ${{ env.PROJECT }}
-          version_mask: 0.0.0.1
-          version_overwrite: "*.*.*-alpha.*"
-          github_token: ${{ secrets.GITHUB_TOKEN }}      
+      run: versionize --pre-release alpha --commit-suffix "[skip ci]" --aggregate-pre-releases
     - name: Pack
       run: dotnet pack --no-build -c release ${{ env.PROJECT }} -o .
     - name: Publish
