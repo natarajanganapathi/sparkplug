@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
     
 env:
-  PROJECT: src/SparkPlug.Contracts/SparkPlug.Contracts.csproj
+  PROJECT: ./src/SparkPlug.Source.sln
         
 jobs:
   publish:
