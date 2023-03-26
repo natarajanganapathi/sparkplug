@@ -18,7 +18,7 @@ public enum FieldOperator
 
 public class FieldFilter : ConditionFilter, IFieldFilter
 {
-    public FieldFilter(string field, FieldOperator op, object value, FilterValueType? type) : base(field, FilterType.Field)
+    public FieldFilter(string field, FieldOperator op, object value, FilterValueType? type = default) : base(field, FilterType.Field)
     {
         Op = op;
         Value = value;
