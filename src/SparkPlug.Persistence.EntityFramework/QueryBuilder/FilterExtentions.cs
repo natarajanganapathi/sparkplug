@@ -50,12 +50,11 @@ public static class FilterExtentions
     private static Expression<Func<TEntity, bool>> GetFilterExpression<TEntity>(this IUnaryFilter unaryFilter)
     {
         var parameter = Expression.Parameter(typeof(TEntity), "ufilter");
-        var left = Expression.Property(parameter, unaryFilter.Field);
-        var right = Expression.Constant(unaryFilter.Op == UnaryOperator.IsNull ? null : DBNull.Value);
+        var left = PropertyExpression(parameter, unaryFilter);
         Expression body = unaryFilter.Op switch
         {
-            UnaryOperator.IsNull => Expression.Equal(left, right),
-            UnaryOperator.IsNotNull => Expression.NotEqual(left, right),
+            UnaryOperator.IsNull => Expression.Equal(left, ConstantValueExpression(null, left.Type)),
+            UnaryOperator.IsNotNull => Expression.NotEqual(left, ConstantValueExpression(null, left.Type)),
             _ => throw new QueryEntityException($"Invalid unary filter operation - {unaryFilter.Op}")
         };
         return Expression.Lambda<Func<TEntity, bool>>(body, parameter);
@@ -75,10 +74,11 @@ public static class FilterExtentions
                 if (expression != null)
                 {
                     var invokedExpr = Expression.Invoke(expression, result.Parameters.Cast<Expression>());
-                    result = Expression.Lambda<Func<TEntity, bool>>(CompositeOperator.And == op
-                                ? Expression.AndAlso(result.Body, invokedExpr)
-                                : Expression.OrElse(result.Body, invokedExpr),
-                            result.Parameters);
+                    result = Expression.Lambda<Func<TEntity, bool>>(op switch
+                    {
+                        CompositeOperator.Or => Expression.OrElse(result.Body, invokedExpr),
+                        _ => Expression.AndAlso(result.Body, invokedExpr)
+                    }, result.Parameters);
                 }
             }
         }
@@ -87,7 +87,7 @@ public static class FilterExtentions
     #endregion
 
     #region Field Filter
-    private static Expression PropertyExpression(ParameterExpression parameter, IFieldFilter filter)
+    private static Expression PropertyExpression(ParameterExpression parameter, IConditionFilter filter)
     {
         var path = filter.Field.Split(".");
         var property = Expression.Property(parameter, path[0]);
@@ -95,25 +95,22 @@ public static class FilterExtentions
         {
             (property, _) = GetParameterExpression(property, path[1..]);
         }
-        // return property.Type switch
-        // {
-        //     _ => property
-        // };
         return property;
     }
     private static (MemberExpression property, string[] path) GetParameterExpression(MemberExpression property, string[] path)
     {
         return path.Length > 0 ? GetParameterExpression(Expression.Property(property, path[0]), path[1..]) : (property, path);
     }
-    private static Expression ConstantValueExpression(object? value, Type type, FilterValueType? valueType)
+    private static Expression ConstantValueExpression(object? value, Type type, FilterValueType? valueType = default)
     {
-        if (value == null) throw new QueryEntityException(new StringBuilder().Append("value cannot be empty").ToString());
+        if (value == null) { return Expression.Constant(null, type); }
         return type switch
         {
-            { FullName: "System.DateTime" } => ToDateTimeExpression(value, valueType),
-            { FullName: "System.Int64" } or { FullName: "System.Int32" } => Expressions.Parse(value, type),
+            // Other types handling if required 
+            { FullName: Names.DateTime } => ToDateTimeExpression(value, valueType),
+            { FullName: Names.Int64 } or { FullName: Names.Int32 } => Expressions.Parse(value, type),
             { IsEnum: true } => Expression.Convert(Expression.Constant(value), type),
-            _ => Expression.Constant(value)
+            _ => Expression.Constant(value, type)
         };
     }
     private static Expression ToDateTimeExpression(object value, FilterValueType? valueType)
@@ -122,13 +119,9 @@ public static class FilterExtentions
         return valueType switch
         {
             FilterValueType.UtcDateTime => Expressions.ToUniversalTime(value),
-            FilterValueType.DateOnly => StringToDateOnlyExpression(value),
+            FilterValueType.DateOnly => Expressions.ToDateOnly(value),
             _ => throw new QueryEntityException(new StringBuilder().Append(valueType).Append(" is not valid type for FilterValueType").ToString())
         };
-    }
-    private static Expression StringToDateOnlyExpression(object value)
-    {
-        throw new QueryEntityException("StringToDateOnlyExpression is Not Implemented. Please override this method");
     }
     private static Expression InOperatorExpresson(Expression left, IFieldFilter filter)
     {

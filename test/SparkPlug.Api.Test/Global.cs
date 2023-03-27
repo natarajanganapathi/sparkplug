@@ -22,4 +22,3 @@ global using SparkPlug.Persistence.Abstractions;
 
 global using SparkPlug.Contracts;
 global using SparkPlug.Api.Controllers;
-
