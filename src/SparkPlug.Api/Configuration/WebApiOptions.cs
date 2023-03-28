@@ -12,5 +12,5 @@ public class WebApiOptions
     [Required]
     public string ApplicationName { get; set; }
     public string PathBase { get; set; }
-    public bool IsMultiTenant { get => PathBase.Contains($"{{{WebApiConstants.Tenant}}}"); }
+    public bool IsMultiTenant { get => PathBase.Contains($"{{{WebApiConstants.Tenant}}}", StringComparison.CurrentCultureIgnoreCase); }
 }
