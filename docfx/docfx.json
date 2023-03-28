@@ -55,7 +55,7 @@
         ]
       }
     ],
-    "dest": "_site",
+    "dest": "../docs",
     "globalMetadata": {
       "_enableSearch": "true"
     },

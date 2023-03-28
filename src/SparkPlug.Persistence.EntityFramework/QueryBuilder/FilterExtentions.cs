@@ -108,7 +108,6 @@ public static class FilterExtentions
         {
             // Other types handling if required 
             { FullName: Names.DateTime } => ToDateTimeExpression(value, valueType),
-            { FullName: Names.Int64 } or { FullName: Names.Int32 } => Expressions.Parse(value, type),
             { IsEnum: true } => Expression.Convert(Expression.Constant(value), type),
             _ => Expression.Constant(value, type)
         };
