@@ -22,18 +22,13 @@ public static class ApiServiceCollectionExtenstions
                 {
                     options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles;
                     options.JsonSerializerOptions.DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull;
-                    // options.JsonSerializerOptions.PropertyNamingPolicy = JsonNamingPolicy.CamelCase;
                 });
         // .SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         services.AddControllers(options => options.Filters.Add<ApiExceptionFilterAttribute>())
-        .AddNewtonsoftJson(options =>
-        {
-            // options.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore;
-            options.SerializerSettings.NullValueHandling = NullValueHandling.Ignore;
-            // options.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
-        });
+                .AddNewtonsoftJson(options => options.SerializerSettings.NullValueHandling = NullValueHandling.Ignore);
 
         if (setupAction != null) services.Configure(setupAction);
+
         services.AddSwagger();
         return services;
     }
@@ -47,7 +42,7 @@ public static class ApiServiceCollectionExtenstions
         app.UseGlobalExceptionHandling();
         app.UseTransactionMiddleware();
         app.UseTenantResolverMiddleware();
-        // app.UseHttpsRedirection();
+        // app UseHttpsRedirection
         app.UseSwaggerApi();
         app.UseHealthChecks();
         app.UseRouting();

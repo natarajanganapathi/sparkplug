@@ -16,7 +16,6 @@ public class GenericTypeControllerFeatureProvider : IApplicationFeatureProvider<
         {
             var baseType = model.BaseType;
             var genericTypes = baseType?.GetGenericArguments();
-            // if (candidate.BaseType == typeof(object) || candidate.BaseType?.GenericTypeArguments.Length != 1)
             if (model.BaseType == typeof(object) || genericTypes?.Length != 1)
             {
                 throw new ArgumentException("Api attribute should be used only on IBaseModel<> implementation");

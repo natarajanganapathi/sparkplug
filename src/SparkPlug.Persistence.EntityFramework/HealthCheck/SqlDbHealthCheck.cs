@@ -13,7 +13,7 @@ public class SqlDbHealthCheck : IHealthCheck
     {
         try
         {
-            var connection = _options.Connection ?? throw new ArgumentException("Connection is null");
+            if (_options.Connection == null) throw new ArgumentException("Connection is null");
             await _options.Connection.OpenAsync(cancellationToken);
             await _options.Connection.CloseAsync();
             return HealthCheckResult.Healthy();

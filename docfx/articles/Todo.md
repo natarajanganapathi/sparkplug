@@ -1,4 +1,4 @@
-# SparkPlug ToDo Items
+# ToDo List 
 
 ## SparkPlug.Api
 1. Load SparkPlug dependency module dynamically

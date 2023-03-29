@@ -15,7 +15,7 @@ public class SqlDbContext : DbContext
     public async Task<int> SaveChangesAsync<TId>(TId id, CancellationToken cancellationToken)
     {
         var entries = ChangeTracker.Entries()
-            .Where(x => x.Entity is IAuditableEntity<TId> && (x.State == EntityState.Added || x.State == EntityState.Modified));
+                  .Where(x => (x.State == EntityState.Added || x.State == EntityState.Modified) && x.Entity is IAuditableEntity<TId>);
         var dateTime = DateTime.UtcNow;
         foreach (var entry in entries)
         {
@@ -27,6 +27,6 @@ public class SqlDbContext : DbContext
             entry.Property(nameof(IAuditableEntity<TId>.ModifiedAt)).CurrentValue = dateTime;
             entry.Property(nameof(IAuditableEntity<TId>.ModifiedBy)).CurrentValue = id;
         }
-        return await SaveChangesAsync(cancellationToken).ConfigureAwait(false);
+        return await SaveChangesAsync(cancellationToken);
     }
 }
