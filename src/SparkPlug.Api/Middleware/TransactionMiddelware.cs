@@ -12,14 +12,7 @@ public class TransactionMiddleware
     public async Task InvokeAsync(HttpContext context)
     {
         using var scope = new TransactionScope(TransactionScopeOption.Required, new TransactionOptions { IsolationLevel = IsolationLevel.ReadCommitted }, TransactionScopeAsyncFlowOption.Enabled);
-        try
-        {
-            await _next(context);
-            scope.Complete();
-        }
-        finally
-        {
-            scope.Dispose();
-        }
+        await _next(context);
+        scope.Complete();
     }
 }

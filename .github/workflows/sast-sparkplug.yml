@@ -2,9 +2,9 @@ name: SAST With Sonar Cloud
 
 on:
   push:
-    branches: [ "development", "feature/*" ]
+    branches: []
   pull_request:
-    branches: [ "main"]
+    branches: []
   workflow_dispatch:
 
 jobs:
@@ -17,6 +17,7 @@ jobs:
         with:
           distribution: "microsoft"
           java-version: 11
+
       - uses: actions/checkout@v3
         with:
           fetch-depth: 0
