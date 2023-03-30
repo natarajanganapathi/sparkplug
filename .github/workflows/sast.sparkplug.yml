@@ -1,10 +1,10 @@
-name: SAST With Sonar Cloud
+name: SAST - SonarCloud Analysis
 
 on:
   push:
-    branches: []
+    branches: [ "feature/*" ]
   pull_request:
-    branches: []
+    branches: [ "main"]
   workflow_dispatch:
 
 jobs:
@@ -26,8 +26,8 @@ jobs:
         uses: actions/cache@v3
         with:
           path: ~/sonar/cache
-          key: ${{ runner.os }}-sonar
-          restore-keys: ${{ runner.os }}-sonar
+          key: ${{ runner.os }}-sonar-packages
+          restore-keys: ${{ runner.os }}-sonar-packages
 
       - name: Cache SonarQube scanner
         id: cache-sonar-scanner
@@ -37,13 +37,11 @@ jobs:
           key: ${{ runner.os }}-sonar-scanner
           restore-keys: ${{ runner.os }}-sonar-scanner
 
-      - name: Install SonarQube scanner
+      - name: Install tools
         shell: powershell
-        run: dotnet tool update --global dotnet-sonarscanner  --version 5.12.0
-
-      - name: Install Dotnet Coverage tool
-        shell: powershell
-        run: dotnet tool update --global dotnet-coverage --version 17.4.4
+        run: |
+          dotnet tool update --global dotnet-sonarscanner  --version 5.12.0
+          dotnet tool update --global dotnet-coverage --version 17.4.4
 
       - name: Build and analyze
         env:
@@ -52,10 +50,16 @@ jobs:
         shell: powershell
         run: |
           dotnet tool list -g
-          dotnet build --no-incremental
           dotnet coverage collect "dotnet test" -f xml -o "coverage.xml"
-          dir
-          dotnet sonarscanner begin /k:"natarajanganapathi_sparkplug" /o:"natarajan-ganapathi" /d:sonar.login="${{ secrets.SONAR_TOKEN }}" /d:sonar.cs.vscoveragexml.reportsPaths=coverage.xml /d:sonar.host.url="https://sonarcloud.io"
+          dotnet sonarscanner begin `
+                /k:"natarajanganapathi_sparkplug" `
+                /o:"natarajan-ganapathi" `
+                /d:sonar.login="${{ secrets.SONAR_TOKEN }}" `
+                /d:sonar.cs.vscoveragexml.reportsPaths=coverage.xml `
+                /d:sonar.host.url="https://sonarcloud.io" `
+                /d:sonar.tests="tests/" `
+                /d:sonar.exclusions="**/samples/**,**/tests/**" `
+                /d:sonar.test.exclusions="**/samples/**,**/tests/**" `
+                /d:sonar.coverage.exclusions="**/samples/**,**/tests/**"
           dotnet build --no-incremental
-          dir
           dotnet sonarscanner end /d:sonar.login="${{ secrets.SONAR_TOKEN }}"

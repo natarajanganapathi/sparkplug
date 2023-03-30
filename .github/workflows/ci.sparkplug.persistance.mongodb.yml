@@ -4,11 +4,11 @@ on:
   push:
     paths:
       - 'src/SparkPlug.Persistence.MongoDb/**'
-      - 'test/SparkPlug.Persistence.MongoDb.Test/**'
+      - 'tests/SparkPlug.Persistence.MongoDb.Test/**'
   pull_request:
     paths:
       - 'src/SparkPlug.Persistence.MongoDb/**'
-      - 'test/SparkPlug.Persistence.MongoDb.Test/**'
+      - 'tests/SparkPlug.Persistence.MongoDb.Test/**'
   workflow_dispatch:
 
 env:

@@ -21,11 +21,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Api.Mongo", "samples\Api.Mo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Api.EntityFramework", "samples\Api.EntityFramework\Api.EntityFramework.csproj", "{E41D721B-0EF1-479A-A19D-C8344E4C91A2}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{6BE0AD2B-4D15-47BB-B8A0-4C556B44314D}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{6BE0AD2B-4D15-47BB-B8A0-4C556B44314D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SparkPlug.Contracts.Test", "test\SparkPlug.Contracts.Test\SparkPlug.Contracts.Test.csproj", "{0EA1FECE-28D0-4785-9D57-D3B3FE004423}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SparkPlug.Contracts.Test", "tests\SparkPlug.Contracts.Test\SparkPlug.Contracts.Test.csproj", "{0EA1FECE-28D0-4785-9D57-D3B3FE004423}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SparkPlug.Api.Test", "test\SparkPlug.Api.Test\SparkPlug.Api.Test.csproj", "{8E4602D6-DF2D-497B-9ED0-0468808CAF1A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SparkPlug.Api.Test", "tests\SparkPlug.Api.Test\SparkPlug.Api.Test.csproj", "{8E4602D6-DF2D-497B-9ED0-0468808CAF1A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

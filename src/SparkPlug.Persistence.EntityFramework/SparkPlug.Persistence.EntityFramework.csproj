@@ -8,11 +8,11 @@
     <FileVersion>0.0.0.1</FileVersion>
     <Version>0.0.1-alpha.2</Version>
     <PackageReadmeFile>README.md</PackageReadmeFile>
-    <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+    <PackageLicenseFile>../../LICENSE.txt</PackageLicenseFile>
   </PropertyGroup>
   <ItemGroup>
       <None Include="README.md" Pack="true" PackagePath="README.md" />
-      <None Include="LICENSE.txt" Pack="true" PackagePath="LICENSE.txt" />
+      <None Include="../../LICENSE.txt" Pack="true" PackagePath="../../LICENSE.txt"/>
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Diagnostics.HealthChecks" Version="2.2.0" />

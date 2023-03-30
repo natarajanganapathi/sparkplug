@@ -4,11 +4,11 @@ on:
   push:
     paths:
       - 'src/SparkPlug.Persistence.EntityFramework/**'
-      - 'test/SparkPlug.Persistence.EntityFramework.Test/**'
+      - 'tests/SparkPlug.Persistence.EntityFramework.Test/**'
   pull_request:
     paths:
       - 'src/SparkPlug.Persistence.EntityFramework/**'
-      - 'test/SparkPlug.Persistence.EntityFramework.Test/**'
+      - 'tests/SparkPlug.Persistence.EntityFramework.Test/**'
   workflow_dispatch:
 
 env:

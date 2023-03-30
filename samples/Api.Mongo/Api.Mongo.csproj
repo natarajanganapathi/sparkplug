@@ -18,8 +18,4 @@
     <ProjectReference Include="..\..\src\SparkPlug.Persistence.Abstractions\SparkPlug.Persistence.Abstractions.csproj" />
     <ProjectReference Include="..\..\src\SparkPlug.Persistence.MongoDb\SparkPlug.Persistence.MongoDb.csproj" />
   </ItemGroup>
-  <ItemGroup>
-      <None Include="README.md" Pack="true" PackagePath="README.md" />
-      <None Include="LICENSE.txt" Pack="true" PackagePath="LICENSE.txt" />
-  </ItemGroup>
 </Project>
