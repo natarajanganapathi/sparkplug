@@ -21,7 +21,6 @@ jobs:
           dotnet-version: '7.0.x'
 
       - name: Install Dotnet Coverage tool
-        shell: powershell
         run: dotnet tool update --global dotnet-coverage --version 17.4.4
 
       - name: Restore dependencies
