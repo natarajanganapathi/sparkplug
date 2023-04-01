@@ -8,6 +8,11 @@ on:
 jobs:
   publish-docs:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    concurrency:
+      group: ${{ github.workflow }}-${{ github.ref }}
+    
     steps:
     - name: Chekout
       uses: actions/checkout@v3
