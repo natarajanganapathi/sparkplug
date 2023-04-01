@@ -3,8 +3,10 @@ name: SAST - SonarCloud Analysis
 on:
   push:
     branches: [ "feature/*" ]
+    paths-ignore: ["docfx", "samples", ".github"]
   pull_request:
     branches: [ "main"]
+    paths-ignore: ["docfx", "samples", ".github"]
   workflow_dispatch:
 
 jobs:
