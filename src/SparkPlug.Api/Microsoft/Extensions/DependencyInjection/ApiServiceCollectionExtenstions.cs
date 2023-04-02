@@ -1,6 +1,3 @@
-using System.Text.Json;
-using System.Text.Json.Serialization;
-
 namespace Microsoft.Extensions.DependencyInjection;
 
 public static class ApiServiceCollectionExtenstions
@@ -35,17 +32,14 @@ public static class ApiServiceCollectionExtenstions
 
     public static void UseWebApi(this IApplicationBuilder app, IServiceProvider serviceProvider)
     {
-        var options = serviceProvider.GetRequiredService<IOptions<WebApiOptions>>();
         var env = serviceProvider.GetRequiredService<IWebHostEnvironment>();
-        app.UsePathBase(options.Value.PathBase);
-        if (env.IsDevelopment()) { app.UseSwagger(); }
+        if (env.IsDevelopment()) { app.UseSwaggerApi(); }
         app.UseGlobalExceptionHandling();
-        app.UseTransactionMiddleware();
-        app.UseTenantResolverMiddleware();
         // app UseHttpsRedirection
-        app.UseSwaggerApi();
         app.UseHealthChecks();
         app.UseRouting();
+        app.UseTransactionMiddleware();
+        app.UseTenantResolverMiddleware();
         app.UseEndpoints(endpoints => endpoints.MapGet("/", async context => await context.Response.WriteAsync("Running!...")));
         app.UseAuthentication();
         app.UseAuthorization();

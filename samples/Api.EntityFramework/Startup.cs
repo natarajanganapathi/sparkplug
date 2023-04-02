@@ -12,14 +12,14 @@ public class Startup
     {
         services.AddWebApi(Configuration);
         services.AddSqlDb(Configuration);
-        services.AddOptions<SqlDbOptions>().Configure((options) => options.Connection = new NpgsqlConnection(options.ConnectionString));
+        services.AddOptions<SqlDbOptions>().Configure((options) => options.GetConnection = (connectionString) => new NpgsqlConnection(connectionString));
         services.AddScoped<IDbContextOptionsProvider, DbContextOptionsProvider>();
         services.AddSingleton<IModelConfigurationProvider, ModelConfigurationProvider>();
         services.AddScoped<ITenantResolver, TenantResolver>();
-        services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
-                .AddMicrosoftIdentityWebApi(
-                    (bearerOptions) => Configuration.Bind("SparkPlug:Api:AzureAd", bearerOptions),
-                    (identityOptions) => Configuration.Bind("SparkPlug:Api:AzureAd", identityOptions));
+        // services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+        //         .AddMicrosoftIdentityWebApi(
+        //             (bearerOptions) => Configuration.Bind("SparkPlug:Api:AzureAd", bearerOptions),
+        //             (identityOptions) => Configuration.Bind("SparkPlug:Api:AzureAd", identityOptions));
 
         // builder.Services.AddAuthentication().AddMicrosoftAccount((options) =>
         //     {

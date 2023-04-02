@@ -1,6 +1,6 @@
 namespace SparkPlug.Persistence.EntityFramework.Models;
 
-public class TenantDetails : BaseEntity<Guid>, IConcurrencyEntity, IAuditableEntity<Guid>, IDeletableEntity
+public class TenantDetails : BaseEntity<Guid>, IConcurrencyEntity, IAuditableEntity<long>, IDeletableEntity
 {
     public string? Name { get; set; }
     public List<Options> Options { get; set; } = new List<Options>();
@@ -8,12 +8,12 @@ public class TenantDetails : BaseEntity<Guid>, IConcurrencyEntity, IAuditableEnt
     public int Revision { get; set; }
     public Status Status { get; set; }
     public DateTime CreatedAt { get; set; }
-    public Guid CreatedBy { get; set; }
+    public long CreatedBy { get; set; }
     public DateTime ModifiedAt { get; set; }
-    public Guid ModifiedBy { get; set; }
+    public long ModifiedBy { get; set; }
 }
 
-public class Options : BaseEntity<Guid>, IConcurrencyEntity, IAuditableEntity<Guid>, IDeletableEntity
+public class Options : BaseEntity<long>, IConcurrencyEntity, IAuditableEntity<long>, IDeletableEntity
 {
     public string Key { get; set; } = string.Empty;
     public string? Value { get; set; }
@@ -21,7 +21,7 @@ public class Options : BaseEntity<Guid>, IConcurrencyEntity, IAuditableEntity<Gu
     public int Revision { get; set; }
     public Status Status { get; set; }
     public DateTime CreatedAt { get; set; }
-    public Guid CreatedBy { get; set; }
+    public long CreatedBy { get; set; }
     public DateTime ModifiedAt { get; set; }
-    public Guid ModifiedBy { get; set; }
+    public long ModifiedBy { get; set; }
 }

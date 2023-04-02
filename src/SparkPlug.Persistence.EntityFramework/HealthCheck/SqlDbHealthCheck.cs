@@ -13,9 +13,10 @@ public class SqlDbHealthCheck : IHealthCheck
     {
         try
         {
-            if (_options.Connection == null) throw new ArgumentException("Connection is null");
-            await _options.Connection.OpenAsync(cancellationToken);
-            await _options.Connection.CloseAsync();
+            if (_options.GetConnection == null) throw new ArgumentException("Connection is null");
+            using var connection = _options.GetConnection(_options.ConnectionString);
+            await connection.OpenAsync(cancellationToken);
+            await connection.CloseAsync();
             return HealthCheckResult.Healthy();
         }
         catch (Exception ex)

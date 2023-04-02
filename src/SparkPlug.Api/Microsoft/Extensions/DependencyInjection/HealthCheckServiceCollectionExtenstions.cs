@@ -9,7 +9,7 @@ public static class HealthCheckServiceCollectionExtensions
             Predicate = healthCheck => healthCheck.Tags.Contains("all"),
             ResponseWriter = async (context, report) =>
             {
-                context.Response.ContentType = "application/json";
+                context.Response.ContentType = WebApiConstants.ContentType;
                 var result = JsonConvert.SerializeObject(new
                 {
                     status = report.Status.ToString(),

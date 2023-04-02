@@ -9,5 +9,5 @@ public class SqlDbOptions
     }
     [Required]
     public string ConnectionString { get; set; }
-    public DbConnection? Connection { get; set; }
+    public Func<string, DbConnection>? GetConnection { get; set; }
 }

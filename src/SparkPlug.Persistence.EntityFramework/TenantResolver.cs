@@ -18,12 +18,22 @@ public class TenantResolver : ITenantResolver
         var result = new Tenant() { Options = dict };
         if (!string.IsNullOrWhiteSpace(id))
         {
-            if (!Guid.TryParse(id, out Guid gid)) { throw new ArgumentException($"{id} is not valid tenant id"); }
+            if (!Guid.TryParse(id, out Guid guid)) { throw new ArgumentException($"{id} is not valid tenant id"); }
             var repo = _serviceProvider.GetRequiredService<Repository<Guid, TenantDetails>>();
-            var tenantDetails = await repo.GetAsync(gid, CancellationToken.None);
-            tenantDetails.Options.ForEach(x => dict[x.Key] = x.Value);
-            result = new Tenant() { Id = tenantDetails.Id.ToString(), Name = tenantDetails.Name, Options = dict };
+            var tenantDetails = await repo.GetAsync(guid, CancellationToken.None);
+            return ToTenant(tenantDetails);
         }
         return result;
+    }
+    public async Task<IEnumerable<TenantDetails>> GetAllTenantsAsync()
+    {
+        var repo = _serviceProvider.GetRequiredService<Repository<Guid, TenantDetails>>();
+        return await repo.FindAsync(new QueryRequest(), CancellationToken.None);
+    }
+    private static Tenant ToTenant(TenantDetails tenant)
+    {
+        var dict = new Dictionary<string, string?>();
+        tenant.Options.ForEach(x => dict[x.Key] = x.Value);
+        return new Tenant() { Id = tenant.Id.ToString(), Name = tenant.Name, Options = dict };
     }
 }
