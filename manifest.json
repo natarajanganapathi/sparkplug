@@ -1,0 +1,252 @@
+{
+  "homepages": [],
+  "source_base_path": "/home/runner/work/sparkplug/sparkplug/docfx",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Resource",
+      "output": {
+        "resource": {
+          "relative_path": "index.json"
+        }
+      }
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/index.html",
+          "hash": "+g/aBLz6qvcNYdlsWSAd2uH0H952INcKnSqe1gxmxLQ="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html",
+          "hash": "4UDdSckGDkJN65C6llSR4aNeh30x5vKCcrt49S47oZk="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/Todo.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/Todo.html",
+          "hash": "X76ZysuT7CCQhO/39g9RdIe+7DHMj91QviDroh4v+SI="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/get-started.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/get-started.html",
+          "hash": "kXsjMsqf+Bi+AaEVxXcoKkpgx5+cq8Tcac07L5cpXDk="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/intro.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/intro.html",
+          "hash": "M6fcA95w65NkLKX6okPd8iVShaY/aHPR9+6uRjEFKas="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "articles/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "articles/toc.html",
+          "hash": "n/00OMZwJhElsPMIWb/hrU+T5kE5twn3sRP1EeVR80g="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "examples/NugetPublish.md",
+      "output": {
+        ".html": {
+          "relative_path": "examples/NugetPublish.html",
+          "hash": "FdhUE/ZHQOVoBF1TucFaC6Jb80GBGwN4rVPIOuWHxVA="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "examples/RedisCacheImpl.md",
+      "output": {
+        ".html": {
+          "relative_path": "examples/RedisCacheImpl.html",
+          "hash": "krxNITHhofD78ohZ4RMfEThB8LUMQDCHpNcFrfMWWa4="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "examples/Reference.md",
+      "output": {
+        ".html": {
+          "relative_path": "examples/Reference.html",
+          "hash": "SaH5GGMp4Jwk9WZ8ApEXFxwtpruihBjWKUmclA7VqhM="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "examples/TODO.md",
+      "output": {
+        ".html": {
+          "relative_path": "examples/TODO.html",
+          "hash": "W+9xtb4GM8Vhn88jouIcARFthOWU4ZJ6Ow/DPdmhibA="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "examples/WebApi.md",
+      "output": {
+        ".html": {
+          "relative_path": "examples/WebApi.html",
+          "hash": "PO0RxYs9qUD6kR9EV9Xz1jmfEmGYFZOpZsmB7UKsN4w="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "examples/ef-entity-relationship.md",
+      "output": {
+        ".html": {
+          "relative_path": "examples/ef-entity-relationship.html",
+          "hash": "7s0xf0S7wOsw6fo8kxXBalM9SXKMfN8RUBYsbjqY1JY="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "examples/git.md",
+      "output": {
+        ".html": {
+          "relative_path": "examples/git.html",
+          "hash": "c7iousbJcD+Cr3wIcCu62T9RIrBjs1NdcR5yoKdDG0E="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "examples/intro.md",
+      "output": {
+        ".html": {
+          "relative_path": "examples/intro.html",
+          "hash": "Uh2nLszAfhy1c+hychhi9VP+R8S97bAWeWKVXCJWz3k="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "examples/kestral.md",
+      "output": {
+        ".html": {
+          "relative_path": "examples/kestral.html",
+          "hash": "ND1TWl/yoQqiuSzM+MYZqGsmZMzmply7sb1BVnUPEVE="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "examples/postgresql.md",
+      "output": {
+        ".html": {
+          "relative_path": "examples/postgresql.html",
+          "hash": "bnjbjIlyatiXhI8/xU5FHHv2W2WMTEqllT9lmf3hIRQ="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "examples/rbac.md",
+      "output": {
+        ".html": {
+          "relative_path": "examples/rbac.html",
+          "hash": "nGVpWguqNIDl2NoG2Uw/Lfvx9rObaITWr37fJOWNdq4="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "examples/sample-request.md",
+      "output": {
+        ".html": {
+          "relative_path": "examples/sample-request.html",
+          "hash": "X/6NDrP2PSKByR9c6y56Q9jl4lIBH+lY5m9ezc6EGtM="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "examples/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "examples/toc.html",
+          "hash": "fw4MCJp7XhRvFTWJKckyjLsqRx28dGZ/6hd/0vwPgQM="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html",
+          "hash": "dzqIwrroJ5KUxSeym/ZpmrLg8LgyiYBLHwZ1RiWbmBY="
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html",
+          "hash": "mByccq8seB3uIRrWh9wGn/DZ7FxCw+HlCvfwtQ41JdY="
+        }
+      },
+      "version": ""
+    }
+  ],
+  "version_info": {},
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}
