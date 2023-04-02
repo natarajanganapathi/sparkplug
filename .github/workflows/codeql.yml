@@ -14,8 +14,10 @@ name: "CodeQL"
 on:
   push:
     branches: [ "feature/*" ]
+    paths-ignore: ["docfx", "samples", ".github"]
   pull_request:
     branches: [ "main" ]
+    paths-ignore: ["docfx", "samples", ".github"]
 
 jobs:
   analyze:

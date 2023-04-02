@@ -33,12 +33,12 @@
 10. Health Check 
     - Database Health Check          - Done
     - Local Resource Manual Health check
-    - Azure Service's Health Check  
+    - Azure Service's Health Check   
 11. Monitoring
     - Azure Monitor
 12. Entity Framework
     - Code First
-        - Create DB Schema
+        - Create DB Schema          - Done
         - Create Migration Script
         - Execute Migration Script
     - Db First
@@ -53,8 +53,8 @@
     - Kafka
 17. - Multi-Tenancy                 - Done
 17. CORS
-18. CI/CD pipleline
-    - Github Actions
+18. CI/CD pipleline                 - Done
+    - Github Actions                - Done
 19. Container
     - Docker Build
     - Helm Chart

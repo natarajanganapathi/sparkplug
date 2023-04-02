@@ -21,7 +21,7 @@ public static class SwaggerServiceCollectionExtensions
         services.AddSwaggerGen(swaggerOptions =>
             {
                 Array.ForEach(_apiVersions, version => swaggerOptions.SwaggerDoc(version, new OpenApiInfo { Version = version, Title = "Api" }));
-                swaggerOptions.DocumentFilter<SetBasePathFilter>();
+                // swaggerOptions.DocumentFilter<SetBasePathFilter>();
                 swaggerOptions.ResolveConflictingActions(apiDescriptions => apiDescriptions.First());
                 swaggerOptions.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
                 {
@@ -53,18 +53,19 @@ public static class SwaggerServiceCollectionExtensions
     }
 }
 
-public class SetBasePathFilter : IDocumentFilter
-{
-    private readonly WebApiOptions _options;
-    public SetBasePathFilter(IOptions<WebApiOptions> options)
-    {
-        _options = options.Value;
-    }
-    public void Apply(OpenApiDocument swaggerDoc, DocumentFilterContext context)
-    {
-        swaggerDoc.Servers = new List<OpenApiServer>
-            {
-                new OpenApiServer { Url = _options.PathBase }
-            };
-    }
-}
+// public class SetBasePathFilter : IDocumentFilter
+// {
+//     private readonly WebApiOptions _options;
+//     public SetBasePathFilter(IOptions<WebApiOptions> options)
+//     {
+//         _options = options.Value;
+//     }
+//     public void Apply(OpenApiDocument swaggerDoc, DocumentFilterContext context)
+//     {
+//         var pathBase = _options.IsMultiTenant ? string.Join("/", _options.PathBase, string.Format("[{0}]", WebApiConstants.Tenant)) : _options.PathBase;
+//         swaggerDoc.Servers = new List<OpenApiServer>
+//             {
+//                 new OpenApiServer { Url = pathBase }
+//             };
+//     }
+// }

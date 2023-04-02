@@ -3,6 +3,7 @@ namespace SparkPlug.Api.Controllers;
 public class GenericTypeControllerFeatureProvider : IApplicationFeatureProvider<ControllerFeature>
 {
     private readonly Type _controllerType;
+    private readonly static string IBaseEntityName = typeof(IBaseEntity<>).Name;
 
     public GenericTypeControllerFeatureProvider(Type controllerType)
     {
@@ -14,9 +15,9 @@ public class GenericTypeControllerFeatureProvider : IApplicationFeatureProvider<
         var models = assemblies.SelectMany(x => x.GetExportedTypes().Where(x => x.GetCustomAttributes<ApiAttribute>().Any()));
         foreach (var model in models)
         {
-            var baseType = model.BaseType;
-            var genericTypes = baseType?.GetGenericArguments();
-            if (model.BaseType == typeof(object) || genericTypes?.Length != 1)
+            var iBaseEntityType = model.GetInterface(IBaseEntityName);
+            var genericTypes = iBaseEntityType?.GetGenericArguments();
+            if (genericTypes?.Length != 1)
             {
                 throw new ArgumentException("Api attribute should be used only on IBaseModel<> implementation");
             }

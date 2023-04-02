@@ -10,6 +10,7 @@ public static class SqlServiceCollectionExtenstions
         services.AddScoped<IRepositoryProvider, SqlRepositoryProvider>();
         services.AddScoped(typeof(SqlRepository<,>));
         services.AddHealthChecks().AddCheck<SqlDbHealthCheck>("SqlDb", tags: new[] { "sqldb", "all" });
+        // services.AddHealthChecks().AddCheck<MultiTenantHealthCheck>("MultiTenant", tags: new[] { "multitenant"});
     }
 
     public static void UseSqlDb(this IApplicationBuilder app, IServiceProvider serviceProvider)
