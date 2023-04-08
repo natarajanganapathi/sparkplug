@@ -31,4 +31,9 @@ public class TenantResolver : ITenantResolver
         };
         return new Tenant() { Options = dict };
     }
+
+    public Task<IEnumerable<ITenant>> GetAllTenantsAsync()
+    {
+        throw new NotImplementedException();
+    }
 }

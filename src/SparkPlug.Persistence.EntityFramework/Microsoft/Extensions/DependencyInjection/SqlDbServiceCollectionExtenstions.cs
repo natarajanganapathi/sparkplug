@@ -1,6 +1,6 @@
 namespace Microsoft.Extensions.DependencyInjection;
 
-public static class SqlServiceCollectionExtenstions
+public static class SqlDbServiceCollectionExtenstions
 {
     public static void AddSqlDb(this IServiceCollection services, IConfiguration configuration)
     {
@@ -10,11 +10,6 @@ public static class SqlServiceCollectionExtenstions
         services.AddScoped<IRepositoryProvider, SqlRepositoryProvider>();
         services.AddScoped(typeof(SqlRepository<,>));
         services.AddHealthChecks().AddCheck<SqlDbHealthCheck>("SqlDb", tags: new[] { "sqldb", "all" });
-        // services.AddHealthChecks().AddCheck<MultiTenantHealthCheck>("MultiTenant", tags: new[] { "multitenant"});
-    }
-
-    public static void UseSqlDb(this IApplicationBuilder app, IServiceProvider serviceProvider)
-    {
-        // app.MapGet("/db", ([FromServices] SparkPlugEntityFrameworkOptions options) => options);
+        services.AddHealthChecks().AddCheck<MultiTenantHealthCheck>("MultiTenant", tags: new[] { "multitenant"});
     }
 }

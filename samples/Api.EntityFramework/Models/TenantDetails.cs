@@ -1,7 +1,9 @@
-namespace SparkPlug.Persistence.EntityFramework.Models;
+namespace SparkPlug.Sample.WebApi.Models;
 
-public class TenantDetails : BaseEntity<Guid>, IConcurrencyEntity, IAuditableEntity<long>, IDeletableEntity
+[Api("tenants"), IgnoreMultiTenant]
+public class TenantDetails : BaseEntity<long>, IConcurrencyEntity, IAuditableEntity<long>, IDeletableEntity
 {
+    public Guid TenantId { get; set; }
     public string? Name { get; set; }
     public List<Options> Options { get; set; } = new List<Options>();
     [ConcurrencyCheck]

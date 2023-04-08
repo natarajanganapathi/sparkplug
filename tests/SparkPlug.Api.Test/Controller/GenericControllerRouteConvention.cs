@@ -6,8 +6,8 @@ public class GenericControllerRouteConventionTests
     public void Apply_AddsSelectorModel_WhenControllerTypeIsGenericType()
     {
         // Arrange
-        var convention = new GenericControllerRouteConvention();
-        var controllerModel = new ControllerModel(typeof(TestController<,>).GetTypeInfo(), Array.Empty<object>());
+        var convention = new GenericControllerRouteConvention(new RouteAttribute("{tenant}"), false);
+        var controllerModel = new ControllerModel(typeof(TestController).GetTypeInfo(), Array.Empty<object>());
 
         // Act
         convention.Apply(controllerModel);
@@ -18,8 +18,13 @@ public class GenericControllerRouteConventionTests
         Assert.Equal("TModel", controllerModel.Selectors[0].AttributeRouteModel?.Template);
     }
 
-    public class TestController<TId, TModel>
+    [ApiController, Route("test"), ApiExplorerSettings(GroupName = "v1")]
+    public class TestController : BaseController<long, User>
     {
+        public TestController(IServiceProvider serviceProvider) : base(serviceProvider) { }
         public IActionResult? Index() => null;
     }
+
+    [Api("user")]
+    public class User : BaseEntity<long> { }
 }

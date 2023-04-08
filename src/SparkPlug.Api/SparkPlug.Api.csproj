@@ -12,8 +12,8 @@
     <PackageLicenseFile>../../LICENSE.txt</PackageLicenseFile>
   </PropertyGroup>
   <ItemGroup>
-      <None Include="README.md" Pack="true" PackagePath="README.md"/>
-      <None Include="../../LICENSE.txt" Pack="true" PackagePath="../../LICENSE.txt"/>
+      <None Include="README.md" Pack="true" PackagePath="README.md" />
+      <None Include="../../LICENSE.txt" Pack="true" PackagePath="../../LICENSE.txt" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore" Version="2.2.0" />
@@ -27,6 +27,7 @@
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Analyzers" Version="2.2.0" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="7.0.2" />
     <PackageReference Include="Microsoft.AspNetCore.Routing" Version="2.2.2" />
+    <PackageReference Include="Microsoft.Extensions.Caching.Memory" Version="7.0.0" />
     <PackageReference Include="Microsoft.Extensions.Diagnostics.HealthChecks" Version="7.0.4" />
     <PackageReference Include="Microsoft.Extensions.Logging" Version="7.0.0" />
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.4" />

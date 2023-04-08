@@ -13,6 +13,7 @@ global using Microsoft.Identity.Web;
 global using Microsoft.EntityFrameworkCore;
 global using Microsoft.Extensions.Configuration;
 global using Microsoft.EntityFrameworkCore.Metadata.Builders;
+global using Microsoft.Extensions.Options;
 global using Npgsql;
 global using Newtonsoft.Json;
 

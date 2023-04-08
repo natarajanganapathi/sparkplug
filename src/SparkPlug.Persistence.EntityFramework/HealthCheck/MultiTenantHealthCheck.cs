@@ -13,7 +13,7 @@ public class MultiTenantHealthCheck : IHealthCheck
     {
         try
         {
-            var tenantResolver = _serviceProvider.GetRequiredService<TenantResolver>();
+            var tenantResolver = _serviceProvider.GetRequiredService<ITenantResolver>();
             var options = _serviceProvider.GetRequiredService<IOptions<SqlDbOptions>>().Value;
             var tenants = await tenantResolver.GetAllTenantsAsync() ?? throw new Exception("There is no tenants onboarded");
             var results = new Dictionary<string, HealthCheckResult>();
@@ -21,17 +21,22 @@ public class MultiTenantHealthCheck : IHealthCheck
             if (options.GetConnection == null) throw new ArgumentException("GetConnection delegate is null");
             foreach (var tenant in tenants)
             {
-                try
+                if (tenant.Id != null)
                 {
-                    var connectionString = tenant.Options.Find(x => x.Key.Contains(SqlDbOptions.ConfigPath))?.Value ?? throw new Exception(new StringBuilder().Append(tenant.Id).Append(" does not have connection string").ToString());
-                    using var connection = options.GetConnection(connectionString);
-                    await connection.OpenAsync(cancellationToken);
-                    await connection.CloseAsync();
-                    results.Add(tenant.Id.ToString(), HealthCheckResult.Healthy());
-                }
-                catch (Exception ex)
-                {
-                    results.Add(tenant.Id.ToString(), new HealthCheckResult(context.Registration.FailureStatus, exception: ex));
+                    try
+                    {
+                        var connectionString = tenant.Options.TryGetValue(SqlDbOptions.ConfigPath, out string? value)
+                                            ? value ?? throw new Exception(new StringBuilder().Append(tenant.Id).Append(" does not have connection string").ToString())
+                                            : throw new Exception(new StringBuilder().Append(tenant.Id).Append(" not valid tenant identifier").ToString());
+                        using var connection = options.GetConnection(connectionString);
+                        await connection.OpenAsync(cancellationToken);
+                        await connection.CloseAsync();
+                        results.Add(tenant.Id, HealthCheckResult.Healthy());
+                    }
+                    catch (Exception ex)
+                    {
+                        results.Add(tenant.Id, new HealthCheckResult(context.Registration.FailureStatus, exception: ex));
+                    }
                 }
             }
             var response = results.ToDictionary(x => x.Key, x => (object)x.Value);

@@ -6,7 +6,8 @@ public class SqlDbContext : DbContext
     public SqlDbContext(IServiceProvider serviceProvider, SqlDbContextOptions sqlOptions) : base(sqlOptions.Value)
     {
         _modelConfigurationProvider = serviceProvider.GetRequiredService<IModelConfigurationProvider>();
-        Database.EnsureCreated();
+        // Move to Create Tenant Api  - When onboard new tenant, this will create the db schema
+        // Database EnsureCreated
     }
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
