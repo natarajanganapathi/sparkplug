@@ -22,7 +22,7 @@ public class GenericControllerRouteConventionTests
     public class TestController : BaseController<long, User>
     {
         public TestController(IServiceProvider serviceProvider) : base(serviceProvider) { }
-        public IActionResult? Index() => null;
+        public static IActionResult? Index() => null;
     }
 
     [Api("user")]

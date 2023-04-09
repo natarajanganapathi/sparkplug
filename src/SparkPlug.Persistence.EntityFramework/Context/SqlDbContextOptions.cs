@@ -1,12 +1,22 @@
 namespace SparkPlug.Persistence.EntityFramework.Context;
 
-public class SqlDbContextOptions
+public abstract class SqlDbContextOptions
 {
     public DbContextOptions Value { get; }
-    public SqlDbContextOptions(IServiceProvider serviceProvider)
+    protected SqlDbContextOptions(IDbContextOptionsProvider dbContextOptionsProvider, string connectionString)
     {
-        var dbContextOptionsProvider = serviceProvider.GetRequiredService<IDbContextOptionsProvider>();
-        var tenantConfig = serviceProvider.GetRequiredService<ITenantOptions<TenantConfig>>();
-        Value = dbContextOptionsProvider.GetDbContextOption(tenantConfig.Value.ConnectionString);
+        Value = dbContextOptionsProvider.GetDbContextOption(connectionString);
     }
+}
+
+public class TenantDbContextOptions : SqlDbContextOptions
+{
+    public TenantDbContextOptions(IDbContextOptionsProvider dbContextOptionsProvider, ITenantOptions<DbConfig> dbConfig)
+        : base(dbContextOptionsProvider, dbConfig.Value.ConnectionString) { }
+}
+
+public class HomeDbContextOptions : SqlDbContextOptions
+{
+    public HomeDbContextOptions(IDbContextOptionsProvider dbContextOptionsProvider, IOptions<DbConfig> dbConfig)
+        : base(dbContextOptionsProvider, dbConfig.Value.ConnectionString) { }
 }

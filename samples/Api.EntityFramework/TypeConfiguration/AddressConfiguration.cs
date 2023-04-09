@@ -1,5 +1,6 @@
 namespace SparkPlug.Sample.WebApi.Models;
 
+[TenantDbEntity]
 public class AddressConfiguration : IEntityTypeConfiguration<Address>
 {
     public void Configure(EntityTypeBuilder<Address> builder)

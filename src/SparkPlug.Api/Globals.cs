@@ -1,6 +1,5 @@
 global using System;
 global using System.ComponentModel.DataAnnotations;
-global using System.Globalization;
 global using System.Linq;
 global using System.Reflection;
 global using System.Text;
@@ -32,6 +31,7 @@ global using Microsoft.OpenApi.Models;
 global using Newtonsoft.Json;
 global using Newtonsoft.Json.Linq;
 
+global using SparkPlug;
 global using SparkPlug.Api.Configuration;
 global using SparkPlug.Api.Controllers;
 global using SparkPlug.Api.Filters;

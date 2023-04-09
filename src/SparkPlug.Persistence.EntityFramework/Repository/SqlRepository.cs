@@ -1,6 +1,6 @@
 namespace SparkPlug.Persistence.EntityFramework;
 
-public class SqlRepository<TId, TEntity> : IRepository<TId, TEntity> where TEntity : class, IBaseEntity<TId>, new()
+public abstract class SqlRepository<TId, TEntity> : IRepository<TId, TEntity> where TEntity : class, IBaseEntity<TId>, new()
 {
     public SqlDbContext DbContext { get; }
     internal readonly ILogger<SqlRepository<TId, TEntity>> logger;
@@ -21,9 +21,9 @@ public class SqlRepository<TId, TEntity> : IRepository<TId, TEntity> where TEnti
     {
         return DbContext.Set<Entity>();
     }
-    public SqlRepository(IServiceProvider serviceProvider)
+    protected SqlRepository(IServiceProvider serviceProvider, SqlDbContext dbContext)
     {
-        DbContext = serviceProvider.GetRequiredService<SqlDbContext>();
+        DbContext = dbContext;
         logger = serviceProvider.GetRequiredService<ILogger<SqlRepository<TId, TEntity>>>();
         requestContext = serviceProvider.GetRequiredService<IRequestContext<TId>>();
     }

@@ -1,17 +1,12 @@
 namespace SparkPlug.Persistence.EntityFramework.Context;
 
-public class SqlDbContext : DbContext
+public abstract class SqlDbContext : DbContext
 {
-    private readonly IModelConfigurationProvider _modelConfigurationProvider;
-    public SqlDbContext(IServiceProvider serviceProvider, SqlDbContextOptions sqlOptions) : base(sqlOptions.Value)
-    {
-        _modelConfigurationProvider = serviceProvider.GetRequiredService<IModelConfigurationProvider>();
-        // Move to Create Tenant Api  - When onboard new tenant, this will create the db schema
-        // Database EnsureCreated
-    }
+    protected abstract ISqlDbModelConfiguration ModelConfigProvider { get; }
+    protected SqlDbContext(DbContextOptions sqlOptions) : base(sqlOptions) { }
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        _modelConfigurationProvider.Configure(modelBuilder);
+        ModelConfigProvider.Configure(modelBuilder);
     }
     public async Task<int> SaveChangesAsync<TId>(TId id, CancellationToken cancellationToken)
     {
@@ -30,4 +25,24 @@ public class SqlDbContext : DbContext
         }
         return await SaveChangesAsync(cancellationToken);
     }
+}
+
+public class TenantDbContext : SqlDbContext
+{
+    private readonly ITenantDbModelConfiguration _modelConfigProvider;
+    public TenantDbContext(ITenantDbModelConfiguration modelConfigProvider, TenantDbContextOptions sqlOptions) : base(sqlOptions.Value)
+    {
+        _modelConfigProvider = modelConfigProvider;
+    }
+    protected override ISqlDbModelConfiguration ModelConfigProvider => _modelConfigProvider;
+}
+
+public class HomeDbContext : SqlDbContext
+{
+    private readonly IHomeDbModelConfiguration _modelConfigProvider;
+    public HomeDbContext(IHomeDbModelConfiguration modelConfigProvider, HomeDbContextOptions sqlOptions) : base(sqlOptions.Value)
+    {
+        _modelConfigProvider = modelConfigProvider;
+    }
+    protected override ISqlDbModelConfiguration ModelConfigProvider => _modelConfigProvider;
 }

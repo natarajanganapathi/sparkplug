@@ -11,8 +11,7 @@ public class GenericTypeControllerFeatureProvider : IApplicationFeatureProvider<
     }
     public void PopulateFeature(IEnumerable<ApplicationPart> parts, ControllerFeature feature)
     {
-        var assemblies = SwaggerServiceCollectionExtensions.CachedAssemblies;
-        var models = assemblies.SelectMany(x => x.GetExportedTypes().Where(x => x.GetCustomAttributes<ApiAttribute>().Any()));
+        var models = AssemblyCache.Assemblies.SelectMany(x => x.GetExportedTypes().Where(x => x.GetCustomAttributes<ApiAttribute>().Any()));
         foreach (var model in models)
         {
             var iBaseEntityType = model.GetInterface(IBaseEntityName);

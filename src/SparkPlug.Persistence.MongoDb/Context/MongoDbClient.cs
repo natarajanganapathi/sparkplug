@@ -4,7 +4,7 @@ public class MongoDbClient
 {
     private string DatabaseName { get; set; } = string.Empty;
     public IMongoDatabase Database { get; }
-    public MongoDbClient(ITenantOptions<TenantConfig> options)
+    public MongoDbClient(ITenantOptions<DbConfig> options)
     {
         var _mongoClient = GetClient(options.Value.ConnectionString);
         Database = _mongoClient.GetDatabase(DatabaseName);

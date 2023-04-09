@@ -11,18 +11,15 @@ public static class ApiServiceCollectionExtenstions
         services.AddScoped(typeof(IRequestContext<>), typeof(RequestContext<>));
         services.AddScoped(typeof(Repository<,>));
         services.AddScoped(typeof(IRepository<,>), typeof(Repository<,>));
-        services.AddScoped(typeof(ITenantOptions<>), typeof(TenantOptionsManager<>));
-        services.AddScoped(typeof(IOptions<>), typeof(TenantOptionsManager<>));
+        // services.AddScoped(typeof(ITenantOptions<>), typeof(TenantOptions<>));
+        // services.AddScoped(typeof(IOptions<>), typeof(TenantOptionsManager<>));
         services.AddScoped(sp => sp.GetRequiredService<IHttpContextAccessor>().HttpContext?.Items["Tenant"] as ITenant ?? Tenant.Default);
         services.AddMvc(MvcOptions =>
         {
             IRouteTemplateProvider routeAttribute = new RouteAttribute("{tenant}");
             var isMultiTenant = configuration.GetValue<bool>($"{WebApiOptions.ConfigPath}:{nameof(WebApiOptions.IsMultiTenant)}");
             MvcOptions.Conventions.Add(new GenericControllerRouteConvention(routeAttribute, isMultiTenant));
-            if (isMultiTenant)
-            {
-                MvcOptions.UseCentralRoutePrefix(routeAttribute);
-            }
+            if (isMultiTenant) { MvcOptions.UseCentralRoutePrefix(routeAttribute); }
         })
         .ConfigureApplicationPartManager(m => m.FeatureProviders.Add(new GenericTypeControllerFeatureProvider(typeof(ApiController<,>))))
         .AddJsonOptions(options =>

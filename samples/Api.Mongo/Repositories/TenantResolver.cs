@@ -27,7 +27,7 @@ public class TenantResolver : ITenantResolver
         var options = _serviceProvider.GetRequiredService<IOptions<MongoDbOptions>>().Value;
         var dict = new Dictionary<string, string?>()
         {
-            { $"{nameof(TenantConfig)}:{nameof(options.ConnectionString)}", options.ConnectionString }
+            { $"{nameof(DbConfig)}:{nameof(options.ConnectionString)}", options.ConnectionString }
         };
         return new Tenant() { Options = dict };
     }

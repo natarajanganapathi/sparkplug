@@ -2,17 +2,13 @@ namespace Microsoft.Extensions.DependencyInjection;
 
 public static class SwaggerServiceCollectionExtensions
 {
-    private static readonly string?[] _apiVersions = CachedAssemblies
+    private static readonly string?[] _apiVersions = AssemblyCache.Assemblies
             .SelectMany(assembly => assembly.GetTypes())
             .Where(type => type.IsDefined(typeof(ApiExplorerSettingsAttribute), false))
             .SelectMany(type => type.GetCustomAttributes<ApiExplorerSettingsAttribute>())
             .Select(a => a.GroupName)
             .Distinct()
             .ToArray();
-
-    private static Assembly[]? _assemblies;
-
-    public static Assembly[] CachedAssemblies { get => _assemblies ??= AppDomain.CurrentDomain.GetAssemblies(); }
 
     public static IServiceCollection AddSwagger(this IServiceCollection services)
     {

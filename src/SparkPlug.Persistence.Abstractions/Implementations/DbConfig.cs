@@ -1,6 +1,6 @@
 namespace SparkPlug.Persistence.Abstractions;
 
-public class TenantConfig
+public class DbConfig
 {
     public string ConnectionString { get; set; } = string.Empty;
 }

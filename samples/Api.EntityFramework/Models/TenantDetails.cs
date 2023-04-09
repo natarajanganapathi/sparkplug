@@ -19,6 +19,9 @@ public class Options : BaseEntity<long>, IConcurrencyEntity, IAuditableEntity<lo
 {
     public string Key { get; set; } = string.Empty;
     public string? Value { get; set; }
+    public long TenantDetailId { get; set; }
+    [JsonIgnore]
+    public TenantDetails TenantDetails { get; set; } = new();
     [ConcurrencyCheck]
     public int Revision { get; set; }
     public Status Status { get; set; }
