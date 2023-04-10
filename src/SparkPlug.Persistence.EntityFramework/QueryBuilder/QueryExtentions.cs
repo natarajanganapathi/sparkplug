@@ -110,8 +110,8 @@ public static class QueryExtentions
             {
                 { IsEnum: true } => GetEnumValueExpression(propAccessExpression),
                 { FullName: "System.String" } => GetValueExpression(propAccessExpression),
-                { IsClass: true } => GetJObjectValueExpression(type, propAccessExpression, include?.Select, include?.Includes),
                 { IsArray: true } or { IsGenericType: true } => GetCollectionValueExpression(type.GenericTypeArguments[0], propAccessExpression, include?.Select, include?.Includes),
+                { IsClass: true } => GetJObjectValueExpression(type, propAccessExpression, include?.Select, include?.Includes),
                 _ => GetValueExpression(propAccessExpression)
             };
             var target = properties.Length == 2 ? properties[1] : propInfo.Name;

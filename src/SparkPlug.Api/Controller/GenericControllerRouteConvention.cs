@@ -20,7 +20,7 @@ public class GenericControllerRouteConvention : IControllerModelConvention
             if (apiAttribute != null)
             {
                 var route = new AttributeRouteModel(new RouteAttribute(apiAttribute.Route));
-                if (type?.GetCustomAttribute<IgnoreMultiTenantAttribute>() == null && _isMultiTenant)
+                if (type?.GetCustomAttribute<TenantDbEntityAttribute>() != null && _isMultiTenant)
                 {
                     route = AttributeRouteModel.CombineAttributeRouteModel(_tenantPrefix, route);
                 }

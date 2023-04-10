@@ -1,6 +1,6 @@
 namespace SparkPlug.Sample.WebApi.Models;
 
-[Api("tenants"), IgnoreMultiTenant]
+[Api("tenants"), HomeDbEntity]
 public class TenantDetails : BaseEntity<long>, IConcurrencyEntity, IAuditableEntity<long>, IDeletableEntity
 {
     public Guid TenantId { get; set; }

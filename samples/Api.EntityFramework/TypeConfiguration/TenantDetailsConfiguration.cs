@@ -1,6 +1,5 @@
 namespace SparkPlug.Sample.WebApi.Models;
 
-[HomeDbEntity]
 public class TenantDetailsConfiguration : IEntityTypeConfiguration<TenantDetails>
 {
     public void Configure(EntityTypeBuilder<TenantDetails> builder)
