@@ -26,7 +26,7 @@ public class TenantResolverMiddleware
     {
         var containsTenantKey = request.RouteValues.ContainsKey(WebApiConstants.Tenant);
         var tenantId = request.RouteValues[WebApiConstants.Tenant]?.ToString();
-        if (containsTenantKey && string.IsNullOrWhiteSpace(tenantId)) { throw new Exception("Tenant identifier missed in the url"); }
+        if (containsTenantKey && string.IsNullOrWhiteSpace(tenantId)) { throw new ArgumentException("Tenant identifier missed in the url"); }
         return tenantId;
     }
 
@@ -47,29 +47,6 @@ public class TenantResolverMiddleware
         }
         return tenant!;
     }
-
-    // public async Task InvokeAsync(HttpContext context, ITenantResolver tenantResolver)
-    // {
-    //     var request = context.Request;
-    //     var containsTenantKey = request.RouteValues.ContainsKey(WebApiConstants.Tenant);
-    //     var tenantId = context.GetRouteValue(WebApiConstants.Tenant)?.ToString();
-    //     if (containsTenantKey && string.IsNullOrWhiteSpace(tenantId)) { throw new Exception("Tenant identifier missed in the url"); }
-    //     string key = $"{_cacheKey}_{tenantId ?? "default"}";
-    //     var cachedTenant = await _cache.GetAsync(key, context.RequestAborted);
-    //     ITenant? tenant = cachedTenant == null ? null : ConvertTo<ITenant>(cachedTenant);
-    //     if (tenant == null)
-    //     {
-    //         tenant = await tenantResolver.ResolveAsync(tenantId);
-    //         if (tenant != null)
-    //         {
-    //             var options = new DistributedCacheEntryOptions()
-    //                               .SetSlidingExpiration(TimeSpan.FromMinutes(_options.CacheDuration.TenantCacheInfo));
-    //             await _cache.SetAsync(key, Encoding.UTF8.GetBytes(_serializer.Serialize(tenant)), options);
-    //         }
-    //     }
-    //     context.Items["Tenant"] = tenant;
-    //     await _next(context);
-    // }
 
     private T? ConvertTo<T>(byte[] content)
     {

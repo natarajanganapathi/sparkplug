@@ -11,8 +11,6 @@ public static class ApiServiceCollectionExtenstions
         services.AddScoped(typeof(IRequestContext<>), typeof(RequestContext<>));
         services.AddScoped(typeof(Repository<,>));
         services.AddScoped(typeof(IRepository<,>), typeof(Repository<,>));
-        // services.AddScoped(typeof(ITenantOptions<>), typeof(TenantOptions<>));
-        // services.AddScoped(typeof(IOptions<>), typeof(TenantOptionsManager<>));
         services.AddScoped(sp => sp.GetRequiredService<IHttpContextAccessor>().HttpContext?.Items["Tenant"] as ITenant ?? Tenant.Default);
         services.AddMvc(MvcOptions =>
         {

@@ -6,7 +6,6 @@ public class HomeModelConfigurations : IHomeDbModelConfiguration
     {
         var homeModelsType = AssemblyCache.Types
             .Where(t => !string.IsNullOrEmpty(t.Namespace) && t.GetCustomAttributes<HomeDbEntityAttribute>().Any());
-
         foreach (var hmType in homeModelsType)
         {
             Type? configType = Array.Find(AssemblyCache.EntityTypeConfiguration, type =>

@@ -27,16 +27,6 @@ public class GenericControllerRouteConvention : IControllerModelConvention
                 controller.Selectors.Add(new SelectorModel { AttributeRouteModel = route });
                 controller.ControllerName = type!.Name;
             }
-            // var res = controller.ControllerType
-            //                     .GetGenericArguments()
-            //                     .Select(gtyp => (gtyp.Name, gtyp.GetCustomAttribute<ApiAttribute>()?.Route))
-            //                     .FirstOrDefault(x => x.Route != null);
-            // if (res.Route != null)
-            // {
-            //     var attRutMdl = AttributeRouteModel.CombineAttributeRouteModel(_centralPrefix, new AttributeRouteModel(new RouteAttribute(res.Route)));
-            //     controller.Selectors.Add(new SelectorModel { AttributeRouteModel = attRutMdl });
-            //     controller.ControllerName = res.Name;
-            // }
         }
     }
 }
