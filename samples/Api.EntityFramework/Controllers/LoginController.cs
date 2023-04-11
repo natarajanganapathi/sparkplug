@@ -1,6 +1,6 @@
 namespace SparkPlug.Sample.WebApi.Controllers;
 
-[ApiController, Route("auth")]
+[ApiController, Route("auth"), ApiExplorerSettings(GroupName = "v1")]
 public class LoginController : ControllerBase
 {
     [HttpPost("login")]

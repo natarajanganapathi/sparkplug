@@ -4,5 +4,5 @@ public interface ITenant
 {
     public string? Id { get; }
     public string? Name { get; }
-    public IEnumerable<KeyValuePair<string, string?>> Options { get; }
+    public IDictionary<string, string?> Options { get; }
 }

@@ -10,8 +10,4 @@ public static class MongoDbServiceCollectionExtenstions
         services.AddScoped(typeof(MongoRepository<,>));
         services.AddHealthChecks().AddCheck<MongoDbHealthCheck>("MongoDb", tags: new[] { "mongodb", "all" });
     }
-
-    public static void UseMongoDb(this IApplicationBuilder app, IServiceProvider serviceProvider)
-    {
-    }
 }

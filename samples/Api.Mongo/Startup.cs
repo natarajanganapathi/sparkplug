@@ -33,6 +33,5 @@ public class Startup
     {
         app.UseCors();
         app.UseWebApi(serviceProvider);
-        app.UseMongoDb(serviceProvider);
     }
 }

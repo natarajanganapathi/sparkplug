@@ -1,7 +1,9 @@
-namespace SparkPlug.Persistence.EntityFramework.Models;
+namespace SparkPlug.Sample.WebApi.Models;
 
-public class TenantDetails : BaseEntity<Guid>, IConcurrencyEntity, IAuditableEntity<long>, IDeletableEntity
+[Api("tenants"), HomeDbEntity]
+public class TenantDetails : BaseEntity<long>, IConcurrencyEntity, IAuditableEntity<long>, IDeletableEntity
 {
+    public Guid TenantId { get; set; }
     public string? Name { get; set; }
     public List<Options> Options { get; set; } = new List<Options>();
     [ConcurrencyCheck]
@@ -17,6 +19,9 @@ public class Options : BaseEntity<long>, IConcurrencyEntity, IAuditableEntity<lo
 {
     public string Key { get; set; } = string.Empty;
     public string? Value { get; set; }
+    public long TenantDetailId { get; set; }
+    [JsonIgnore]
+    public TenantDetails TenantDetails { get; set; } = new();
     [ConcurrencyCheck]
     public int Revision { get; set; }
     public Status Status { get; set; }
