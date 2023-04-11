@@ -16,8 +16,7 @@
       "source_relative_path": "api/index.md",
       "output": {
         ".html": {
-          "relative_path": "api/index.html",
-          "hash": "ofEFQ0QnuXM8D5rqwCoNMllXAjCoAmsdel5Y3btuTFM="
+          "relative_path": "api/index.html"
         }
       },
       "version": ""
@@ -27,8 +26,7 @@
       "source_relative_path": "api/toc.yml",
       "output": {
         ".html": {
-          "relative_path": "api/toc.html",
-          "hash": "4UDdSckGDkJN65C6llSR4aNeh30x5vKCcrt49S47oZk="
+          "relative_path": "api/toc.html"
         }
       },
       "version": ""
@@ -38,8 +36,7 @@
       "source_relative_path": "articles/Todo.md",
       "output": {
         ".html": {
-          "relative_path": "articles/Todo.html",
-          "hash": "KuKxd7gMSkYRnNbvjWf0es+RKZ6VdtOnac+3qVv5ZVk="
+          "relative_path": "articles/Todo.html"
         }
       },
       "version": ""
@@ -49,8 +46,7 @@
       "source_relative_path": "articles/get-started.md",
       "output": {
         ".html": {
-          "relative_path": "articles/get-started.html",
-          "hash": "lkkDS4wG8K4VuTsAPwCxEnuv1D0A9l40ZCo4PsQbzBg="
+          "relative_path": "articles/get-started.html"
         }
       },
       "version": ""
@@ -60,8 +56,7 @@
       "source_relative_path": "articles/intro.md",
       "output": {
         ".html": {
-          "relative_path": "articles/intro.html",
-          "hash": "eX1WYNU4L4VwrXxzJ2zWsECIJqheE/LtBEhGjVPMNGU="
+          "relative_path": "articles/intro.html"
         }
       },
       "version": ""
@@ -71,8 +66,7 @@
       "source_relative_path": "articles/toc.yml",
       "output": {
         ".html": {
-          "relative_path": "articles/toc.html",
-          "hash": "n/00OMZwJhElsPMIWb/hrU+T5kE5twn3sRP1EeVR80g="
+          "relative_path": "articles/toc.html"
         }
       },
       "version": ""
@@ -82,8 +76,7 @@
       "source_relative_path": "examples/NugetPublish.md",
       "output": {
         ".html": {
-          "relative_path": "examples/NugetPublish.html",
-          "hash": "XMhpcxmNB4dk8nOs4bcetQgzKcLIoMMxJBRWvK23FwQ="
+          "relative_path": "examples/NugetPublish.html"
         }
       },
       "version": ""
@@ -93,8 +86,7 @@
       "source_relative_path": "examples/RedisCacheImpl.md",
       "output": {
         ".html": {
-          "relative_path": "examples/RedisCacheImpl.html",
-          "hash": "O1BelTULkE/l2WQ3z3Zx6qhzksB4oawacsDFQndxw54="
+          "relative_path": "examples/RedisCacheImpl.html"
         }
       },
       "version": ""
@@ -104,8 +96,7 @@
       "source_relative_path": "examples/Reference.md",
       "output": {
         ".html": {
-          "relative_path": "examples/Reference.html",
-          "hash": "Kk97+kEAus94P2jvw+ysveen5a+yFaeX6PMKLWqpP+4="
+          "relative_path": "examples/Reference.html"
         }
       },
       "version": ""
@@ -115,8 +106,7 @@
       "source_relative_path": "examples/TODO.md",
       "output": {
         ".html": {
-          "relative_path": "examples/TODO.html",
-          "hash": "/JAtaY6WxwmOfMt1dFaBqHjdm7aMo8BAHfI8G1+U9KA="
+          "relative_path": "examples/TODO.html"
         }
       },
       "version": ""
@@ -126,8 +116,7 @@
       "source_relative_path": "examples/WebApi.md",
       "output": {
         ".html": {
-          "relative_path": "examples/WebApi.html",
-          "hash": "RKFeIxsFYtw5WrZ5Hn75VtPIGuzVuXOxkE+7vlDy9Zg="
+          "relative_path": "examples/WebApi.html"
         }
       },
       "version": ""
@@ -137,8 +126,7 @@
       "source_relative_path": "examples/ef-entity-relationship.md",
       "output": {
         ".html": {
-          "relative_path": "examples/ef-entity-relationship.html",
-          "hash": "eY55NG1+sr0B1TPj8UwAUzm5SFDzM5/QFn+ftILwbko="
+          "relative_path": "examples/ef-entity-relationship.html"
         }
       },
       "version": ""
@@ -148,8 +136,7 @@
       "source_relative_path": "examples/git.md",
       "output": {
         ".html": {
-          "relative_path": "examples/git.html",
-          "hash": "bggHSQOYhVDkCH1zV9NLWMXDmk81Gq8UA/EsoC2nzrY="
+          "relative_path": "examples/git.html"
         }
       },
       "version": ""
@@ -159,8 +146,7 @@
       "source_relative_path": "examples/intro.md",
       "output": {
         ".html": {
-          "relative_path": "examples/intro.html",
-          "hash": "AWk7pY6L+5kgzIcyZgch4aO6P40x2N44Dd3O5yLGjWU="
+          "relative_path": "examples/intro.html"
         }
       },
       "version": ""
@@ -170,8 +156,17 @@
       "source_relative_path": "examples/kestral.md",
       "output": {
         ".html": {
-          "relative_path": "examples/kestral.html",
-          "hash": "5JP0xXf5LC9jzMas474qLIgwJ1IHZhxexHbfuJ8EMX8="
+          "relative_path": "examples/kestral.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "examples/migration.md",
+      "output": {
+        ".html": {
+          "relative_path": "examples/migration.html"
         }
       },
       "version": ""
@@ -181,8 +176,7 @@
       "source_relative_path": "examples/postgresql.md",
       "output": {
         ".html": {
-          "relative_path": "examples/postgresql.html",
-          "hash": "HDH3KipfT8PQv+hrbwH1wh9eE4JAAd6A5xsXqCkOVNU="
+          "relative_path": "examples/postgresql.html"
         }
       },
       "version": ""
@@ -192,8 +186,7 @@
       "source_relative_path": "examples/rbac.md",
       "output": {
         ".html": {
-          "relative_path": "examples/rbac.html",
-          "hash": "HsmsD4bI5kxoidKHnXyoN3eV2yXa37ytBaJUSp1vf4c="
+          "relative_path": "examples/rbac.html"
         }
       },
       "version": ""
@@ -203,8 +196,7 @@
       "source_relative_path": "examples/sample-request.md",
       "output": {
         ".html": {
-          "relative_path": "examples/sample-request.html",
-          "hash": "2PJqMYA2/ss0FxbdAX17MtuIZ7fe2oi5lYjraRj12f4="
+          "relative_path": "examples/sample-request.html"
         }
       },
       "version": ""
@@ -214,8 +206,7 @@
       "source_relative_path": "examples/toc.yml",
       "output": {
         ".html": {
-          "relative_path": "examples/toc.html",
-          "hash": "fw4MCJp7XhRvFTWJKckyjLsqRx28dGZ/6hd/0vwPgQM="
+          "relative_path": "examples/toc.html"
         }
       },
       "version": ""
@@ -225,8 +216,7 @@
       "source_relative_path": "index.md",
       "output": {
         ".html": {
-          "relative_path": "index.html",
-          "hash": "gt4kPZcfnnUL6N5NBI4V5PfWxm3yy0D5eHb+pqONHOM="
+          "relative_path": "index.html"
         }
       },
       "version": ""
@@ -236,8 +226,7 @@
       "source_relative_path": "toc.yml",
       "output": {
         ".html": {
-          "relative_path": "toc.html",
-          "hash": "mByccq8seB3uIRrWh9wGn/DZ7FxCw+HlCvfwtQ41JdY="
+          "relative_path": "toc.html"
         }
       },
       "version": ""

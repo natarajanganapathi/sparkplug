@@ -17,7 +17,7 @@
   "articles/Todo.html": {
     "href": "articles/Todo.html",
     "title": "ToDo List",
-    "keywords": "ToDo List SparkPlug.Api Load SparkPlug dependency module dynamically Composite Api Controller Template development for Composite Key tables Data Cache implementation CompositeRequest handling api development SparkPlug.Persistance SparkPlug.Persistance.EntityFramework Repository should support Composite Key tables In QueryRequeset, add Exclude[] property to exclude properties in response. If we provide Exclude[] without select, It returns all the columns except Exclude properties. Filter criteria need to add in all the QueryRequest for each entity. Filter criteria for included entity add in QueryRequest. Support Not operator for all cobinations of Filter. Like NotIn, NotEq, NotNull, etc. DB Migrations using ef migrate command. Composite Request handling Sample Projects Azure Authentication integration Azure Application Insights integration Common Common string extenstion for string Case chagse. ex. camelCase, Snake_Case, PascalCase, etc. Github Actions for CICD"
+    "keywords": "ToDo List SparkPlug.Api Load SparkPlug dependency module dynamically Composite Api Controller Template development for Composite Key tables - Workaround is sarogate Id for Composite Key tables. Data Cache implementation - Done CompositeRequest handling api development - InProgress Enable Http 2.0 in WebApi Database.EnsureCreated() move to Create Tenant api - When onboard new tenant, this will create the db schema. Database.Migrate() should be called in application Startup. SparkPlug.Persistance SparkPlug.Persistance.EntityFramework Repository should support Composite Key tables In QueryRequeset, add Exclude[] property to exclude properties in response. If we provide Exclude[] without select, It returns all the columns except Exclude properties. Filter criteria need to add in all the QueryRequest for each entity to get only live data. Filter criteria for included entity add in QueryRequest. - Done for where condition. Support Not operator for all cobinations of Filter. Like NotIn, NotEq, NotNull, etc. DB Migrations using ef migrate command. Sample Projects Azure Authentication integration Azure Application Insights integration Common Common string extenstion for string Case chagse. ex. camelCase, Snake_Case, PascalCase, etc. Github Actions for CICD - In Progress"
   },
   "examples/ef-entity-relationship.html": {
     "href": "examples/ef-entity-relationship.html",
@@ -38,6 +38,11 @@
     "href": "examples/kestral.html",
     "title": "",
     "keywords": "Set Maximum qeury string length in Kestral server { \"Kestrel\": { \"Limits\": { \"MaxQueryStringLength\": 4096 } } }"
+  },
+  "examples/migration.html": {
+    "href": "examples/migration.html",
+    "title": "Database Migration",
+    "keywords": "Database Migration dotnet ef migrations --list"
   },
   "examples/NugetPublish.html": {
     "href": "examples/NugetPublish.html",
