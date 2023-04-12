@@ -18,7 +18,7 @@ public class CompositeController : ControllerBase
         {
             foreach (var kv in request.Requests)
             {
-                var payload = JsonConvert.SerializeObject(kv.Value);
+                var payload = JsonConvert.SerializeObject(new object()); // kv.Value
                 var httpClient = _httpClientFactory.CreateClient();
                 var requestContent = new StringContent(payload, Encoding.UTF8, "application/json");
                 // If kv.Value is QueryRequest crate GetAsync and CommandRequest create PostAsync

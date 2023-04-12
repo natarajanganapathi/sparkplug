@@ -38,6 +38,9 @@ jobs:
     - name: Bump versions
       run: versionize --pre-release alpha --commit-suffix "[skip ci]" --aggregate-pre-releases
 
+    - name: Push to Github
+      run: git push --follow-tags origin main
+
     - name: Pack
       run: dotnet pack --no-build -c release ${{ env.PROJECT }} -o .
 

@@ -3,12 +3,11 @@ namespace SparkPlug.Persistence.EntityFramework;
 public static class QueryExtentions
 {
     // TODO: Optimization required
-    private static readonly MethodInfo? _selectMethodInfo = typeof(Enumerable)
-                .GetMethods(BindingFlags.Public | BindingFlags.Static)
-                .FirstOrDefault(m => m.Name == nameof(Enumerable.Select) &&
-                    m.GetParameters().Length == 2 &&
-                    m.GetParameters()[1].ParameterType.GetGenericArguments()[1] == m.ReturnType.GetGenericArguments()[0]
-                );
+    private static readonly MethodInfo? _selectMethodInfo = Array.Find(typeof(Enumerable)
+                .GetMethods(BindingFlags.Public | BindingFlags.Static),
+                m => m.Name == nameof(Enumerable.Select) && m.GetParameters().Length == 2 &&
+                m.GetParameters()[1].ParameterType.GetGenericArguments()[1] == m.ReturnType.GetGenericArguments()[0]
+    );
 
     #region Includes
     public static IQueryable<TEntity> ApplyIncludes<TEntity>(this IQueryable<TEntity> query, Include[]? includes, string? parent = default) where TEntity : class
@@ -184,8 +183,9 @@ public static class QueryExtentions
             if (propertyInfo.PropertyType.IsClass && includes?.Any(i => i.Name == propertyInfo.Name) == true)
             {
                 var include = includes.First(i => i.Name == propertyInfo.Name);
+                var selects = include.Select?.Length > 0 ? include.Select : GetProperties(propertyInfo.PropertyType).ToArray();
                 MemberExpression inProperty = Expression.Property(parameter, propertyInfo.Name);
-                var inExpression = GetMemberInitExpression(propertyInfo.PropertyType, inProperty, include.Select, include.Includes);
+                var inExpression = GetMemberInitExpression(propertyInfo.PropertyType, inProperty, selects, include.Includes);
                 yield return GetMemberBinding(propertyInfo, inExpression);
             }
             else
