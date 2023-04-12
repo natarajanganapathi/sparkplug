@@ -48,6 +48,22 @@ public static class IQueryRequestExtensions
         return request;
     }
     #endregion
+    #region Includes
+    public static IQueryRequest Include(this IQueryRequest request, string name)
+    {
+        return request.Include(new Include(name));
+    }
+    public static IQueryRequest Include(this IQueryRequest request, Include include)
+    {
+        request.Includes = request.Includes?.Append(include).ToArray() ?? new Include[] { include };
+        return request;
+    }
+    public static IQueryRequest Includes(this IQueryRequest request, params Include[] includes)
+    {
+        request.Includes = request.Includes?.Concat(includes).ToArray() ?? includes;
+        return request;
+    }
+    #endregion
     #region Sort
     public static IQueryRequest Sort(this IQueryRequest request, string field, Direction direction)
     {

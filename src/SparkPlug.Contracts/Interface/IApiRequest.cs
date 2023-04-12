@@ -8,8 +8,8 @@ public interface IApiRequest
 public interface IInclude
 {
     public string Name { get; set; }
-    public string[] Select { get; set; }
-    public Include[] Includes { get; set; }
+    public string[]? Select { get; set; }
+    public Include[]? Includes { get; set; }
 }
 
 public interface IQueryRequest : IApiRequest

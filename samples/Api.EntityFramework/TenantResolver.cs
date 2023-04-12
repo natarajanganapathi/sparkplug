@@ -25,8 +25,10 @@ public class TenantResolver : ITenantResolver
     {
         if (!Guid.TryParse(id, out Guid guid)) { throw new ArgumentException(new StringBuilder().Append(id).Append(" is not valid tenant id").ToString()); }
         var repo = _serviceProvider.GetRequiredService<HomeRepository<long, TenantDetails>>();
-        // var tenantDetails = await repo.FindAsync(new QueryRequest().Where(nameof(TenantDetails.TenantId), FieldOperator.Equal, guid), CancellationToken.None);
-        var tenantDetails = await repo.DbSet.Where(x=>x.TenantId == guid).Include("Options").ToListAsync();
+        var tenantDetails = await repo.FindAsync(new QueryRequest()
+                .Include(nameof(WebApi.Models.Options))
+                .Where(nameof(TenantDetails.TenantId), FieldOperator.Equal, guid), CancellationToken.None);
+        // var tenantDetails = await repo.DbSet.Where(x=>x.TenantId == guid).Include(nameof(WebApi.Models.Options)).ToListAsync();
         var tenant = tenantDetails?.FirstOrDefault();
         if (tenant == null)
         {
