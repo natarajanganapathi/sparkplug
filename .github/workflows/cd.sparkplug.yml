@@ -38,7 +38,7 @@ jobs:
       run: dotnet build -c release ${{ env.PROJECT }} --no-restore
 
     - name: Bump versions
-      run: versionize --pre-release alpha --commit-suffix "[skip ci]" --aggregate-pre-releases
+      run: versionize --pre-release alpha --commit-suffix "[skip ci]"
 
     - name: Push to Github
       run: git push --follow-tags origin main
