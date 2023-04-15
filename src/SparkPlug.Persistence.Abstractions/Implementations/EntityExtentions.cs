@@ -1,6 +1,6 @@
 namespace SparkPlug.Persistence.Abstractions;
 
-public static class RepositoryExtentions
+public static class EntityExtentions
 {
     public static TEntity Auditable<TId, TEntity>(this TEntity entity, TId userId, DateTime currentTime, bool isCreate = false) where TEntity : class, IBaseEntity<TId>
     {

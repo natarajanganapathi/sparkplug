@@ -44,7 +44,7 @@ public class TenantResolver : ITenantResolver
     }
     public async Task<IEnumerable<ITenant>> GetAllTenantsAsync()
     {
-        var repo = _serviceProvider.GetRequiredService<Repository<long, TenantDetails>>();
+        var repo = _serviceProvider.GetRequiredService<BaseService<long, TenantDetails>>();
         var result = await repo.FindAsync(new QueryRequest(), CancellationToken.None);
         return result.Select(ToTenant);
     }

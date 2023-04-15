@@ -9,8 +9,7 @@ public static class ApiServiceCollectionExtenstions
         services.Configure<WebApiOptions>(configuration.GetSection(WebApiOptions.ConfigPath));
         services.AddSingleton<ISerializer, NewtonsoftSerializer>();
         services.AddScoped(typeof(IRequestContext<>), typeof(RequestContext<>));
-        services.AddScoped(typeof(Repository<,>));
-        services.AddScoped(typeof(IRepository<,>), typeof(Repository<,>));
+        services.AddScoped(typeof(BaseService<,>));
         services.AddScoped(sp => sp.GetRequiredService<IHttpContextAccessor>().HttpContext?.Items["Tenant"] as ITenant ?? Tenant.Default);
         services.AddMvc(MvcOptions =>
         {

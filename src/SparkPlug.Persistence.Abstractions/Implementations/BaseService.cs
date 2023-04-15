@@ -1,11 +1,11 @@
 namespace SparkPlug.Persistence.Abstractions;
 
-public class Repository<TId, TEntity> : IRepository<TId, TEntity> where TEntity : class, IBaseEntity<TId>, new()
+public class BaseService<TId, TEntity> where TEntity : class, IBaseEntity<TId>, new()
 {
     private readonly IRepository<TId, TEntity> _repository;
     private readonly IServiceProvider _serviceProvider;
 
-    public Repository(IServiceProvider serviceProvider)
+    public BaseService(IServiceProvider serviceProvider)
     {
         _serviceProvider = serviceProvider;
         var repositoryProvider = _serviceProvider.GetRequiredService<IRepositoryProvider>();

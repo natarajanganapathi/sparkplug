@@ -19,3 +19,37 @@ dotnet-sonarscanner      5.11.0          dotnet-sonarscanner
 dotnet-version-cli       2.3.1           dotnet-version
 versionize               1.18.0          versionize
 ```
+
+
+Module Dependency
+=============================================
+SparkPlug.<Module>.Domain
+    SparkPlug.Persistence.Abstractions
+
+
+SparkPlug.<Module>.Repository.Sql
+    SparkPlug.Persistence.EntityFramework
+    SparkPlug.<Module>.Domain
+
+
+SparkPlug.<Module>.Repository.Mongo
+    SparkPlug.Persistence.Mongo
+    SparkPlug.<Module>.Domain
+
+
+SparkPlug.<Module>.Service
+    SparkPlug.Contracts
+    SparkPlug.Persistence.Abstractions
+    SparkPlug.<Module>.Domain
+
+
+SparkPlug.<Module>.Api
+    SparkPlug.Contracts
+    SparkPlug.Api
+
+Application
+===============================================
+SparkPlug.<ApplicationName>.Host
+    SparkPlug.<Module-1>.Api
+    SparkPlug.<Module-2>.Api
+    SparkPlug.<Module-2>.Api

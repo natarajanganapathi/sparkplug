@@ -16,7 +16,7 @@ public class TenantResolver : ITenantResolver
     public async Task<Tenant> GetTenant(string id)
     {
         var dict = new Dictionary<string, string?>();
-        var repo = _serviceProvider.GetRequiredService<Repository<string, TenantDetails>>();
+        var repo = _serviceProvider.GetRequiredService<BaseService<string, TenantDetails>>();
         var tenantDetails = await repo.GetAsync(id, CancellationToken.None);
         tenantDetails.Options.ForEach(x => dict[x.Key] = x.Value);
         return new Tenant() { Id = tenantDetails.Id, Name = tenantDetails.Name, Options = dict };
