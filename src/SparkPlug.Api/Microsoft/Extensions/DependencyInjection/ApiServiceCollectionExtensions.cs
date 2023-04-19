@@ -10,15 +10,9 @@ public static class ApiServiceCollectionExtenstions
         services.AddSingleton<ISerializer, NewtonsoftSerializer>();
         services.AddScoped(typeof(IRequestContext<>), typeof(RequestContext<>));
         services.AddScoped(typeof(BaseService<,>));
-        services.AddScoped(sp => sp.GetRequiredService<IHttpContextAccessor>().HttpContext?.Items["Tenant"] as ITenant ?? Tenant.Default);
-        services.AddMvc(MvcOptions =>
-        {
-            IRouteTemplateProvider routeAttribute = new RouteAttribute("{tenant}");
-            var isMultiTenant = configuration.GetValue<bool>($"{WebApiOptions.ConfigPath}:{nameof(WebApiOptions.IsMultiTenant)}");
-            MvcOptions.Conventions.Add(new GenericControllerRouteConvention(routeAttribute, isMultiTenant));
-            if (isMultiTenant) { MvcOptions.UseCentralRoutePrefix(routeAttribute); }
-        })
-        .ConfigureApplicationPartManager(m => m.FeatureProviders.Add(new GenericTypeControllerFeatureProvider(typeof(ApiController<,>))))
+        services.AddCustomModules();
+        services.AddMvc()
+        // .ConfigureApplicationPartManager(m => m.FeatureProviders.Add(new GenericTypeControllerFeatureProvider(typeof(ApiController<,>))))
         .AddJsonOptions(options =>
         {
             options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles;
@@ -48,7 +42,11 @@ public static class ApiServiceCollectionExtenstions
         app.UseHealthChecks();
         app.UseRouting();
         app.UseTransactionMiddleware();
-        app.UseTenantResolverMiddleware();
+
+        // Custom Moudeles
+        app.UseCustomModules(serviceProvider);
+        app.UseCustomModulesMiddelware();
+
         app.UseEndpoints(endpoints => endpoints.MapGet("/", async context => await context.Response.WriteAsync("Running!...")));
         app.UseAuthentication();
         app.UseAuthorization();

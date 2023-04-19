@@ -1,6 +1,6 @@
 namespace SparkPlug.Sample.WebApi.Models;
 
-[Api("department"), TenantDbEntity]
+[Api("department"), TenantDb]
 public class Department : BaseEntity<long>, IConcurrencyEntity, IAuditableEntity<long>, IDeletableEntity
 {
     public string? DepartmnetName { get; set; }

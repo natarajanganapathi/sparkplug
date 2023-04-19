@@ -14,13 +14,12 @@ public static class SqlDbServiceCollectionExtenstions
         services.AddScoped<TenantDbContextOptions>();
         services.AddDbContext<TenantDbContext>(ServiceLifetime.Scoped);
         services.AddScoped(typeof(TenantRepository<,>));
-        services.AddScoped(typeof(ITenantOptions<>), typeof(TenantOptions<>));
 
         services.AddScoped<IRepositoryProvider, SqlRepositoryProvider>();
         services.AddSingleton<ITenantDbModelConfiguration, TenantModelConfigurations>();
         services.AddSingleton<IHomeDbModelConfiguration, HomeModelConfigurations>();
 
         services.AddHealthChecks().AddCheck<SqlDbHealthCheck>("SqlDb", tags: new[] { "sqldb", "all" });
-        services.AddHealthChecks().AddCheck<MultiTenantHealthCheck>("MultiTenant", tags: new[] { "multitenant"});
+        // services.AddHealthChecks().AddCheck<MultiTenantHealthCheck>("MultiTenant", tags: new[] { "multitenant"});
     }
 }

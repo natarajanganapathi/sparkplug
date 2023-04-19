@@ -16,7 +16,7 @@ public class Startup
         services.AddSqlDb(Configuration);
         services.AddOptions<SqlDbOptions>().Configure((options) => options.GetConnection = (connectionString) => new NpgsqlConnection(connectionString));
         services.AddScoped<IDbContextOptionsProvider, DbContextOptionsProvider>();
-        services.AddScoped<ITenantResolver, TenantResolver>();
+        // services.AddScoped<ITenantResolver, TenantResolver>();
 
         // services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
         //         .AddMicrosoftIdentityWebApi(

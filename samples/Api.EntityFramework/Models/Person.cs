@@ -1,6 +1,6 @@
 namespace SparkPlug.Sample.WebApi.Models;
 
-[Api("person", typeof(ApiController<,>)), TenantDbEntity]
+[Api("person", typeof(ApiController<,>)), TenantDb]
 public class Person : BaseEntity<long>, IConcurrencyEntity, IAuditableEntity<long>, IDeletableEntity
 {
     public string? PersonName { get; set; }

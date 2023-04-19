@@ -3,12 +3,10 @@ namespace SparkPlug.Api.Controllers;
 public class GenericControllerRouteConvention : IControllerModelConvention
 {
     private static readonly Type apiAttributeType = typeof(ApiAttribute);
-    private readonly AttributeRouteModel _tenantPrefix;
-    private readonly bool _isMultiTenant;
-    public GenericControllerRouteConvention(IRouteTemplateProvider routeTemplateProvider, bool isMultiTenant)
+    private readonly AttributeRouteModel? _tenantPrefix;
+    public GenericControllerRouteConvention(IRouteTemplateProvider? routeTemplateProvider)
     {
-        _tenantPrefix = new AttributeRouteModel(routeTemplateProvider);
-        _isMultiTenant = isMultiTenant;
+        _tenantPrefix = routeTemplateProvider == null ? null : new AttributeRouteModel(routeTemplateProvider);
     }
     public void Apply(ControllerModel controller)
     {
@@ -20,7 +18,7 @@ public class GenericControllerRouteConvention : IControllerModelConvention
             if (apiAttribute != null)
             {
                 var route = new AttributeRouteModel(new RouteAttribute(apiAttribute.Route));
-                if (type?.GetCustomAttribute<TenantDbEntityAttribute>() != null && _isMultiTenant)
+                if (type?.GetCustomAttribute<TenantDbAttribute>() != null)
                 {
                     route = AttributeRouteModel.CombineAttributeRouteModel(_tenantPrefix, route);
                 }

@@ -9,7 +9,7 @@ public class PersonController : BaseController<long, Person>
     public async Task<IActionResult> GetByName(string name, CancellationToken cancellationToken)
     {
         var req = new QueryRequest().Where("PersonName", FieldOperator.Equal, name);
-        var entities = await _repository.FindAsync(req, cancellationToken);
+        var entities = await _service.FindAsync(req, cancellationToken);
         return Ok(entities);
     }
 

@@ -6,7 +6,7 @@ public class GenericControllerRouteConventionTests
     public void Apply_AddsSelectorModel_WhenControllerTypeIsGenericType()
     {
         // Arrange
-        var convention = new GenericControllerRouteConvention(new RouteAttribute("{tenant}"), false);
+        var convention = new GenericControllerRouteConvention(new RouteAttribute("{tenant}"));
         var controllerModel = new ControllerModel(typeof(ApiController<long, User>).GetTypeInfo(), Array.Empty<object>());
 
         // Act
@@ -18,6 +18,6 @@ public class GenericControllerRouteConventionTests
         Assert.Equal("user", controllerModel.Selectors[0].AttributeRouteModel?.Template);
     }
 
-    [Api("user"), TenantDbEntity]
+    [Api("user"), TenantDb]
     public class User : BaseEntity<long> { }
 }

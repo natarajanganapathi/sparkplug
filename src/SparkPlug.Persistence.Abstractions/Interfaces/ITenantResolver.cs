@@ -1,7 +1,7 @@
-namespace SparkPlug.Persistence.Abstractions;
+// namespace SparkPlug.Persistence.Abstractions;
 
-public interface ITenantResolver
-{
-    Task<ITenant> ResolveAsync(string? id);
-    Task<IEnumerable<ITenant>> GetAllTenantsAsync();
-}
+// public interface ITenantResolver
+// {
+//     Task<ITenant> ResolveAsync(string? id);
+//     Task<IEnumerable<ITenant>> GetAllTenantsAsync();
+// }

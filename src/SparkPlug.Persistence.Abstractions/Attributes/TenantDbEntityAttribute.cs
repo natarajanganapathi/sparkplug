@@ -1,4 +1,4 @@
 namespace SparkPlug.Persistence.Abstractions;
 
 [AttributeUsage(AttributeTargets.Class, AllowMultiple = false)]
-public class TenantDbEntityAttribute : Attribute { }
+public class TenantDbAttribute : Attribute { }

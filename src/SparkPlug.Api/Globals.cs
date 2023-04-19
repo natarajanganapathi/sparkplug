@@ -32,6 +32,7 @@ global using Newtonsoft.Json;
 global using Newtonsoft.Json.Linq;
 
 global using SparkPlug;
+global using SparkPlug.Api;
 global using SparkPlug.Api.Configuration;
 global using SparkPlug.Api.Controllers;
 global using SparkPlug.Api.Filters;

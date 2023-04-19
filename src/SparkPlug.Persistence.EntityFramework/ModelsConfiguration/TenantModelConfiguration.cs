@@ -5,7 +5,7 @@ public class TenantModelConfigurations : ITenantDbModelConfiguration
     public void Configure(ModelBuilder modelBuilder)
     {
         var tenantModelsType = AssemblyCache.Assemblies.SelectMany(x => x.GetTypes())
-             .Where(t => !string.IsNullOrEmpty(t.Namespace) && t.GetCustomAttributes<TenantDbEntityAttribute>().Any());
+             .Where(t => !string.IsNullOrEmpty(t.Namespace) && t.GetCustomAttributes<TenantDbAttribute>().Any());
         foreach (var tmType in tenantModelsType)
         {
             Type? configType = Array.Find(AssemblyCache.EntityTypeConfiguration, type =>

@@ -12,7 +12,7 @@ public class Startup
     {
         services.AddWebApi(Configuration);
         services.AddMongoDb(Configuration);
-        services.AddScoped<ITenantResolver, TenantResolver>();
+        // services.AddScoped<ITenantResolver, TenantResolver>();
         services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
                 .AddMicrosoftIdentityWebApi(
                     (bearerOptions) => Configuration.Bind("SparkPlug:Api:AzureAd", bearerOptions),

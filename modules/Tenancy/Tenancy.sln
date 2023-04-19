@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SparkPlug.Tenancy.Domain", "SparkPlug.Tenancy.Domain\SparkPlug.Tenancy.Domain.csproj", "{98BD1B71-EB63-49A8-921A-3A6C204DFCD3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SparkPlug.Tenancy.Repository.Mongo", "SparkPlug.Tenancy.Repository.Mongo\SparkPlug.Tenancy.Repository.Mongo.csproj", "{390A879D-DA6D-4C93-8828-856A91199E1B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SparkPlug.Tenancy.Repository.Sql", "SparkPlug.Tenancy.Repository.Sql\SparkPlug.Tenancy.Repository.Sql.csproj", "{13E6A0FB-62DF-42E1-B8E4-492EE81578A4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SparkPlug.Tenancy.Service", "SparkPlug.Tenancy.Service\SparkPlug.Tenancy.Service.csproj", "{6DB322D9-2F77-456C-9673-B07545707770}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SparkPlug.Tenancy.Api", "SparkPlug.Tenancy.Api\SparkPlug.Tenancy.Api.csproj", "{1F6D47E3-23C7-46D8-A87B-80682E7A027E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{98BD1B71-EB63-49A8-921A-3A6C204DFCD3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{98BD1B71-EB63-49A8-921A-3A6C204DFCD3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{98BD1B71-EB63-49A8-921A-3A6C204DFCD3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{98BD1B71-EB63-49A8-921A-3A6C204DFCD3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{390A879D-DA6D-4C93-8828-856A91199E1B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{390A879D-DA6D-4C93-8828-856A91199E1B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{390A879D-DA6D-4C93-8828-856A91199E1B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{390A879D-DA6D-4C93-8828-856A91199E1B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{13E6A0FB-62DF-42E1-B8E4-492EE81578A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13E6A0FB-62DF-42E1-B8E4-492EE81578A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{13E6A0FB-62DF-42E1-B8E4-492EE81578A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{13E6A0FB-62DF-42E1-B8E4-492EE81578A4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6DB322D9-2F77-456C-9673-B07545707770}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6DB322D9-2F77-456C-9673-B07545707770}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6DB322D9-2F77-456C-9673-B07545707770}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6DB322D9-2F77-456C-9673-B07545707770}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1F6D47E3-23C7-46D8-A87B-80682E7A027E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F6D47E3-23C7-46D8-A87B-80682E7A027E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F6D47E3-23C7-46D8-A87B-80682E7A027E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F6D47E3-23C7-46D8-A87B-80682E7A027E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
