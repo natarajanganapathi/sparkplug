@@ -20,4 +20,9 @@
 
     <ProjectReference Include="..\..\modules\Tenancy\SparkPlug.Tenancy.Api\SparkPlug.Tenancy.Api.csproj" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="appsettings.json" Condition="Exists('appsettings.json')">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
 </Project>

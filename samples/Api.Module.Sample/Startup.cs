@@ -10,7 +10,6 @@ public class Startup
 
     public void ConfigureServices(IServiceCollection services)
     {
-        var module = new TenancyModule();
         services.AddMemoryCache();
         services.AddDistributedMemoryCache();
         services.AddWebApi(Configuration);
