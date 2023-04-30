@@ -25,7 +25,7 @@ public class CompositeController : ControllerBase
                 var response = await httpClient.PostAsync(kv.Key, requestContent, cancellationToken);
                 if (!response.IsSuccessStatusCode)
                 {
-                    res.Add(kv.Key, new ErrorResponse(message: $"API call failed with status code {response.StatusCode}"));
+                    res.Add(kv.Key, new ErrorResponse().SetMessage($"API call failed with status code {response.StatusCode}"));
                 }
                 _ = await response.Content.ReadAsStringAsync(cancellationToken);
             }

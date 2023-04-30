@@ -2,26 +2,45 @@ namespace SparkPlug.Contracts;
 
 public class ErrorResponse : ApiResponse, IErrorResponse
 {
-    public ErrorResponse(string? code = null, string? message = null, string? stackTrace = null) : base(code, message)
-    {
-        StackTrace = stackTrace;
-    }
-    public ErrorResponse(string? code, Exception? exception = null) : base(code, exception?.Message)
-    {
-#if DEBUG
-        StackTrace = exception?.StackTrace;
-#endif
-    }
+    public string TraceIdentifier { get; set; } = string.Empty;
     public string? StackTrace { get; set; }
 }
 
 public static class ExceptionExtension
 {
+    public static ErrorResponse SetMessage(this ErrorResponse error, string message)
+    {
+        error.Message = message;
+        return error;
+    }
+    public static ErrorResponse SetCode(this ErrorResponse error, string code)
+    {
+        error.Code = code;
+        return error;
+    }
+    public static ErrorResponse SetStackTrace(this ErrorResponse error, string stackTrace)
+    {
+#if DEBUG
+        error.StackTrace = stackTrace;
+#endif
+        return error;
+    }
+    public static ErrorResponse SetTraceIdentifier(this ErrorResponse error, string traceIdentifier)
+    {
+        error.TraceIdentifier = traceIdentifier;
+        return error;
+    }
+    public static ErrorResponse SetFromException(this ErrorResponse error, Exception ex)
+    {
+        error.SetMessage(ex.Message);
+        error.SetStackTrace(ex.GetInnerStackTrace());
+        return error;
+    }
     public static string GetInnerStackTrace(this Exception? exception)
     {
         var sb = new StringBuilder();
         int level = 0;
-        while (exception?.StackTrace != null)
+        while (exception != null)
         {
             sb = sb.Append("Level: ").Append(level++)
                 .Append(", Exception: ")

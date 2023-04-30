@@ -9,6 +9,7 @@ public interface IApiResponse
 public interface IErrorResponse : IApiResponse
 {
     string? StackTrace { get; set; }
+    string TraceIdentifier { get; set; }
 }
 
 public interface IQueryResponse : IApiResponse

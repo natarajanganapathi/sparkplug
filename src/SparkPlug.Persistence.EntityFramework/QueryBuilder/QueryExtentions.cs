@@ -127,6 +127,10 @@ public static class QueryExtentions
         {
             return GetEnumValueExpression(propAccessExpression);
         }
+        else if(type == typeof(string))
+        {
+            return GetValueExpression(propAccessExpression);
+        }
         else if (type.IsArray || (type.IsGenericType && type.GetGenericTypeDefinition() == typeof(List<>)))
         {
             return GetCollectionValueExpression(type.GenericTypeArguments[0], propAccessExpression, include?.Select, include?.Includes);

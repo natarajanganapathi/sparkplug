@@ -29,6 +29,6 @@ public class GlobalExceptionHandlingMiddleware
         var response = context.Response;
         response.StatusCode = StatusCodes.Status500InternalServerError;
         response.ContentType = WebApiConstants.ContentType;
-        await context.Response.WriteAsJsonAsync(new JsonResult(new ErrorResponse("Internal Server Error", exception)));
+        await context.Response.WriteAsJsonAsync(new JsonResult(new ErrorResponse().SetFromException(exception).SetTraceIdentifier(context.TraceIdentifier)));
     }
 }

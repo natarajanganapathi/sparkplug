@@ -3,17 +3,19 @@ namespace SparkPlug.Api.Filters;
 public class ApiExceptionFilterAttribute : ExceptionFilterAttribute
 {
     private readonly ILogger<ApiExceptionFilterAttribute> _logger;
-    public ApiExceptionFilterAttribute(ILogger<ApiExceptionFilterAttribute> logger)
+    private readonly HttpContext _context;
+    public ApiExceptionFilterAttribute(ILogger<ApiExceptionFilterAttribute> logger, HttpContext context)
     {
         _logger = logger;
+        _context = context;
     }
-    public override void OnException(ExceptionContext context)
+    public override void OnException(ExceptionContext exceptionContext)
     {
-        _logger.LogError(WebApiConstants.LogErrorMessageTemplate, context.Exception.Message, context.Exception);
-        var response = context.HttpContext.Response;
+        _logger.LogError(WebApiConstants.LogErrorMessageTemplate, exceptionContext.Exception.Message, exceptionContext.Exception);
+        var response = exceptionContext.HttpContext.Response;
         response.StatusCode = StatusCodes.Status500InternalServerError;
         response.ContentType = WebApiConstants.ContentType;
-        context.Result = new JsonResult(new ErrorResponse("Internal Server Error", context.Exception));
-        context.ExceptionHandled = true;
+        exceptionContext.Result = new JsonResult(new ErrorResponse().SetFromException(exceptionContext.Exception).SetTraceIdentifier(_context.TraceIdentifier));
+        exceptionContext.ExceptionHandled = true;
     }
 }
