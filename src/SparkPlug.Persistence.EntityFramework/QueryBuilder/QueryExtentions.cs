@@ -105,18 +105,40 @@ public static class QueryExtentions
             var propAccessExpression = Expression.Property(sourceParameter, propInfo);
             var type = propInfo.PropertyType;
             var include = includes?.FirstOrDefault(i => i.Name.Equals(source, StringComparison.CurrentCultureIgnoreCase));
-            Expression? value = type switch
-            {
-                { IsEnum: true } => GetEnumValueExpression(propAccessExpression),
-                { FullName: "System.String" } => GetValueExpression(propAccessExpression),
-                { IsArray: true } or { IsGenericType: true } => GetCollectionValueExpression(type.GenericTypeArguments[0], propAccessExpression, include?.Select, include?.Includes),
-                { IsClass: true } => GetJObjectValueExpression(type, propAccessExpression, include?.Select, include?.Includes),
-                _ => GetValueExpression(propAccessExpression)
-            };
+            // Expression? value = type switch
+            // {
+            //     { IsEnum: true } => GetEnumValueExpression(propAccessExpression),
+            //     { FullName: "System.String" } => GetValueExpression(propAccessExpression),
+            //     { IsArray: true } or { IsGenericType: true } => GetCollectionValueExpression(type.GenericTypeArguments[0], propAccessExpression, include?.Select, include?.Includes),
+            //     { IsClass: true } => GetJObjectValueExpression(type, propAccessExpression, include?.Select, include?.Includes),
+            //     _ => GetValueExpression(propAccessExpression)
+            // };
+            Expression? value = GetExpression(propAccessExpression, type, include);
+
             var target = properties.Length == 2 ? properties[1] : propInfo.Name;
             return Expression.ElementInit(addMethodInfo!, Expression.Constant(target.ToCamelCase()), value!);
         });
         return Expression.ListInit(jObjectExpression, jPropertiesExpressions);
+    }
+
+    private static Expression? GetExpression(MemberExpression propAccessExpression, Type type, Include? include)
+    {
+        if (type.IsEnum)
+        {
+            return GetEnumValueExpression(propAccessExpression);
+        }
+        else if (type.IsArray || (type.IsGenericType && type.GetGenericTypeDefinition() == typeof(List<>)))
+        {
+            return GetCollectionValueExpression(type.GenericTypeArguments[0], propAccessExpression, include?.Select, include?.Includes);
+        }
+        else if (type.IsClass)
+        {
+            return GetJObjectValueExpression(type, propAccessExpression, include?.Select, include?.Includes);
+        }
+        else
+        {
+            return GetValueExpression(propAccessExpression);
+        }
     }
 
     public static Expression GetCollectionValueExpression(Type elementType, MemberExpression propAccessExpression, string[]? select, Include[]? includes)

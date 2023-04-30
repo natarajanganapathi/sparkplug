@@ -7,9 +7,9 @@ public class QueryResponse : ApiResponse, IQueryResponse
         Data = data;
         Page = pc;
     }
-    public QueryResponse(object data, IPageContext? pc)
+    public QueryResponse(object? data, IPageContext? pc)
     {
-        Data = JArray.FromObject(data);
+        Data = data == null ? new JArray() : JArray.FromObject(data);
         Page = pc;
     }
     public IPageContext? Page { get; set; }

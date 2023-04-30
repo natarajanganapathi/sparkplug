@@ -19,6 +19,9 @@
     <ProjectReference Include="..\..\src\SparkPlug.Persistence.EntityFramework\SparkPlug.Persistence.EntityFramework.csproj" />
 
     <ProjectReference Include="..\..\modules\Tenancy\SparkPlug.Tenancy.Api\SparkPlug.Tenancy.Api.csproj" />
+    <ProjectReference Include="..\..\modules\Tenancy\SparkPlug.Tenancy.Repository.Sql\SparkPlug.Tenancy.Repository.Sql.csproj" />
+    <ProjectReference Include="..\..\modules\Menu\SparkPlug.Menu.Api\SparkPlug.Menu.Api.csproj" />
+    <ProjectReference Include="..\..\modules\Menu\SparkPlug.Menu.Repository.Sql\SparkPlug.Menu.Repository.Sql.csproj" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="appsettings.json" Condition="Exists('appsettings.json')">

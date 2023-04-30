@@ -10,7 +10,7 @@ public static class ApiServiceCollectionExtenstions
         services.AddSingleton<ISerializer, NewtonsoftSerializer>();
         services.AddScoped(typeof(IRequestContext<>), typeof(RequestContext<>));
         services.AddScoped(typeof(BaseService<,>));
-        services.AddCustomModules(configuration.GetSection(WebApiOptions.ConfigPath));
+        services.AddCustomModules();
         services.AddMvc()
         // .ConfigureApplicationPartManager(m => m.FeatureProviders.Add(new GenericTypeControllerFeatureProvider(typeof(ApiController<,>))))
         .AddJsonOptions(options =>

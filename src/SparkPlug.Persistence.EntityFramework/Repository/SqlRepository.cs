@@ -27,23 +27,26 @@ public abstract class SqlRepository<TId, TEntity> : IRepository<TId, TEntity> wh
         logger = serviceProvider.GetRequiredService<ILogger<SqlRepository<TId, TEntity>>>();
         requestContext = serviceProvider.GetRequiredService<IRequestContext<TId>>();
     }
-    public async Task<ListResult<JObject>> QueryAsync(IQueryRequest? request, CancellationToken cancellationToken)
+    public async Task<IList<JObject>> QueryAsync(IQueryRequest request, CancellationToken cancellationToken)
     {
         var query = new QueryBuilder<TEntity>(DbSet, request).Project();
 #if DEBUG
-        logger.LogInformation("Search Query: {query}", query.ToQueryString());
+        logger.LogInformation("Sql Query: {query}", query.ToQueryString());
 #endif
-        return new ListResult<JObject>(await query.ToListAsync(cancellationToken), await query.LongCountAsync(cancellationToken));
+        // return new PagedResult<JObject>(await query.ToListAsync(cancellationToken), await query.LongCountAsync(cancellationToken));
+        return await query.ToListAsync(cancellationToken);
     }
-    public async Task<IEnumerable<TEntity>> FindAsync(IQueryRequest? request, CancellationToken cancellationToken)
+    public async Task<IList<TEntity>> FindAsync(IQueryRequest request, CancellationToken cancellationToken)
     {
-        return await new QueryBuilder<TEntity>(DbSet, request).Select().ToListAsync(cancellationToken);
+        var query = new QueryBuilder<TEntity>(DbSet, request).Select();
+        // return new PagedResult<TEntity>(await query.ToListAsync(cancellationToken), await query.LongCountAsync(cancellationToken));
+        return await query.ToListAsync(cancellationToken);
+    }
+    public async Task<long> CountAsync(IQueryRequest request, CancellationToken cancellationToken)
+    {
+        return await new QueryBuilder<TEntity>(DbSet, request).CountAsync(cancellationToken);
     }
 
-    public async Task<long> GetCountAsync(IQueryRequest? request, CancellationToken cancellationToken)
-    {
-        return await new QueryBuilder<TEntity>(DbSet, request).Count(cancellationToken);
-    }
     public async Task<TEntity> GetAsync(TId id, CancellationToken cancellationToken)
     {
         var tid = id ?? throw new QueryEntityException("Id is null");

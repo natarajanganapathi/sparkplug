@@ -17,7 +17,7 @@ public class TenantService : BaseService<long, TenantDetails>, ITenantResolver
     {
         if (!Guid.TryParse(id, out Guid guid)) { throw new ArgumentException(new StringBuilder().Append(id).Append(" is not valid tenant id").ToString()); }
         var tenantDetails = await FindAsync(new QueryRequest()
-                .Include(nameof(TenantOption))
+                .Include(nameof(TenantDetails.Options))
                 .Where(nameof(TenantDetails.TenantId), FieldOperator.Equal, guid), CancellationToken.None);
         var tenant = tenantDetails?.FirstOrDefault();
         if (tenant == null)

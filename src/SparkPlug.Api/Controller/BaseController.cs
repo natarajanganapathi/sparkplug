@@ -13,7 +13,7 @@ public abstract class BaseController<TId, TEntity> : ControllerBase where TEntit
         _logger = serviceProvider.GetRequiredService<ILogger<BaseController<TId, TEntity>>>();
     }
     [NonAction]
-    public OkObjectResult Ok([ActionResultObjectValue] IEnumerable<TEntity> data, [ActionResultObjectValue] IPageContext? pagecontext)
+    public OkObjectResult Ok([ActionResultObjectValue] IEnumerable<TEntity>? data, [ActionResultObjectValue] IPageContext? pagecontext)
     {
         return Ok(new QueryResponse(data, pagecontext));
     }

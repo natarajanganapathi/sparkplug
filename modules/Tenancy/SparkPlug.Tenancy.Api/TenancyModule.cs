@@ -6,7 +6,7 @@ public class TenancyModule : IModule
     {
         services.AddScoped<ITenantResolver, TenantService>();
         services.AddScoped(typeof(ITenantOptions<>), typeof(TenantOptions<>));
-        services.AddTenancy();
+        services.AddTenancyRouteAttribute();
     }
 
     public void UseModule(IApplicationBuilder app, IServiceProvider serviceProvider)

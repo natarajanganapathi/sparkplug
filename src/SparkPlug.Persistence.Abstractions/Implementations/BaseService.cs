@@ -35,9 +35,9 @@ public class BaseService<TId, TEntity> where TEntity : class, IBaseEntity<TId>, 
         return _repository.GetAsync(id, cancellationToken);
     }
 
-    public Task<long> GetCountAsync(IQueryRequest? request, CancellationToken cancellationToken)
+    public Task<long> CountAsync(IQueryRequest request, CancellationToken cancellationToken)
     {
-        return _repository.GetCountAsync(request, cancellationToken);
+        return _repository.CountAsync(request, cancellationToken);
     }
 
     public Task<IEnumerable<TEntity>> GetManyAsync(TId[] ids, CancellationToken cancellationToken)
@@ -45,11 +45,11 @@ public class BaseService<TId, TEntity> where TEntity : class, IBaseEntity<TId>, 
         return _repository.GetManyAsync(ids, cancellationToken);
     }
 
-    public async Task<IEnumerable<TEntity>> FindAsync(IQueryRequest? request, CancellationToken cancellationToken)
+    public async Task<IList<TEntity>> FindAsync(IQueryRequest request, CancellationToken cancellationToken)
     {
         return await _repository.FindAsync(request, cancellationToken);
     }
-    public async Task<ListResult<JObject>> QueryAsync(IQueryRequest? request, CancellationToken cancellationToken)
+    public async Task<IList<JObject>> QueryAsync(IQueryRequest request, CancellationToken cancellationToken)
     {
         return await _repository.QueryAsync(request, cancellationToken);
     }

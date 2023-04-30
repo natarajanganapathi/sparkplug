@@ -1,6 +1,6 @@
 namespace SparkPlug.Tenancy.Repository.Sql;
 
-public class TenantConfiguration : IEntityTypeConfiguration<TenantDetails>
+public class TenantDetailsConfiguration : IEntityTypeConfiguration<TenantDetails>
 {
     public void Configure(EntityTypeBuilder<TenantDetails> builder)
     {

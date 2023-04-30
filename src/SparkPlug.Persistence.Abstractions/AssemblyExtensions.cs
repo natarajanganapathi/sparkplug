@@ -1,4 +1,4 @@
-namespace SparkPlug;
+namespace SparkPlug.Persistence.Abstractions;
 
 public static class AssemblyCache
 {

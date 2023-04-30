@@ -20,6 +20,5 @@ public static class SqlDbServiceCollectionExtenstions
         services.AddSingleton<IHomeDbModelConfiguration, HomeModelConfigurations>();
 
         services.AddHealthChecks().AddCheck<SqlDbHealthCheck>("SqlDb", tags: new[] { "sqldb", "all" });
-        // services.AddHealthChecks().AddCheck<MultiTenantHealthCheck>("MultiTenant", tags: new[] { "multitenant"});
     }
 }

@@ -13,11 +13,6 @@ public interface ITenantResolver
     Task<IEnumerable<ITenant>> GetAllTenantsAsync();
 }
 
-// public interface ITenantOptions<out TOptions> where TOptions : new()
-// {
-//     public TOptions Value { get; }
-// }
-
 public class Tenant : ITenant
 {
     public static ITenant Default { get => new Tenant() { Id = string.Empty, Name = string.Empty }; }

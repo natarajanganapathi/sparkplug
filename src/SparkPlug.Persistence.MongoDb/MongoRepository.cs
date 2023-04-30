@@ -25,20 +25,45 @@ public class MongoRepository<TId, TEntity> : IRepository<TId, TEntity> where TEn
         _logger = serviceProvider.GetRequiredService<ILogger<MongoRepository<TId, TEntity>>>();
         _requestContext = serviceProvider.GetRequiredService<IRequestContext<TId>>();
     }
-    public async Task<IEnumerable<TEntity>> FindAsync(IQueryRequest? request, CancellationToken cancellationToken)
+    public async Task<IList<TEntity>> FindAsync(IQueryRequest request, CancellationToken cancellationToken)
     {
-        var projection = GetProjection(request?.Select);
-        var sort = GetSort(request?.Sort);
-        var pc = request?.Page ?? new PageContext(1, 100);
-        var filter = GetFilterDefinition(request?.Where);
-        return await GetAsync(projection, filter, sort, pc, cancellationToken).ConfigureAwait(false);
+        // var pc = new PageContext();
+        // var projection = GetProjection(request?.Select);
+        // var sort = GetSort(request?.Sort);
+        // var filter = GetFilterDefinition(request?.Where);
+        // return await GetAsync(projection, filter, sort, pc, cancellationToken).ConfigureAwait(false);
+        var pc = new PageContext(1, 100);
+        request.Page ??= pc;
+        var query = GetQuery(request);
+        return await query.ToListAsync(cancellationToken);
+        // return new PagedResult<TEntity>(data, await query.CountDocumentsAsync(cancellationToken));
     }
-    public async Task<ListResult<JObject>> QueryAsync(IQueryRequest? request, CancellationToken cancellationToken)
+    public async Task<IList<JObject>> QueryAsync(IQueryRequest request, CancellationToken cancellationToken)
     {
-        var entitiesTask = FindAsync(request, cancellationToken);
-        var countTask = GetCountAsync(request, cancellationToken);
-        await Task.WhenAll(entitiesTask, countTask).ConfigureAwait(false);
-        return new ListResult<JObject>(entitiesTask.Result.Select(JObject.FromObject), countTask.Result);
+        // var entitiesTask = GetData(request, cancellationToken);
+        // var countTask = GetCountAsync(request, cancellationToken);
+        // await Task.WhenAll(entitiesTask, countTask).ConfigureAwait(false);
+        // return new ListResult<JObject>(entitiesTask.Result.Select(JObject.FromObject), countTask.Result);
+        var pc = new PageContext(1, 100);
+        request.Page ??= pc;
+        var query = GetQuery(request);
+        var data = await query.ToListAsync(cancellationToken);
+        return data.ConvertAll(JObject.FromObject);
+        // return new PagedResult<JObject>(data.Select(JObject.FromObject), await query.CountDocumentsAsync(cancellationToken));
+    }
+
+    public IFindFluent<TEntity, TEntity> GetQuery(IQueryRequest request)
+    {
+        var projection = GetProjection(request.Select);
+        var filter = GetFilterDefinition(request.Where);
+        var sort = GetSort(request.Sort);
+        return GetFindFluent(projection, filter, sort, request.Page);
+    }
+    public async Task<long> CountAsync(IQueryRequest request, CancellationToken cancellationToken)
+    {
+        var filter = GetFilterDefinition(request.Where) ?? GetFilterBuilder().Empty;
+        var result = Collection.Find(filter);
+        return await result.CountDocumentsAsync(cancellationToken).ConfigureAwait(false);
     }
 
     public async Task<TEntity> GetAsync(TId id, CancellationToken cancellationToken)
@@ -46,9 +71,9 @@ public class MongoRepository<TId, TEntity> : IRepository<TId, TEntity> where TEn
         var filter = GetIdFilterDefinition(id);
         return await GetByFilter(filter).FirstOrDefaultAsync(cancellationToken);
     }
-    public async Task<IEnumerable<TEntity>> GetAsync(ProjectionDefinition<TEntity>? projection, FilterDefinition<TEntity>? filter = default, SortDefinition<TEntity>? sorts = default, IPageContext? pc = default, CancellationToken cancellationToken = default)
+    public IFindFluent<TEntity, TEntity> GetFindFluent(ProjectionDefinition<TEntity>? projection, FilterDefinition<TEntity>? filter = default, SortDefinition<TEntity>? sorts = default, IPageContext? pc = default)
     {
-        pc ??= new PageContext();
+        pc ??= new PageContext(1, 100);
         filter ??= GetFilterBuilder().Empty;
         var query = GetByFilter(filter);
         if (projection != default)
@@ -59,7 +84,7 @@ public class MongoRepository<TId, TEntity> : IRepository<TId, TEntity> where TEn
         {
             query.Sort(sorts);
         }
-        return await query.Skip(pc.Skip).Limit(pc.PageSize).ToListAsync(cancellationToken);
+        return query.Skip(pc.Skip).Limit(pc.PageSize);
     }
     public async Task<IEnumerable<TEntity>> GetManyAsync(TId[] ids, CancellationToken cancellationToken)
     {
@@ -116,12 +141,7 @@ public class MongoRepository<TId, TEntity> : IRepository<TId, TEntity> where TEn
         var result = await Collection.DeleteOneAsync(GetIdFilterDefinition(id), cancellationToken);
         return result.IsAcknowledged && result.DeletedCount > 0 ? new TEntity() : throw new DeleteEntityException($"Nothing is deleted. Id={id}");
     }
-    public async Task<long> GetCountAsync(IQueryRequest? request, CancellationToken cancellationToken)
-    {
-        var filter = GetFilterDefinition(request?.Where) ?? GetFilterBuilder().Empty;
-        var result = Collection.Find(filter);
-        return await result.CountDocumentsAsync(cancellationToken).ConfigureAwait(false);
-    }
+
     public UpdateDefinition<TEntity> GetUpdateDef(TEntity data, bool patch = false)
     {
         var properties = typeof(TEntity).GetProperties();

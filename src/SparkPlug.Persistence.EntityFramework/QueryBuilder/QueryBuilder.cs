@@ -20,7 +20,7 @@ public class QueryBuilder<TEntity> where TEntity : class
     public IQueryable<JObject> Project() => Get().ApplyProjection(Request?.Select, Request?.Includes);
     public IQueryable<TEntity> Select() => Get().ApplySelector(Request?.Select, Request?.Includes);
 
-    public async Task<long> Count(CancellationToken cancellationToken = default)
+    public async Task<long> CountAsync(CancellationToken cancellationToken = default)
     {
         var query = Request == null ? Query
                                     : Query.ApplyWhere(Request.Where);

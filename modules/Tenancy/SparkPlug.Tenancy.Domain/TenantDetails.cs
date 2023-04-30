@@ -1,5 +1,6 @@
 namespace SparkPlug.Tenancy.Domain;
 
+[HomeDb]
 public class TenantDetails : IBaseEntity<long>, IConcurrencyEntity, IAuditableEntity<long>, IDeletableEntity
 {
     public long Id { get; set; }
@@ -13,9 +14,4 @@ public class TenantDetails : IBaseEntity<long>, IConcurrencyEntity, IAuditableEn
     public long CreatedBy { get; set; }
     public DateTime ModifiedAt { get; set; }
     public long ModifiedBy { get; set; }
-
-    public long GetId()
-    {
-        return Id;
-    }
 }

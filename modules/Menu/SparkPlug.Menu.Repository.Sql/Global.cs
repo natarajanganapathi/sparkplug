@@ -6,4 +6,4 @@ global using Microsoft.Extensions.Diagnostics.HealthChecks;
 global using Microsoft.Extensions.Options;
 
 global using SparkPlug.Persistence.Abstractions;
-global using SparkPlug.Tenancy.Domain;
+global using SparkPlug.Menu.Domain;

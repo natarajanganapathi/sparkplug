@@ -1,4 +1,4 @@
-namespace SparkPlug.Api;
+namespace SparkPlug.Persistence.Abstractions;
 
 public interface IModule
 {

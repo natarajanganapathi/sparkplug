@@ -1,8 +1,8 @@
 namespace SparkPlug.Persistence.Abstractions;
 
-public record ListResult<TResult>
+public record PagedResult<TResult>
 {
-    public ListResult(IEnumerable<TResult> items, long count)
+    public PagedResult(IEnumerable<TResult> items, long count)
     {
         Items = items;
         Count = count;
