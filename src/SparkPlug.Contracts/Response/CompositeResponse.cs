@@ -2,7 +2,7 @@ namespace SparkPlug.Contracts;
 
 public class CompositeResponse : ApiResponse, ICompositeResponse
 {
-    public CompositeResponse(string? code = null, string? message = null, Dictionary<string, IApiResponse>? data = null) : base(code, message)
+    public CompositeResponse(Dictionary<string, IApiResponse>? data = null)
     {
         Data = data;
     }

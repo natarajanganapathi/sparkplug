@@ -1,13 +1,11 @@
 namespace SparkPlug.Contracts;
 
-public interface IApiResponse
-{
-    string? Code { get; set; }
-    string? Message { get; set; }
-}
+public interface IApiResponse { }
 
 public interface IErrorResponse : IApiResponse
 {
+    string? Code { get; set; }
+    string? Message { get; set; }
     string? StackTrace { get; set; }
     string TraceIdentifier { get; set; }
 }

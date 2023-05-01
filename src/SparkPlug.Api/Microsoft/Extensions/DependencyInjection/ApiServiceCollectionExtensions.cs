@@ -11,16 +11,22 @@ public static class ApiServiceCollectionExtenstions
         services.AddScoped(typeof(IRequestContext<>), typeof(RequestContext<>));
         services.AddScoped(typeof(BaseService<,>));
         services.AddCustomModules();
-        services.AddMvc()
+        // services.AddMvc()
         // .ConfigureApplicationPartManager(m => m.FeatureProviders.Add(new GenericTypeControllerFeatureProvider(typeof(ApiController<,>))))
-        .AddJsonOptions(options =>
-        {
-            options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles;
-            options.JsonSerializerOptions.DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull;
-        });
         // .SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         services.AddControllers(options => options.Filters.Add<ApiExceptionFilterAttribute>())
-                .AddNewtonsoftJson(options => options.SerializerSettings.NullValueHandling = NullValueHandling.Ignore);
+                // .AddJsonOptions(options =>
+                // {
+                //     options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles;
+                //     options.JsonSerializerOptions.DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull;
+                //     options.JsonSerializerOptions.PropertyNamingPolicy = JsonNamingPolicy.CamelCase;
+                // })
+                .AddNewtonsoftJson(options =>
+                {
+                    options.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore;
+                    options.SerializerSettings.NullValueHandling = NullValueHandling.Ignore;
+                    options.SerializerSettings.ContractResolver = new DefaultContractResolver() { NamingStrategy = new CamelCaseNamingStrategy() };
+                });
         services.AddSwagger();
         services.AddHttpClient();
         return services;

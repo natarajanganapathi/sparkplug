@@ -17,7 +17,8 @@
     <ProjectReference Include="..\..\src\SparkPlug.Contracts\SparkPlug.Contracts.csproj" />
     <ProjectReference Include="..\..\src\SparkPlug.Persistence.Abstractions\SparkPlug.Persistence.Abstractions.csproj" />
     <ProjectReference Include="..\..\src\SparkPlug.Persistence.EntityFramework\SparkPlug.Persistence.EntityFramework.csproj" />
-
+  </ItemGroup>
+  <ItemGroup>
     <ProjectReference Include="..\..\modules\Tenancy\SparkPlug.Tenancy.Api\SparkPlug.Tenancy.Api.csproj" />
     <ProjectReference Include="..\..\modules\Tenancy\SparkPlug.Tenancy.Repository.Sql\SparkPlug.Tenancy.Repository.Sql.csproj" />
     <ProjectReference Include="..\..\modules\Menu\SparkPlug.Menu.Api\SparkPlug.Menu.Api.csproj" />

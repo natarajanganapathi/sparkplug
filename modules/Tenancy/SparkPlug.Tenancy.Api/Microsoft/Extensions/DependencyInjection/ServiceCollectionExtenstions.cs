@@ -8,7 +8,6 @@ public static class ApiServiceCollectionExtenstions
         services.AddMvc(MvcOptions =>
         {
             IRouteTemplateProvider routeAttribute = new RouteAttribute("{tenant}");
-            // MvcOptions.Conventions.Add(new GenericControllerRouteConvention(routeAttribute));
             MvcOptions.UseCentralRoutePrefix(routeAttribute);
         });
         return services;

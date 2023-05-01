@@ -2,6 +2,8 @@ namespace SparkPlug.Contracts;
 
 public class ErrorResponse : ApiResponse, IErrorResponse
 {
+    public string? Message { get; set; }
+    public string? Code { get; set; }
     public string TraceIdentifier { get; set; } = string.Empty;
     public string? StackTrace { get; set; }
 }

@@ -11,7 +11,7 @@
     e. .Patch("/user/10")
 
 3. SparkPlug.Api Unit Testing with MongoDb
-5. GenericTypeControllerFeatureProvider - Add controller to feature.Controllers with sapcific api verbs (only GET and POST like).
+5. GenericTypeControllerFeatureProvider - Add controller to feature.Controllers with sapcific api verbs (only GET and POST like). - Feature rejected due to introduce service layer.
 8. Generic Cache interface need to be implement for SparkPlug.Api
 9. Distributed Cache interface implementation to cache data including Tenant information.
 10. Update or reload config if the configuration is modifyed in the cloud.

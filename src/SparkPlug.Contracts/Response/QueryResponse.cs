@@ -19,7 +19,7 @@ public class QueryResponse : ApiResponse, IQueryResponse
 public static partial class Extensions
 {
     #region QueryResponse
-    public static IQueryResponse AddResponse(this IQueryResponse source, JArray data)
+    public static IQueryResponse AddData(this IQueryResponse source, JArray data)
     {
         source.Data = data;
         return source;
