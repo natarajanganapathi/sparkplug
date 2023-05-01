@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-      <title>Create new Schema </title>
+      <title>Sample Connection String </title>
       <meta name="viewport" content="width=device-width">
-      <meta name="title" content="Create new Schema ">
+      <meta name="title" content="Sample Connection String ">
     
       <link rel="shortcut icon" href="../favicon.ico">
       <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
@@ -76,15 +76,36 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h2 id="create-new-schema">Create new Schema</h2>
+<h2 id="sample-connection-string">Sample Connection String</h2>
 
-<p>CREATE SCHEMA tenant_1;</p>
+<pre><code class="lang-string">Server=sssssss.postgres.database.azure.com;Database=ddddddd;Port=5432;User Id=uuuuuuu;Password=ppppppp;Ssl Mode=Require;Trust Server Certificate=true;Search Path=tenant_1,public
+</code></pre>
+<p>Note: <code>Search Path</code> denotes that tenants' schema if the the tenant is not using defalt schema. <code>Search Path</code> will containe comma separated schema names like example connection string <code>Search Path=tenant_1,public</code>.</p>
+<h2 id="tenantoptions">TenantOptions</h2>
+<p>&quot;DbConfig:ConnectionString&quot;</p>
+<h2 id="create-new-schema">Create new Schema</h2>
+<pre><code class="lang-sql">CREATE SCHEMA tenant_1;
+</code></pre>
 <h2 id="list-schema">List Schema</h2>
-<p>SELECT schema_name FROM information_schema.schemata;</p>
+<pre><code class="lang-sql">SELECT schema_name FROM information_schema.schemata;
+</code></pre>
+<h2 id="switch-schema">Switch Schema</h2>
+<pre><code class="lang-sql">SET search_path TO tenant_1;
+</code></pre>
+<h2 id="converty-the-type-of-a-column-from-one-type-to-another">Converty the type of a column from one type to another</h2>
+<pre><code class="lang-sql">ALTER TABLE tenant_1.&quot;MenuItem&quot; ALTER COLUMN &quot;Properties&quot; TYPE json USING &quot;Properties&quot;::json;
+</code></pre>
+<h2 id="get-the-data-type-for-a-column">Get the data type for a column</h2>
+<pre><code class="lang-sql">SELECT column_name, data_type 
+FROM information_schema.columns 
+WHERE table_name = 'MenuItem' AND column_name = 'Properties';
+</code></pre>
+<h2 id="json-in-postgresql">JSON in postgresql</h2>
+<p><a href="https://www.npgsql.org/efcore/mapping/json.html?tabs=data-annotations%2Cpoco">.Net Reference</a></p>
 </article>
           </div>
           <div class="contribution-panel mobile-hide">
-              <a href="https://github.com/natarajanganapathi/sparkplug/blob/36/merge/docfx/examples/postgresql.md/#L1" title="Improve this Doc" class="fab btn-warning pull-right"><i class="glyphicon glyphicon-pencil"></i></a>
+              <a href="https://github.com/natarajanganapathi/sparkplug/blob/35/merge/docfx/examples/postgresql.md/#L1" title="Improve this Doc" class="fab btn-warning pull-right"><i class="glyphicon glyphicon-pencil"></i></a>
           </div>
 
           <div class="hidden-sm col-md-2" role="complementary">

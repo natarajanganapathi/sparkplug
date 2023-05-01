@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-      <title>Configuration </title>
+      <title>Module Dependency </title>
       <meta name="viewport" content="width=device-width">
-      <meta name="title" content="Configuration ">
+      <meta name="title" content="Module Dependency ">
     
       <link rel="shortcut icon" href="../favicon.ico">
       <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
@@ -76,40 +76,35 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h2 id="configuration">Configuration</h2>
+<h1 id="module-dependency">Module Dependency</h1>
 
-<pre><code class="lang-json">{
-    &quot;Logging&quot;: {
-        &quot;LogLevel&quot;: {
-            &quot;Default&quot;: &quot;Information&quot;,
-            &quot;Microsoft&quot;: &quot;Warning&quot;,
-            &quot;Microsoft.Hosting.Lifetime&quot;: &quot;Information&quot;,
-            &quot;SparkPlug.*&quot;: &quot;Information&quot;
-        }
-    },
-    &quot;SparkPlug&quot;: {
-        &quot;Api&quot;: {
-            &quot;ApplicationName&quot;: &quot;Web Api&quot;,
-            &quot;PathBase&quot;: &quot;/api/v1&quot;
-        },
-        &quot;SqlDb&quot;: {
-            &quot;ConnectionString&quot;: &quot;&quot;
-        }
-    }
-}
-</code></pre>
-<h2 id="additional-connection-string-attribute-required-to-ignore-certificate-issue-in-development">Additional connection string attribute required to ignore certificate issue in development</h2>
-<p><code>Trust Server Certificate=true</code> may required in connection string.</p>
-<h2 id="sparkplugapipathbase">SparkPlug.Api.PathBase</h2>
-<p>This property refers to the application base path. If the path contains <code>{tanant}</code> then the application can handle multi tenant's request. The Tenat Id will be passed in the URL path. Also <code>appsettings.json</code> file connection string consider as tenant managemetn database.</p>
-<h3 id="single-tenant-application">Single Tenant Application</h3>
-<p>Ex. &quot;PathBase&quot; : &quot;/api/v1/&quot;</p>
-<h3 id="multi-tenant-application">Multi Tenant Application</h3>
-<p>Ex. &quot;PathBase&quot; : &quot;/api/v1/{tanant}/&quot;</p>
+<p>SparkPlug.<module>.Domain
+SparkPlug.Domain</module></p>
+<p>SparkPlug.<module>.Repository.Sql
+SparkPlug.Persistence.Abstraction
+SparkPlug.Persistence.EntityFramework
+SparkPlug.<module>.Domain</module></module></p>
+<p>SparkPlug.<module>.Repository.Mongo
+SparkPlug.Persistence.Abstraction
+SparkPlug.Persistence.MongoDb
+SparkPlug.<module>.Domain</module></module></p>
+<p>SparkPlug.<module>.Service
+SparkPlug.Contracts
+SparkPlug.Persistence
+SparkPlug.<module>.Domain</module></module></p>
+<p>SparkPlug.<module>.Api
+SparkPlug.Contracts
+SparkPlug.Api
+SparkPlug.<module>.Service</module></module></p>
+<h1 id="application">Application</h1>
+<p>SparkPlug.<applicationname>.Host
+SparkPlug.<module-1>.Api
+SparkPlug.<module-2>.Api
+SparkPlug.<module-2>.Api</module-2></module-2></module-1></applicationname></p>
 </article>
           </div>
           <div class="contribution-panel mobile-hide">
-              <a href="https://github.com/natarajanganapathi/sparkplug/blob/35/merge/docfx/articles/get-started.md/#L1" title="Improve this Doc" class="fab btn-warning pull-right"><i class="glyphicon glyphicon-pencil"></i></a>
+              <a href="https://github.com/natarajanganapathi/sparkplug/blob/35/merge/docfx/examples/modules.md/#L1" title="Improve this Doc" class="fab btn-warning pull-right"><i class="glyphicon glyphicon-pencil"></i></a>
           </div>
 
           <div class="hidden-sm col-md-2" role="complementary">

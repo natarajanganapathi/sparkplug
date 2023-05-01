@@ -151,9 +151,7 @@
 </code></pre>
 <h2 id="sample-request-with-enum-as-string">Sample Request with ENUM as String</h2>
 <pre><code class="lang-json">{
-  &quot;select&quot;: [
-      &quot;personName&quot;, &quot;Department&quot;, &quot;Salary&quot;, &quot;id&quot;, &quot;address&quot;
-  ],
+  &quot;select&quot;: [&quot;personName&quot;, &quot;Department&quot;, &quot;Salary&quot;, &quot;id&quot;, &quot;address&quot;],
   &quot;includes&quot;: [
     {
       &quot;name&quot;: &quot;Address&quot;,
@@ -161,25 +159,29 @@
     }
   ],
   &quot;where&quot;: {
-     &quot;filterType&quot;: &quot;COMPOSITE&quot;,
-     &quot;op&quot;: &quot;OR&quot;,
-     &quot;filters&quot;: [{
+    &quot;filterType&quot;: &quot;COMPOSITE&quot;,
+    &quot;op&quot;: &quot;OR&quot;,
+    &quot;filters&quot;: [
+      {
         &quot;filterType&quot;: &quot;FIELD&quot;,
         &quot;op&quot;: &quot;EQUAL&quot;,
         &quot;field&quot;: &quot;department&quot;,
         &quot;value&quot;: &quot;IT&quot;
-      }, {
+      },
+      {
         &quot;filterType&quot;: &quot;FIELD&quot;,
         &quot;op&quot;: &quot;EQUAL&quot;,
         &quot;field&quot;: &quot;PersonName&quot;,
         &quot;value&quot;: &quot;Demo User&quot;
-      }]
+      }
+    ]
   },
   &quot;sort&quot;: [
     {
       &quot;field&quot;: &quot;PersonName&quot;,
       &quot;direction&quot;: &quot;DESC&quot;
-    }, {
+    },
+    {
       &quot;field&quot;: &quot;Salary&quot;,
       &quot;direction&quot;: &quot;ASC&quot;
     }
@@ -223,10 +225,19 @@
     .ToList();
 
 </code></pre>
+<h2 id="sample-request-for-patch-document">Sample Request for Patch Document</h2>
+<h3 id="sample-request-object-to-update-the-menuitem-object">Sample Request object to update the MenuItem object</h3>
+<pre><code class="lang-json">{
+  &quot;data&quot;: [
+    { &quot;op&quot;: &quot;replace&quot;, &quot;path&quot;: &quot;/moduleCode&quot;, &quot;value&quot;: &quot;App Developer Module&quot; },
+    { &quot;op&quot;: &quot;replace&quot;, &quot;path&quot;: &quot;/menuCode&quot;, &quot;value&quot;: &quot;AppDev&quot; }
+  ]
+}
+</code></pre>
 </article>
           </div>
           <div class="contribution-panel mobile-hide">
-              <a href="https://github.com/natarajanganapathi/sparkplug/blob/36/merge/docfx/examples/sample-request.md/#L1" title="Improve this Doc" class="fab btn-warning pull-right"><i class="glyphicon glyphicon-pencil"></i></a>
+              <a href="https://github.com/natarajanganapathi/sparkplug/blob/35/merge/docfx/examples/sample-request.md/#L1" title="Improve this Doc" class="fab btn-warning pull-right"><i class="glyphicon glyphicon-pencil"></i></a>
           </div>
 
           <div class="hidden-sm col-md-2" role="complementary">

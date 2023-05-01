@@ -173,6 +173,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "examples/modules.md",
+      "output": {
+        ".html": {
+          "relative_path": "examples/modules.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "examples/postgresql.md",
       "output": {
         ".html": {
