@@ -4,6 +4,12 @@ build:
 tests:
 	dotnet test SparkPlug.sln
 
+pack:
+	dotnet pack -c release  -o .
+
+clean:
+	dotnet clean
+
 samples:
 	dotnet build ./sample/WebApi/WebApi.csproj
 
