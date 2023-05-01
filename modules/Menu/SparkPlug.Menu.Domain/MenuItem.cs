@@ -6,14 +6,14 @@ public class MenuItem : IBaseEntity<long>, IConcurrencyEntity, IAuditableEntity<
     public long Id { get; set; }
     public long? ParentMenuId { get; set; }
     public long? ModuleId { get; set; }
-    public String? ModuleCode { get; set; }
-    public String? MenuCode { get; set; }
-    public String? ParentMenuCode { get; set; }
-    public String? MenuType { get; set; }
-    public String? MenuPosition { get; set; }
-    public String? Display { get; set; }
-    public String? SRef { get; set; }
-    public String? IconRef { get; set; }
+    public string? ModuleCode { get; set; }
+    public string? MenuCode { get; set; }
+    public string? ParentMenuCode { get; set; }
+    public string? MenuType { get; set; }
+    public string? MenuPosition { get; set; }
+    public string? Display { get; set; }
+    public string? SRef { get; set; }
+    public string? IconRef { get; set; }
     public int DisplayOrder { get; set; }
     [ConcurrencyCheck]
     public int Revision { get; set; }
