@@ -1,5 +1,5 @@
-
 ## sample Query Request
+
 ```json
 {
   "select": [
@@ -73,13 +73,11 @@
 }
 ```
 
-## Sample Request with ENUM as String 
+## Sample Request with ENUM as String
 
 ```json
 {
-  "select": [
-      "personName", "Department", "Salary", "id", "address"
-  ],
+  "select": ["personName", "Department", "Salary", "id", "address"],
   "includes": [
     {
       "name": "Address",
@@ -87,25 +85,29 @@
     }
   ],
   "where": {
-     "filterType": "COMPOSITE",
-     "op": "OR",
-     "filters": [{
+    "filterType": "COMPOSITE",
+    "op": "OR",
+    "filters": [
+      {
         "filterType": "FIELD",
         "op": "EQUAL",
         "field": "department",
         "value": "IT"
-      }, {
+      },
+      {
         "filterType": "FIELD",
         "op": "EQUAL",
         "field": "PersonName",
         "value": "Demo User"
-      }]
+      }
+    ]
   },
   "sort": [
     {
       "field": "PersonName",
       "direction": "DESC"
-    }, {
+    },
+    {
       "field": "Salary",
       "direction": "ASC"
     }
@@ -139,8 +141,6 @@ var users = context.Users
 
 ```
 
-
-
 ```c#
 var users = context.Users
     .Include(u => u.Address)
@@ -155,4 +155,16 @@ var users = context.Users
     })
     .ToList();
 
+```
+
+## Sample Request for Patch Document
+
+### Sample Request object to update the MenuItem object
+```json
+{
+  "data": [
+    { "op": "replace", "path": "/moduleCode", "value": "App Developer Module" },
+    { "op": "replace", "path": "/menuCode", "value": "AppDev" }
+  ]
+}
 ```

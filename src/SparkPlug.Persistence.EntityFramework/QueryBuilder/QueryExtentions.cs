@@ -101,7 +101,7 @@ public static class QueryExtentions
             if (properties.Length > 2) throw new QueryEntityException(new StringBuilder().Append(property).Append(" should not have more than 2 keywords").ToString());
             string source = properties[0];
             var propInfo = elementType.GetProperty(source, BindingFlags.IgnoreCase | BindingFlags.Public | BindingFlags.Instance)
-                        ?? throw new ArgumentException(new StringBuilder().Append(source).Append(" is not a valid property of type ").Append(elementType).ToString());
+                        ?? throw new ArgumentException(new StringBuilder().Append('\'').Append(source).Append("' is not a valid property of type ").Append(elementType).ToString());
             var propAccessExpression = Expression.Property(sourceParameter, propInfo);
             var type = propInfo.PropertyType;
             var include = includes?.FirstOrDefault(i => i.Name.Equals(source, StringComparison.CurrentCultureIgnoreCase));

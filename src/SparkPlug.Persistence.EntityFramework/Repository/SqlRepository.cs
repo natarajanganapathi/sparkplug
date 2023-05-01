@@ -55,7 +55,6 @@ public abstract class SqlRepository<TId, TEntity> : IRepository<TId, TEntity> wh
     }
     public async Task<IEnumerable<TEntity>> GetManyAsync(TId[] ids, CancellationToken cancellationToken)
     {
-        if (ids == null) throw new QueryEntityException("Ids are null or empty");
         return await DbSet.Where(x => ids.Contains(x.Id)).ToArrayAsync(cancellationToken);
     }
     public async Task<TEntity> CreateAsync(ICommandRequest<TEntity> request, CancellationToken cancellationToken)
@@ -96,17 +95,15 @@ public abstract class SqlRepository<TId, TEntity> : IRepository<TId, TEntity> wh
 
     public async Task<TEntity> PatchAsync(TId id, ICommandRequest<JsonPatchDocument<TEntity>> request, CancellationToken cancellationToken)
     {
-        var patchDocument = request.Data ?? throw new UpdateEntityException("Entity is null");
-        var tid = id ?? throw new UpdateEntityException("Id is null");
-        TEntity original = await GetAsync(tid, cancellationToken);
+        var patchDocument = request.Data ?? throw new UpdateEntityException("JsonPatchDocument<TEntity> is null");
+        TEntity original = await GetAsync(id, cancellationToken);
         patchDocument.ApplyTo(original);
         return await UpdateAsync(original, cancellationToken);
     }
     public async Task<TEntity> ReplaceAsync(TId id, ICommandRequest<TEntity> request, CancellationToken cancellationToken)
     {
         var entity = request.Data ?? throw new UpdateEntityException("Entity is null");
-        var tid = id ?? throw new UpdateEntityException("Id is null");
-        var sourceEntity = await GetAsync(tid, cancellationToken).ConfigureAwait(false);
+        var sourceEntity = await GetAsync(id, cancellationToken).ConfigureAwait(false);
         sourceEntity = sourceEntity ?? throw new UpdateEntityException("Id is invalid");
         DbContext.Entry(sourceEntity).CurrentValues.SetValues(entity);
         var modifyedCount = await DbContext.SaveChangesAsync(requestContext.UserId, cancellationToken);
