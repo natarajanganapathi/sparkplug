@@ -47,7 +47,7 @@ public static class ApiServiceCollectionExtenstions
         // app UseHttpsRedirection
         app.UseHealthChecks();
         app.UseRouting();
-        app.UseTransactionMiddleware();
+        app.UseWhen(context => context.Request.Method != "GET", appBuilder => appBuilder.UseTransactionMiddleware());
 
         // Custom Moudeles
         app.UseCustomModules(serviceProvider);
