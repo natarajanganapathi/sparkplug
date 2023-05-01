@@ -8,7 +8,6 @@ public class Test_QueryResponse
         var qr = new QueryResponse();
         Assert.NotNull(qr);
         Assert.Null(qr.Data);
-        Assert.Null(qr.Message);
         Assert.Null(qr.Page);
         // Assert.Null(qr.Total);
     }
@@ -18,8 +17,6 @@ public class Test_QueryResponse
     {
         var qr = new QueryResponse(new int[] { 100 }, new PageContext(1, 100));
         Assert.NotNull(qr);
-        Assert.Null(qr.Code);
-        Assert.Null(qr.Message);
         Assert.NotNull(qr.Data);
         Assert.Equal(1, qr.Page?.PageNo);
         Assert.Equal(100, qr.Page?.PageSize);

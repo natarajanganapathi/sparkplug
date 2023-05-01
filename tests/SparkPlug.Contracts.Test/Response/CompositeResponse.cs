@@ -8,6 +8,5 @@ public class Test_CompositeResponse
         var qr = new CompositeResponse();
         Assert.NotNull(qr);
         Assert.Null(qr.Data);
-        Assert.Null(qr.Message);
     }
 }

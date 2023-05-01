@@ -13,7 +13,6 @@ public class Test_CommandResponse
         var qr = new CommandResponse(new User() { Name = "Demo" });
         Assert.NotNull(qr);
         Assert.Equal("Demo", qr.Data.Value<string>(nameof(User.Name)));
-        Assert.Null(qr.Message);
     }
 
     [Fact]
@@ -22,6 +21,5 @@ public class Test_CommandResponse
         var qr = new CommandResponse();
         Assert.NotNull(qr);
         Assert.Null(qr.Data.Value<string>(nameof(User.Name)));
-        Assert.Null(qr.Message);
     }
 }

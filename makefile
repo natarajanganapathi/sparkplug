@@ -1,5 +1,7 @@
 build: 
 	dotnet build SparkPlug.sln
+	dotnet build ./samples/
+	dotnet build ./tests/
 
 tests:
 	dotnet test SparkPlug.sln
@@ -9,6 +11,12 @@ pack:
 
 clean:
 	dotnet clean
+
+full: 
+	make clean
+	make build
+	make tests
+	make pack
 
 samples:
 	dotnet build ./sample/WebApi/WebApi.csproj
