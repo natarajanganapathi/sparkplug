@@ -1,6 +1,5 @@
 namespace SparkPlug.Persistence.Abstractions;
 
-// [JsonConverter(typeof(StringEnumConverter))]
 public enum Status
 {
     [EnumMember] Live = 1,

@@ -3,15 +3,15 @@ Module Dependency
 =============================================
 
 SparkPlug.<Module>.Domain
-    SparkPlug.Domain
+    SparkPlug.Persistence.Abstractions
     
 SparkPlug.<Module>.Repository.Sql
-    SparkPlug.Persistence.Abstraction
+    SparkPlug.Persistence.Abstractions
     SparkPlug.Persistence.EntityFramework
     SparkPlug.<Module>.Domain
 
 SparkPlug.<Module>.Repository.Mongo
-    SparkPlug.Persistence.Abstraction
+    SparkPlug.Persistence.Abstractions
     SparkPlug.Persistence.MongoDb
     SparkPlug.<Module>.Domain
 
