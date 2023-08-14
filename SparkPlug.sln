@@ -23,25 +23,25 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SparkPlug.Api.Test", "tests
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "modules", "modules", "{81138EC1-E7DC-462D-9F09-47E5B050AA9B}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Menu", "Menu", "{F1077347-969C-42DF-A3F2-01210B68D1C9}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SparkPlug.Business.Menu", "SparkPlug.Business.Menu", "{F1077347-969C-42DF-A3F2-01210B68D1C9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SparkPlug.Menu.Api", "modules\Menu\SparkPlug.Menu.Api\SparkPlug.Menu.Api.csproj", "{7B54016B-A57F-48D2-BF86-E7A2F963A4B4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SparkPlug.Business.Menu.Api", "modules\SparkPlug.Business.Menu\SparkPlug.Business.Menu.Api\SparkPlug.Business.Menu.Api.csproj", "{7B54016B-A57F-48D2-BF86-E7A2F963A4B4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SparkPlug.Menu.Domain", "modules\Menu\SparkPlug.Menu.Domain\SparkPlug.Menu.Domain.csproj", "{F8B9373A-BD73-4B44-8A5B-6D54082AEB7E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SparkPlug.Business.Menu.Domain", "modules\SparkPlug.Business.Menu\SparkPlug.Business.Menu.Domain\SparkPlug.Business.Menu.Domain.csproj", "{F8B9373A-BD73-4B44-8A5B-6D54082AEB7E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SparkPlug.Menu.Service", "modules\Menu\SparkPlug.Menu.Service\SparkPlug.Menu.Service.csproj", "{97D779E2-C4FF-4699-A1B4-0A9EECF1BB8A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SparkPlug.Business.Menu.Service", "modules\SparkPlug.Business.Menu\SparkPlug.Business.Menu.Service\SparkPlug.Business.Menu.Service.csproj", "{97D779E2-C4FF-4699-A1B4-0A9EECF1BB8A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SparkPlug.Menu.Repository.Sql", "modules\Menu\SparkPlug.Menu.Repository.Sql\SparkPlug.Menu.Repository.Sql.csproj", "{2B18E44B-A10D-4143-B349-F20E5279D337}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SparkPlug.Business.Menu.Repository.Sql", "modules\SparkPlug.Business.Menu\SparkPlug.Business.Menu.Repository.Sql\SparkPlug.Business.Menu.Repository.Sql.csproj", "{2B18E44B-A10D-4143-B349-F20E5279D337}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tenancy", "Tenancy", "{0CFF238F-4220-4B78-9A1B-A1CFAEA10E63}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SparkPlug.Business.Tenancy", "SparkPlug.Business.Tenancy", "{0CFF238F-4220-4B78-9A1B-A1CFAEA10E63}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SparkPlug.Tenancy.Api", "modules\Tenancy\SparkPlug.Tenancy.Api\SparkPlug.Tenancy.Api.csproj", "{6712C3D9-ACF2-457E-8962-751D0F9E20A8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SparkPlug.Business.Tenancy.Api", "modules\SparkPlug.Business.Tenancy\SparkPlug.Business.Tenancy.Api\SparkPlug.Business.Tenancy.Api.csproj", "{6712C3D9-ACF2-457E-8962-751D0F9E20A8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SparkPlug.Tenancy.Domain", "modules\Tenancy\SparkPlug.Tenancy.Domain\SparkPlug.Tenancy.Domain.csproj", "{F746FAD7-1239-495D-8396-3DBCF2DC077C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SparkPlug.Business.Tenancy.Domain", "modules\SparkPlug.Business.Tenancy\SparkPlug.Business.Tenancy.Domain\SparkPlug.Business.Tenancy.Domain.csproj", "{F746FAD7-1239-495D-8396-3DBCF2DC077C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SparkPlug.Tenancy.Repository.Sql", "modules\Tenancy\SparkPlug.Tenancy.Repository.Sql\SparkPlug.Tenancy.Repository.Sql.csproj", "{3C94EF02-8EF9-40A1-8297-9C9B9F2CF935}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SparkPlug.Business.Tenancy.Repository.Sql", "modules\SparkPlug.Business.Tenancy\SparkPlug.Business.Tenancy.Repository.Sql\SparkPlug.Business.Tenancy.Repository.Sql.csproj", "{3C94EF02-8EF9-40A1-8297-9C9B9F2CF935}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SparkPlug.Tenancy.Service", "modules\Tenancy\SparkPlug.Tenancy.Service\SparkPlug.Tenancy.Service.csproj", "{30FA03DA-3F56-40E3-A99A-24F19109F325}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SparkPlug.Business.Tenancy.Service", "modules\SparkPlug.Business.Tenancy\SparkPlug.Business.Tenancy.Service\SparkPlug.Business.Tenancy.Service.csproj", "{30FA03DA-3F56-40E3-A99A-24F19109F325}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

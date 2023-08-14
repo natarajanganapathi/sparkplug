@@ -11,22 +11,19 @@ public static class ApiServiceCollectionExtenstions
         services.AddScoped(typeof(IRequestContext<>), typeof(RequestContext<>));
         services.AddScoped(typeof(BaseService<,>));
         services.AddCustomModules();
-        // services.AddMvc()
-        // .ConfigureApplicationPartManager(m => m.FeatureProviders.Add(new GenericTypeControllerFeatureProvider(typeof(ApiController<,>))))
-        // .SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
-        services.AddControllers(options => options.Filters.Add<ApiExceptionFilterAttribute>())
-                // .AddJsonOptions(options =>
-                // {
-                //     options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles;
-                //     options.JsonSerializerOptions.DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull;
-                //     options.JsonSerializerOptions.PropertyNamingPolicy = JsonNamingPolicy.CamelCase;
-                // })
-                .AddNewtonsoftJson(options =>
-                {
-                    options.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore;
-                    options.SerializerSettings.NullValueHandling = NullValueHandling.Ignore;
-                    options.SerializerSettings.ContractResolver = new DefaultContractResolver() { NamingStrategy = new CamelCaseNamingStrategy() };
-                });
+        services.AddControllers(options =>
+            {
+                var policy = new AuthorizationPolicyBuilder()
+                            .RequireAuthenticatedUser()
+                            .Build();
+                options.Filters.Add(new AuthorizeFilter(policy));
+                options.Filters.Add<ApiExceptionFilterAttribute>();
+            })
+            .AddNewtonsoftJson(options =>
+            {
+                options.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore;
+                options.SerializerSettings.NullValueHandling = NullValueHandling.Ignore;
+            });
         services.AddSwagger();
         services.AddHttpClient();
         return services;
@@ -47,7 +44,7 @@ public static class ApiServiceCollectionExtenstions
         // app UseHttpsRedirection
         app.UseHealthChecks();
         app.UseRouting();
-        app.UseWhen(context => context.Request.Method != "GET", appBuilder => appBuilder.UseTransactionMiddleware());
+        app.UseWhen(context => context.Request.Method != "GET", appBuilder => appBuilder.UseTransactionMiddleware()); // Transaction not required in GET Method
 
         // Custom Moudeles
         app.UseCustomModules(serviceProvider);

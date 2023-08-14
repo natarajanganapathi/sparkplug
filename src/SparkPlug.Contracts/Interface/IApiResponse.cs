@@ -13,12 +13,12 @@ public interface IErrorResponse : IApiResponse
 public interface IQueryResponse : IApiResponse
 {
     IPageContext? Page { get; set; }
-    JArray? Data { get; set; }
+    IEnumerable<object>? Data { get; set; }
 }
 
 public interface ICommandResponse : IApiResponse
 {
-    JObject Data { get; set; }
+    object? Data { get; set; }
 }
 
 public interface ICompositeResponse : IApiResponse
