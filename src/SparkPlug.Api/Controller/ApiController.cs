@@ -6,7 +6,7 @@ public abstract class ApiController<TId, TEntity> : BaseController<TId, TEntity>
     protected ApiController(IServiceProvider serviceProvider) : base(serviceProvider) { }
 
     [HttpGet]
-    public async Task<IActionResult> List([FromQuery] int? pageNo, [FromQuery] int? pageSize, CancellationToken cancellationToken)
+    public async Task<IActionResult> ListAsync([FromQuery] int? pageNo, [FromQuery] int? pageSize, CancellationToken cancellationToken)
     {
         var pc = new PageContext(pageNo ?? 1, pageSize ?? 25);
         var request = new QueryRequest(pc);
@@ -16,7 +16,7 @@ public abstract class ApiController<TId, TEntity> : BaseController<TId, TEntity>
     }
 
     [HttpPost("search")]
-    public async Task<IActionResult> Query([FromBody] QueryRequest request, CancellationToken cancellationToken)
+    public async Task<IActionResult> QueryAsync([FromBody] QueryRequest request, CancellationToken cancellationToken)
     {
         request.Page ??= new PageContext();
         var data = await _service.QueryAsync(request, cancellationToken);
@@ -25,35 +25,35 @@ public abstract class ApiController<TId, TEntity> : BaseController<TId, TEntity>
     }
 
     [HttpPost]
-    public async Task<IActionResult> Post([FromBody] CommandRequest<TEntity> rec, CancellationToken cancellationToken)
+    public async Task<IActionResult> PostAsync([FromBody] CommandRequest<TEntity> rec, CancellationToken cancellationToken)
     {
         var entity = await _service.CreateAsync(rec, cancellationToken);
         return Ok(entity);
     }
 
     [HttpGet("{id}")]
-    public async Task<IActionResult> Get(TId id, CancellationToken cancellationToken)
+    public async Task<IActionResult> GetAsync(TId id, CancellationToken cancellationToken)
     {
         var entity = await _service.GetAsync(id, cancellationToken);
         return Ok(entity);
     }
 
     [HttpPut("{id}")]
-    public async Task<IActionResult> Put(TId id, [FromBody] CommandRequest<TEntity> rec, CancellationToken cancellationToken)
+    public async Task<IActionResult> PutAsync(TId id, [FromBody] CommandRequest<TEntity> rec, CancellationToken cancellationToken)
     {
         var entity = await _service.UpdateAsync(id, rec, cancellationToken);
         return Ok(entity);
     }
 
     [HttpPatch("{id}")]
-    public async Task<IActionResult> Patch(TId id, [FromBody] CommandRequest<JsonPatchDocument<TEntity>> rec, CancellationToken cancellationToken)
+    public async Task<IActionResult> PatchAsync(TId id, [FromBody] CommandRequest<JsonPatchDocument<TEntity>> rec, CancellationToken cancellationToken)
     {
         var entity = await _service.PatchAsync(id, rec, cancellationToken);
         return Ok(entity);
     }
 
     [HttpDelete("{id}")]
-    public async Task<IActionResult> Delete(TId id, CancellationToken cancellationToken)
+    public async Task<IActionResult> DeleteAsync(TId id, CancellationToken cancellationToken)
     {
         var entity = await _service.DeleteAsync(id, cancellationToken);
         return Ok(entity);

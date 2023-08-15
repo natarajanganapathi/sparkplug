@@ -3,24 +3,25 @@ namespace SparkPlug.Api.Filters;
 public class ApiExceptionFilterAttribute : ExceptionFilterAttribute
 {
     private readonly ILogger<ApiExceptionFilterAttribute> _logger;
-    private readonly IHttpContextAccessor _httpContextAccessor;
-    public ApiExceptionFilterAttribute(ILogger<ApiExceptionFilterAttribute> logger, IHttpContextAccessor httpContextAccessor)
+
+    public ApiExceptionFilterAttribute(ILogger<ApiExceptionFilterAttribute> logger)
     {
         _logger = logger;
-        _httpContextAccessor = httpContextAccessor;
     }
-    public override void OnException(ExceptionContext exceptionContext)
+    public override void OnException(ExceptionContext context)
     {
-        _logger.LogError(WebApiConstants.LogErrorMessageTemplate, exceptionContext.Exception.Message, exceptionContext.Exception);
-        var errorResponse = new ErrorResponse().SetFromException(exceptionContext.Exception);
-        if (_httpContextAccessor.HttpContext != null)
+        var exception = context.Exception;
+        var eventId = new EventId((int)ApiEventId.ExceptionFilter, nameof(ApiEventId.ExceptionFilter));
+        _logger.LogError(eventId, exception, $"Trace-Id: {context.HttpContext?.TraceIdentifier} Message: {exception.Message}");
+
+        if (context.HttpContext != null)
         {
-            errorResponse.SetTraceIdentifier(_httpContextAccessor.HttpContext.TraceIdentifier);
+            var response = context.HttpContext.Response;
+            response.StatusCode = StatusCodes.Status500InternalServerError;
+            response.ContentType = WebApiConstants.ContentType;
         }
-        var response = exceptionContext.HttpContext.Response;
-        response.StatusCode = StatusCodes.Status500InternalServerError;
-        response.ContentType = WebApiConstants.ContentType;
-        exceptionContext.Result = new JsonResult(errorResponse);
-        exceptionContext.ExceptionHandled = true;
+        var errorResponse = new ErrorResponse().SetFromException(exception);
+        context.Result = new JsonResult(errorResponse);
+        context.ExceptionHandled = true;
     }
 }

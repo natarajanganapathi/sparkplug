@@ -5,7 +5,7 @@
 2. Composite Api Controller Template development for Composite Key tables - Workaround is sarogate Id for Composite Key tables.
 3. Data Cache implementation - Done
 4. CompositeRequest handling api development - InProgress
-5. Enable Http 2.0 in WebApi
+5. Enable Http 2.0/3.0 in WebApi
 6. Database.EnsureCreated() move to Create Tenant api - When onboard new tenant, this will create the db schema.
 7. Database.Migrate() should be called in application Startup.
 
@@ -27,3 +27,7 @@
 ## Common
 1. Common string extenstion for string Case chagse. ex. camelCase, Snake_Case, PascalCase, etc.
 2. Github Actions for CICD - In Progress
+3. Razor Template Engine Module 
+4. Puppeteer Sharp project for PDF generation
+5. Dockerfile for dotnet 8 with AOT Compilation for apis.
+6. OPA (Open Policy Agent) based authorization module

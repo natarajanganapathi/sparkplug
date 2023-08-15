@@ -36,3 +36,7 @@ Ex. "PathBase" : "/api/v1/"
 
 ### Multi Tenant Application
 Ex. "PathBase" : "/api/v1/{tanant}/"
+
+### TraceIdentifier vs CorrelationId
+
+utilizing `TraceIdentifier` for local request tracking within a service and `CorrelationId` for tracking across services in a distributed environment.

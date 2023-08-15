@@ -7,7 +7,7 @@ public interface IErrorResponse : IApiResponse
     string? Code { get; set; }
     string? Message { get; set; }
     string? StackTrace { get; set; }
-    string TraceIdentifier { get; set; }
+    // string TraceIdentifier { get; set; } Removed since it is available in response header `X-Trace-Id`
 }
 
 public interface IQueryResponse : IApiResponse
