@@ -12,6 +12,1726 @@
       }
     },
     {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Microsoft.Extensions.DependencyInjection.ApiServiceCollectionExtenstions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Microsoft.Extensions.DependencyInjection.ApiServiceCollectionExtenstions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Microsoft.Extensions.DependencyInjection.GlobalExceptionHandlingMiddlewareExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Microsoft.Extensions.DependencyInjection.GlobalExceptionHandlingMiddlewareExtensions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Microsoft.Extensions.DependencyInjection.HealthCheckServiceCollectionExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Microsoft.Extensions.DependencyInjection.HealthCheckServiceCollectionExtensions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Microsoft.Extensions.DependencyInjection.ModuleLoader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Microsoft.Extensions.DependencyInjection.ModuleLoader.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Microsoft.Extensions.DependencyInjection.MongoDbServiceCollectionExtenstions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Microsoft.Extensions.DependencyInjection.MongoDbServiceCollectionExtenstions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Microsoft.Extensions.DependencyInjection.MvcOptionsExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Microsoft.Extensions.DependencyInjection.MvcOptionsExtensions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Microsoft.Extensions.DependencyInjection.SqlDbServiceCollectionExtenstions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Microsoft.Extensions.DependencyInjection.SqlDbServiceCollectionExtenstions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Microsoft.Extensions.DependencyInjection.SwaggerServiceCollectionExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Microsoft.Extensions.DependencyInjection.SwaggerServiceCollectionExtensions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Microsoft.Extensions.DependencyInjection.TenantResolverMiddlewareExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Microsoft.Extensions.DependencyInjection.TenantResolverMiddlewareExtensions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Microsoft.Extensions.DependencyInjection.TransactionMiddlewareExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Microsoft.Extensions.DependencyInjection.TransactionMiddlewareExtensions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Microsoft.Extensions.DependencyInjection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Microsoft.Extensions.DependencyInjection.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Api.Configuration.SlidingExpiration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Api.Configuration.SlidingExpiration.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Api.Configuration.WebApiConstants.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Api.Configuration.WebApiConstants.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Api.Configuration.WebApiOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Api.Configuration.WebApiOptions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Api.Configuration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Api.Configuration.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Api.Controllers.ApiAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Api.Controllers.ApiAttribute.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Api.Controllers.ApiController-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Api.Controllers.ApiController-2.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Api.Controllers.BaseController-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Api.Controllers.BaseController-2.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Api.Controllers.CompositeController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Api.Controllers.CompositeController.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Api.Controllers.GenericControllerRouteConvention.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Api.Controllers.GenericControllerRouteConvention.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Api.Controllers.RouteConvention.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Api.Controllers.RouteConvention.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Api.Controllers.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Api.Controllers.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Api.Filters.ApiExceptionFilterAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Api.Filters.ApiExceptionFilterAttribute.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Api.Filters.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Api.Filters.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Api.Middleware.GlobalExceptionHandlingMiddleware.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Api.Middleware.GlobalExceptionHandlingMiddleware.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Api.Middleware.TransactionMiddleware.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Api.Middleware.TransactionMiddleware.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Api.Middleware.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Api.Middleware.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Business.Menu.Api.MenuController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Business.Menu.Api.MenuController.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Business.Menu.Api.MenuModule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Business.Menu.Api.MenuModule.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Business.Menu.Api.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Business.Menu.Api.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Business.Menu.Domain.MenuItem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Business.Menu.Domain.MenuItem.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Business.Menu.Domain.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Business.Menu.Domain.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Business.Menu.Repository.Sql.MenuItemConfiguration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Business.Menu.Repository.Sql.MenuItemConfiguration.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Business.Menu.Repository.Sql.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Business.Menu.Repository.Sql.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Business.Menu.Service.Menuervice.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Business.Menu.Service.Menuervice.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Business.Menu.Service.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Business.Menu.Service.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Business.Tenancy.Api.TenancyModule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Business.Tenancy.Api.TenancyModule.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Business.Tenancy.Api.TenantDetailsController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Business.Tenancy.Api.TenantDetailsController.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Business.Tenancy.Api.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Business.Tenancy.Api.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Business.Tenancy.Domain.TenantDetails.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Business.Tenancy.Domain.TenantDetails.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Business.Tenancy.Domain.TenantOption.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Business.Tenancy.Domain.TenantOption.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Business.Tenancy.Domain.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Business.Tenancy.Domain.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Business.Tenancy.Repository.Mongo.Class1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Business.Tenancy.Repository.Mongo.Class1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Business.Tenancy.Repository.Mongo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Business.Tenancy.Repository.Mongo.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Business.Tenancy.Repository.Sql.TenantDetailsConfiguration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Business.Tenancy.Repository.Sql.TenantDetailsConfiguration.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Business.Tenancy.Repository.Sql.TenantOptionConfiguration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Business.Tenancy.Repository.Sql.TenantOptionConfiguration.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Business.Tenancy.Repository.Sql.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Business.Tenancy.Repository.Sql.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Business.Tenancy.Service.ITenant.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Business.Tenancy.Service.ITenant.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Business.Tenancy.Service.ITenantResolver.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Business.Tenancy.Service.ITenantResolver.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Business.Tenancy.Service.Tenant.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Business.Tenancy.Service.Tenant.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Business.Tenancy.Service.TenantOptions-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Business.Tenancy.Service.TenantOptions-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Business.Tenancy.Service.TenantResolverMiddleware.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Business.Tenancy.Service.TenantResolverMiddleware.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Business.Tenancy.Service.TenantService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Business.Tenancy.Service.TenantService.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Business.Tenancy.Service.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Business.Tenancy.Service.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Contracts.ApiRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Contracts.ApiRequest.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Contracts.ApiResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Contracts.ApiResponse.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Contracts.CommandRequest-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Contracts.CommandRequest-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Contracts.CommandResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Contracts.CommandResponse.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Contracts.CompositeFilter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Contracts.CompositeFilter.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Contracts.CompositeOperator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Contracts.CompositeOperator.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Contracts.CompositeRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Contracts.CompositeRequest.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Contracts.CompositeResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Contracts.CompositeResponse.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Contracts.ConditionFilter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Contracts.ConditionFilter.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Contracts.Direction.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Contracts.Direction.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Contracts.ErrorResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Contracts.ErrorResponse.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Contracts.ExceptionExtension.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Contracts.ExceptionExtension.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Contracts.Extensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Contracts.Extensions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Contracts.FieldFilter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Contracts.FieldFilter.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Contracts.FieldOperator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Contracts.FieldOperator.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Contracts.Filter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Contracts.Filter.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Contracts.FilterConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Contracts.FilterConverter.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Contracts.FilterType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Contracts.FilterType.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Contracts.FilterValueType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Contracts.FilterValueType.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Contracts.IApiRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Contracts.IApiRequest.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Contracts.IApiResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Contracts.IApiResponse.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Contracts.ICommandRequest-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Contracts.ICommandRequest-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Contracts.ICommandResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Contracts.ICommandResponse.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Contracts.ICompositeFilter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Contracts.ICompositeFilter.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Contracts.ICompositeRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Contracts.ICompositeRequest.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Contracts.ICompositeResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Contracts.ICompositeResponse.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Contracts.IConditionFilter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Contracts.IConditionFilter.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Contracts.IErrorResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Contracts.IErrorResponse.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Contracts.IFieldFilter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Contracts.IFieldFilter.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Contracts.IFilter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Contracts.IFilter.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Contracts.IInclude.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Contracts.IInclude.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Contracts.IOrder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Contracts.IOrder.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Contracts.IPageContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Contracts.IPageContext.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Contracts.IQueryRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Contracts.IQueryRequest.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Contracts.IQueryRequestExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Contracts.IQueryRequestExtensions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Contracts.IQueryResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Contracts.IQueryResponse.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Contracts.ISerializer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Contracts.ISerializer.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Contracts.IUnaryFilter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Contracts.IUnaryFilter.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Contracts.Include.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Contracts.Include.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Contracts.NewtonsoftSerializer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Contracts.NewtonsoftSerializer.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Contracts.Order.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Contracts.Order.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Contracts.PageContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Contracts.PageContext.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Contracts.QueryRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Contracts.QueryRequest.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Contracts.QueryResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Contracts.QueryResponse.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Contracts.UnaryFilter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Contracts.UnaryFilter.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Contracts.UnaryOperator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Contracts.UnaryOperator.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Contracts.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Contracts.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Persistence.Abstractions.AssemblyCache.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Persistence.Abstractions.AssemblyCache.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Persistence.Abstractions.BaseService-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Persistence.Abstractions.BaseService-2.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Persistence.Abstractions.CreateEntityException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Persistence.Abstractions.CreateEntityException.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Persistence.Abstractions.DbConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Persistence.Abstractions.DbConfig.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Persistence.Abstractions.DeleteEntityException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Persistence.Abstractions.DeleteEntityException.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Persistence.Abstractions.EntityExtentions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Persistence.Abstractions.EntityExtentions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Persistence.Abstractions.HomeDbAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Persistence.Abstractions.HomeDbAttribute.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Persistence.Abstractions.IAuditableEntity-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Persistence.Abstractions.IAuditableEntity-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Persistence.Abstractions.IBaseEntity-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Persistence.Abstractions.IBaseEntity-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Persistence.Abstractions.ICompositeEntity.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Persistence.Abstractions.ICompositeEntity.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Persistence.Abstractions.IConcurrencyEntity.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Persistence.Abstractions.IConcurrencyEntity.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Persistence.Abstractions.IDbContextOptionsProvider.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Persistence.Abstractions.IDbContextOptionsProvider.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Persistence.Abstractions.IDeletableEntity.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Persistence.Abstractions.IDeletableEntity.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Persistence.Abstractions.IModule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Persistence.Abstractions.IModule.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Persistence.Abstractions.IMultiTenantEntity-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Persistence.Abstractions.IMultiTenantEntity-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Persistence.Abstractions.IRepository-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Persistence.Abstractions.IRepository-2.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Persistence.Abstractions.IRepositoryProvider.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Persistence.Abstractions.IRepositoryProvider.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Persistence.Abstractions.IRequestContext-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Persistence.Abstractions.IRequestContext-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Persistence.Abstractions.ITenantOptions-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Persistence.Abstractions.ITenantOptions-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Persistence.Abstractions.PagedResult-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Persistence.Abstractions.PagedResult-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Persistence.Abstractions.PersistenceException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Persistence.Abstractions.PersistenceException.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Persistence.Abstractions.QueryEntityException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Persistence.Abstractions.QueryEntityException.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Persistence.Abstractions.RequestContext-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Persistence.Abstractions.RequestContext-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Persistence.Abstractions.Status.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Persistence.Abstractions.Status.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Persistence.Abstractions.TenantDbAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Persistence.Abstractions.TenantDbAttribute.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Persistence.Abstractions.UpdateEntityException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Persistence.Abstractions.UpdateEntityException.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Persistence.Abstractions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Persistence.Abstractions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Persistence.EntityFramework.Configuration.SqlDbOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Persistence.EntityFramework.Configuration.SqlDbOptions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Persistence.EntityFramework.Configuration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Persistence.EntityFramework.Configuration.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Persistence.EntityFramework.Context.HomeDbContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Persistence.EntityFramework.Context.HomeDbContext.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Persistence.EntityFramework.Context.HomeDbContextOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Persistence.EntityFramework.Context.HomeDbContextOptions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Persistence.EntityFramework.Context.IHomeDbModelConfiguration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Persistence.EntityFramework.Context.IHomeDbModelConfiguration.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Persistence.EntityFramework.Context.ISqlDbModelConfiguration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Persistence.EntityFramework.Context.ISqlDbModelConfiguration.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Persistence.EntityFramework.Context.ITenantDbModelConfiguration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Persistence.EntityFramework.Context.ITenantDbModelConfiguration.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Persistence.EntityFramework.Context.SqlDbContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Persistence.EntityFramework.Context.SqlDbContext.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Persistence.EntityFramework.Context.SqlDbContextOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Persistence.EntityFramework.Context.SqlDbContextOptions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Persistence.EntityFramework.Context.TenantDbContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Persistence.EntityFramework.Context.TenantDbContext.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Persistence.EntityFramework.Context.TenantDbContextOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Persistence.EntityFramework.Context.TenantDbContextOptions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Persistence.EntityFramework.Context.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Persistence.EntityFramework.Context.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Persistence.EntityFramework.Expressions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Persistence.EntityFramework.Expressions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Persistence.EntityFramework.FilterExtentions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Persistence.EntityFramework.FilterExtentions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Persistence.EntityFramework.HealthCheck.SqlDbHealthCheck.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Persistence.EntityFramework.HealthCheck.SqlDbHealthCheck.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Persistence.EntityFramework.HealthCheck.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Persistence.EntityFramework.HealthCheck.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Persistence.EntityFramework.HomeModelConfigurations.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Persistence.EntityFramework.HomeModelConfigurations.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Persistence.EntityFramework.HomeOptions-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Persistence.EntityFramework.HomeOptions-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Persistence.EntityFramework.HomeRepository-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Persistence.EntityFramework.HomeRepository-2.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Persistence.EntityFramework.Models.BaseEntity-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Persistence.EntityFramework.Models.BaseEntity-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Persistence.EntityFramework.Models.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Persistence.EntityFramework.Models.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Persistence.EntityFramework.Names.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Persistence.EntityFramework.Names.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Persistence.EntityFramework.QueryBuilder-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Persistence.EntityFramework.QueryBuilder-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Persistence.EntityFramework.QueryExtentions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Persistence.EntityFramework.QueryExtentions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Persistence.EntityFramework.SqlRepository-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Persistence.EntityFramework.SqlRepository-2.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Persistence.EntityFramework.SqlRepositoryProvider.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Persistence.EntityFramework.SqlRepositoryProvider.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Persistence.EntityFramework.TenantModelConfigurations.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Persistence.EntityFramework.TenantModelConfigurations.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Persistence.EntityFramework.TenantRepository-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Persistence.EntityFramework.TenantRepository-2.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Persistence.EntityFramework.Types.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Persistence.EntityFramework.Types.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Persistence.EntityFramework.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Persistence.EntityFramework.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Persistence.MongoDb.Attributes.CollectionAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Persistence.MongoDb.Attributes.CollectionAttribute.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Persistence.MongoDb.Attributes.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Persistence.MongoDb.Attributes.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Persistence.MongoDb.Configuration.MongoDbOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Persistence.MongoDb.Configuration.MongoDbOptions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Persistence.MongoDb.Configuration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Persistence.MongoDb.Configuration.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Persistence.MongoDb.Context.MongoDbClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Persistence.MongoDb.Context.MongoDbClient.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Persistence.MongoDb.Context.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Persistence.MongoDb.Context.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Persistence.MongoDb.Extention.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Persistence.MongoDb.Extention.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Persistence.MongoDb.HealthCheck.MongoDbHealthCheck.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Persistence.MongoDb.HealthCheck.MongoDbHealthCheck.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Persistence.MongoDb.HealthCheck.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Persistence.MongoDb.HealthCheck.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Persistence.MongoDb.Models.BaseEntity-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Persistence.MongoDb.Models.BaseEntity-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Persistence.MongoDb.Models.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Persistence.MongoDb.Models.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Persistence.MongoDb.MongoRepository-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Persistence.MongoDb.MongoRepository-2.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Persistence.MongoDb.MongoRepositoryProvider.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Persistence.MongoDb.MongoRepositoryProvider.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Persistence.MongoDb.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Persistence.MongoDb.html"
+        }
+      },
+      "version": ""
+    },
+    {
       "type": "Conceptual",
       "source_relative_path": "api/index.md",
       "output": {
@@ -227,6 +1947,16 @@
       "output": {
         ".html": {
           "relative_path": "index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "static/img/HttpStatusCode.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "static/img/HttpStatusCode.jpg"
         }
       },
       "version": ""

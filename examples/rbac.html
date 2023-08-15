@@ -124,10 +124,45 @@ Message,</p>
 <ol>
 <li>Id</li>
 </ol>
+<h1 id="tools">Tools:</h1>
+<h2 id="platform-tools">Platform tools</h2>
+<ol>
+<li>Kubernetes</li>
+<li>Helm</li>
+<li>OPA - Open Policy Agent</li>
+<li>Redis / TIKV / Inmemroy Cache</li>
+<li>Postgre SQL Database</li>
+</ol>
+<h2 id="observability-and-monitoring">observability and monitoring</h2>
+<ol>
+<li><p>OpenTelemetry Instrumentation Libraries: These libraries are integrated into your application code to automatically generate telemetry data, including traces, metrics, and contextual information. They provide the foundation for collecting observability data from your services.</p>
+</li>
+<li><p>OpenTelemetry Collector: The collector is a central component that receives, processes, and exports telemetry data. It can be configured to gather data from OpenTelemetry-instrumented applications and then route that data to different backends for further analysis and visualization.</p>
+</li>
+<li><p>Jaeger or Zipkin: These distributed tracing systems can receive trace data from the OpenTelemetry Collector. They allow you to visualize the flow of requests across your microservices, identify bottlenecks, and analyze the latency of individual service calls.</p>
+</li>
+<li><p>Prometheus: Prometheus can be used alongside OpenTelemetry for metrics collection and monitoring. The OpenTelemetry Collector can export metrics data to Prometheus, which can then be used to create dashboards, set up alerts, and perform long-term metrics analysis.</p>
+</li>
+<li><p>Grafana: Grafana can be used to visualize telemetry data collected by various sources, including Jaeger, Prometheus, and other OpenTelemetry exporters. You can create custom dashboards to display traces, metrics, and logs, providing a unified view of your system's observability data.</p>
+</li>
+<li><p>Loki / Elasticsearch : While not directly part of OpenTelemetry, Loki can complement your observability stack by collecting logs and integrating with Grafana for log visualization and analysis.</p>
+</li>
+</ol>
+<p>When deploying these tools together, consider the following:</p>
+<ol>
+<li><p>Integration and Compatibility: Ensure that the versions of the tools you choose are compatible with each other. Check the documentation and recommended setups for any integration considerations.</p>
+</li>
+<li><p>Resource Utilization: Keep in mind the resource requirements of each tool when deploying them. Distributed tracing systems like Jaeger and metrics databases like Prometheus can consume resources, so proper resource planning is important.</p>
+</li>
+<li><p>Configuration and Setup: Each tool may require configuration and setup. Plan how data flows between the tools, configure exporters, and create appropriate dashboards.</p>
+</li>
+<li><p>Monitoring and Maintenance: Regularly monitor the health and performance of your observability stack. Update the tools and configurations as needed to adapt to changes in your application and infrastructure.</p>
+</li>
+</ol>
 </article>
           </div>
           <div class="contribution-panel mobile-hide">
-              <a href="https://github.com/natarajanganapathi/sparkplug/blob/54/merge/docfx/examples/rbac.md/#L1" title="Improve this Doc" class="fab btn-warning pull-right"><i class="glyphicon glyphicon-pencil"></i></a>
+              <a href="https://github.com/natarajanganapathi/sparkplug/blob/feature/tenancy/docfx/examples/rbac.md/#L1" title="Improve this Doc" class="fab btn-warning pull-right"><i class="glyphicon glyphicon-pencil"></i></a>
           </div>
 
           <div class="hidden-sm col-md-2" role="complementary">
