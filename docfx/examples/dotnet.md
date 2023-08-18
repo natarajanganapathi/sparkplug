@@ -1,4 +1,26 @@
+
+## HTTPS Certificate for Development
+```sh 
+dotnet dev-certs https --trust
+
+```
+
+## Optimized build
+
+`<PublishTrimmed>true</PublishTrimmed>` will gives more compiletime waring. more works required.
+
+```xml
+<PropertyGroup>
+    <PublishTrimmed>true</PublishTrimmed>
+    <PublishSingleFile>true</PublishSingleFile>
+    <SelfContained>true</SelfContained>
+</PropertyGroup>
+```
+
+
 # Nuget Package publish 
+
+1. [Reference](https://learn.microsoft.com/en-us/nuget/nuget-org/publish-a-package)
 
 The project file should be like below. Readme and license file should be included in the project file and the path should have these files. 
 

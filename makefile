@@ -12,10 +12,13 @@ pack:
 clean:
 	dotnet clean
 
+find-deprecated:
+	dotnet list package --deprecated
+
 nuget-clear:
 	dotnet nuget locals all --clear
 
-full: 
+full:
 	make clean
 	make build
 	make tests
