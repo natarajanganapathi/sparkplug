@@ -12,13 +12,13 @@ public class ApiExceptionFilterAttribute : ExceptionFilterAttribute
     {
         var exception = context.Exception;
         var eventId = new EventId((int)ApiEventId.ExceptionFilter, nameof(ApiEventId.ExceptionFilter));
-        _logger.LogError(eventId, exception, $"Trace-Id: {context.HttpContext?.TraceIdentifier} Message: {exception.Message}");
+        _logger.LogError(eventId, exception, $"{Constants.XTraceId}: {context.HttpContext?.TraceIdentifier} Message: {exception.Message}");
 
         if (context.HttpContext != null)
         {
             var response = context.HttpContext.Response;
             response.StatusCode = StatusCodes.Status500InternalServerError;
-            response.ContentType = WebApiConstants.ContentType;
+            response.ContentType = Constants.JsonContentType;
         }
         var errorResponse = new ErrorResponse().SetFromException(exception);
         context.Result = new JsonResult(errorResponse);

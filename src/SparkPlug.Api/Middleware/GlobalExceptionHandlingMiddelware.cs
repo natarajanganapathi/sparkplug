@@ -15,7 +15,11 @@ public class GlobalExceptionHandlingMiddleware
     {
         try
         {
-            context.Response.Headers.Add("X-Trace-Id", context.TraceIdentifier);
+            var headers = context.Response.Headers;
+            if (!headers.TryGetValue(Constants.XTraceId, out _))
+            {
+                headers.Append(Constants.XTraceId, context.TraceIdentifier);
+            }
             await _next(context);
         }
         catch (Exception ex)
@@ -27,10 +31,10 @@ public class GlobalExceptionHandlingMiddleware
     private async Task HandleExceptionAsync(HttpContext context, Exception exception)
     {
         var eventId = new EventId((int)ApiEventId.UnknownGlobaException, nameof(ApiEventId.UnknownGlobaException));
-        _logger.LogError(eventId, exception, $"Trace-Id: {context.TraceIdentifier} Message: {exception.Message}");
+        _logger.LogError(eventId, exception, $"{Constants.XTraceId}: {context.TraceIdentifier} Message: {exception.Message}");
         var response = context.Response;
         response.StatusCode = StatusCodes.Status500InternalServerError;
-        response.ContentType = WebApiConstants.ContentType;
+        response.ContentType = Constants.JsonContentType;
         var errorResponse = new ErrorResponse().SetFromException(exception).SetCode($"{eventId.Id}");
         await context.Response.WriteAsJsonAsync(errorResponse);
     }

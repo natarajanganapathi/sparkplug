@@ -1,8 +1,8 @@
 namespace SparkPlug.Api.Configuration;
 
-public static class WebApiConstants
+public static class Constants
 {
     public const string Tenant = "tenant";
-    public const string ContentType = "application/json; charset=utf-8";
-    // public const string LogErrorMessageTemplate = "Error : {Message} TraceIdentifier : {TraceIdentifier} Exception: {Exception}";
+    public const string JsonContentType = "application/json; charset=utf-8";
+    public const string XTraceId = "X-Trace-Id";
 }

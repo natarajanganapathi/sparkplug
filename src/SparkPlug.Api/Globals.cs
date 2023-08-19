@@ -5,6 +5,7 @@ global using System.Reflection;
 global using System.Text;
 global using System.Threading.Tasks;
 global using System.Transactions;
+global using System.Reflection.Metadata;
 
 global using Microsoft.AspNetCore.Authorization;
 global using Microsoft.AspNetCore.Builder;

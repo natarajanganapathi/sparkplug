@@ -38,7 +38,7 @@ public class GlobalExceptionHandlingMiddlewareTests
 
         // Assert
         Assert.Equal(StatusCodes.Status500InternalServerError, context.Response.StatusCode);
-        Assert.Equal(WebApiConstants.ContentType, context.Response.ContentType);
+        Assert.Equal(Constants.JsonContentType, context.Response.ContentType);
         responseBodyStream.Seek(0, SeekOrigin.Begin);
         var responseContent = await new StreamReader(responseBodyStream).ReadToEndAsync();
         // Assert.Contains("Internal Server Error", responseContent);
