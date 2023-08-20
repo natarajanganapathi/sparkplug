@@ -47,6 +47,8 @@
 
 ## To be validate
 1. `Json.NET (Newtonsoft.Json) ` can be replaced by `System.Text.Json`. 
-    1. Which framework is providing high performance
-    2. Which framework is supporting Expression based query object construction. JSON.NET supportign and implemented. 
-    3. Child object property name also need to be in camael case in HTTP Response.
+    * Which framework is providing high performance
+    * Which framework is supporting Expression based query object construction. JSON.NET supportign and implemented. 
+    * Child object property name also need to be in camael case in HTTP Response.
+
+2. 

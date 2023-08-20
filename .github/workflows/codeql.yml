@@ -32,12 +32,22 @@ jobs:
       fail-fast: false
       matrix:
         language: [ 'csharp' ]
+        dotnet-version: [7.0.x]
         # CodeQL supports [ 'cpp', 'csharp', 'go', 'java', 'javascript', 'python', 'ruby' ]
         # Learn more about CodeQL language support at https://aka.ms/codeql-docs/language-support
 
     steps:
     - name: Checkout repository
       uses: actions/checkout@v3
+
+    - name: Setup .NET Core
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: ${{ matrix.dotnet-version }}
+      
+    - name: Restore NuGet packages
+      run: dotnet restore
+
 
     # Initializes the CodeQL tools for scanning.
     - name: Initialize CodeQL
