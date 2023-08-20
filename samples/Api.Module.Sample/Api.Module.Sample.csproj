@@ -17,8 +17,6 @@
     <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="7.0.1" /> 
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\src\SparkPlug.Api\SparkPlug.Api.csproj" />
-    <ProjectReference Include="..\..\src\SparkPlug.Contracts\SparkPlug.Contracts.csproj" />
     <ProjectReference Include="..\..\src\SparkPlug.Persistence.Abstractions\SparkPlug.Persistence.Abstractions.csproj" />
     <ProjectReference Include="..\..\src\SparkPlug.Persistence.EntityFramework\SparkPlug.Persistence.EntityFramework.csproj" />
   </ItemGroup>
