@@ -4,12 +4,12 @@ public static class Program
 {
     public static void Main(string[] args)
     {
-        var modules = new object[]{
-            new TenancyModule(),
-            new TenantDetailsConfiguration(),
-            new MenuModule(),
-            new MenuItemConfiguration()
-        };
+        // var modules = new object[]{
+        //     new TenancyModule(),
+        //     new TenantDetailsConfiguration(),
+        //     new MenuModule(),
+        //     new MenuItemConfiguration()
+        // };
         CreateHostBuilder(args)
         .ConfigureLogging((_, builder) => builder.AddSimpleConsole((options) =>
         {

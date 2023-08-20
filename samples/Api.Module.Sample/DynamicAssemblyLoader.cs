@@ -14,13 +14,14 @@ public static class DynamicAssemblyLoader
             LoadAssemblies(modules);
         }
     }
+
     public static void LoadAssemblies(string[] assemblyNames)
     {
         _ = assemblyNames.Select(LoadAssembly).ToList();
     }
     public static Assembly LoadAssembly(string assemblyName)
     {
-        string appDirectory = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) ?? string.Empty;
+        string appDirectory = AppContext.BaseDirectory;
         string assemblyPath = Path.Combine(appDirectory, assemblyName);
         if (!File.Exists(assemblyPath))
         {

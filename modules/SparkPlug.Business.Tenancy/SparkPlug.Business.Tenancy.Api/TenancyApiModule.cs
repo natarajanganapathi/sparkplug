@@ -1,6 +1,6 @@
 namespace SparkPlug.Business.Tenancy.Api;
 
-public class TenancyModule : IModule
+public class TenancyApiModule : IModule
 {
     public void AddModule(IServiceCollection services)
     {

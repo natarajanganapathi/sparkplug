@@ -1,10 +1,9 @@
-namespace SparkPlug.Business.Menu.Api;
+namespace SparkPlug.Business.Tenancy.Domain;
 
-public class MenuModule : IModule
+public class TenancyDomainModule : IModule
 {
     public void AddModule(IServiceCollection services)
     {
-        services.AddScoped<Menuervice>();
     }
 
     public void UseModule(IApplicationBuilder app, IServiceProvider serviceProvider)
