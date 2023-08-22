@@ -6,6 +6,7 @@ global using Microsoft.Extensions.DependencyInjection;
 
 global using SparkPlug.Api.Controllers;
 global using SparkPlug.Persistence.Abstractions;
+global using SparkPlug.Contracts;
 
 global using SparkPlug.Business.Tenancy.Service;
 global using SparkPlug.Business.Tenancy.Domain;

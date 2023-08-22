@@ -1,4 +1,4 @@
-namespace Microsoft.Extensions.DependencyInjection;
+namespace SparkPlug.Api.Common;
 
 public static class ModuleLoader
 {

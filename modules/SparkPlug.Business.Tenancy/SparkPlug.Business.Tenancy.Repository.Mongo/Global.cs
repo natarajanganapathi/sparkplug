@@ -1,5 +1,3 @@
-﻿namespace SparkPlug.Business.Tenancy.Repository.Mongo;
-public class Class1
-{
+﻿global using Microsoft.AspNetCore.Builder;
 
-}
+global using SparkPlug.Contracts;
