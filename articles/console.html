@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-      <title>ToDo List </title>
+      <title>Command Line Interface (CLI) </title>
       <meta name="viewport" content="width=device-width">
-      <meta name="title" content="ToDo List ">
+      <meta name="title" content="Command Line Interface (CLI) ">
     
       <link rel="shortcut icon" href="../favicon.ico">
       <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
@@ -76,45 +76,17 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="todo-list">ToDo List</h1>
+<h1 id="command-line-interface-cli">Command Line Interface (CLI)</h1>
 
-<h2 id="sparkplugapi">SparkPlug.Api</h2>
 <ol>
-<li>Load SparkPlug dependency module dynamically</li>
-<li>Composite Api Controller Template development for Composite Key tables - Workaround is sarogate Id for Composite Key tables.</li>
-<li>Data Cache implementation - Done</li>
-<li>CompositeRequest handling api development - InProgress</li>
-<li>Enable Http 2.0 in WebApi</li>
-<li>Database.EnsureCreated() move to Create Tenant api - When onboard new tenant, this will create the db schema.</li>
-<li>Database.Migrate() should be called in application Startup.</li>
-</ol>
-<h2 id="sparkplugpersistance">SparkPlug.Persistance</h2>
-<ol>
-<li></li>
-</ol>
-<h2 id="sparkplugpersistanceentityframework">SparkPlug.Persistance.EntityFramework</h2>
-<ol>
-<li>Repository should support Composite Key tables</li>
-<li>In <code>QueryRequeset</code>, add <code>Exclude[]</code> property to exclude properties in response. If we provide <code>Exclude[]</code> without select, It returns all the columns except Exclude properties.</li>
-<li>Filter criteria need to add in all the <code>QueryRequest</code> for each entity to get only <code>live</code> data.</li>
-<li>Filter criteria for included entity add in QueryRequest. - Done for where condition.</li>
-<li>Support <code>Not</code> operator for all cobinations of <code>Filter</code>. Like <code>NotIn</code>, <code>NotEq</code>, <code>NotNull</code>, etc.</li>
-<li>DB Migrations using ef migrate command.</li>
-</ol>
-<h2 id="sample-projects">Sample Projects</h2>
-<ol>
-<li>Azure Authentication integration</li>
-<li>Azure Application Insights integration</li>
-</ol>
-<h2 id="common">Common</h2>
-<ol>
-<li>Common string extenstion for string Case chagse. ex. camelCase, Snake_Case, PascalCase, etc.</li>
-<li>Github Actions for CICD - In Progress</li>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/core/tools/global-tools-how-to-create">Microsoft CLI Global tool</a></li>
+<li><a href="https://github.com/natemcmaster/CommandLineUtils/pkgs/nuget/McMaster.Extensions.CommandLineUtils">CLI Framework - OpenSource</a></li>
+<li><a href="https://github.com/dotnet/command-line-api">Microsoft CLI Sample Source Code</a></li>
 </ol>
 </article>
           </div>
           <div class="contribution-panel mobile-hide">
-              <a href="https://github.com/natarajanganapathi/sparkplug/blob/feature/tenancy/docfx/articles/Todo.md/#L1" title="Improve this Doc" class="fab btn-warning pull-right"><i class="glyphicon glyphicon-pencil"></i></a>
+              <a href="https://github.com/natarajanganapathi/sparkplug/blob/55/merge/docfx/articles/console.md/#L1" title="Improve this Doc" class="fab btn-warning pull-right"><i class="glyphicon glyphicon-pencil"></i></a>
           </div>
 
           <div class="hidden-sm col-md-2" role="complementary">

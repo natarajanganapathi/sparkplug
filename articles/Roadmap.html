@@ -1,0 +1,178 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>SparkPlug Roadmap </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="SparkPlug Roadmap ">
+    
+      <link rel="shortcut icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../styles/docfx.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta property="docfx:navrel" content="../toc.html">
+      <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="sparkplug-roadmap">SparkPlug Roadmap</h1>
+
+<h2 id="framework-development">Framework Development</h2>
+<ol>
+<li>Storage Abstraction and Azure storage Implementation to access and manage the files.</li>
+<li>Puppeteer Sharp project for PDF generation</li>
+<li>Common string extenstion for string Case chagse. ex. camelCase, Snake_Case, PascalCase, etc.</li>
+</ol>
+<h3 id="sparkplugapi">SparkPlug.Api</h3>
+<ol>
+<li>Load SparkPlug dependency module dynamically</li>
+<li>Composite Api Controller Template development for Composite Key tables - Workaround is sarogate Id for Composite Key tables.</li>
+<li>Data Cache implementation                                                                                                        - Done</li>
+<li>CompositeRequest handling api development                                                                                        - InProgress</li>
+<li>Enable Http 2.0/3.0 in WebApi</li>
+<li>Database.EnsureCreated() move to Create Tenant api - When onboard new tenant, this will create the db schema.</li>
+<li>Database.Migrate() should be called in application Startup.</li>
+</ol>
+<h3 id="sparkplugpersistance">SparkPlug.Persistance</h3>
+<ol>
+<li></li>
+</ol>
+<h3 id="sparkplugpersistanceentityframework">SparkPlug.Persistance.EntityFramework</h3>
+<ol>
+<li>Repository should support Composite Key tables</li>
+<li>In <code>QueryRequeset</code>, add <code>Exclude[]</code> property to exclude properties in response. If we provide <code>Exclude[]</code> without select, It returns all the columns except Exclude properties.</li>
+<li>Filter criteria need to add in all the <code>QueryRequest</code> for each entity to get only <code>live</code> data.</li>
+<li>Filter criteria for included entity add in QueryRequest. - Done for where condition.</li>
+<li>Support <code>Not</code> operator for all cobinations of <code>Filter</code>. Like <code>NotIn</code>, <code>NotEq</code>, <code>NotNull</code>, etc.</li>
+<li>DB Migrations using ef migrate command.</li>
+</ol>
+<h2 id="sample-application-development">Sample Application Development</h2>
+<ol>
+<li>Azure Authentication integration</li>
+<li>Azure Application Insights integration</li>
+<li>Sample project for Single Tenant and Multi Tenant</li>
+</ol>
+<h2 id="commandline-interface-cli-development">Commandline Interface (CLI) Development</h2>
+<ol>
+<li>Razor Template Engine Module. Don't use RazorLight dll for template engine.</li>
+<li>CLI Base Framework with help of <code>Spectre.Console</code></li>
+<li>CLI for <code>SparkPlug</code></li>
+</ol>
+<h2 id="infrastructure-development">Infrastructure Development</h2>
+<ol>
+<li>OPA (Open Policy Agent) based authorization module</li>
+<li>Add local machie as Azure Kubernetes worker node</li>
+<li>Istio setup in kubernetes environment</li>
+</ol>
+<h2 id="devops-development">DevOps Development</h2>
+<ol>
+<li>Github Actions for CICD                                                                      - In Progress</li>
+<li>Create GitHub Actions pipeline for generating SKD from OpenAPI 3.0 json file</li>
+<li>Dockerfile for dotnet 8 with AOT Compilation for apis.</li>
+</ol>
+<h2 id="to-be-validate">To be validate</h2>
+<ol>
+<li><p><code>Json.NET (Newtonsoft.Json) </code> can be replaced by <code>System.Text.Json</code>.</p>
+<ul>
+<li>Which framework is providing high performance</li>
+<li>Which framework is supporting Expression based query object construction. JSON.NET supportign and implemented.</li>
+<li>Child object property name also need to be in camael case in HTTP Response.</li>
+</ul>
+</li>
+<li></li>
+</ol>
+</article>
+          </div>
+          <div class="contribution-panel mobile-hide">
+              <a href="https://github.com/natarajanganapathi/sparkplug/blob/55/merge/docfx/articles/Roadmap.md/#L1" title="Improve this Doc" class="fab btn-warning pull-right"><i class="glyphicon glyphicon-pencil"></i></a>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

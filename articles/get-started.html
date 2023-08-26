@@ -106,10 +106,15 @@
 <p>Ex. &quot;PathBase&quot; : &quot;/api/v1/&quot;</p>
 <h3 id="multi-tenant-application">Multi Tenant Application</h3>
 <p>Ex. &quot;PathBase&quot; : &quot;/api/v1/{tanant}/&quot;</p>
+<h3 id="traceidentifier-vs-correlationid">TraceIdentifier vs CorrelationId</h3>
+<p>utilizing <code>TraceIdentifier</code> for local request tracking within a service and <code>CorrelationId</code> for tracking across services in a distributed environment.</p>
+<h3 id="optimization">Optimization</h3>
+<p>dotnet counters monitor --name Api.Module.Sample --counters &quot;cpu-usage&quot; &quot;working-set&quot;
+dotnet-monitor collect 34136 --providers cpu memory</p>
 </article>
           </div>
           <div class="contribution-panel mobile-hide">
-              <a href="https://github.com/natarajanganapathi/sparkplug/blob/feature/tenancy/docfx/articles/get-started.md/#L1" title="Improve this Doc" class="fab btn-warning pull-right"><i class="glyphicon glyphicon-pencil"></i></a>
+              <a href="https://github.com/natarajanganapathi/sparkplug/blob/55/merge/docfx/articles/get-started.md/#L1" title="Improve this Doc" class="fab btn-warning pull-right"><i class="glyphicon glyphicon-pencil"></i></a>
           </div>
 
           <div class="hidden-sm col-md-2" role="complementary">

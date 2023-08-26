@@ -1,0 +1,150 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>HTTPS Certificate for Development </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="HTTPS Certificate for Development ">
+    
+      <link rel="shortcut icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../styles/docfx.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta property="docfx:navrel" content="../toc.html">
+      <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h2 id="https-certificate-for-development">HTTPS Certificate for Development</h2>
+
+<pre><code class="lang-sh">dotnet dev-certs https --trust
+
+</code></pre>
+<h2 id="optimized-build">Optimized build</h2>
+<p><code>&lt;PublishTrimmed&gt;true&lt;/PublishTrimmed&gt;</code> will gives more compiletime waring. more works required.</p>
+<pre><code class="lang-xml">&lt;PropertyGroup&gt;
+    &lt;PublishTrimmed&gt;true&lt;/PublishTrimmed&gt;
+    &lt;PublishSingleFile&gt;true&lt;/PublishSingleFile&gt;
+    &lt;SelfContained&gt;true&lt;/SelfContained&gt;
+&lt;/PropertyGroup&gt;
+</code></pre>
+<h1 id="nuget-package-publish">Nuget Package publish</h1>
+<ol>
+<li><a href="https://learn.microsoft.com/en-us/nuget/nuget-org/publish-a-package">Reference</a></li>
+</ol>
+<p>The project file should be like below. Readme and license file should be included in the project file and the path should have these files.</p>
+<pre><code class="lang-xml">&lt;Project Sdk=&quot;Microsoft.NET.Sdk&quot;&gt;
+  &lt;PropertyGroup&gt;
+    &lt;TargetFramework&gt;net7.0&lt;/TargetFramework&gt;
+    &lt;ImplicitUsings&gt;enable&lt;/ImplicitUsings&gt;
+    &lt;Nullable&gt;enable&lt;/Nullable&gt;
+    &lt;AssemblyVersion&gt;0.0.0.1&lt;/AssemblyVersion&gt;
+    &lt;FileVersion&gt;0.0.0.1&lt;/FileVersion&gt;
+    &lt;Version&gt;0.0.1-alpha1&lt;/Version&gt;
+    &lt;PackageReadmeFile&gt;README.md&lt;/PackageReadmeFile&gt;
+    &lt;PackageLicenseFile&gt;LICENSE.txt&lt;/PackageLicenseFile&gt;
+  &lt;/PropertyGroup&gt;
+  &lt;ItemGroup&gt;
+  &lt;/ItemGroup&gt;
+  &lt;ItemGroup&gt;
+      &lt;None Include=&quot;README.md&quot; Pack=&quot;true&quot; PackagePath=&quot;README.md&quot;/&gt;
+      &lt;None Include=&quot;LICENSE.txt&quot; Pack=&quot;true&quot; PackagePath=&quot;LICENSE.txt&quot;/&gt;
+  &lt;/ItemGroup&gt;
+&lt;/Project&gt;
+
+</code></pre>
+</article>
+          </div>
+          <div class="contribution-panel mobile-hide">
+              <a href="https://github.com/natarajanganapathi/sparkplug/blob/55/merge/docfx/examples/dotnet.md/#L1" title="Improve this Doc" class="fab btn-warning pull-right"><i class="glyphicon glyphicon-pencil"></i></a>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
