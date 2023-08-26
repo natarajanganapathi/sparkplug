@@ -6,7 +6,6 @@ public class Startup
     public Startup(IConfiguration configuration)
     {
         Configuration = configuration;
-        // DynamicAssemblyLoader.LoadAssemblyFromConfiguration(Configuration);
     }
 
     public void ConfigureServices(IServiceCollection services)

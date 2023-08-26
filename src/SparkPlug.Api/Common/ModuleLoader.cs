@@ -5,9 +5,12 @@ public static class ModuleLoader
     private static readonly IEnumerable<IModule?> Modules;
     static ModuleLoader()
     {
-         Modules = AssemblyCache.Types
-                .Where(t => t.IsClass && typeof(IModule).IsAssignableFrom(t))
-                .Select(t => Activator.CreateInstance(t) as IModule);
+        string exeDirectory = Path.GetDirectoryName(Assembly.GetEntryAssembly()?.Location) ?? ".";
+        Modules = Directory.GetFiles(exeDirectory, "*.dll")
+                        .Select(Assembly.LoadFrom)
+                        .SelectMany(x => x.GetTypes())
+                        .Where(t => t.IsClass && typeof(IModule).IsAssignableFrom(t))
+                        .Select(t => Activator.CreateInstance(t) as IModule);
     }
 
     public static void AddCustomModules(this IServiceCollection services)
@@ -25,7 +28,7 @@ public static class ModuleLoader
         }
     }
 
-    public static void UseCustomModulesMiddelware(this IApplicationBuilder app)
+    public static void UseCustomModulesMiddelwares(this IApplicationBuilder app)
     {
         foreach (var module in Modules)
         {

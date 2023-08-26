@@ -127,7 +127,7 @@ public static class QueryExtentions
         {
             return GetEnumValueExpression(propAccessExpression);
         }
-        else if(type == typeof(string))
+        else if (type == typeof(string))
         {
             return GetValueExpression(propAccessExpression);
         }

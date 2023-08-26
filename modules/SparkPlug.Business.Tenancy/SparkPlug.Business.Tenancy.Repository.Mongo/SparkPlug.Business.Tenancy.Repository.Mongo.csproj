@@ -14,5 +14,7 @@
     <None Include="README.md" Pack="true" PackagePath="README.md" />
     <None Include="LICENSE.txt" Pack="true" PackagePath="LICENSE.txt" />
   </ItemGroup>
-
+ <ItemGroup>
+    <ProjectReference Include="..\..\..\src\SparkPlug.Persistence.Abstractions\SparkPlug.Persistence.Abstractions.csproj" />
+  </ItemGroup>
 </Project>

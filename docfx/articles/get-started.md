@@ -40,3 +40,9 @@ Ex. "PathBase" : "/api/v1/{tanant}/"
 ### TraceIdentifier vs CorrelationId
 
 utilizing `TraceIdentifier` for local request tracking within a service and `CorrelationId` for tracking across services in a distributed environment.
+
+
+### Optimization
+
+dotnet counters monitor --name Api.Module.Sample --counters "cpu-usage" "working-set"
+dotnet-monitor collect 34136 --providers cpu memory

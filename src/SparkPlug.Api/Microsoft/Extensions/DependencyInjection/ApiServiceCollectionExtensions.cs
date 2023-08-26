@@ -48,7 +48,7 @@ public static class ApiServiceCollectionExtenstions
 
         // Custom Moudeles
         app.UseCustomModules(serviceProvider);
-        app.UseCustomModulesMiddelware();
+        app.UseCustomModulesMiddelwares();
 
         app.UseEndpoints(endpoints => endpoints.MapGet("/", async context => await context.Response.WriteAsync("Running!...")));
         app.UseAuthentication();
