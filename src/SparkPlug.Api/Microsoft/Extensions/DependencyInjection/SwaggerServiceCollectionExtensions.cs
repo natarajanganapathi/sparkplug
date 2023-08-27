@@ -58,7 +58,7 @@ public static class SwaggerServiceCollectionExtensions
 //     }
 //     public void Apply(OpenApiDocument swaggerDoc, DocumentFilterContext context)
 //     {
-//         var pathBase = _options.IsMultiTenant ? string.Join("/", _options.PathBase, string.Format("[{0}]", WebApiConstants.Tenant)) : _options.PathBase;
+//         var pathBase = _options.IsMultiTenant ? string.Join("/", _options.PathBase, string.Format("[{0}]", Constants.Tenant)) : _options.PathBase;
 //         swaggerDoc.Servers = new List<OpenApiServer>
 //             {
 //                 new OpenApiServer { Url = pathBase }

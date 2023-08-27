@@ -5,15 +5,24 @@
             // Use IntelliSense to find out which attributes exist for C# debugging
             // Use hover for the description of the existing attributes
             // For further information visit https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger-launchjson.md
-            "name": ".NET Core Launch (console)",
+            "name": "Contracts Test",
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "build",
-            // If you have changed target frameworks, make sure to update the program path.
             "program": "${workspaceFolder}/tests/SparkPlug.Contracts.Test/bin/Debug/net7.0/SparkPlug.Contracts.Test.dll",
             "args": [],
             "cwd": "${workspaceFolder}/tests/SparkPlug.Contracts.Test",
-            // For more information about the 'console' field, see https://aka.ms/VSCode-CS-LaunchJson-Console
+            "console": "internalConsole",
+            "stopAtEntry": false
+        },
+        {
+            "name": "API Test",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            "program": "${workspaceFolder}/tests/SparkPlug.Api.Test/bin/Debug/net7.0/SparkPlug.Api.Test.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/tests/SparkPlug.Api.Test",
             "console": "internalConsole",
             "stopAtEntry": false
         },

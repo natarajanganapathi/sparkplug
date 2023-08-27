@@ -27,57 +27,93 @@ public abstract class SqlRepository<TId, TEntity> : IRepository<TId, TEntity> wh
         logger = serviceProvider.GetRequiredService<ILogger<SqlRepository<TId, TEntity>>>();
         requestContext = serviceProvider.GetRequiredService<IRequestContext<TId>>();
     }
-    public async Task<IList<JObject>> QueryAsync(IQueryRequest request, CancellationToken cancellationToken)
+    public async Task<IList<JObject>> QueryAsync(IQueryRequest request, CancellationToken cancellationToken = default)
     {
         var query = new QueryBuilder<TEntity>(DbSet, request).Project();
 #if DEBUG
         logger.LogInformation("Sql Query: {query}", query.ToQueryString());
 #endif
-        // return new PagedResult<JObject>(await query.ToListAsync(cancellationToken), await query.LongCountAsync(cancellationToken));
         return await query.ToListAsync(cancellationToken);
     }
-    public async Task<IList<TEntity>> FindAsync(IQueryRequest request, CancellationToken cancellationToken)
+    public async Task<IList<TEntity>> FindAsync(IQueryRequest request, CancellationToken cancellationToken = default)
     {
         var query = new QueryBuilder<TEntity>(DbSet, request).Select();
-        // return new PagedResult<TEntity>(await query.ToListAsync(cancellationToken), await query.LongCountAsync(cancellationToken));
         return await query.ToListAsync(cancellationToken);
     }
-    public async Task<long> CountAsync(IQueryRequest request, CancellationToken cancellationToken)
+    public async Task<long> CountAsync(IQueryRequest request, CancellationToken cancellationToken = default)
     {
         return await new QueryBuilder<TEntity>(DbSet, request).CountAsync(cancellationToken);
     }
 
-    public async Task<TEntity> GetAsync(TId id, CancellationToken cancellationToken)
+    public async Task<TEntity> GetAsync(TId id, CancellationToken cancellationToken = default)
     {
         var tid = id ?? throw new QueryEntityException("Id is null");
-        var result = await DbSet.FindAsync(new object[] { tid }, cancellationToken).ConfigureAwait(false);
-        return result ?? throw new QueryEntityException("Id is not found");
+        var result = await DbSet.FindAsync(new object[] { tid }, cancellationToken);
+        if (result is IDeletableEntity obj)
+        {
+            result = obj.Status == Status.Live ? result : null;
+        }
+        return result ?? throw new QueryEntityException($"Id '{id}' is not found");
     }
-    public async Task<IEnumerable<TEntity>> GetManyAsync(TId[] ids, CancellationToken cancellationToken)
+    public async Task<IEnumerable<TEntity>> GetManyAsync(TId[] ids, CancellationToken cancellationToken = default)
     {
-        return await DbSet.Where(x => ids.Contains(x.Id)).ToArrayAsync(cancellationToken);
+        var results = await DbSet.AsNoTracking().Where(x => ids.Contains(x.Id)).ToListAsync(cancellationToken);
+        var deletedEntities = results.OfType<IDeletableEntity>().Where(x => x.Status != Status.Live);
+        if (deletedEntities.Any() || ids.Length != results.Count)
+        {
+            throw new QueryEntityException("One or more id is not found");
+        }
+        return results;
     }
-    public async Task<TEntity> CreateAsync(ICommandRequest<TEntity> request, CancellationToken cancellationToken)
+    private async Task<Status> GetStats(TId id, CancellationToken cancellationToken = default)
+    {
+        if (id != null)
+        {
+            var request = new QueryRequest(new[] { "id", "status" })
+                          .Where("Id", FieldOperator.Equal, id);
+            var record = (await QueryAsync(request, cancellationToken)).SingleOrDefault();
+            if (record != null && record.TryGetValue("status", out var statusValue))
+            {
+                return (Status)statusValue.Value<int>();
+            }
+        }
+        return Status.Deleted;
+    }
+    public async Task<TEntity> CreateAsync(ICommandRequest<TEntity> request, CancellationToken cancellationToken = default)
     {
         var entity = request.Data ?? throw new CreateEntityException("Entity is null");
+        if (entity is IDeletableEntity obj) { obj.Status = Status.Live; }
         var entityEntry = await DbSet.AddAsync(entity, cancellationToken);
         await DbContext.SaveChangesAsync(requestContext.UserId, cancellationToken);
         return entityEntry.Entity;
     }
-    public async Task<IEnumerable<TEntity>> CreateManyAsync(ICommandRequest<TEntity[]> request, CancellationToken cancellationToken)
+    public async Task<IEnumerable<TEntity>> CreateManyAsync(ICommandRequest<TEntity[]> request, CancellationToken cancellationToken = default)
     {
         var entities = request.Data ?? throw new CreateEntityException("Entities are null");
+        foreach (var entity in entities)
+        {
+            if (entity is IDeletableEntity obj) { obj.Status = Status.Live; }
+        }
         await DbSet.AddRangeAsync(entities, cancellationToken);
         await DbContext.SaveChangesAsync(requestContext.UserId, cancellationToken);
         return entities;
     }
-    public async Task<TEntity> UpdateAsync(TId id, ICommandRequest<TEntity> request, CancellationToken cancellationToken)
+    public async Task<TEntity> UpdateAsync(TId id, ICommandRequest<TEntity> request, CancellationToken cancellationToken = default)
     {
         var entity = request.Data ?? throw new UpdateEntityException("Entity is null");
         entity.Id = id ?? throw new UpdateEntityException("Id is null");
+        if (entity is IDeletableEntity)
+        {
+            var status = await GetStats(id, cancellationToken);
+            if (status != Status.Live)
+            {
+                throw new UpdateEntityException($"Entity with ID '{id}' is not live and cannot be updated.");
+            }
+        }
         return await UpdateAsync(entity, cancellationToken);
     }
-    private async Task<TEntity> UpdateAsync(TEntity entity, CancellationToken cancellationToken)
+
+    private async Task<TEntity> UpdateAsync(TEntity entity, CancellationToken cancellationToken = default)
     {
         DbSet.Attach(entity);
         if (entity is IConcurrencyEntity obj) { obj.Revision++; }
@@ -87,13 +123,11 @@ public abstract class SqlRepository<TId, TEntity> : IRepository<TId, TEntity> wh
     }
     public async Task<TEntity> DeleteAsync(TId id, CancellationToken cancellationToken)
     {
-        var tid = id ?? throw new DeleteEntityException("Id is null");
-        TEntity entityToDelete = (await DbSet.FindAsync(new object[] { tid }, cancellationToken).ConfigureAwait(false)) ?? throw new DeleteEntityException("Id is invalid");
+        TEntity entityToDelete = await GetAsync(id, cancellationToken);
         if (entityToDelete is IDeletableEntity obj) { obj.Status = Status.Deleted; }
         return await UpdateAsync(entityToDelete, cancellationToken);
     }
-
-    public async Task<TEntity> PatchAsync(TId id, ICommandRequest<JsonPatchDocument<TEntity>> request, CancellationToken cancellationToken)
+    public async Task<TEntity> PatchAsync(TId id, ICommandRequest<JsonPatchDocument<TEntity>> request, CancellationToken cancellationToken = default)
     {
         var patchDocument = request.Data ?? throw new UpdateEntityException("JsonPatchDocument<TEntity> is null");
         TEntity original = await GetAsync(id, cancellationToken);
@@ -103,7 +137,7 @@ public abstract class SqlRepository<TId, TEntity> : IRepository<TId, TEntity> wh
     public async Task<TEntity> ReplaceAsync(TId id, ICommandRequest<TEntity> request, CancellationToken cancellationToken)
     {
         var entity = request.Data ?? throw new UpdateEntityException("Entity is null");
-        var sourceEntity = await GetAsync(id, cancellationToken).ConfigureAwait(false);
+        var sourceEntity = await GetAsync(id, cancellationToken);
         sourceEntity = sourceEntity ?? throw new UpdateEntityException("Id is invalid");
         DbContext.Entry(sourceEntity).CurrentValues.SetValues(entity);
         var modifyedCount = await DbContext.SaveChangesAsync(requestContext.UserId, cancellationToken);

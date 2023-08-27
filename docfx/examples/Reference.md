@@ -57,8 +57,13 @@
 
 26. Web Api Development Reference
     [ABP Framework](https://abp.io/?_ga=2.23733490.952085864.1676135167-1712102471.1662221989)
+
 27. Database Migration
     [Fluent Migration](https://fluentmigrator.github.io/articles/comparison-to-entity-framework-migrations.html)
+
+28. Open Policy Agent
+    [OPA Playground](https://play.openpolicyagent.org/)    
+
 ## DevOps Reference
 1. [Bump Version Number](https://github.com/marketplace/actions/dotnet-bump-versions)
  

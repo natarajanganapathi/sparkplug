@@ -4,7 +4,6 @@ public class ErrorResponse : ApiResponse, IErrorResponse
 {
     public string? Message { get; set; }
     public string? Code { get; set; }
-    public string TraceIdentifier { get; set; } = string.Empty;
     public string? StackTrace { get; set; }
 }
 
@@ -27,11 +26,7 @@ public static class ExceptionExtension
 #endif
         return error;
     }
-    public static ErrorResponse SetTraceIdentifier(this ErrorResponse error, string traceIdentifier)
-    {
-        error.TraceIdentifier = traceIdentifier;
-        return error;
-    }
+    
     public static ErrorResponse SetFromException(this ErrorResponse error, Exception ex)
     {
         error.SetMessage(ex.Message);

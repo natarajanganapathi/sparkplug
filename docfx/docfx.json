@@ -2,14 +2,20 @@
   "metadata": [
     {
       "src": [
-        {
-          "files": [
-            "src/SparkPlug.Contracts/SparkPlug.Contracts.csproj",
-            "src/SparkPlug.Persistence.Abstractions/SparkPlug.Persistence.Abstractions.csproj"
-          ]
-        }
-      ],
+        { 
+          "files": ["SparkPlug.Source.sln"],
+          "src": "../src"
+        },
+        { 
+          "files": ["SparkPlug.Business.Menu/Menu.sln"],
+          "src": "../modules"
+        },
+        { 
+          "files": ["SparkPlug.Business.Tenancy/Tenancy.sln"],
+          "src": "../modules"
+        }],
       "dest": "api",
+      "addReference":[],
       "noDefaultInherit": true,
       "includePrivateMembers": false,
       "disableGitFeatures": false,
@@ -19,6 +25,11 @@
     }
   ],
   "build": {
+    "assembly": [
+    {
+        "name": "../samples/Api.Module.Sample/bin/Release/net7.0/Newtonsoft.Json.dll"
+    }
+    ],
     "content": [
       {
         "files": [
@@ -40,15 +51,13 @@
     "resource": [
       {
         "files": [
-          "images/**"
+          "static/**"
         ]
       }
     ],
     "overwrite": [
       {
-        "files": [
-          "apidoc/**.md"
-        ],
+        "files": [],
         "exclude": [
           "obj/**",
           "_site/**"
@@ -68,7 +77,7 @@
     "postProcessors": [
       "ExtractSearchIndex"
     ],
-    "noLangKeyword": false,
+    "noLangKeyword": true,
     "keepFileLink": false,
     "disableGitFeatures": false
   }

@@ -20,13 +20,13 @@ public class Startup
 
         services.AddCors(options =>
         {
-           options.AddDefaultPolicy(builder =>
-           {
-               builder.WithOrigins("http://localhost:*", "http://127.0.0.1:*")
-                      .AllowAnyHeader()
-                      .AllowAnyMethod();
-           });
-       });
+            options.AddDefaultPolicy(builder =>
+            {
+                builder.WithOrigins("http://localhost:*", "http://127.0.0.1:*")
+                       .AllowAnyHeader()
+                       .AllowAnyMethod();
+            });
+        });
     }
 
     public void Configure(IApplicationBuilder app, IServiceProvider serviceProvider)
