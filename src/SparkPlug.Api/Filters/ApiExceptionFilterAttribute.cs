@@ -12,7 +12,7 @@ public class ApiExceptionFilterAttribute : ExceptionFilterAttribute
     {
         var exception = context.Exception;
         var eventId = new EventId((int)ApiEventId.ExceptionFilter, nameof(ApiEventId.ExceptionFilter));
-        _logger.LogError(eventId, exception, $"{Constants.XTraceId}: {context.HttpContext?.TraceIdentifier} Message: {exception.Message}");
+        _logger.LogError(eventId, exception, "{XTraceId}: {TraceIdentifier} Message: {Message}", Constants.XTraceId, context.HttpContext?.TraceIdentifier, exception.Message);
 
         if (context.HttpContext != null)
         {

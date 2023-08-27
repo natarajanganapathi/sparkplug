@@ -104,7 +104,7 @@ public static class QueryExtentions
                         ?? throw new ArgumentException(new StringBuilder().Append('\'').Append(source).Append("' is not a valid property of type ").Append(elementType).ToString());
             var propAccessExpression = Expression.Property(sourceParameter, propInfo);
             var type = propInfo.PropertyType;
-            var include = includes?.FirstOrDefault(i => i.Name.Equals(source, StringComparison.CurrentCultureIgnoreCase));
+            var include = includes?.First(i => i.Name.Equals(source, StringComparison.CurrentCultureIgnoreCase));
             // Expression? value = type switch
             // {
             //     { IsEnum: true } => GetEnumValueExpression(propAccessExpression),
@@ -206,7 +206,7 @@ public static class QueryExtentions
         foreach (var propertyName in propertyNames)
         {
             var propertyInfo = type.GetProperty(propertyName, BindingFlags.IgnoreCase | BindingFlags.Public | BindingFlags.Instance) ?? throw new ArgumentException($"property {propertyName} not available in type {type}", propertyName);
-            if (propertyInfo.PropertyType.IsClass && includes?.Any(i => i.Name == propertyInfo.Name) == true)
+            if (propertyInfo.PropertyType.IsClass && includes != null && Array.Exists(includes, i => i.Name == propertyInfo.Name) == true)
             {
                 var include = includes.First(i => i.Name == propertyInfo.Name);
                 var selects = include.Select?.Length > 0 ? include.Select : GetProperties(propertyInfo.PropertyType).ToArray();
