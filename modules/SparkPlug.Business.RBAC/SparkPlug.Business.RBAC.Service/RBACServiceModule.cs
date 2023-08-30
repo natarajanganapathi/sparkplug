@@ -1,10 +1,9 @@
-namespace SparkPlug.Business.Tenancy.Service;
+namespace SparkPlug.Business.RBAC.Service;
 
-public class TenancyServiceModule : IModule
+public class RBACServiceModule : IModule
 {
     public void AddModule(IServiceCollection services)
     {
-        services.AddScoped<ITenantResolver, TenantService>();
     }
 
     public void UseModule(IApplicationBuilder app, IServiceProvider serviceProvider)

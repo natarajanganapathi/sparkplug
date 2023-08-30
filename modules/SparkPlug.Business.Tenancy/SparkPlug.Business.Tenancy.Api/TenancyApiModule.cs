@@ -4,7 +4,6 @@ public class TenancyApiModule : IModule
 {
     public void AddModule(IServiceCollection services)
     {
-        services.AddScoped<ITenantResolver, TenantService>();
         services.AddScoped(typeof(ITenantOptions<>), typeof(TenantOptions<>));
         services.AddTenancyRouteAttribute();
     }

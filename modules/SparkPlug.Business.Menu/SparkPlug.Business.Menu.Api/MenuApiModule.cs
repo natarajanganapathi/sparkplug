@@ -4,7 +4,7 @@ public class MenuApiModule : IModule
 {
     public void AddModule(IServiceCollection services)
     {
-        services.AddScoped<Menuervice>();
+        services.AddScoped<MenuService>();
     }
 
     public void UseModule(IApplicationBuilder app, IServiceProvider serviceProvider)

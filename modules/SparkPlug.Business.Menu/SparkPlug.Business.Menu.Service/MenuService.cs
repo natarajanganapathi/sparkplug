@@ -1,6 +1,6 @@
 namespace SparkPlug.Business.Menu.Service;
 
-public class Menuervice : BaseService<long, MenuItem>
+public class MenuService : BaseService<long, MenuItem>
 {
-   public Menuervice(IServiceProvider serviceProvider) : base(serviceProvider) { }
+   public MenuService(IServiceProvider serviceProvider) : base(serviceProvider) { }
 }

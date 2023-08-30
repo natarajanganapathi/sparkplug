@@ -1,10 +1,9 @@
-namespace SparkPlug.Business.Tenancy.Service;
+namespace SparkPlug.Business.RBAC.Repository.Sql;
 
-public class TenancyServiceModule : IModule
+public class RBACRepositorySqlModule : IModule
 {
     public void AddModule(IServiceCollection services)
     {
-        services.AddScoped<ITenantResolver, TenantService>();
     }
 
     public void UseModule(IApplicationBuilder app, IServiceProvider serviceProvider)
