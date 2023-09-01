@@ -72,7 +72,8 @@
     "fileMetadataFiles": [],
     "template": [
       "default",
-      "templates/mathew"
+      "modern",
+      "templates/material"
     ],
     "postProcessors": [
       "ExtractSearchIndex"
