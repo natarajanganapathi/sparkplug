@@ -19,7 +19,10 @@
   <ItemGroup>
     <ProjectReference Include="..\..\src\SparkPlug.Persistence.Abstractions\SparkPlug.Persistence.Abstractions.csproj" />
     <ProjectReference Include="..\..\src\SparkPlug.Persistence.EntityFramework\SparkPlug.Persistence.EntityFramework.csproj" />
-    <ProjectReference Include="..\..\src\SparkPlug.Api\SparkPlug.Api.csproj" />
+    <ProjectReference Include="..\..\modules\SparkPlug.Business.Menu\SparkPlug.Business.Menu.Api\SparkPlug.Business.Menu.Api.csproj" />
+    <ProjectReference Include="..\..\modules\SparkPlug.Business.Menu\SparkPlug.Business.Menu.Repository.Sql\SparkPlug.Business.Menu.Repository.Sql.csproj" />
+    <ProjectReference Include="..\..\modules\SparkPlug.Business.RBAC\SparkPlug.Business.RBAC.Api\SparkPlug.Business.RBAC.Api.csproj" />
+    <ProjectReference Include="..\..\modules\SparkPlug.Business.RBAC\SparkPlug.Business.RBAC.Repository.Sql\SparkPlug.Business.RBAC.Repository.Sql.csproj" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="appsettings.json" Condition="Exists('appsettings.json')">

@@ -40,9 +40,12 @@ angular:
 	npx @openapitools/openapi-generator-cli generate -i open-api.json -g typescript-angular -o client/angular
 	npx @openapitools/openapi-generator-cli generate -i open-api.json -g dotnet -o client/dotnet
 
-run:
+run-sample:
 	setx ASPNETCORE_ENVIRONMENT "Development"
 	dotnet run --project ./samples/Api.Module.Sample/Api.Module.Sample.csproj
-	
+
+run:
+	setx ASPNETCORE_ENVIRONMENT "Development"
+	dotnet run --project ./src/SparkPlug.Hosts/SparkPlug.Hosts.csproj	
 
 # "Production"

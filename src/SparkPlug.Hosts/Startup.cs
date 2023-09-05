@@ -1,4 +1,4 @@
-namespace SparkPlug.Host;
+namespace SparkPlug.Hosts;
 
 public class Startup
 {

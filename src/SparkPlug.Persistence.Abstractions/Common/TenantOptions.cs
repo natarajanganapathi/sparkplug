@@ -1,4 +1,4 @@
-namespace SparkPlug.Business.Tenancy.Service;
+namespace SparkPlug.Persistence.Abstractions;
 
 public class TenantOptions<TOptions> : ITenantOptions<TOptions> where TOptions : new()
 {
