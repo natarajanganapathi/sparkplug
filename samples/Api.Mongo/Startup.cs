@@ -10,8 +10,8 @@ public class Startup
 
     public void ConfigureServices(IServiceCollection services)
     {
-        services.AddWebApi(Configuration);
-        services.AddMongoDb(Configuration);
+        // services.AddWebApi(Configuration);
+        // services.AddMongoDb(Configuration);
         // services.AddScoped<ITenantResolver, TenantResolver>();
         services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
                 .AddMicrosoftIdentityWebApi(
@@ -32,6 +32,6 @@ public class Startup
     public void Configure(IApplicationBuilder app, IServiceProvider serviceProvider)
     {
         app.UseCors();
-        app.UseWebApi(serviceProvider);
+        // app.UseWebApi(serviceProvider);
     }
 }

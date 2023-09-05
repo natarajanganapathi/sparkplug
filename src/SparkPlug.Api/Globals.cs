@@ -28,7 +28,6 @@ global using Microsoft.OpenApi.Models;
 global using Newtonsoft.Json;
 global using Newtonsoft.Json.Linq;
 
-global using SparkPlug.Api.Common;
 global using SparkPlug.Api.Configuration;
 global using SparkPlug.Api.Controllers;
 global using SparkPlug.Api.Filters;
