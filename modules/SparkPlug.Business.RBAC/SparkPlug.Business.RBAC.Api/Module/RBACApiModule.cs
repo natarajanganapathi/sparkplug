@@ -1,6 +1,6 @@
 namespace SparkPlug.Business.RBAC.Api;
 
-public class RBACApiModule : IModule
+public class RbacApiModule : IModule
 {
     public void AddModule(IServiceCollection services, IConfiguration configuration)
     {

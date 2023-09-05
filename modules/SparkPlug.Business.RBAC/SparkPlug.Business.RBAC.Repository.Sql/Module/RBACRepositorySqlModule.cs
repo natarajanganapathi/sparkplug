@@ -1,6 +1,6 @@
 namespace SparkPlug.Business.RBAC.Repository.Sql;
 
-public class RBACRepositorySqlModule : IModule
+public class RbacRepositorySqlModule : IModule
 {
     public void AddModule(IServiceCollection services, IConfiguration configuration)
     {

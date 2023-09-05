@@ -1,6 +1,6 @@
 namespace SparkPlug.Business.RBAC.Domain;
 
-public class RBACDomainModule : IModule
+public class RbacDomainModule : IModule
 {
     public void AddModule(IServiceCollection services, IConfiguration configuration)
     {
