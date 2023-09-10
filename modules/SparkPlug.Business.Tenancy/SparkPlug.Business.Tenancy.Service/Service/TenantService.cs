@@ -4,21 +4,21 @@ public class TenantService : BaseService<long, TenantDetails>, ITenantResolver
 {
     public TenantService(IServiceProvider serviceProvider) : base(serviceProvider) { }
 
-    public async Task<IEnumerable<ITenant>> GetAllTenantsAsync()
+    public async Task<IEnumerable<ITenant>> GetAllTenantsAsync(CancellationToken cancellationToken = default)
     {
-        var result = await FindAsync(new QueryRequest(), CancellationToken.None);
+        var result = await FindAsync(new QueryRequest(), cancellationToken);
         return result.Select(ToTenant);
     }
-    public async Task<ITenant> ResolveAsync(string? id)
+    public async Task<ITenant> ResolveAsync(string? id, CancellationToken cancellationToken = default)
     {
-        return await GetByTenantId(id);
+        return await GetByTenantId(id, cancellationToken);
     }
-    public async Task<Tenant> GetByTenantId(string? id)
+    public async Task<Tenant> GetByTenantId(string? id, CancellationToken cancellationToken = default)
     {
         if (!Guid.TryParse(id, out Guid guid)) { throw new ArgumentException(new StringBuilder().Append(id).Append(" is not valid tenant id").ToString()); }
         var tenantDetails = await FindAsync(new QueryRequest()
                 .Include(nameof(TenantDetails.Options))
-                .Where(nameof(TenantDetails.TenantId), FieldOperator.Equal, guid), CancellationToken.None);
+                .Where(nameof(TenantDetails.TenantId), FieldOperator.Equal, guid), cancellationToken);
         var tenant = tenantDetails?.FirstOrDefault() ?? throw new ArgumentException(new StringBuilder().Append(id).Append(" is not valid tenant id").ToString());
         return ToTenant(tenant);
     }

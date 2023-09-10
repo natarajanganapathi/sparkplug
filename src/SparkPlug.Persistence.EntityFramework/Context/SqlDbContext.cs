@@ -26,23 +26,3 @@ public abstract class SqlDbContext : DbContext
         return await SaveChangesAsync(cancellationToken);
     }
 }
-
-public class TenantDbContext : SqlDbContext
-{
-    private readonly ITenantDbModelConfiguration _modelConfigProvider;
-    public TenantDbContext(ITenantDbModelConfiguration modelConfigProvider, TenantDbContextOptions sqlOptions) : base(sqlOptions.Value)
-    {
-        _modelConfigProvider = modelConfigProvider;
-    }
-    protected override ISqlDbModelConfiguration ModelConfigProvider => _modelConfigProvider;
-}
-
-public class HomeDbContext : SqlDbContext
-{
-    private readonly IHomeDbModelConfiguration _modelConfigProvider;
-    public HomeDbContext(IHomeDbModelConfiguration modelConfigProvider, HomeDbContextOptions sqlOptions) : base(sqlOptions.Value)
-    {
-        _modelConfigProvider = modelConfigProvider;
-    }
-    protected override ISqlDbModelConfiguration ModelConfigProvider => _modelConfigProvider;
-}

@@ -7,7 +7,6 @@ public class PersistanceAbstractionModule : IModule
         services.AddScoped(typeof(IRequestContext<>), typeof(RequestContext<>));
         services.AddScoped(typeof(BaseService<,>));
         services.AddScoped(typeof(ITenantOptions<>), typeof(TenantOptions<>));
-        services.AddScoped(typeof(ITenant), typeof(SingleTenant));
     }
 
     public void UseMiddelwares(IApplicationBuilder app)

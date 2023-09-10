@@ -9,7 +9,7 @@
             "program": "${workspaceFolder}/src/SparkPlug.Hosts/bin/Debug/net7.0/SparkPlug.Hosts.dll",
             "args": [],
             "cwd": "${workspaceFolder}",
-            "stopAtEntry": true,
+            "stopAtEntry": false,
             "env": {
                 "ASPNETCORE_ENVIRONMENT": "Development"
             }

@@ -8,16 +8,13 @@
   </PropertyGroup>
    <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.3" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.1">
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-      <PrivateAssets>all</PrivateAssets>
-    </PackageReference>
     <PackageReference Include="Microsoft.Identity.Web" Version="2.10.0" />
     <PackageReference Include="Microsoft.Extensions.Caching.Memory" Version="7.0.0" />
-    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="7.0.1" /> 
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\src\SparkPlug.Persistence.EntityFramework\SparkPlug.Persistence.EntityFramework.csproj" /> 
+    <ProjectReference Include="..\SparkPlug.Contracts\SparkPlug.Contracts.csproj" /> 
+    <ProjectReference Include="..\SparkPlug.Persistence.EntityFramework\SparkPlug.Persistence.EntityFramework.csproj" /> 
+    <ProjectReference Include="..\SparkPlug.Persistence.EntityFramework.PostgreSql\SparkPlug.Persistence.EntityFramework.PostgreSql.csproj" /> 
     <ProjectReference Include="..\..\modules\SparkPlug.Business.Menu\SparkPlug.Business.Menu.Api\SparkPlug.Business.Menu.Api.csproj" />
     <ProjectReference Include="..\..\modules\SparkPlug.Business.Menu\SparkPlug.Business.Menu.Repository.Sql\SparkPlug.Business.Menu.Repository.Sql.csproj" />
   </ItemGroup>

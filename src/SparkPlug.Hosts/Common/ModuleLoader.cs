@@ -18,7 +18,7 @@ public static class ModuleLoader
     public static void UseCustomModules(this IApplicationBuilder app, IServiceProvider serviceProvider)
     {
         app.UseGlobalExceptionHandling();
-        // app UseHttpsRedirection
+        app.UseHttpsRedirection();
         app.UseHealthChecks();
         app.UseRouting();
         app.UseWhen(context => context.Request.Method != "GET", appBuilder => appBuilder.UseTransactionMiddleware()); // Transaction not required in GET Method

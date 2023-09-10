@@ -12,7 +12,6 @@ public class Startup
     {
         services.AddCustomModules(Configuration);
         services.AddDistributedMemoryCache();
-        // services.AddOptions<SqlDbOptions>().Configure((options) => options.GetConnection = (connectionString) => new NpgsqlConnection(connectionString));
         services.AddScoped<IDbContextOptionsProvider, DbContextOptionsProvider>();
 
         services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)

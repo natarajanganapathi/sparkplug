@@ -1,25 +1,24 @@
 namespace SparkPlug.Persistence.EntityFramework;
 
-public class TenantModelConfigurations : ITenantDbModelConfiguration
+public abstract class ModelConfigurations
 {
-    public void Configure(ModelBuilder modelBuilder)
+    public void Configure<T>(ModelBuilder modelBuilder) where T : Attribute
     {
-        var tenantModelsType = AssemblyCache.Assemblies.SelectMany(x => x.GetTypes())
-             .Where(t => !string.IsNullOrEmpty(t.Namespace) && t.GetCustomAttributes<TenantDbAttribute>().Any());
-        foreach (var tmType in tenantModelsType)
+        var modelsType = AssemblyCache.Types
+           .Where(t => !string.IsNullOrEmpty(t.Namespace) && t.GetCustomAttributes<T>().Any());
+        foreach (var hmType in modelsType)
         {
             Type? configType = Array.Find(AssemblyCache.EntityTypeConfiguration, type =>
             {
                 var etype = Array.Find(type.GetInterfaces(),
                         x => x.IsGenericType && x.GetGenericTypeDefinition() == typeof(IEntityTypeConfiguration<>)
                     )?.GetGenericArguments().FirstOrDefault();
-                return etype == tmType;
+                return etype == hmType;
             });
             if (configType != null)
             {
                 modelBuilder.ApplyConfiguration(Activator.CreateInstance(configType) as dynamic);
             }
         }
-        // modelBuilder.ApplyConfigurationsFromAssembly(typeof(TenantModelConfigurations).Assembly);
     }
 }

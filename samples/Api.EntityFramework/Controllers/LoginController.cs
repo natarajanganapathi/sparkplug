@@ -12,7 +12,7 @@ public class LoginController : ControllerBase
             {
                 return BadRequest("Username and/or Password not specified");
             }
-            if (login.UserName.Equals("adin") && login.Password.Equals("admin@123"))
+            if (login.UserName.Equals("admin") && login.Password.Equals("admin@123"))
             {
                 var secretKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("thisisasecretkey@123"));
                 var signinCredentials = new SigningCredentials(secretKey, SecurityAlgorithms.HmacSha256);

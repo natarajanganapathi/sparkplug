@@ -10,11 +10,7 @@ public static class HealthCheckServiceCollectionExtensions
             ResponseWriter = async (context, report) =>
             {
                 context.Response.ContentType = Constants.JsonContentType;
-                var result = JsonConvert.SerializeObject(new
-                {
-                    status = report.Status.ToString(),
-                    errors = report.Entries.Select(e => e.Value.Exception?.Message)
-                });
+                var result = JsonConvert.SerializeObject(report);
                 await context.Response.WriteAsync(result);
             }
         });
