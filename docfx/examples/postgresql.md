@@ -23,6 +23,8 @@ SELECT schema_name FROM information_schema.schemata;
 ## Switch Schema
 ```sql
 SET search_path TO tenant_1;
+SELECT * FROM Tenant_1."MenuItem";
+
 ```
 
 ## Converty the type of a column from one type to another
@@ -39,3 +41,12 @@ WHERE table_name = 'MenuItem' AND column_name = 'Properties';
 
 ## JSON in postgresql
 [.Net Reference](https://www.npgsql.org/efcore/mapping/json.html?tabs=data-annotations%2Cpoco)
+
+## Db Migration 
+1. [DB Migration](https://learn.microsoft.com/en-us/ef/core/managing-schemas/migrations/managing?tabs=dotnet-core-cli)
+2. [Creating Separate Migration Project](https://learn.microsoft.com/en-us/ef/core/managing-schemas/migrations/projects?tabs=dotnet-core-cli)
+
+```sh
+dotnet ef migrations add InitialCreate --output-dir Your/Directory
+
+```

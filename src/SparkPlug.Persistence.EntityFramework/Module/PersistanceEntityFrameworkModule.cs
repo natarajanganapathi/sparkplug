@@ -16,7 +16,7 @@ public class PersistanceEntityFrameworkModule : IModule
 
         services.AddDbContext<TenantDbContext>(ServiceLifetime.Scoped);
         services.AddScoped<TenantDbContextOptions>();
-        services.AddScoped<TenantDbMigrationConetxt>();
+        services.AddScoped<TenantDbMigrationContext>();
         services.AddScoped(typeof(TenantRepository<,>));
 
         services.AddScoped<IRepositoryProvider, SqlRepositoryProvider>();
@@ -33,6 +33,6 @@ public class PersistanceEntityFrameworkModule : IModule
 
     public void UseModule(IApplicationBuilder app, IServiceProvider serviceProvider)
     {
-      app.ApplyMigrations();   
+      app.ApplyMigrationsForHomeDb(serviceProvider);   
     }
 }

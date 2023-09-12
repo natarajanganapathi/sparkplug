@@ -1,9 +1,9 @@
 namespace SparkPlug.Persistence.EntityFramework.Context;
 
-public class TenantDbMigrationConetxt : DbContext
+public class TenantDbMigrationContext : DbContext
 {
     private readonly ITenantDbModelConfiguration _modelConfigProvider;
-    public TenantDbMigrationConetxt(ITenantDbModelConfiguration modelConfigProvider, TenantDbContextOptions options) : base(options.Value)
+    public TenantDbMigrationContext(ITenantDbModelConfiguration modelConfigProvider, TenantDbContextOptions options) : base(options.Value)
     {
         _modelConfigProvider = modelConfigProvider;
     }
