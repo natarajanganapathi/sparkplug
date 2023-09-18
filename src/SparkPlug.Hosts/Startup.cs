@@ -12,16 +12,14 @@ public class Startup
     {
         services.AddCustomModules(Configuration);
         services.AddDistributedMemoryCache();
-        services.AddScoped<IDbContextOptionsProvider, DbContextOptionsProvider>();
-
         services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
-            .AddMicrosoftIdentityWebApi(
-                (bearerOptions) => {
-                    Configuration.Bind("SparkPlug:Api:AzureAdB2C", bearerOptions);
-                    bearerOptions.TokenValidationParameters.NameClaimType = "name";
-                },
-                (identityOptions) => Configuration.Bind("SparkPlug:Api:AzureAdB2C", identityOptions)
-            );
+                .AddMicrosoftIdentityWebApi(
+                    (bearerOptions) => {
+                        Configuration.Bind("SparkPlug:Api:AzureAdB2C", bearerOptions);
+                        bearerOptions.TokenValidationParameters.NameClaimType = "name";
+                    },
+                    (identityOptions) => Configuration.Bind("SparkPlug:Api:AzureAdB2C", identityOptions)
+                );
         services.AddAuthorization(options => options.AddPolicy("CustomPolicy", policy => policy.RequireAuthenticatedUser()));
 
         services.AddCors(options =>
@@ -29,8 +27,8 @@ public class Startup
             options.AddDefaultPolicy(builder =>
             {
                 builder.WithOrigins("http://localhost:*", "http://127.0.0.1:*")
-                    .AllowAnyHeader()
-                    .AllowAnyMethod();
+                        .AllowAnyHeader()
+                        .AllowAnyMethod();
             });
         });
     }
@@ -39,6 +37,5 @@ public class Startup
     {
         app.UseCors();
         app.UseCustomModules(serviceProvider);
-        // app.UseWebApi(serviceProvider);
     }
 }

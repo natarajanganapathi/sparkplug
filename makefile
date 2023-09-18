@@ -46,6 +46,27 @@ run-sample:
 
 run:
 	setx ASPNETCORE_ENVIRONMENT "Development"
-	dotnet run --project ./src/SparkPlug.Hosts/SparkPlug.Hosts.csproj	
+	dotnet run --project ./src/SparkPlug.Hosts/SparkPlug.Hosts.csproj
 
-# "Production"
+sdkk:
+	setx ASPNETCORE_ENVIRONMENT "Development"
+	dotnet run --project ./sdk/ClientSdkGenerator/ClientSdkGenerator.csproj	
+
+mig:
+	dotnet ef migrations list --project ./src/SparkPlug.Persistence.EntityFramework --context SparkPlug.Persistence.EntityFramework.Context.HomeDbMigrationContext
+
+tools:
+	dotnet tool list -g
+	dotnet tool update -g coverlet.console                
+	dotnet tool update -g docfx                           
+	dotnet tool update -g dotnet-counters                 
+	dotnet tool update -g dotnet-coverage                 
+	dotnet tool update -g dotnet-doc                      
+	dotnet tool update -g dotnet-ef                       
+	dotnet tool update -g dotnet-format                   
+	dotnet tool update -g dotnet-monitor                  
+	dotnet tool update -g dotnet-sonarscanner             
+	dotnet tool update -g dotnet-version-cli
+	dotnet tool update -g swashbuckle.aspnetcore.cli
+	dotnet tool update -g versionize
+	dotnet tool list -g

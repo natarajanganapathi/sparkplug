@@ -13,11 +13,7 @@
     <PackageReference Include="Microsoft.Extensions.Caching.Memory" Version="7.0.0" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\SparkPlug.Contracts\SparkPlug.Contracts.csproj" /> 
-    <ProjectReference Include="..\SparkPlug.Persistence.EntityFramework\SparkPlug.Persistence.EntityFramework.csproj" /> 
-    <ProjectReference Include="..\SparkPlug.Persistence.EntityFramework.PostgreSql\SparkPlug.Persistence.EntityFramework.PostgreSql.csproj" /> 
-    <ProjectReference Include="..\..\modules\SparkPlug.Business.Menu\SparkPlug.Business.Menu.Api\SparkPlug.Business.Menu.Api.csproj" />
-    <ProjectReference Include="..\..\modules\SparkPlug.Business.Menu\SparkPlug.Business.Menu.Repository.Sql\SparkPlug.Business.Menu.Repository.Sql.csproj" />
+    <ProjectReference Include="..\SparkPlug.Api\SparkPlug.Api.csproj" /> 
   </ItemGroup>
   <ItemGroup>
     <Content Include="appsettings.json" Condition="Exists('appsettings.json')">

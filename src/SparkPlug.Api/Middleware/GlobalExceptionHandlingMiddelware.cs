@@ -30,7 +30,7 @@ public class GlobalExceptionHandlingMiddleware
 
     private async Task HandleExceptionAsync(HttpContext context, Exception exception)
     {
-        var eventId = new EventId((int)ApiEventId.UnknownGlobaException, nameof(ApiEventId.UnknownGlobaException));
+        var eventId = new EventId((int)ApiEventId.UnknownGlobalException, nameof(ApiEventId.UnknownGlobalException));
         _logger.LogError(eventId, exception, "{XTraceId}: {TraceIdentifier} Message: {Message}", Constants.XTraceId, context.TraceIdentifier, exception.Message);
         var response = context.Response;
         response.StatusCode = StatusCodes.Status500InternalServerError;

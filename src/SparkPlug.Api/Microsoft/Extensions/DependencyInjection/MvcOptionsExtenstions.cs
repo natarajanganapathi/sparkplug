@@ -1,5 +1,3 @@
-using Microsoft.AspNetCore.Mvc.Routing;
-
 namespace Microsoft.Extensions.DependencyInjection;
 
 public static class MvcOptionsExtensions

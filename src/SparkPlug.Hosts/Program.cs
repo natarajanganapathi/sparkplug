@@ -4,21 +4,25 @@ public static class Program
 {
     public static void Main(string[] args)
     {
-       Host
-        .CreateDefaultBuilder(args)
-        .ConfigureLogging((context, builder) =>
-        {
-            builder.AddSimpleConsole(options =>
+        Run<Startup>(args);
+    }
+    public static void Run<TStartup>(string[] args) where TStartup : class
+    {
+        Host
+            .CreateDefaultBuilder(args)
+            .ConfigureLogging((context, builder) =>
             {
-                options.SingleLine = true;
-                options.TimestampFormat = "hh:mm:ss ";
-            });
-        })
-        .ConfigureWebHostDefaults(webBuilder =>
-        {
-            webBuilder.UseStartup<Startup>();
-        })
-        .Build()
-        .Run();
+                builder.AddSimpleConsole(options =>
+                {
+                    options.SingleLine = true;
+                    options.TimestampFormat = "hh:mm:ss ";
+                });
+            })
+            .ConfigureWebHostDefaults(webBuilder =>
+            {
+                webBuilder.UseStartup<TStartup>();
+            })
+            .Build()
+            .Run();
     }
 }
