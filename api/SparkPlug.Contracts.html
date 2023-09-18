@@ -1,417 +1,325 @@
 ﻿<!DOCTYPE html>
-<!--[if IE]><![endif]-->
 <html>
-
   <head>
     <meta charset="utf-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
       <title>Namespace SparkPlug.Contracts
  </title>
-      <meta name="viewport" content="width=device-width">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Namespace SparkPlug.Contracts
  ">
-    
-      <link rel="shortcut icon" href="../favicon.ico">
-      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
-      <link rel="stylesheet" href="../styles/docfx.css">
-      <link rel="stylesheet" href="../styles/main.css">
-      <meta property="docfx:navrel" content="../toc.html">
-      <meta property="docfx:tocrel" content="toc.html">
-    
-    <meta property="docfx:rel" content="../">
-    
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
   </head>
-  <body data-spy="scroll" data-target="#affix" data-offset="120">
-    <div id="wrapper">
-      <header>
 
-        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
-          <div class="container">
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
+  <script type="module">
+    import options from './../public/main.js'
+    import { init } from './../public/docfx.min.js'
+    init(options)
+  </script>
 
-              <a class="navbar-brand" href="../index.html">
-                <img id="logo" class="svg" src="../logo.svg" alt="">
-              </a>
-            </div>
-            <div class="collapse navbar-collapse" id="navbar">
-              <form class="navbar-form navbar-right" role="search" id="search">
-                <div class="form-group">
-                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
-                </div>
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
               </form>
             </div>
           </div>
-        </nav>
-
-        <div class="subnav navbar navbar-default">
-          <div class="container hide-when-search" id="breadcrumb">
-            <ul class="breadcrumb">
-              <li></li>
-            </ul>
-          </div>
         </div>
-      </header>
-      <div class="container body-content">
+      </nav>
+    </header>
 
-        <div id="search-results">
-          <div class="search-list">Search Results for <span></span></div>
-          <div class="sr-items">
-            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
           </div>
-          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
         </div>
       </div>
-      <div role="main" class="container body-content hide-when-search">
 
-        <div class="sidenav hide-when-search">
-          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
-          <div class="sidetoggle collapse" id="sidetoggle">
-            <div id="sidetoc"></div>
-          </div>
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
         </div>
-        <div class="article row grid-right">
-          <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="SparkPlug.Contracts">
-  <h1 id="SparkPlug_Contracts" data-uid="SparkPlug.Contracts">Namespace SparkPlug.Contracts
+
+        <article data-uid="SparkPlug.Contracts">
+
+  <h1 id="SparkPlug_Contracts" data-uid="SparkPlug.Contracts" class="text-break">Namespace SparkPlug.Contracts
 </h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <div class="markdown level0 remarks"></div>
+
     <h3 id="classes">
 Classes
 </h3>
-    <table>
-      <tr>
-        <td>
-          <p><a class="xref" href="SparkPlug.Contracts.ApiRequest.html">ApiRequest</a></p>
-          <p></p>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <p><a class="xref" href="SparkPlug.Contracts.ApiResponse.html">ApiResponse</a></p>
-          <p></p>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <p><a class="xref" href="SparkPlug.Contracts.CommandRequest-1.html">CommandRequest&lt;TEntity&gt;</a></p>
-          <p></p>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <p><a class="xref" href="SparkPlug.Contracts.CommandResponse.html">CommandResponse</a></p>
-          <p></p>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <p><a class="xref" href="SparkPlug.Contracts.CompositeFilter.html">CompositeFilter</a></p>
-          <p></p>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <p><a class="xref" href="SparkPlug.Contracts.CompositeRequest.html">CompositeRequest</a></p>
-          <p></p>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <p><a class="xref" href="SparkPlug.Contracts.CompositeResponse.html">CompositeResponse</a></p>
-          <p></p>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <p><a class="xref" href="SparkPlug.Contracts.ConditionFilter.html">ConditionFilter</a></p>
-          <p></p>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <p><a class="xref" href="SparkPlug.Contracts.ErrorResponse.html">ErrorResponse</a></p>
-          <p></p>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <p><a class="xref" href="SparkPlug.Contracts.ExceptionExtension.html">ExceptionExtension</a></p>
-          <p></p>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <p><a class="xref" href="SparkPlug.Contracts.Extensions.html">Extensions</a></p>
-          <p></p>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <p><a class="xref" href="SparkPlug.Contracts.FieldFilter.html">FieldFilter</a></p>
-          <p></p>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <p><a class="xref" href="SparkPlug.Contracts.Filter.html">Filter</a></p>
-          <p></p>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <p><a class="xref" href="SparkPlug.Contracts.FilterConverter.html">FilterConverter</a></p>
-          <p></p>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <p><a class="xref" href="SparkPlug.Contracts.IQueryRequestExtensions.html">IQueryRequestExtensions</a></p>
-          <p></p>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <p><a class="xref" href="SparkPlug.Contracts.Include.html">Include</a></p>
-          <p></p>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <p><a class="xref" href="SparkPlug.Contracts.NewtonsoftSerializer.html">NewtonsoftSerializer</a></p>
-          <p></p>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <p><a class="xref" href="SparkPlug.Contracts.Order.html">Order</a></p>
-          <p></p>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <p><a class="xref" href="SparkPlug.Contracts.PageContext.html">PageContext</a></p>
-          <p></p>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <p><a class="xref" href="SparkPlug.Contracts.QueryRequest.html">QueryRequest</a></p>
-          <p></p>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <p><a class="xref" href="SparkPlug.Contracts.QueryResponse.html">QueryResponse</a></p>
-          <p></p>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <p><a class="xref" href="SparkPlug.Contracts.UnaryFilter.html">UnaryFilter</a></p>
-          <p></p>
-        </td>
-      </tr>
-    </table>
+    <dl class="jumplist">
+      <dt><a class="xref" href="SparkPlug.Contracts.ApiRequest.html">ApiRequest</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="SparkPlug.Contracts.ApiResponse.html">ApiResponse</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="SparkPlug.Contracts.CommandRequest-1.html">CommandRequest&lt;TEntity&gt;</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="SparkPlug.Contracts.CommandResponse.html">CommandResponse</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="SparkPlug.Contracts.CompositeFilter.html">CompositeFilter</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="SparkPlug.Contracts.CompositeRequest.html">CompositeRequest</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="SparkPlug.Contracts.CompositeResponse.html">CompositeResponse</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="SparkPlug.Contracts.ConditionFilter.html">ConditionFilter</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="SparkPlug.Contracts.ContractsModule.html">ContractsModule</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="SparkPlug.Contracts.ErrorResponse.html">ErrorResponse</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="SparkPlug.Contracts.ExceptionExtension.html">ExceptionExtension</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="SparkPlug.Contracts.Extensions.html">Extensions</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="SparkPlug.Contracts.FieldFilter.html">FieldFilter</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="SparkPlug.Contracts.Filter.html">Filter</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="SparkPlug.Contracts.FilterConverter.html">FilterConverter</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="SparkPlug.Contracts.IQueryRequestExtensions.html">IQueryRequestExtensions</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="SparkPlug.Contracts.Include.html">Include</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="SparkPlug.Contracts.NewtonsoftSerializer.html">NewtonsoftSerializer</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="SparkPlug.Contracts.Order.html">Order</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="SparkPlug.Contracts.PageContext.html">PageContext</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="SparkPlug.Contracts.QueryRequest.html">QueryRequest</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="SparkPlug.Contracts.QueryResponse.html">QueryResponse</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="SparkPlug.Contracts.UnaryFilter.html">UnaryFilter</a></dt>
+      <dd></dd>
+    </dl>
     <h3 id="interfaces">
 Interfaces
 </h3>
-    <table>
-      <tr>
-        <td>
-          <p><a class="xref" href="SparkPlug.Contracts.IApiRequest.html">IApiRequest</a></p>
-          <p></p>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <p><a class="xref" href="SparkPlug.Contracts.IApiResponse.html">IApiResponse</a></p>
-          <p></p>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <p><a class="xref" href="SparkPlug.Contracts.ICommandRequest-1.html">ICommandRequest&lt;TEntity&gt;</a></p>
-          <p></p>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <p><a class="xref" href="SparkPlug.Contracts.ICommandResponse.html">ICommandResponse</a></p>
-          <p></p>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <p><a class="xref" href="SparkPlug.Contracts.ICompositeFilter.html">ICompositeFilter</a></p>
-          <p></p>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <p><a class="xref" href="SparkPlug.Contracts.ICompositeRequest.html">ICompositeRequest</a></p>
-          <p></p>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <p><a class="xref" href="SparkPlug.Contracts.ICompositeResponse.html">ICompositeResponse</a></p>
-          <p></p>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <p><a class="xref" href="SparkPlug.Contracts.IConditionFilter.html">IConditionFilter</a></p>
-          <p></p>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <p><a class="xref" href="SparkPlug.Contracts.IErrorResponse.html">IErrorResponse</a></p>
-          <p></p>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <p><a class="xref" href="SparkPlug.Contracts.IFieldFilter.html">IFieldFilter</a></p>
-          <p></p>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <p><a class="xref" href="SparkPlug.Contracts.IFilter.html">IFilter</a></p>
-          <p></p>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <p><a class="xref" href="SparkPlug.Contracts.IInclude.html">IInclude</a></p>
-          <p></p>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <p><a class="xref" href="SparkPlug.Contracts.IModule.html">IModule</a></p>
-          <p></p>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <p><a class="xref" href="SparkPlug.Contracts.IOrder.html">IOrder</a></p>
-          <p></p>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <p><a class="xref" href="SparkPlug.Contracts.IPageContext.html">IPageContext</a></p>
-          <p></p>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <p><a class="xref" href="SparkPlug.Contracts.IQueryRequest.html">IQueryRequest</a></p>
-          <p></p>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <p><a class="xref" href="SparkPlug.Contracts.IQueryResponse.html">IQueryResponse</a></p>
-          <p></p>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <p><a class="xref" href="SparkPlug.Contracts.ISerializer.html">ISerializer</a></p>
-          <p></p>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <p><a class="xref" href="SparkPlug.Contracts.IUnaryFilter.html">IUnaryFilter</a></p>
-          <p></p>
-        </td>
-      </tr>
-    </table>
+    <dl class="jumplist">
+      <dt><a class="xref" href="SparkPlug.Contracts.IApiRequest.html">IApiRequest</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="SparkPlug.Contracts.IApiResponse.html">IApiResponse</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="SparkPlug.Contracts.ICommandRequest-1.html">ICommandRequest&lt;TEntity&gt;</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="SparkPlug.Contracts.ICommandResponse.html">ICommandResponse</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="SparkPlug.Contracts.ICompositeFilter.html">ICompositeFilter</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="SparkPlug.Contracts.ICompositeRequest.html">ICompositeRequest</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="SparkPlug.Contracts.ICompositeResponse.html">ICompositeResponse</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="SparkPlug.Contracts.IConditionFilter.html">IConditionFilter</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="SparkPlug.Contracts.IErrorResponse.html">IErrorResponse</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="SparkPlug.Contracts.IFieldFilter.html">IFieldFilter</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="SparkPlug.Contracts.IFilter.html">IFilter</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="SparkPlug.Contracts.IInclude.html">IInclude</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="SparkPlug.Contracts.IModule.html">IModule</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="SparkPlug.Contracts.IOrder.html">IOrder</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="SparkPlug.Contracts.IPageContext.html">IPageContext</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="SparkPlug.Contracts.IQueryRequest.html">IQueryRequest</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="SparkPlug.Contracts.IQueryResponse.html">IQueryResponse</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="SparkPlug.Contracts.ISerializer.html">ISerializer</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="SparkPlug.Contracts.IUnaryFilter.html">IUnaryFilter</a></dt>
+      <dd></dd>
+    </dl>
     <h3 id="enums">
 Enums
 </h3>
-    <table>
-      <tr>
-        <td>
-          <p><a class="xref" href="SparkPlug.Contracts.CompositeOperator.html">CompositeOperator</a></p>
-          <p></p>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <p><a class="xref" href="SparkPlug.Contracts.Direction.html">Direction</a></p>
-          <p></p>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <p><a class="xref" href="SparkPlug.Contracts.FieldOperator.html">FieldOperator</a></p>
-          <p></p>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <p><a class="xref" href="SparkPlug.Contracts.FilterType.html">FilterType</a></p>
-          <p></p>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <p><a class="xref" href="SparkPlug.Contracts.FilterValueType.html">FilterValueType</a></p>
-          <p></p>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <p><a class="xref" href="SparkPlug.Contracts.UnaryOperator.html">UnaryOperator</a></p>
-          <p></p>
-        </td>
-      </tr>
-    </table>
+    <dl class="jumplist">
+      <dt><a class="xref" href="SparkPlug.Contracts.CompositeOperator.html">CompositeOperator</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="SparkPlug.Contracts.Direction.html">Direction</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="SparkPlug.Contracts.FieldOperator.html">FieldOperator</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="SparkPlug.Contracts.FilterType.html">FilterType</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="SparkPlug.Contracts.FilterValueType.html">FilterValueType</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="SparkPlug.Contracts.UnaryOperator.html">UnaryOperator</a></dt>
+      <dd></dd>
+    </dl>
 
 
 </article>
-          </div>
-          <div class="contribution-panel mobile-hide">
-          </div>
 
-          <div class="hidden-sm col-md-2" role="complementary">
-            <div class="sideaffix">
-              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-              </nav>
-            </div>
-          </div>
+        <div class="contribution d-print-none">
         </div>
+
+        
       </div>
 
-      <footer>
-        <div class="grad-bottom"></div>
-        <div class="footer">
-          <div class="container">
-            <span class="pull-right">
-              <a href="#top">Back to top</a>
-            </span>
-      
-      <span>Generated by <strong>DocFX</strong></span>
-          </div>
-        </div>
-      </footer>
-    </div>
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
 
-    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
-    <script type="text/javascript" src="../styles/docfx.js"></script>
-    <script type="text/javascript" src="../styles/main.js"></script>
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>

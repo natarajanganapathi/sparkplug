@@ -43,30 +43,10 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Microsoft.Extensions.DependencyInjection.MongoDbServiceCollectionExtenstions.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Microsoft.Extensions.DependencyInjection.MongoDbServiceCollectionExtenstions.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api/Microsoft.Extensions.DependencyInjection.MvcOptionsExtensions.yml",
       "output": {
         ".html": {
           "relative_path": "api/Microsoft.Extensions.DependencyInjection.MvcOptionsExtensions.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Microsoft.Extensions.DependencyInjection.SqlDbServiceCollectionExtenstions.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Microsoft.Extensions.DependencyInjection.SqlDbServiceCollectionExtenstions.html"
         }
       },
       "version": ""
@@ -113,20 +93,10 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/SparkPlug.Api.Common.ModuleLoader.yml",
+      "source_relative_path": "api/SparkPlug.Api.ApiModule.yml",
       "output": {
         ".html": {
-          "relative_path": "api/SparkPlug.Api.Common.ModuleLoader.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/SparkPlug.Api.Common.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/SparkPlug.Api.Common.html"
+          "relative_path": "api/SparkPlug.Api.ApiModule.html"
         }
       },
       "version": ""
@@ -303,6 +273,26 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Api.SwaggerModule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Api.SwaggerModule.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Api.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Api.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/SparkPlug.Business.Menu.Api.MenuApiModule.yml",
       "output": {
         ".html": {
@@ -403,20 +393,20 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/SparkPlug.Business.Menu.Service.MenuServiceModule.yml",
+      "source_relative_path": "api/SparkPlug.Business.Menu.Service.MenuService.yml",
       "output": {
         ".html": {
-          "relative_path": "api/SparkPlug.Business.Menu.Service.MenuServiceModule.html"
+          "relative_path": "api/SparkPlug.Business.Menu.Service.MenuService.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/SparkPlug.Business.Menu.Service.Menuervice.yml",
+      "source_relative_path": "api/SparkPlug.Business.Menu.Service.MenuServiceModule.yml",
       "output": {
         ".html": {
-          "relative_path": "api/SparkPlug.Business.Menu.Service.Menuervice.html"
+          "relative_path": "api/SparkPlug.Business.Menu.Service.MenuServiceModule.html"
         }
       },
       "version": ""
@@ -563,16 +553,6 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/SparkPlug.Business.Tenancy.Service.ITenant.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/SparkPlug.Business.Tenancy.Service.ITenant.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api/SparkPlug.Business.Tenancy.Service.ITenantResolver.yml",
       "output": {
         ".html": {
@@ -597,16 +577,6 @@
       "output": {
         ".html": {
           "relative_path": "api/SparkPlug.Business.Tenancy.Service.Tenant.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/SparkPlug.Business.Tenancy.Service.TenantOptions-1.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/SparkPlug.Business.Tenancy.Service.TenantOptions-1.html"
         }
       },
       "version": ""
@@ -727,6 +697,16 @@
       "output": {
         ".html": {
           "relative_path": "api/SparkPlug.Contracts.ConditionFilter.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Contracts.ContractsModule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Contracts.ContractsModule.html"
         }
       },
       "version": ""
@@ -1123,6 +1103,46 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Hosts.ModuleLoader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Hosts.ModuleLoader.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Hosts.Program.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Hosts.Program.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Hosts.Startup.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Hosts.Startup.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Hosts.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Hosts.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/SparkPlug.Persistence.Abstractions.AssemblyCache.yml",
       "output": {
         ".html": {
@@ -1293,6 +1313,16 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Persistence.Abstractions.ITenant.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Persistence.Abstractions.ITenant.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/SparkPlug.Persistence.Abstractions.ITenantOptions-1.yml",
       "output": {
         ".html": {
@@ -1307,6 +1337,16 @@
       "output": {
         ".html": {
           "relative_path": "api/SparkPlug.Persistence.Abstractions.PagedResult-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Persistence.Abstractions.PersistanceAbstractionModule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Persistence.Abstractions.PersistanceAbstractionModule.html"
         }
       },
       "version": ""
@@ -1357,6 +1397,16 @@
       "output": {
         ".html": {
           "relative_path": "api/SparkPlug.Persistence.Abstractions.TenantDbAttribute.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Persistence.Abstractions.TenantOptions-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Persistence.Abstractions.TenantOptions-1.html"
         }
       },
       "version": ""
@@ -1493,6 +1543,16 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Persistence.EntityFramework.Context.TenantDbMigrationContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Persistence.EntityFramework.Context.TenantDbMigrationContext.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/SparkPlug.Persistence.EntityFramework.Context.yml",
       "output": {
         ".html": {
@@ -1573,6 +1633,16 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Persistence.EntityFramework.ModelConfigurations.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Persistence.EntityFramework.ModelConfigurations.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/SparkPlug.Persistence.EntityFramework.Models.BaseEntity-1.yml",
       "output": {
         ".html": {
@@ -1603,6 +1673,56 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Persistence.EntityFramework.PersistanceEntityFrameworkExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Persistence.EntityFramework.PersistanceEntityFrameworkExtensions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Persistence.EntityFramework.PersistanceEntityFrameworkModule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Persistence.EntityFramework.PersistanceEntityFrameworkModule.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Persistence.EntityFramework.PostgreSql.DbContextOptionsProvider.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Persistence.EntityFramework.PostgreSql.DbContextOptionsProvider.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Persistence.EntityFramework.PostgreSql.EntityFrameworkPostgreSql.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Persistence.EntityFramework.PostgreSql.EntityFrameworkPostgreSql.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Persistence.EntityFramework.PostgreSql.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Persistence.EntityFramework.PostgreSql.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/SparkPlug.Persistence.EntityFramework.QueryBuilder-1.yml",
       "output": {
         ".html": {
@@ -1617,6 +1737,16 @@
       "output": {
         ".html": {
           "relative_path": "api/SparkPlug.Persistence.EntityFramework.QueryExtentions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Persistence.EntityFramework.SingleTenant.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Persistence.EntityFramework.SingleTenant.html"
         }
       },
       "version": ""
@@ -1813,6 +1943,16 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Persistence.MongoDb.PersistanceMongoDbModule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Persistence.MongoDb.PersistanceMongoDbModule.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/SparkPlug.Persistence.MongoDb.yml",
       "output": {
         ".html": {
@@ -1837,6 +1977,9 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html"
+        },
+        ".json": {
+          "relative_path": "api/toc.json"
         }
       },
       "version": ""
@@ -1907,6 +2050,9 @@
       "output": {
         ".html": {
           "relative_path": "articles/toc.html"
+        },
+        ".json": {
+          "relative_path": "articles/toc.json"
         }
       },
       "version": ""
@@ -2057,6 +2203,9 @@
       "output": {
         ".html": {
           "relative_path": "examples/toc.html"
+        },
+        ".json": {
+          "relative_path": "examples/toc.json"
         }
       },
       "version": ""
@@ -2087,6 +2236,9 @@
       "output": {
         ".html": {
           "relative_path": "toc.html"
+        },
+        ".json": {
+          "relative_path": "toc.json"
         }
       },
       "version": ""

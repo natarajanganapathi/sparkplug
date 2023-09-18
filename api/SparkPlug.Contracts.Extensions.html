@@ -1,98 +1,130 @@
 ﻿<!DOCTYPE html>
-<!--[if IE]><![endif]-->
 <html>
-
   <head>
     <meta charset="utf-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
       <title>Class Extensions
  </title>
-      <meta name="viewport" content="width=device-width">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class Extensions
  ">
-    
-      <link rel="shortcut icon" href="../favicon.ico">
-      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
-      <link rel="stylesheet" href="../styles/docfx.css">
-      <link rel="stylesheet" href="../styles/main.css">
-      <meta property="docfx:navrel" content="../toc.html">
-      <meta property="docfx:tocrel" content="toc.html">
-    
-    <meta property="docfx:rel" content="../">
-    
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/natarajanganapathi/sparkplug/new/76/merge/apiSpec/new?filename=SparkPlug_Contracts_Extensions.md&amp;value=---%0Auid%3A%20SparkPlug.Contracts.Extensions%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
   </head>
-  <body data-spy="scroll" data-target="#affix" data-offset="120">
-    <div id="wrapper">
-      <header>
 
-        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
-          <div class="container">
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
+  <script type="module">
+    import options from './../public/main.js'
+    import { init } from './../public/docfx.min.js'
+    init(options)
+  </script>
 
-              <a class="navbar-brand" href="../index.html">
-                <img id="logo" class="svg" src="../logo.svg" alt="">
-              </a>
-            </div>
-            <div class="collapse navbar-collapse" id="navbar">
-              <form class="navbar-form navbar-right" role="search" id="search">
-                <div class="form-group">
-                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
-                </div>
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
               </form>
             </div>
           </div>
-        </nav>
-
-        <div class="subnav navbar navbar-default">
-          <div class="container hide-when-search" id="breadcrumb">
-            <ul class="breadcrumb">
-              <li></li>
-            </ul>
-          </div>
         </div>
-      </header>
-      <div class="container body-content">
+      </nav>
+    </header>
 
-        <div id="search-results">
-          <div class="search-list">Search Results for <span></span></div>
-          <div class="sr-items">
-            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
           </div>
-          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
         </div>
       </div>
-      <div role="main" class="container body-content hide-when-search">
 
-        <div class="sidenav hide-when-search">
-          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
-          <div class="sidetoggle collapse" id="sidetoggle">
-            <div id="sidetoc"></div>
-          </div>
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
         </div>
-        <div class="article row grid-right">
-          <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="SparkPlug.Contracts.Extensions">
 
-  <h1 id="SparkPlug_Contracts_Extensions" data-uid="SparkPlug.Contracts.Extensions">Class Extensions
-</h1>
-  <div class="markdown level0 summary"></div>
-  <div class="markdown level0 conceptual"></div>
+        <article data-uid="SparkPlug.Contracts.Extensions">
 
-  <div class="inheritance">
-    <h5>Inheritance</h5>
-    <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
-    <div class="level1"><span class="xref">Extensions</span></div>
+
+
+  <h1 id="SparkPlug_Contracts_Extensions" data-uid="SparkPlug.Contracts.Extensions" class="text-break">
+    Class Extensions
+  <a class="header-action link-secondary" title="View source" href="https://github.com/natarajanganapathi/sparkplug/blob/76/merge/src/SparkPlug.Contracts/Response/QueryResponse.cs/#L14"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="SparkPlug.html">SparkPlug</a>.<a class="xref" href="SparkPlug.Contracts.html">Contracts</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>SparkPlug.Contracts.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"></div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static class Extensions</code></pre>
   </div>
 
 
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">Extensions</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist derived">
+    <dt>Inherited Members</dt>
+    <dd>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
     </div>
@@ -114,78 +146,46 @@
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
     </div>
-  </div>
-
-  <h6><strong>Namespace</strong>: <a class="xref" href="SparkPlug.html">SparkPlug</a>.<a class="xref" href="SparkPlug.Contracts.html">Contracts</a></h6>
-  <h6><strong>Assembly</strong>: SparkPlug.Contracts.dll</h6>
-
-  <h5 id="SparkPlug_Contracts_Extensions_syntax">Syntax</h5>
-  <div class="codewrapper">
-    <pre><code class="lang- hljs">public static class Extensions</code></pre>
-  </div>
+  </dd></dl>
 
 
 
 
 
-  <h3 id="methods">Methods
-</h3>
 
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/natarajanganapathi/sparkplug/new/75/merge/apiSpec/new?filename=SparkPlug_Contracts_Extensions_Add_SparkPlug_Contracts_ICompositeRequest_System_String_SparkPlug_Contracts_IApiRequest_.md&amp;value=---%0Auid%3A%20SparkPlug.Contracts.Extensions.Add(SparkPlug.Contracts.ICompositeRequest%2CSystem.String%2CSparkPlug.Contracts.IApiRequest)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Edit this page"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/natarajanganapathi/sparkplug/blob/75/merge/src/SparkPlug.Contracts/Request/CompositeRequest.cs/#L15" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
+  <h2 class="section" id="methods">Methods
+</h2>
+
 
   <a id="SparkPlug_Contracts_Extensions_Add_" data-uid="SparkPlug.Contracts.Extensions.Add*"></a>
 
-  <h4 id="SparkPlug_Contracts_Extensions_Add_SparkPlug_Contracts_ICompositeRequest_System_String_SparkPlug_Contracts_IApiRequest_" data-uid="SparkPlug.Contracts.Extensions.Add(SparkPlug.Contracts.ICompositeRequest,System.String,SparkPlug.Contracts.IApiRequest)"><a href="#collapsible-SparkPlug_Contracts_Extensions_Add_SparkPlug_Contracts_ICompositeRequest_System_String_SparkPlug_Contracts_IApiRequest_" class="expander" data-toggle="collapse">Add(ICompositeRequest, string, IApiRequest)</a></h4>
+  <h3 id="SparkPlug_Contracts_Extensions_Add_SparkPlug_Contracts_ICompositeRequest_System_String_SparkPlug_Contracts_IApiRequest_" data-uid="SparkPlug.Contracts.Extensions.Add(SparkPlug.Contracts.ICompositeRequest,System.String,SparkPlug.Contracts.IApiRequest)">
+  Add(ICompositeRequest, string, IApiRequest)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/natarajanganapathi/sparkplug/blob/76/merge/src/SparkPlug.Contracts/Request/CompositeRequest.cs/#L15"><i class="bi bi-code-slash"></i></a>
+  </h3>
 
-  <div id="collapsible-SparkPlug_Contracts_Extensions_Add_SparkPlug_Contracts_ICompositeRequest_System_String_SparkPlug_Contracts_IApiRequest_" class="collapse in">
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
-    <pre><code class="lang- hljs">public static ICompositeRequest Add(this ICompositeRequest source, string key, IApiRequest value)</code></pre>
+    <pre><code class="lang-csharp hljs">public static ICompositeRequest Add(this ICompositeRequest source, string key, IApiRequest value)</code></pre>
   </div>
 
-  <h5 class="parameters">Parameters</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="SparkPlug.Contracts.ICompositeRequest.html">ICompositeRequest</a></span>
-        <span class="parametername">source</span>
-        <p></p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></span>
-        <span class="parametername">key</span>
-        <p></p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="SparkPlug.Contracts.IApiRequest.html">IApiRequest</a></span>
-        <span class="parametername">value</span>
-        <p></p>
-      </td>
-    </tr>
-  </table>
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>source</code> <a class="xref" href="SparkPlug.Contracts.ICompositeRequest.html">ICompositeRequest</a></dt>
+    <dd></dd>
+    <dt><code>key</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>value</code> <a class="xref" href="SparkPlug.Contracts.IApiRequest.html">IApiRequest</a></dt>
+    <dd></dd>
+  </dl>
 
-  <h5 class="returns">Returns</h5>
-  <table>
-    <tr>
-      <td>
-      <a class="xref" href="SparkPlug.Contracts.ICompositeRequest.html">ICompositeRequest</a>
-        <p></p>
-      </td>
-    </tr>
-  </table>
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="SparkPlug.Contracts.ICompositeRequest.html">ICompositeRequest</a></dt>
+    <dd></dd>
+  </dl>
 
 
 
@@ -196,116 +196,34 @@
 
 
 
-  </div>
-
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/natarajanganapathi/sparkplug/new/75/merge/apiSpec/new?filename=SparkPlug_Contracts_Extensions_AddData_SparkPlug_Contracts_IQueryResponse_System_Collections_Generic_IEnumerable_System_Object__.md&amp;value=---%0Auid%3A%20SparkPlug.Contracts.Extensions.AddData(SparkPlug.Contracts.IQueryResponse%2CSystem.Collections.Generic.IEnumerable%7BSystem.Object%7D)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Edit this page"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/natarajanganapathi/sparkplug/blob/75/merge/src/SparkPlug.Contracts/Response/QueryResponse.cs/#L17" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-
-  <a id="SparkPlug_Contracts_Extensions_AddData_" data-uid="SparkPlug.Contracts.Extensions.AddData*"></a>
-
-  <h4 id="SparkPlug_Contracts_Extensions_AddData_SparkPlug_Contracts_IQueryResponse_System_Collections_Generic_IEnumerable_System_Object__" data-uid="SparkPlug.Contracts.Extensions.AddData(SparkPlug.Contracts.IQueryResponse,System.Collections.Generic.IEnumerable{System.Object})"><a href="#collapsible-SparkPlug_Contracts_Extensions_AddData_SparkPlug_Contracts_IQueryResponse_System_Collections_Generic_IEnumerable_System_Object__" class="expander" data-toggle="collapse">AddData(IQueryResponse, IEnumerable&lt;object&gt;)</a></h4>
-
-  <div id="collapsible-SparkPlug_Contracts_Extensions_AddData_SparkPlug_Contracts_IQueryResponse_System_Collections_Generic_IEnumerable_System_Object__" class="collapse in">
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-
-  <div class="codewrapper">
-    <pre><code class="lang- hljs">public static IQueryResponse AddData(this IQueryResponse source, IEnumerable&lt;object&gt; data)</code></pre>
-  </div>
-
-  <h5 class="parameters">Parameters</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="SparkPlug.Contracts.IQueryResponse.html">IQueryResponse</a></span>
-        <span class="parametername">source</span>
-        <p></p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</span>
-        <span class="parametername">data</span>
-        <p></p>
-      </td>
-    </tr>
-  </table>
-
-  <h5 class="returns">Returns</h5>
-  <table>
-    <tr>
-      <td>
-      <a class="xref" href="SparkPlug.Contracts.IQueryResponse.html">IQueryResponse</a>
-        <p></p>
-      </td>
-    </tr>
-  </table>
-
-
-
-
-
-
-
-
-
-
-  </div>
-
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/natarajanganapathi/sparkplug/new/75/merge/apiSpec/new?filename=SparkPlug_Contracts_Extensions_AddDependency_SparkPlug_Contracts_IApiRequest_System_String___.md&amp;value=---%0Auid%3A%20SparkPlug.Contracts.Extensions.AddDependency(SparkPlug.Contracts.IApiRequest%2CSystem.String%5B%5D)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Edit this page"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/natarajanganapathi/sparkplug/blob/75/merge/src/SparkPlug.Contracts/Request/ApiRequest.cs/#L11" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
 
   <a id="SparkPlug_Contracts_Extensions_AddDependency_" data-uid="SparkPlug.Contracts.Extensions.AddDependency*"></a>
 
-  <h4 id="SparkPlug_Contracts_Extensions_AddDependency_SparkPlug_Contracts_IApiRequest_System_String___" data-uid="SparkPlug.Contracts.Extensions.AddDependency(SparkPlug.Contracts.IApiRequest,System.String[])"><a href="#collapsible-SparkPlug_Contracts_Extensions_AddDependency_SparkPlug_Contracts_IApiRequest_System_String___" class="expander" data-toggle="collapse">AddDependency(IApiRequest, params string[])</a></h4>
+  <h3 id="SparkPlug_Contracts_Extensions_AddDependency_SparkPlug_Contracts_IApiRequest_System_String___" data-uid="SparkPlug.Contracts.Extensions.AddDependency(SparkPlug.Contracts.IApiRequest,System.String[])">
+  AddDependency(IApiRequest, params string[])
+  <a class="header-action link-secondary" title="View source" href="https://github.com/natarajanganapathi/sparkplug/blob/76/merge/src/SparkPlug.Contracts/Request/ApiRequest.cs/#L11"><i class="bi bi-code-slash"></i></a>
+  </h3>
 
-  <div id="collapsible-SparkPlug_Contracts_Extensions_AddDependency_SparkPlug_Contracts_IApiRequest_System_String___" class="collapse in">
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
-    <pre><code class="lang- hljs">public static IApiRequest AddDependency(this IApiRequest request, params string[] deps)</code></pre>
+    <pre><code class="lang-csharp hljs">public static IApiRequest AddDependency(this IApiRequest request, params string[] deps)</code></pre>
   </div>
 
-  <h5 class="parameters">Parameters</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="SparkPlug.Contracts.IApiRequest.html">IApiRequest</a></span>
-        <span class="parametername">request</span>
-        <p></p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>[]</span>
-        <span class="parametername">deps</span>
-        <p></p>
-      </td>
-    </tr>
-  </table>
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>request</code> <a class="xref" href="SparkPlug.Contracts.IApiRequest.html">IApiRequest</a></dt>
+    <dd></dd>
+    <dt><code>deps</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>[]</dt>
+    <dd></dd>
+  </dl>
 
-  <h5 class="returns">Returns</h5>
-  <table>
-    <tr>
-      <td>
-      <a class="xref" href="SparkPlug.Contracts.IApiRequest.html">IApiRequest</a>
-        <p></p>
-      </td>
-    </tr>
-  </table>
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="SparkPlug.Contracts.IApiRequest.html">IApiRequest</a></dt>
+    <dd></dd>
+  </dl>
 
 
 
@@ -316,116 +234,34 @@
 
 
 
-  </div>
-
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/natarajanganapathi/sparkplug/new/75/merge/apiSpec/new?filename=SparkPlug_Contracts_Extensions_AddPageContext_SparkPlug_Contracts_IQueryResponse_SparkPlug_Contracts_IPageContext_.md&amp;value=---%0Auid%3A%20SparkPlug.Contracts.Extensions.AddPageContext(SparkPlug.Contracts.IQueryResponse%2CSparkPlug.Contracts.IPageContext)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Edit this page"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/natarajanganapathi/sparkplug/blob/75/merge/src/SparkPlug.Contracts/Response/QueryResponse.cs/#L22" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-
-  <a id="SparkPlug_Contracts_Extensions_AddPageContext_" data-uid="SparkPlug.Contracts.Extensions.AddPageContext*"></a>
-
-  <h4 id="SparkPlug_Contracts_Extensions_AddPageContext_SparkPlug_Contracts_IQueryResponse_SparkPlug_Contracts_IPageContext_" data-uid="SparkPlug.Contracts.Extensions.AddPageContext(SparkPlug.Contracts.IQueryResponse,SparkPlug.Contracts.IPageContext)"><a href="#collapsible-SparkPlug_Contracts_Extensions_AddPageContext_SparkPlug_Contracts_IQueryResponse_SparkPlug_Contracts_IPageContext_" class="expander" data-toggle="collapse">AddPageContext(IQueryResponse, IPageContext)</a></h4>
-
-  <div id="collapsible-SparkPlug_Contracts_Extensions_AddPageContext_SparkPlug_Contracts_IQueryResponse_SparkPlug_Contracts_IPageContext_" class="collapse in">
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-
-  <div class="codewrapper">
-    <pre><code class="lang- hljs">public static IQueryResponse AddPageContext(this IQueryResponse source, IPageContext pc)</code></pre>
-  </div>
-
-  <h5 class="parameters">Parameters</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="SparkPlug.Contracts.IQueryResponse.html">IQueryResponse</a></span>
-        <span class="parametername">source</span>
-        <p></p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="SparkPlug.Contracts.IPageContext.html">IPageContext</a></span>
-        <span class="parametername">pc</span>
-        <p></p>
-      </td>
-    </tr>
-  </table>
-
-  <h5 class="returns">Returns</h5>
-  <table>
-    <tr>
-      <td>
-      <a class="xref" href="SparkPlug.Contracts.IQueryResponse.html">IQueryResponse</a>
-        <p></p>
-      </td>
-    </tr>
-  </table>
-
-
-
-
-
-
-
-
-
-
-  </div>
-
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/natarajanganapathi/sparkplug/new/75/merge/apiSpec/new?filename=SparkPlug_Contracts_Extensions_And_SparkPlug_Contracts_CompositeFilter_SparkPlug_Contracts_CompositeFilter_.md&amp;value=---%0Auid%3A%20SparkPlug.Contracts.Extensions.And(SparkPlug.Contracts.CompositeFilter%2CSparkPlug.Contracts.CompositeFilter)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Edit this page"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/natarajanganapathi/sparkplug/blob/75/merge/src/SparkPlug.Contracts/Filter/CompositeFilter.cs/#L66" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
 
   <a id="SparkPlug_Contracts_Extensions_And_" data-uid="SparkPlug.Contracts.Extensions.And*"></a>
 
-  <h4 id="SparkPlug_Contracts_Extensions_And_SparkPlug_Contracts_CompositeFilter_SparkPlug_Contracts_CompositeFilter_" data-uid="SparkPlug.Contracts.Extensions.And(SparkPlug.Contracts.CompositeFilter,SparkPlug.Contracts.CompositeFilter)"><a href="#collapsible-SparkPlug_Contracts_Extensions_And_SparkPlug_Contracts_CompositeFilter_SparkPlug_Contracts_CompositeFilter_" class="expander" data-toggle="collapse">And(CompositeFilter, CompositeFilter)</a></h4>
+  <h3 id="SparkPlug_Contracts_Extensions_And_SparkPlug_Contracts_CompositeFilter_SparkPlug_Contracts_CompositeFilter_" data-uid="SparkPlug.Contracts.Extensions.And(SparkPlug.Contracts.CompositeFilter,SparkPlug.Contracts.CompositeFilter)">
+  And(CompositeFilter, CompositeFilter)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/natarajanganapathi/sparkplug/blob/76/merge/src/SparkPlug.Contracts/Filter/CompositeFilter.cs/#L66"><i class="bi bi-code-slash"></i></a>
+  </h3>
 
-  <div id="collapsible-SparkPlug_Contracts_Extensions_And_SparkPlug_Contracts_CompositeFilter_SparkPlug_Contracts_CompositeFilter_" class="collapse in">
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
-    <pre><code class="lang- hljs">public static CompositeFilter And(this CompositeFilter source, CompositeFilter filter)</code></pre>
+    <pre><code class="lang-csharp hljs">public static CompositeFilter And(this CompositeFilter source, CompositeFilter filter)</code></pre>
   </div>
 
-  <h5 class="parameters">Parameters</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="SparkPlug.Contracts.CompositeFilter.html">CompositeFilter</a></span>
-        <span class="parametername">source</span>
-        <p></p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="SparkPlug.Contracts.CompositeFilter.html">CompositeFilter</a></span>
-        <span class="parametername">filter</span>
-        <p></p>
-      </td>
-    </tr>
-  </table>
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>source</code> <a class="xref" href="SparkPlug.Contracts.CompositeFilter.html">CompositeFilter</a></dt>
+    <dd></dd>
+    <dt><code>filter</code> <a class="xref" href="SparkPlug.Contracts.CompositeFilter.html">CompositeFilter</a></dt>
+    <dd></dd>
+  </dl>
 
-  <h5 class="returns">Returns</h5>
-  <table>
-    <tr>
-      <td>
-      <a class="xref" href="SparkPlug.Contracts.CompositeFilter.html">CompositeFilter</a>
-        <p></p>
-      </td>
-    </tr>
-  </table>
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="SparkPlug.Contracts.CompositeFilter.html">CompositeFilter</a></dt>
+    <dd></dd>
+  </dl>
 
 
 
@@ -436,56 +272,34 @@
 
 
 
-  </div>
-
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/natarajanganapathi/sparkplug/new/75/merge/apiSpec/new?filename=SparkPlug_Contracts_Extensions_And_SparkPlug_Contracts_CompositeFilter_SparkPlug_Contracts_ConditionFilter_.md&amp;value=---%0Auid%3A%20SparkPlug.Contracts.Extensions.And(SparkPlug.Contracts.CompositeFilter%2CSparkPlug.Contracts.ConditionFilter)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Edit this page"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/natarajanganapathi/sparkplug/blob/75/merge/src/SparkPlug.Contracts/Filter/CompositeFilter.cs/#L55" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
 
   <a id="SparkPlug_Contracts_Extensions_And_" data-uid="SparkPlug.Contracts.Extensions.And*"></a>
 
-  <h4 id="SparkPlug_Contracts_Extensions_And_SparkPlug_Contracts_CompositeFilter_SparkPlug_Contracts_ConditionFilter_" data-uid="SparkPlug.Contracts.Extensions.And(SparkPlug.Contracts.CompositeFilter,SparkPlug.Contracts.ConditionFilter)"><a href="#collapsible-SparkPlug_Contracts_Extensions_And_SparkPlug_Contracts_CompositeFilter_SparkPlug_Contracts_ConditionFilter_" class="expander" data-toggle="collapse">And(CompositeFilter, ConditionFilter)</a></h4>
+  <h3 id="SparkPlug_Contracts_Extensions_And_SparkPlug_Contracts_CompositeFilter_SparkPlug_Contracts_ConditionFilter_" data-uid="SparkPlug.Contracts.Extensions.And(SparkPlug.Contracts.CompositeFilter,SparkPlug.Contracts.ConditionFilter)">
+  And(CompositeFilter, ConditionFilter)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/natarajanganapathi/sparkplug/blob/76/merge/src/SparkPlug.Contracts/Filter/CompositeFilter.cs/#L55"><i class="bi bi-code-slash"></i></a>
+  </h3>
 
-  <div id="collapsible-SparkPlug_Contracts_Extensions_And_SparkPlug_Contracts_CompositeFilter_SparkPlug_Contracts_ConditionFilter_" class="collapse in">
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
-    <pre><code class="lang- hljs">public static CompositeFilter And(this CompositeFilter source, ConditionFilter filter)</code></pre>
+    <pre><code class="lang-csharp hljs">public static CompositeFilter And(this CompositeFilter source, ConditionFilter filter)</code></pre>
   </div>
 
-  <h5 class="parameters">Parameters</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="SparkPlug.Contracts.CompositeFilter.html">CompositeFilter</a></span>
-        <span class="parametername">source</span>
-        <p></p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="SparkPlug.Contracts.ConditionFilter.html">ConditionFilter</a></span>
-        <span class="parametername">filter</span>
-        <p></p>
-      </td>
-    </tr>
-  </table>
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>source</code> <a class="xref" href="SparkPlug.Contracts.CompositeFilter.html">CompositeFilter</a></dt>
+    <dd></dd>
+    <dt><code>filter</code> <a class="xref" href="SparkPlug.Contracts.ConditionFilter.html">ConditionFilter</a></dt>
+    <dd></dd>
+  </dl>
 
-  <h5 class="returns">Returns</h5>
-  <table>
-    <tr>
-      <td>
-      <a class="xref" href="SparkPlug.Contracts.CompositeFilter.html">CompositeFilter</a>
-        <p></p>
-      </td>
-    </tr>
-  </table>
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="SparkPlug.Contracts.CompositeFilter.html">CompositeFilter</a></dt>
+    <dd></dd>
+  </dl>
 
 
 
@@ -496,56 +310,34 @@
 
 
 
-  </div>
-
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/natarajanganapathi/sparkplug/new/75/merge/apiSpec/new?filename=SparkPlug_Contracts_Extensions_And_SparkPlug_Contracts_CompositeFilter_System_Func_SparkPlug_Contracts_CompositeFilter_SparkPlug_Contracts_CompositeFilter__.md&amp;value=---%0Auid%3A%20SparkPlug.Contracts.Extensions.And(SparkPlug.Contracts.CompositeFilter%2CSystem.Func%7BSparkPlug.Contracts.CompositeFilter%2CSparkPlug.Contracts.CompositeFilter%7D)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Edit this page"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/natarajanganapathi/sparkplug/blob/75/merge/src/SparkPlug.Contracts/Filter/CompositeFilter.cs/#L61" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
 
   <a id="SparkPlug_Contracts_Extensions_And_" data-uid="SparkPlug.Contracts.Extensions.And*"></a>
 
-  <h4 id="SparkPlug_Contracts_Extensions_And_SparkPlug_Contracts_CompositeFilter_System_Func_SparkPlug_Contracts_CompositeFilter_SparkPlug_Contracts_CompositeFilter__" data-uid="SparkPlug.Contracts.Extensions.And(SparkPlug.Contracts.CompositeFilter,System.Func{SparkPlug.Contracts.CompositeFilter,SparkPlug.Contracts.CompositeFilter})"><a href="#collapsible-SparkPlug_Contracts_Extensions_And_SparkPlug_Contracts_CompositeFilter_System_Func_SparkPlug_Contracts_CompositeFilter_SparkPlug_Contracts_CompositeFilter__" class="expander" data-toggle="collapse">And(CompositeFilter, Func&lt;CompositeFilter, CompositeFilter&gt;)</a></h4>
+  <h3 id="SparkPlug_Contracts_Extensions_And_SparkPlug_Contracts_CompositeFilter_System_Func_SparkPlug_Contracts_CompositeFilter_SparkPlug_Contracts_CompositeFilter__" data-uid="SparkPlug.Contracts.Extensions.And(SparkPlug.Contracts.CompositeFilter,System.Func{SparkPlug.Contracts.CompositeFilter,SparkPlug.Contracts.CompositeFilter})">
+  And(CompositeFilter, Func&lt;CompositeFilter, CompositeFilter&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/natarajanganapathi/sparkplug/blob/76/merge/src/SparkPlug.Contracts/Filter/CompositeFilter.cs/#L61"><i class="bi bi-code-slash"></i></a>
+  </h3>
 
-  <div id="collapsible-SparkPlug_Contracts_Extensions_And_SparkPlug_Contracts_CompositeFilter_System_Func_SparkPlug_Contracts_CompositeFilter_SparkPlug_Contracts_CompositeFilter__" class="collapse in">
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
-    <pre><code class="lang- hljs">public static CompositeFilter And(this CompositeFilter source, Func&lt;CompositeFilter, CompositeFilter&gt; filterAction)</code></pre>
+    <pre><code class="lang-csharp hljs">public static CompositeFilter And(this CompositeFilter source, Func&lt;CompositeFilter, CompositeFilter&gt; filterAction)</code></pre>
   </div>
 
-  <h5 class="parameters">Parameters</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="SparkPlug.Contracts.CompositeFilter.html">CompositeFilter</a></span>
-        <span class="parametername">source</span>
-        <p></p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="SparkPlug.Contracts.CompositeFilter.html">CompositeFilter</a>, <a class="xref" href="SparkPlug.Contracts.CompositeFilter.html">CompositeFilter</a>&gt;</span>
-        <span class="parametername">filterAction</span>
-        <p></p>
-      </td>
-    </tr>
-  </table>
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>source</code> <a class="xref" href="SparkPlug.Contracts.CompositeFilter.html">CompositeFilter</a></dt>
+    <dd></dd>
+    <dt><code>filterAction</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="SparkPlug.Contracts.CompositeFilter.html">CompositeFilter</a>, <a class="xref" href="SparkPlug.Contracts.CompositeFilter.html">CompositeFilter</a>&gt;</dt>
+    <dd></dd>
+  </dl>
 
-  <h5 class="returns">Returns</h5>
-  <table>
-    <tr>
-      <td>
-      <a class="xref" href="SparkPlug.Contracts.CompositeFilter.html">CompositeFilter</a>
-        <p></p>
-      </td>
-    </tr>
-  </table>
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="SparkPlug.Contracts.CompositeFilter.html">CompositeFilter</a></dt>
+    <dd></dd>
+  </dl>
 
 
 
@@ -556,70 +348,38 @@
 
 
 
-  </div>
-
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/natarajanganapathi/sparkplug/new/75/merge/apiSpec/new?filename=SparkPlug_Contracts_Extensions_And_SparkPlug_Contracts_CompositeFilter_System_String_SparkPlug_Contracts_FieldOperator_System_Object_.md&amp;value=---%0Auid%3A%20SparkPlug.Contracts.Extensions.And(SparkPlug.Contracts.CompositeFilter%2CSystem.String%2CSparkPlug.Contracts.FieldOperator%2CSystem.Object)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Edit this page"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/natarajanganapathi/sparkplug/blob/75/merge/src/SparkPlug.Contracts/Filter/CompositeFilter.cs/#L51" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
 
   <a id="SparkPlug_Contracts_Extensions_And_" data-uid="SparkPlug.Contracts.Extensions.And*"></a>
 
-  <h4 id="SparkPlug_Contracts_Extensions_And_SparkPlug_Contracts_CompositeFilter_System_String_SparkPlug_Contracts_FieldOperator_System_Object_" data-uid="SparkPlug.Contracts.Extensions.And(SparkPlug.Contracts.CompositeFilter,System.String,SparkPlug.Contracts.FieldOperator,System.Object)"><a href="#collapsible-SparkPlug_Contracts_Extensions_And_SparkPlug_Contracts_CompositeFilter_System_String_SparkPlug_Contracts_FieldOperator_System_Object_" class="expander" data-toggle="collapse">And(CompositeFilter, string, FieldOperator, object)</a></h4>
+  <h3 id="SparkPlug_Contracts_Extensions_And_SparkPlug_Contracts_CompositeFilter_System_String_SparkPlug_Contracts_FieldOperator_System_Object_" data-uid="SparkPlug.Contracts.Extensions.And(SparkPlug.Contracts.CompositeFilter,System.String,SparkPlug.Contracts.FieldOperator,System.Object)">
+  And(CompositeFilter, string, FieldOperator, object)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/natarajanganapathi/sparkplug/blob/76/merge/src/SparkPlug.Contracts/Filter/CompositeFilter.cs/#L51"><i class="bi bi-code-slash"></i></a>
+  </h3>
 
-  <div id="collapsible-SparkPlug_Contracts_Extensions_And_SparkPlug_Contracts_CompositeFilter_System_String_SparkPlug_Contracts_FieldOperator_System_Object_" class="collapse in">
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
-    <pre><code class="lang- hljs">public static CompositeFilter And(this CompositeFilter source, string field, FieldOperator op, object value)</code></pre>
+    <pre><code class="lang-csharp hljs">public static CompositeFilter And(this CompositeFilter source, string field, FieldOperator op, object value)</code></pre>
   </div>
 
-  <h5 class="parameters">Parameters</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="SparkPlug.Contracts.CompositeFilter.html">CompositeFilter</a></span>
-        <span class="parametername">source</span>
-        <p></p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></span>
-        <span class="parametername">field</span>
-        <p></p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="SparkPlug.Contracts.FieldOperator.html">FieldOperator</a></span>
-        <span class="parametername">op</span>
-        <p></p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></span>
-        <span class="parametername">value</span>
-        <p></p>
-      </td>
-    </tr>
-  </table>
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>source</code> <a class="xref" href="SparkPlug.Contracts.CompositeFilter.html">CompositeFilter</a></dt>
+    <dd></dd>
+    <dt><code>field</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>op</code> <a class="xref" href="SparkPlug.Contracts.FieldOperator.html">FieldOperator</a></dt>
+    <dd></dd>
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+  </dl>
 
-  <h5 class="returns">Returns</h5>
-  <table>
-    <tr>
-      <td>
-      <a class="xref" href="SparkPlug.Contracts.CompositeFilter.html">CompositeFilter</a>
-        <p></p>
-      </td>
-    </tr>
-  </table>
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="SparkPlug.Contracts.CompositeFilter.html">CompositeFilter</a></dt>
+    <dd></dd>
+  </dl>
 
 
 
@@ -630,63 +390,36 @@
 
 
 
-  </div>
-
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/natarajanganapathi/sparkplug/new/75/merge/apiSpec/new?filename=SparkPlug_Contracts_Extensions_And_SparkPlug_Contracts_CompositeFilter_System_String_SparkPlug_Contracts_UnaryOperator_.md&amp;value=---%0Auid%3A%20SparkPlug.Contracts.Extensions.And(SparkPlug.Contracts.CompositeFilter%2CSystem.String%2CSparkPlug.Contracts.UnaryOperator)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Edit this page"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/natarajanganapathi/sparkplug/blob/75/merge/src/SparkPlug.Contracts/Filter/CompositeFilter.cs/#L47" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
 
   <a id="SparkPlug_Contracts_Extensions_And_" data-uid="SparkPlug.Contracts.Extensions.And*"></a>
 
-  <h4 id="SparkPlug_Contracts_Extensions_And_SparkPlug_Contracts_CompositeFilter_System_String_SparkPlug_Contracts_UnaryOperator_" data-uid="SparkPlug.Contracts.Extensions.And(SparkPlug.Contracts.CompositeFilter,System.String,SparkPlug.Contracts.UnaryOperator)"><a href="#collapsible-SparkPlug_Contracts_Extensions_And_SparkPlug_Contracts_CompositeFilter_System_String_SparkPlug_Contracts_UnaryOperator_" class="expander" data-toggle="collapse">And(CompositeFilter, string, UnaryOperator)</a></h4>
+  <h3 id="SparkPlug_Contracts_Extensions_And_SparkPlug_Contracts_CompositeFilter_System_String_SparkPlug_Contracts_UnaryOperator_" data-uid="SparkPlug.Contracts.Extensions.And(SparkPlug.Contracts.CompositeFilter,System.String,SparkPlug.Contracts.UnaryOperator)">
+  And(CompositeFilter, string, UnaryOperator)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/natarajanganapathi/sparkplug/blob/76/merge/src/SparkPlug.Contracts/Filter/CompositeFilter.cs/#L47"><i class="bi bi-code-slash"></i></a>
+  </h3>
 
-  <div id="collapsible-SparkPlug_Contracts_Extensions_And_SparkPlug_Contracts_CompositeFilter_System_String_SparkPlug_Contracts_UnaryOperator_" class="collapse in">
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
-    <pre><code class="lang- hljs">public static CompositeFilter And(this CompositeFilter source, string field, UnaryOperator op)</code></pre>
+    <pre><code class="lang-csharp hljs">public static CompositeFilter And(this CompositeFilter source, string field, UnaryOperator op)</code></pre>
   </div>
 
-  <h5 class="parameters">Parameters</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="SparkPlug.Contracts.CompositeFilter.html">CompositeFilter</a></span>
-        <span class="parametername">source</span>
-        <p></p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></span>
-        <span class="parametername">field</span>
-        <p></p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="SparkPlug.Contracts.UnaryOperator.html">UnaryOperator</a></span>
-        <span class="parametername">op</span>
-        <p></p>
-      </td>
-    </tr>
-  </table>
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>source</code> <a class="xref" href="SparkPlug.Contracts.CompositeFilter.html">CompositeFilter</a></dt>
+    <dd></dd>
+    <dt><code>field</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>op</code> <a class="xref" href="SparkPlug.Contracts.UnaryOperator.html">UnaryOperator</a></dt>
+    <dd></dd>
+  </dl>
 
-  <h5 class="returns">Returns</h5>
-  <table>
-    <tr>
-      <td>
-      <a class="xref" href="SparkPlug.Contracts.CompositeFilter.html">CompositeFilter</a>
-        <p></p>
-      </td>
-    </tr>
-  </table>
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="SparkPlug.Contracts.CompositeFilter.html">CompositeFilter</a></dt>
+    <dd></dd>
+  </dl>
 
 
 
@@ -697,63 +430,36 @@
 
 
 
-  </div>
-
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/natarajanganapathi/sparkplug/new/75/merge/apiSpec/new?filename=SparkPlug_Contracts_Extensions_AndEqual_SparkPlug_Contracts_CompositeFilter_System_String_System_Object_.md&amp;value=---%0Auid%3A%20SparkPlug.Contracts.Extensions.AndEqual(SparkPlug.Contracts.CompositeFilter%2CSystem.String%2CSystem.Object)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Edit this page"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/natarajanganapathi/sparkplug/blob/75/merge/src/SparkPlug.Contracts/Filter/CompositeFilter.cs/#L23" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
 
   <a id="SparkPlug_Contracts_Extensions_AndEqual_" data-uid="SparkPlug.Contracts.Extensions.AndEqual*"></a>
 
-  <h4 id="SparkPlug_Contracts_Extensions_AndEqual_SparkPlug_Contracts_CompositeFilter_System_String_System_Object_" data-uid="SparkPlug.Contracts.Extensions.AndEqual(SparkPlug.Contracts.CompositeFilter,System.String,System.Object)"><a href="#collapsible-SparkPlug_Contracts_Extensions_AndEqual_SparkPlug_Contracts_CompositeFilter_System_String_System_Object_" class="expander" data-toggle="collapse">AndEqual(CompositeFilter, string, object)</a></h4>
+  <h3 id="SparkPlug_Contracts_Extensions_AndEqual_SparkPlug_Contracts_CompositeFilter_System_String_System_Object_" data-uid="SparkPlug.Contracts.Extensions.AndEqual(SparkPlug.Contracts.CompositeFilter,System.String,System.Object)">
+  AndEqual(CompositeFilter, string, object)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/natarajanganapathi/sparkplug/blob/76/merge/src/SparkPlug.Contracts/Filter/CompositeFilter.cs/#L23"><i class="bi bi-code-slash"></i></a>
+  </h3>
 
-  <div id="collapsible-SparkPlug_Contracts_Extensions_AndEqual_SparkPlug_Contracts_CompositeFilter_System_String_System_Object_" class="collapse in">
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
-    <pre><code class="lang- hljs">public static CompositeFilter AndEqual(this CompositeFilter source, string field, object value)</code></pre>
+    <pre><code class="lang-csharp hljs">public static CompositeFilter AndEqual(this CompositeFilter source, string field, object value)</code></pre>
   </div>
 
-  <h5 class="parameters">Parameters</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="SparkPlug.Contracts.CompositeFilter.html">CompositeFilter</a></span>
-        <span class="parametername">source</span>
-        <p></p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></span>
-        <span class="parametername">field</span>
-        <p></p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></span>
-        <span class="parametername">value</span>
-        <p></p>
-      </td>
-    </tr>
-  </table>
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>source</code> <a class="xref" href="SparkPlug.Contracts.CompositeFilter.html">CompositeFilter</a></dt>
+    <dd></dd>
+    <dt><code>field</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+  </dl>
 
-  <h5 class="returns">Returns</h5>
-  <table>
-    <tr>
-      <td>
-      <a class="xref" href="SparkPlug.Contracts.CompositeFilter.html">CompositeFilter</a>
-        <p></p>
-      </td>
-    </tr>
-  </table>
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="SparkPlug.Contracts.CompositeFilter.html">CompositeFilter</a></dt>
+    <dd></dd>
+  </dl>
 
 
 
@@ -764,63 +470,36 @@
 
 
 
-  </div>
-
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/natarajanganapathi/sparkplug/new/75/merge/apiSpec/new?filename=SparkPlug_Contracts_Extensions_AndGreaterThan_SparkPlug_Contracts_CompositeFilter_System_String_System_Object_.md&amp;value=---%0Auid%3A%20SparkPlug.Contracts.Extensions.AndGreaterThan(SparkPlug.Contracts.CompositeFilter%2CSystem.String%2CSystem.Object)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Edit this page"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/natarajanganapathi/sparkplug/blob/75/merge/src/SparkPlug.Contracts/Filter/CompositeFilter.cs/#L27" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
 
   <a id="SparkPlug_Contracts_Extensions_AndGreaterThan_" data-uid="SparkPlug.Contracts.Extensions.AndGreaterThan*"></a>
 
-  <h4 id="SparkPlug_Contracts_Extensions_AndGreaterThan_SparkPlug_Contracts_CompositeFilter_System_String_System_Object_" data-uid="SparkPlug.Contracts.Extensions.AndGreaterThan(SparkPlug.Contracts.CompositeFilter,System.String,System.Object)"><a href="#collapsible-SparkPlug_Contracts_Extensions_AndGreaterThan_SparkPlug_Contracts_CompositeFilter_System_String_System_Object_" class="expander" data-toggle="collapse">AndGreaterThan(CompositeFilter, string, object)</a></h4>
+  <h3 id="SparkPlug_Contracts_Extensions_AndGreaterThan_SparkPlug_Contracts_CompositeFilter_System_String_System_Object_" data-uid="SparkPlug.Contracts.Extensions.AndGreaterThan(SparkPlug.Contracts.CompositeFilter,System.String,System.Object)">
+  AndGreaterThan(CompositeFilter, string, object)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/natarajanganapathi/sparkplug/blob/76/merge/src/SparkPlug.Contracts/Filter/CompositeFilter.cs/#L27"><i class="bi bi-code-slash"></i></a>
+  </h3>
 
-  <div id="collapsible-SparkPlug_Contracts_Extensions_AndGreaterThan_SparkPlug_Contracts_CompositeFilter_System_String_System_Object_" class="collapse in">
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
-    <pre><code class="lang- hljs">public static CompositeFilter AndGreaterThan(this CompositeFilter source, string field, object value)</code></pre>
+    <pre><code class="lang-csharp hljs">public static CompositeFilter AndGreaterThan(this CompositeFilter source, string field, object value)</code></pre>
   </div>
 
-  <h5 class="parameters">Parameters</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="SparkPlug.Contracts.CompositeFilter.html">CompositeFilter</a></span>
-        <span class="parametername">source</span>
-        <p></p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></span>
-        <span class="parametername">field</span>
-        <p></p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></span>
-        <span class="parametername">value</span>
-        <p></p>
-      </td>
-    </tr>
-  </table>
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>source</code> <a class="xref" href="SparkPlug.Contracts.CompositeFilter.html">CompositeFilter</a></dt>
+    <dd></dd>
+    <dt><code>field</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+  </dl>
 
-  <h5 class="returns">Returns</h5>
-  <table>
-    <tr>
-      <td>
-      <a class="xref" href="SparkPlug.Contracts.CompositeFilter.html">CompositeFilter</a>
-        <p></p>
-      </td>
-    </tr>
-  </table>
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="SparkPlug.Contracts.CompositeFilter.html">CompositeFilter</a></dt>
+    <dd></dd>
+  </dl>
 
 
 
@@ -831,63 +510,36 @@
 
 
 
-  </div>
-
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/natarajanganapathi/sparkplug/new/75/merge/apiSpec/new?filename=SparkPlug_Contracts_Extensions_AndGreaterThanOrEqual_SparkPlug_Contracts_CompositeFilter_System_String_System_Object_.md&amp;value=---%0Auid%3A%20SparkPlug.Contracts.Extensions.AndGreaterThanOrEqual(SparkPlug.Contracts.CompositeFilter%2CSystem.String%2CSystem.Object)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Edit this page"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/natarajanganapathi/sparkplug/blob/75/merge/src/SparkPlug.Contracts/Filter/CompositeFilter.cs/#L29" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
 
   <a id="SparkPlug_Contracts_Extensions_AndGreaterThanOrEqual_" data-uid="SparkPlug.Contracts.Extensions.AndGreaterThanOrEqual*"></a>
 
-  <h4 id="SparkPlug_Contracts_Extensions_AndGreaterThanOrEqual_SparkPlug_Contracts_CompositeFilter_System_String_System_Object_" data-uid="SparkPlug.Contracts.Extensions.AndGreaterThanOrEqual(SparkPlug.Contracts.CompositeFilter,System.String,System.Object)"><a href="#collapsible-SparkPlug_Contracts_Extensions_AndGreaterThanOrEqual_SparkPlug_Contracts_CompositeFilter_System_String_System_Object_" class="expander" data-toggle="collapse">AndGreaterThanOrEqual(CompositeFilter, string, object)</a></h4>
+  <h3 id="SparkPlug_Contracts_Extensions_AndGreaterThanOrEqual_SparkPlug_Contracts_CompositeFilter_System_String_System_Object_" data-uid="SparkPlug.Contracts.Extensions.AndGreaterThanOrEqual(SparkPlug.Contracts.CompositeFilter,System.String,System.Object)">
+  AndGreaterThanOrEqual(CompositeFilter, string, object)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/natarajanganapathi/sparkplug/blob/76/merge/src/SparkPlug.Contracts/Filter/CompositeFilter.cs/#L29"><i class="bi bi-code-slash"></i></a>
+  </h3>
 
-  <div id="collapsible-SparkPlug_Contracts_Extensions_AndGreaterThanOrEqual_SparkPlug_Contracts_CompositeFilter_System_String_System_Object_" class="collapse in">
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
-    <pre><code class="lang- hljs">public static CompositeFilter AndGreaterThanOrEqual(this CompositeFilter source, string field, object value)</code></pre>
+    <pre><code class="lang-csharp hljs">public static CompositeFilter AndGreaterThanOrEqual(this CompositeFilter source, string field, object value)</code></pre>
   </div>
 
-  <h5 class="parameters">Parameters</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="SparkPlug.Contracts.CompositeFilter.html">CompositeFilter</a></span>
-        <span class="parametername">source</span>
-        <p></p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></span>
-        <span class="parametername">field</span>
-        <p></p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></span>
-        <span class="parametername">value</span>
-        <p></p>
-      </td>
-    </tr>
-  </table>
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>source</code> <a class="xref" href="SparkPlug.Contracts.CompositeFilter.html">CompositeFilter</a></dt>
+    <dd></dd>
+    <dt><code>field</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+  </dl>
 
-  <h5 class="returns">Returns</h5>
-  <table>
-    <tr>
-      <td>
-      <a class="xref" href="SparkPlug.Contracts.CompositeFilter.html">CompositeFilter</a>
-        <p></p>
-      </td>
-    </tr>
-  </table>
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="SparkPlug.Contracts.CompositeFilter.html">CompositeFilter</a></dt>
+    <dd></dd>
+  </dl>
 
 
 
@@ -898,63 +550,36 @@
 
 
 
-  </div>
-
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/natarajanganapathi/sparkplug/new/75/merge/apiSpec/new?filename=SparkPlug_Contracts_Extensions_AndIn_SparkPlug_Contracts_CompositeFilter_System_String_System_Object___.md&amp;value=---%0Auid%3A%20SparkPlug.Contracts.Extensions.AndIn(SparkPlug.Contracts.CompositeFilter%2CSystem.String%2CSystem.Object%5B%5D)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Edit this page"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/natarajanganapathi/sparkplug/blob/75/merge/src/SparkPlug.Contracts/Filter/CompositeFilter.cs/#L35" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
 
   <a id="SparkPlug_Contracts_Extensions_AndIn_" data-uid="SparkPlug.Contracts.Extensions.AndIn*"></a>
 
-  <h4 id="SparkPlug_Contracts_Extensions_AndIn_SparkPlug_Contracts_CompositeFilter_System_String_System_Object___" data-uid="SparkPlug.Contracts.Extensions.AndIn(SparkPlug.Contracts.CompositeFilter,System.String,System.Object[])"><a href="#collapsible-SparkPlug_Contracts_Extensions_AndIn_SparkPlug_Contracts_CompositeFilter_System_String_System_Object___" class="expander" data-toggle="collapse">AndIn(CompositeFilter, string, object[])</a></h4>
+  <h3 id="SparkPlug_Contracts_Extensions_AndIn_SparkPlug_Contracts_CompositeFilter_System_String_System_Object___" data-uid="SparkPlug.Contracts.Extensions.AndIn(SparkPlug.Contracts.CompositeFilter,System.String,System.Object[])">
+  AndIn(CompositeFilter, string, object[])
+  <a class="header-action link-secondary" title="View source" href="https://github.com/natarajanganapathi/sparkplug/blob/76/merge/src/SparkPlug.Contracts/Filter/CompositeFilter.cs/#L35"><i class="bi bi-code-slash"></i></a>
+  </h3>
 
-  <div id="collapsible-SparkPlug_Contracts_Extensions_AndIn_SparkPlug_Contracts_CompositeFilter_System_String_System_Object___" class="collapse in">
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
-    <pre><code class="lang- hljs">public static CompositeFilter AndIn(this CompositeFilter source, string field, object[] values)</code></pre>
+    <pre><code class="lang-csharp hljs">public static CompositeFilter AndIn(this CompositeFilter source, string field, object[] values)</code></pre>
   </div>
 
-  <h5 class="parameters">Parameters</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="SparkPlug.Contracts.CompositeFilter.html">CompositeFilter</a></span>
-        <span class="parametername">source</span>
-        <p></p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></span>
-        <span class="parametername">field</span>
-        <p></p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>[]</span>
-        <span class="parametername">values</span>
-        <p></p>
-      </td>
-    </tr>
-  </table>
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>source</code> <a class="xref" href="SparkPlug.Contracts.CompositeFilter.html">CompositeFilter</a></dt>
+    <dd></dd>
+    <dt><code>field</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>values</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>[]</dt>
+    <dd></dd>
+  </dl>
 
-  <h5 class="returns">Returns</h5>
-  <table>
-    <tr>
-      <td>
-      <a class="xref" href="SparkPlug.Contracts.CompositeFilter.html">CompositeFilter</a>
-        <p></p>
-      </td>
-    </tr>
-  </table>
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="SparkPlug.Contracts.CompositeFilter.html">CompositeFilter</a></dt>
+    <dd></dd>
+  </dl>
 
 
 
@@ -965,56 +590,34 @@
 
 
 
-  </div>
-
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/natarajanganapathi/sparkplug/new/75/merge/apiSpec/new?filename=SparkPlug_Contracts_Extensions_AndIsNotNull_SparkPlug_Contracts_CompositeFilter_System_String_.md&amp;value=---%0Auid%3A%20SparkPlug.Contracts.Extensions.AndIsNotNull(SparkPlug.Contracts.CompositeFilter%2CSystem.String)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Edit this page"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/natarajanganapathi/sparkplug/blob/75/merge/src/SparkPlug.Contracts/Filter/CompositeFilter.cs/#L43" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
 
   <a id="SparkPlug_Contracts_Extensions_AndIsNotNull_" data-uid="SparkPlug.Contracts.Extensions.AndIsNotNull*"></a>
 
-  <h4 id="SparkPlug_Contracts_Extensions_AndIsNotNull_SparkPlug_Contracts_CompositeFilter_System_String_" data-uid="SparkPlug.Contracts.Extensions.AndIsNotNull(SparkPlug.Contracts.CompositeFilter,System.String)"><a href="#collapsible-SparkPlug_Contracts_Extensions_AndIsNotNull_SparkPlug_Contracts_CompositeFilter_System_String_" class="expander" data-toggle="collapse">AndIsNotNull(CompositeFilter, string)</a></h4>
+  <h3 id="SparkPlug_Contracts_Extensions_AndIsNotNull_SparkPlug_Contracts_CompositeFilter_System_String_" data-uid="SparkPlug.Contracts.Extensions.AndIsNotNull(SparkPlug.Contracts.CompositeFilter,System.String)">
+  AndIsNotNull(CompositeFilter, string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/natarajanganapathi/sparkplug/blob/76/merge/src/SparkPlug.Contracts/Filter/CompositeFilter.cs/#L43"><i class="bi bi-code-slash"></i></a>
+  </h3>
 
-  <div id="collapsible-SparkPlug_Contracts_Extensions_AndIsNotNull_SparkPlug_Contracts_CompositeFilter_System_String_" class="collapse in">
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
-    <pre><code class="lang- hljs">public static CompositeFilter AndIsNotNull(this CompositeFilter source, string field)</code></pre>
+    <pre><code class="lang-csharp hljs">public static CompositeFilter AndIsNotNull(this CompositeFilter source, string field)</code></pre>
   </div>
 
-  <h5 class="parameters">Parameters</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="SparkPlug.Contracts.CompositeFilter.html">CompositeFilter</a></span>
-        <span class="parametername">source</span>
-        <p></p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></span>
-        <span class="parametername">field</span>
-        <p></p>
-      </td>
-    </tr>
-  </table>
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>source</code> <a class="xref" href="SparkPlug.Contracts.CompositeFilter.html">CompositeFilter</a></dt>
+    <dd></dd>
+    <dt><code>field</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
 
-  <h5 class="returns">Returns</h5>
-  <table>
-    <tr>
-      <td>
-      <a class="xref" href="SparkPlug.Contracts.CompositeFilter.html">CompositeFilter</a>
-        <p></p>
-      </td>
-    </tr>
-  </table>
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="SparkPlug.Contracts.CompositeFilter.html">CompositeFilter</a></dt>
+    <dd></dd>
+  </dl>
 
 
 
@@ -1025,56 +628,34 @@
 
 
 
-  </div>
-
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/natarajanganapathi/sparkplug/new/75/merge/apiSpec/new?filename=SparkPlug_Contracts_Extensions_AndIsNull_SparkPlug_Contracts_CompositeFilter_System_String_.md&amp;value=---%0Auid%3A%20SparkPlug.Contracts.Extensions.AndIsNull(SparkPlug.Contracts.CompositeFilter%2CSystem.String)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Edit this page"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/natarajanganapathi/sparkplug/blob/75/merge/src/SparkPlug.Contracts/Filter/CompositeFilter.cs/#L41" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
 
   <a id="SparkPlug_Contracts_Extensions_AndIsNull_" data-uid="SparkPlug.Contracts.Extensions.AndIsNull*"></a>
 
-  <h4 id="SparkPlug_Contracts_Extensions_AndIsNull_SparkPlug_Contracts_CompositeFilter_System_String_" data-uid="SparkPlug.Contracts.Extensions.AndIsNull(SparkPlug.Contracts.CompositeFilter,System.String)"><a href="#collapsible-SparkPlug_Contracts_Extensions_AndIsNull_SparkPlug_Contracts_CompositeFilter_System_String_" class="expander" data-toggle="collapse">AndIsNull(CompositeFilter, string)</a></h4>
+  <h3 id="SparkPlug_Contracts_Extensions_AndIsNull_SparkPlug_Contracts_CompositeFilter_System_String_" data-uid="SparkPlug.Contracts.Extensions.AndIsNull(SparkPlug.Contracts.CompositeFilter,System.String)">
+  AndIsNull(CompositeFilter, string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/natarajanganapathi/sparkplug/blob/76/merge/src/SparkPlug.Contracts/Filter/CompositeFilter.cs/#L41"><i class="bi bi-code-slash"></i></a>
+  </h3>
 
-  <div id="collapsible-SparkPlug_Contracts_Extensions_AndIsNull_SparkPlug_Contracts_CompositeFilter_System_String_" class="collapse in">
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
-    <pre><code class="lang- hljs">public static CompositeFilter AndIsNull(this CompositeFilter source, string field)</code></pre>
+    <pre><code class="lang-csharp hljs">public static CompositeFilter AndIsNull(this CompositeFilter source, string field)</code></pre>
   </div>
 
-  <h5 class="parameters">Parameters</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="SparkPlug.Contracts.CompositeFilter.html">CompositeFilter</a></span>
-        <span class="parametername">source</span>
-        <p></p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></span>
-        <span class="parametername">field</span>
-        <p></p>
-      </td>
-    </tr>
-  </table>
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>source</code> <a class="xref" href="SparkPlug.Contracts.CompositeFilter.html">CompositeFilter</a></dt>
+    <dd></dd>
+    <dt><code>field</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
 
-  <h5 class="returns">Returns</h5>
-  <table>
-    <tr>
-      <td>
-      <a class="xref" href="SparkPlug.Contracts.CompositeFilter.html">CompositeFilter</a>
-        <p></p>
-      </td>
-    </tr>
-  </table>
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="SparkPlug.Contracts.CompositeFilter.html">CompositeFilter</a></dt>
+    <dd></dd>
+  </dl>
 
 
 
@@ -1085,63 +666,36 @@
 
 
 
-  </div>
-
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/natarajanganapathi/sparkplug/new/75/merge/apiSpec/new?filename=SparkPlug_Contracts_Extensions_AndLessThan_SparkPlug_Contracts_CompositeFilter_System_String_System_Object_.md&amp;value=---%0Auid%3A%20SparkPlug.Contracts.Extensions.AndLessThan(SparkPlug.Contracts.CompositeFilter%2CSystem.String%2CSystem.Object)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Edit this page"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/natarajanganapathi/sparkplug/blob/75/merge/src/SparkPlug.Contracts/Filter/CompositeFilter.cs/#L31" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
 
   <a id="SparkPlug_Contracts_Extensions_AndLessThan_" data-uid="SparkPlug.Contracts.Extensions.AndLessThan*"></a>
 
-  <h4 id="SparkPlug_Contracts_Extensions_AndLessThan_SparkPlug_Contracts_CompositeFilter_System_String_System_Object_" data-uid="SparkPlug.Contracts.Extensions.AndLessThan(SparkPlug.Contracts.CompositeFilter,System.String,System.Object)"><a href="#collapsible-SparkPlug_Contracts_Extensions_AndLessThan_SparkPlug_Contracts_CompositeFilter_System_String_System_Object_" class="expander" data-toggle="collapse">AndLessThan(CompositeFilter, string, object)</a></h4>
+  <h3 id="SparkPlug_Contracts_Extensions_AndLessThan_SparkPlug_Contracts_CompositeFilter_System_String_System_Object_" data-uid="SparkPlug.Contracts.Extensions.AndLessThan(SparkPlug.Contracts.CompositeFilter,System.String,System.Object)">
+  AndLessThan(CompositeFilter, string, object)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/natarajanganapathi/sparkplug/blob/76/merge/src/SparkPlug.Contracts/Filter/CompositeFilter.cs/#L31"><i class="bi bi-code-slash"></i></a>
+  </h3>
 
-  <div id="collapsible-SparkPlug_Contracts_Extensions_AndLessThan_SparkPlug_Contracts_CompositeFilter_System_String_System_Object_" class="collapse in">
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
-    <pre><code class="lang- hljs">public static CompositeFilter AndLessThan(this CompositeFilter source, string field, object value)</code></pre>
+    <pre><code class="lang-csharp hljs">public static CompositeFilter AndLessThan(this CompositeFilter source, string field, object value)</code></pre>
   </div>
 
-  <h5 class="parameters">Parameters</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="SparkPlug.Contracts.CompositeFilter.html">CompositeFilter</a></span>
-        <span class="parametername">source</span>
-        <p></p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></span>
-        <span class="parametername">field</span>
-        <p></p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></span>
-        <span class="parametername">value</span>
-        <p></p>
-      </td>
-    </tr>
-  </table>
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>source</code> <a class="xref" href="SparkPlug.Contracts.CompositeFilter.html">CompositeFilter</a></dt>
+    <dd></dd>
+    <dt><code>field</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+  </dl>
 
-  <h5 class="returns">Returns</h5>
-  <table>
-    <tr>
-      <td>
-      <a class="xref" href="SparkPlug.Contracts.CompositeFilter.html">CompositeFilter</a>
-        <p></p>
-      </td>
-    </tr>
-  </table>
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="SparkPlug.Contracts.CompositeFilter.html">CompositeFilter</a></dt>
+    <dd></dd>
+  </dl>
 
 
 
@@ -1152,63 +706,36 @@
 
 
 
-  </div>
-
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/natarajanganapathi/sparkplug/new/75/merge/apiSpec/new?filename=SparkPlug_Contracts_Extensions_AndLessThanOrEqual_SparkPlug_Contracts_CompositeFilter_System_String_System_Object_.md&amp;value=---%0Auid%3A%20SparkPlug.Contracts.Extensions.AndLessThanOrEqual(SparkPlug.Contracts.CompositeFilter%2CSystem.String%2CSystem.Object)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Edit this page"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/natarajanganapathi/sparkplug/blob/75/merge/src/SparkPlug.Contracts/Filter/CompositeFilter.cs/#L33" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
 
   <a id="SparkPlug_Contracts_Extensions_AndLessThanOrEqual_" data-uid="SparkPlug.Contracts.Extensions.AndLessThanOrEqual*"></a>
 
-  <h4 id="SparkPlug_Contracts_Extensions_AndLessThanOrEqual_SparkPlug_Contracts_CompositeFilter_System_String_System_Object_" data-uid="SparkPlug.Contracts.Extensions.AndLessThanOrEqual(SparkPlug.Contracts.CompositeFilter,System.String,System.Object)"><a href="#collapsible-SparkPlug_Contracts_Extensions_AndLessThanOrEqual_SparkPlug_Contracts_CompositeFilter_System_String_System_Object_" class="expander" data-toggle="collapse">AndLessThanOrEqual(CompositeFilter, string, object)</a></h4>
+  <h3 id="SparkPlug_Contracts_Extensions_AndLessThanOrEqual_SparkPlug_Contracts_CompositeFilter_System_String_System_Object_" data-uid="SparkPlug.Contracts.Extensions.AndLessThanOrEqual(SparkPlug.Contracts.CompositeFilter,System.String,System.Object)">
+  AndLessThanOrEqual(CompositeFilter, string, object)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/natarajanganapathi/sparkplug/blob/76/merge/src/SparkPlug.Contracts/Filter/CompositeFilter.cs/#L33"><i class="bi bi-code-slash"></i></a>
+  </h3>
 
-  <div id="collapsible-SparkPlug_Contracts_Extensions_AndLessThanOrEqual_SparkPlug_Contracts_CompositeFilter_System_String_System_Object_" class="collapse in">
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
-    <pre><code class="lang- hljs">public static CompositeFilter AndLessThanOrEqual(this CompositeFilter source, string field, object value)</code></pre>
+    <pre><code class="lang-csharp hljs">public static CompositeFilter AndLessThanOrEqual(this CompositeFilter source, string field, object value)</code></pre>
   </div>
 
-  <h5 class="parameters">Parameters</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="SparkPlug.Contracts.CompositeFilter.html">CompositeFilter</a></span>
-        <span class="parametername">source</span>
-        <p></p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></span>
-        <span class="parametername">field</span>
-        <p></p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></span>
-        <span class="parametername">value</span>
-        <p></p>
-      </td>
-    </tr>
-  </table>
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>source</code> <a class="xref" href="SparkPlug.Contracts.CompositeFilter.html">CompositeFilter</a></dt>
+    <dd></dd>
+    <dt><code>field</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+  </dl>
 
-  <h5 class="returns">Returns</h5>
-  <table>
-    <tr>
-      <td>
-      <a class="xref" href="SparkPlug.Contracts.CompositeFilter.html">CompositeFilter</a>
-        <p></p>
-      </td>
-    </tr>
-  </table>
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="SparkPlug.Contracts.CompositeFilter.html">CompositeFilter</a></dt>
+    <dd></dd>
+  </dl>
 
 
 
@@ -1219,63 +746,36 @@
 
 
 
-  </div>
-
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/natarajanganapathi/sparkplug/new/75/merge/apiSpec/new?filename=SparkPlug_Contracts_Extensions_AndNotEqual_SparkPlug_Contracts_CompositeFilter_System_String_System_Object_.md&amp;value=---%0Auid%3A%20SparkPlug.Contracts.Extensions.AndNotEqual(SparkPlug.Contracts.CompositeFilter%2CSystem.String%2CSystem.Object)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Edit this page"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/natarajanganapathi/sparkplug/blob/75/merge/src/SparkPlug.Contracts/Filter/CompositeFilter.cs/#L25" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
 
   <a id="SparkPlug_Contracts_Extensions_AndNotEqual_" data-uid="SparkPlug.Contracts.Extensions.AndNotEqual*"></a>
 
-  <h4 id="SparkPlug_Contracts_Extensions_AndNotEqual_SparkPlug_Contracts_CompositeFilter_System_String_System_Object_" data-uid="SparkPlug.Contracts.Extensions.AndNotEqual(SparkPlug.Contracts.CompositeFilter,System.String,System.Object)"><a href="#collapsible-SparkPlug_Contracts_Extensions_AndNotEqual_SparkPlug_Contracts_CompositeFilter_System_String_System_Object_" class="expander" data-toggle="collapse">AndNotEqual(CompositeFilter, string, object)</a></h4>
+  <h3 id="SparkPlug_Contracts_Extensions_AndNotEqual_SparkPlug_Contracts_CompositeFilter_System_String_System_Object_" data-uid="SparkPlug.Contracts.Extensions.AndNotEqual(SparkPlug.Contracts.CompositeFilter,System.String,System.Object)">
+  AndNotEqual(CompositeFilter, string, object)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/natarajanganapathi/sparkplug/blob/76/merge/src/SparkPlug.Contracts/Filter/CompositeFilter.cs/#L25"><i class="bi bi-code-slash"></i></a>
+  </h3>
 
-  <div id="collapsible-SparkPlug_Contracts_Extensions_AndNotEqual_SparkPlug_Contracts_CompositeFilter_System_String_System_Object_" class="collapse in">
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
-    <pre><code class="lang- hljs">public static CompositeFilter AndNotEqual(this CompositeFilter source, string field, object value)</code></pre>
+    <pre><code class="lang-csharp hljs">public static CompositeFilter AndNotEqual(this CompositeFilter source, string field, object value)</code></pre>
   </div>
 
-  <h5 class="parameters">Parameters</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="SparkPlug.Contracts.CompositeFilter.html">CompositeFilter</a></span>
-        <span class="parametername">source</span>
-        <p></p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></span>
-        <span class="parametername">field</span>
-        <p></p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></span>
-        <span class="parametername">value</span>
-        <p></p>
-      </td>
-    </tr>
-  </table>
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>source</code> <a class="xref" href="SparkPlug.Contracts.CompositeFilter.html">CompositeFilter</a></dt>
+    <dd></dd>
+    <dt><code>field</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+  </dl>
 
-  <h5 class="returns">Returns</h5>
-  <table>
-    <tr>
-      <td>
-      <a class="xref" href="SparkPlug.Contracts.CompositeFilter.html">CompositeFilter</a>
-        <p></p>
-      </td>
-    </tr>
-  </table>
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="SparkPlug.Contracts.CompositeFilter.html">CompositeFilter</a></dt>
+    <dd></dd>
+  </dl>
 
 
 
@@ -1286,63 +786,36 @@
 
 
 
-  </div>
-
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/natarajanganapathi/sparkplug/new/75/merge/apiSpec/new?filename=SparkPlug_Contracts_Extensions_AndNotIn_SparkPlug_Contracts_CompositeFilter_System_String_System_Object___.md&amp;value=---%0Auid%3A%20SparkPlug.Contracts.Extensions.AndNotIn(SparkPlug.Contracts.CompositeFilter%2CSystem.String%2CSystem.Object%5B%5D)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Edit this page"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/natarajanganapathi/sparkplug/blob/75/merge/src/SparkPlug.Contracts/Filter/CompositeFilter.cs/#L37" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
 
   <a id="SparkPlug_Contracts_Extensions_AndNotIn_" data-uid="SparkPlug.Contracts.Extensions.AndNotIn*"></a>
 
-  <h4 id="SparkPlug_Contracts_Extensions_AndNotIn_SparkPlug_Contracts_CompositeFilter_System_String_System_Object___" data-uid="SparkPlug.Contracts.Extensions.AndNotIn(SparkPlug.Contracts.CompositeFilter,System.String,System.Object[])"><a href="#collapsible-SparkPlug_Contracts_Extensions_AndNotIn_SparkPlug_Contracts_CompositeFilter_System_String_System_Object___" class="expander" data-toggle="collapse">AndNotIn(CompositeFilter, string, object[])</a></h4>
+  <h3 id="SparkPlug_Contracts_Extensions_AndNotIn_SparkPlug_Contracts_CompositeFilter_System_String_System_Object___" data-uid="SparkPlug.Contracts.Extensions.AndNotIn(SparkPlug.Contracts.CompositeFilter,System.String,System.Object[])">
+  AndNotIn(CompositeFilter, string, object[])
+  <a class="header-action link-secondary" title="View source" href="https://github.com/natarajanganapathi/sparkplug/blob/76/merge/src/SparkPlug.Contracts/Filter/CompositeFilter.cs/#L37"><i class="bi bi-code-slash"></i></a>
+  </h3>
 
-  <div id="collapsible-SparkPlug_Contracts_Extensions_AndNotIn_SparkPlug_Contracts_CompositeFilter_System_String_System_Object___" class="collapse in">
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
-    <pre><code class="lang- hljs">public static CompositeFilter AndNotIn(this CompositeFilter source, string field, object[] values)</code></pre>
+    <pre><code class="lang-csharp hljs">public static CompositeFilter AndNotIn(this CompositeFilter source, string field, object[] values)</code></pre>
   </div>
 
-  <h5 class="parameters">Parameters</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="SparkPlug.Contracts.CompositeFilter.html">CompositeFilter</a></span>
-        <span class="parametername">source</span>
-        <p></p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></span>
-        <span class="parametername">field</span>
-        <p></p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>[]</span>
-        <span class="parametername">values</span>
-        <p></p>
-      </td>
-    </tr>
-  </table>
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>source</code> <a class="xref" href="SparkPlug.Contracts.CompositeFilter.html">CompositeFilter</a></dt>
+    <dd></dd>
+    <dt><code>field</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>values</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>[]</dt>
+    <dd></dd>
+  </dl>
 
-  <h5 class="returns">Returns</h5>
-  <table>
-    <tr>
-      <td>
-      <a class="xref" href="SparkPlug.Contracts.CompositeFilter.html">CompositeFilter</a>
-        <p></p>
-      </td>
-    </tr>
-  </table>
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="SparkPlug.Contracts.CompositeFilter.html">CompositeFilter</a></dt>
+    <dd></dd>
+  </dl>
 
 
 
@@ -1353,49 +826,32 @@
 
 
 
-  </div>
-
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/natarajanganapathi/sparkplug/new/75/merge/apiSpec/new?filename=SparkPlug_Contracts_Extensions_NextPage_SparkPlug_Contracts_PageContext_.md&amp;value=---%0Auid%3A%20SparkPlug.Contracts.Extensions.NextPage(SparkPlug.Contracts.PageContext)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Edit this page"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/natarajanganapathi/sparkplug/blob/75/merge/src/SparkPlug.Contracts/Common/PageContext.cs/#L18" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
 
   <a id="SparkPlug_Contracts_Extensions_NextPage_" data-uid="SparkPlug.Contracts.Extensions.NextPage*"></a>
 
-  <h4 id="SparkPlug_Contracts_Extensions_NextPage_SparkPlug_Contracts_PageContext_" data-uid="SparkPlug.Contracts.Extensions.NextPage(SparkPlug.Contracts.PageContext)"><a href="#collapsible-SparkPlug_Contracts_Extensions_NextPage_SparkPlug_Contracts_PageContext_" class="expander" data-toggle="collapse">NextPage(PageContext)</a></h4>
+  <h3 id="SparkPlug_Contracts_Extensions_NextPage_SparkPlug_Contracts_PageContext_" data-uid="SparkPlug.Contracts.Extensions.NextPage(SparkPlug.Contracts.PageContext)">
+  NextPage(PageContext)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/natarajanganapathi/sparkplug/blob/76/merge/src/SparkPlug.Contracts/Common/PageContext.cs/#L18"><i class="bi bi-code-slash"></i></a>
+  </h3>
 
-  <div id="collapsible-SparkPlug_Contracts_Extensions_NextPage_SparkPlug_Contracts_PageContext_" class="collapse in">
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
-    <pre><code class="lang- hljs">public static PageContext NextPage(this PageContext pc)</code></pre>
+    <pre><code class="lang-csharp hljs">public static PageContext NextPage(this PageContext pc)</code></pre>
   </div>
 
-  <h5 class="parameters">Parameters</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="SparkPlug.Contracts.PageContext.html">PageContext</a></span>
-        <span class="parametername">pc</span>
-        <p></p>
-      </td>
-    </tr>
-  </table>
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>pc</code> <a class="xref" href="SparkPlug.Contracts.PageContext.html">PageContext</a></dt>
+    <dd></dd>
+  </dl>
 
-  <h5 class="returns">Returns</h5>
-  <table>
-    <tr>
-      <td>
-      <a class="xref" href="SparkPlug.Contracts.PageContext.html">PageContext</a>
-        <p></p>
-      </td>
-    </tr>
-  </table>
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="SparkPlug.Contracts.PageContext.html">PageContext</a></dt>
+    <dd></dd>
+  </dl>
 
 
 
@@ -1406,56 +862,34 @@
 
 
 
-  </div>
-
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/natarajanganapathi/sparkplug/new/75/merge/apiSpec/new?filename=SparkPlug_Contracts_Extensions_Or_SparkPlug_Contracts_CompositeFilter_SparkPlug_Contracts_CompositeFilter_.md&amp;value=---%0Auid%3A%20SparkPlug.Contracts.Extensions.Or(SparkPlug.Contracts.CompositeFilter%2CSparkPlug.Contracts.CompositeFilter)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Edit this page"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/natarajanganapathi/sparkplug/blob/75/merge/src/SparkPlug.Contracts/Filter/CompositeFilter.cs/#L117" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
 
   <a id="SparkPlug_Contracts_Extensions_Or_" data-uid="SparkPlug.Contracts.Extensions.Or*"></a>
 
-  <h4 id="SparkPlug_Contracts_Extensions_Or_SparkPlug_Contracts_CompositeFilter_SparkPlug_Contracts_CompositeFilter_" data-uid="SparkPlug.Contracts.Extensions.Or(SparkPlug.Contracts.CompositeFilter,SparkPlug.Contracts.CompositeFilter)"><a href="#collapsible-SparkPlug_Contracts_Extensions_Or_SparkPlug_Contracts_CompositeFilter_SparkPlug_Contracts_CompositeFilter_" class="expander" data-toggle="collapse">Or(CompositeFilter, CompositeFilter)</a></h4>
+  <h3 id="SparkPlug_Contracts_Extensions_Or_SparkPlug_Contracts_CompositeFilter_SparkPlug_Contracts_CompositeFilter_" data-uid="SparkPlug.Contracts.Extensions.Or(SparkPlug.Contracts.CompositeFilter,SparkPlug.Contracts.CompositeFilter)">
+  Or(CompositeFilter, CompositeFilter)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/natarajanganapathi/sparkplug/blob/76/merge/src/SparkPlug.Contracts/Filter/CompositeFilter.cs/#L117"><i class="bi bi-code-slash"></i></a>
+  </h3>
 
-  <div id="collapsible-SparkPlug_Contracts_Extensions_Or_SparkPlug_Contracts_CompositeFilter_SparkPlug_Contracts_CompositeFilter_" class="collapse in">
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
-    <pre><code class="lang- hljs">public static CompositeFilter Or(this CompositeFilter source, CompositeFilter filter)</code></pre>
+    <pre><code class="lang-csharp hljs">public static CompositeFilter Or(this CompositeFilter source, CompositeFilter filter)</code></pre>
   </div>
 
-  <h5 class="parameters">Parameters</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="SparkPlug.Contracts.CompositeFilter.html">CompositeFilter</a></span>
-        <span class="parametername">source</span>
-        <p></p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="SparkPlug.Contracts.CompositeFilter.html">CompositeFilter</a></span>
-        <span class="parametername">filter</span>
-        <p></p>
-      </td>
-    </tr>
-  </table>
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>source</code> <a class="xref" href="SparkPlug.Contracts.CompositeFilter.html">CompositeFilter</a></dt>
+    <dd></dd>
+    <dt><code>filter</code> <a class="xref" href="SparkPlug.Contracts.CompositeFilter.html">CompositeFilter</a></dt>
+    <dd></dd>
+  </dl>
 
-  <h5 class="returns">Returns</h5>
-  <table>
-    <tr>
-      <td>
-      <a class="xref" href="SparkPlug.Contracts.CompositeFilter.html">CompositeFilter</a>
-        <p></p>
-      </td>
-    </tr>
-  </table>
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="SparkPlug.Contracts.CompositeFilter.html">CompositeFilter</a></dt>
+    <dd></dd>
+  </dl>
 
 
 
@@ -1466,56 +900,34 @@
 
 
 
-  </div>
-
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/natarajanganapathi/sparkplug/new/75/merge/apiSpec/new?filename=SparkPlug_Contracts_Extensions_Or_SparkPlug_Contracts_CompositeFilter_SparkPlug_Contracts_ConditionFilter_.md&amp;value=---%0Auid%3A%20SparkPlug.Contracts.Extensions.Or(SparkPlug.Contracts.CompositeFilter%2CSparkPlug.Contracts.ConditionFilter)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Edit this page"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/natarajanganapathi/sparkplug/blob/75/merge/src/SparkPlug.Contracts/Filter/CompositeFilter.cs/#L106" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
 
   <a id="SparkPlug_Contracts_Extensions_Or_" data-uid="SparkPlug.Contracts.Extensions.Or*"></a>
 
-  <h4 id="SparkPlug_Contracts_Extensions_Or_SparkPlug_Contracts_CompositeFilter_SparkPlug_Contracts_ConditionFilter_" data-uid="SparkPlug.Contracts.Extensions.Or(SparkPlug.Contracts.CompositeFilter,SparkPlug.Contracts.ConditionFilter)"><a href="#collapsible-SparkPlug_Contracts_Extensions_Or_SparkPlug_Contracts_CompositeFilter_SparkPlug_Contracts_ConditionFilter_" class="expander" data-toggle="collapse">Or(CompositeFilter, ConditionFilter)</a></h4>
+  <h3 id="SparkPlug_Contracts_Extensions_Or_SparkPlug_Contracts_CompositeFilter_SparkPlug_Contracts_ConditionFilter_" data-uid="SparkPlug.Contracts.Extensions.Or(SparkPlug.Contracts.CompositeFilter,SparkPlug.Contracts.ConditionFilter)">
+  Or(CompositeFilter, ConditionFilter)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/natarajanganapathi/sparkplug/blob/76/merge/src/SparkPlug.Contracts/Filter/CompositeFilter.cs/#L106"><i class="bi bi-code-slash"></i></a>
+  </h3>
 
-  <div id="collapsible-SparkPlug_Contracts_Extensions_Or_SparkPlug_Contracts_CompositeFilter_SparkPlug_Contracts_ConditionFilter_" class="collapse in">
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
-    <pre><code class="lang- hljs">public static CompositeFilter Or(this CompositeFilter source, ConditionFilter filter)</code></pre>
+    <pre><code class="lang-csharp hljs">public static CompositeFilter Or(this CompositeFilter source, ConditionFilter filter)</code></pre>
   </div>
 
-  <h5 class="parameters">Parameters</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="SparkPlug.Contracts.CompositeFilter.html">CompositeFilter</a></span>
-        <span class="parametername">source</span>
-        <p></p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="SparkPlug.Contracts.ConditionFilter.html">ConditionFilter</a></span>
-        <span class="parametername">filter</span>
-        <p></p>
-      </td>
-    </tr>
-  </table>
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>source</code> <a class="xref" href="SparkPlug.Contracts.CompositeFilter.html">CompositeFilter</a></dt>
+    <dd></dd>
+    <dt><code>filter</code> <a class="xref" href="SparkPlug.Contracts.ConditionFilter.html">ConditionFilter</a></dt>
+    <dd></dd>
+  </dl>
 
-  <h5 class="returns">Returns</h5>
-  <table>
-    <tr>
-      <td>
-      <a class="xref" href="SparkPlug.Contracts.CompositeFilter.html">CompositeFilter</a>
-        <p></p>
-      </td>
-    </tr>
-  </table>
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="SparkPlug.Contracts.CompositeFilter.html">CompositeFilter</a></dt>
+    <dd></dd>
+  </dl>
 
 
 
@@ -1526,56 +938,34 @@
 
 
 
-  </div>
-
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/natarajanganapathi/sparkplug/new/75/merge/apiSpec/new?filename=SparkPlug_Contracts_Extensions_Or_SparkPlug_Contracts_CompositeFilter_System_Func_SparkPlug_Contracts_CompositeFilter_SparkPlug_Contracts_CompositeFilter__.md&amp;value=---%0Auid%3A%20SparkPlug.Contracts.Extensions.Or(SparkPlug.Contracts.CompositeFilter%2CSystem.Func%7BSparkPlug.Contracts.CompositeFilter%2CSparkPlug.Contracts.CompositeFilter%7D)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Edit this page"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/natarajanganapathi/sparkplug/blob/75/merge/src/SparkPlug.Contracts/Filter/CompositeFilter.cs/#L112" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
 
   <a id="SparkPlug_Contracts_Extensions_Or_" data-uid="SparkPlug.Contracts.Extensions.Or*"></a>
 
-  <h4 id="SparkPlug_Contracts_Extensions_Or_SparkPlug_Contracts_CompositeFilter_System_Func_SparkPlug_Contracts_CompositeFilter_SparkPlug_Contracts_CompositeFilter__" data-uid="SparkPlug.Contracts.Extensions.Or(SparkPlug.Contracts.CompositeFilter,System.Func{SparkPlug.Contracts.CompositeFilter,SparkPlug.Contracts.CompositeFilter})"><a href="#collapsible-SparkPlug_Contracts_Extensions_Or_SparkPlug_Contracts_CompositeFilter_System_Func_SparkPlug_Contracts_CompositeFilter_SparkPlug_Contracts_CompositeFilter__" class="expander" data-toggle="collapse">Or(CompositeFilter, Func&lt;CompositeFilter, CompositeFilter&gt;)</a></h4>
+  <h3 id="SparkPlug_Contracts_Extensions_Or_SparkPlug_Contracts_CompositeFilter_System_Func_SparkPlug_Contracts_CompositeFilter_SparkPlug_Contracts_CompositeFilter__" data-uid="SparkPlug.Contracts.Extensions.Or(SparkPlug.Contracts.CompositeFilter,System.Func{SparkPlug.Contracts.CompositeFilter,SparkPlug.Contracts.CompositeFilter})">
+  Or(CompositeFilter, Func&lt;CompositeFilter, CompositeFilter&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/natarajanganapathi/sparkplug/blob/76/merge/src/SparkPlug.Contracts/Filter/CompositeFilter.cs/#L112"><i class="bi bi-code-slash"></i></a>
+  </h3>
 
-  <div id="collapsible-SparkPlug_Contracts_Extensions_Or_SparkPlug_Contracts_CompositeFilter_System_Func_SparkPlug_Contracts_CompositeFilter_SparkPlug_Contracts_CompositeFilter__" class="collapse in">
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
-    <pre><code class="lang- hljs">public static CompositeFilter Or(this CompositeFilter source, Func&lt;CompositeFilter, CompositeFilter&gt; filterAction)</code></pre>
+    <pre><code class="lang-csharp hljs">public static CompositeFilter Or(this CompositeFilter source, Func&lt;CompositeFilter, CompositeFilter&gt; filterAction)</code></pre>
   </div>
 
-  <h5 class="parameters">Parameters</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="SparkPlug.Contracts.CompositeFilter.html">CompositeFilter</a></span>
-        <span class="parametername">source</span>
-        <p></p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="SparkPlug.Contracts.CompositeFilter.html">CompositeFilter</a>, <a class="xref" href="SparkPlug.Contracts.CompositeFilter.html">CompositeFilter</a>&gt;</span>
-        <span class="parametername">filterAction</span>
-        <p></p>
-      </td>
-    </tr>
-  </table>
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>source</code> <a class="xref" href="SparkPlug.Contracts.CompositeFilter.html">CompositeFilter</a></dt>
+    <dd></dd>
+    <dt><code>filterAction</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="SparkPlug.Contracts.CompositeFilter.html">CompositeFilter</a>, <a class="xref" href="SparkPlug.Contracts.CompositeFilter.html">CompositeFilter</a>&gt;</dt>
+    <dd></dd>
+  </dl>
 
-  <h5 class="returns">Returns</h5>
-  <table>
-    <tr>
-      <td>
-      <a class="xref" href="SparkPlug.Contracts.CompositeFilter.html">CompositeFilter</a>
-        <p></p>
-      </td>
-    </tr>
-  </table>
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="SparkPlug.Contracts.CompositeFilter.html">CompositeFilter</a></dt>
+    <dd></dd>
+  </dl>
 
 
 
@@ -1586,70 +976,38 @@
 
 
 
-  </div>
-
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/natarajanganapathi/sparkplug/new/75/merge/apiSpec/new?filename=SparkPlug_Contracts_Extensions_Or_SparkPlug_Contracts_CompositeFilter_System_String_SparkPlug_Contracts_FieldOperator_System_Object_.md&amp;value=---%0Auid%3A%20SparkPlug.Contracts.Extensions.Or(SparkPlug.Contracts.CompositeFilter%2CSystem.String%2CSparkPlug.Contracts.FieldOperator%2CSystem.Object)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Edit this page"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/natarajanganapathi/sparkplug/blob/75/merge/src/SparkPlug.Contracts/Filter/CompositeFilter.cs/#L102" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
 
   <a id="SparkPlug_Contracts_Extensions_Or_" data-uid="SparkPlug.Contracts.Extensions.Or*"></a>
 
-  <h4 id="SparkPlug_Contracts_Extensions_Or_SparkPlug_Contracts_CompositeFilter_System_String_SparkPlug_Contracts_FieldOperator_System_Object_" data-uid="SparkPlug.Contracts.Extensions.Or(SparkPlug.Contracts.CompositeFilter,System.String,SparkPlug.Contracts.FieldOperator,System.Object)"><a href="#collapsible-SparkPlug_Contracts_Extensions_Or_SparkPlug_Contracts_CompositeFilter_System_String_SparkPlug_Contracts_FieldOperator_System_Object_" class="expander" data-toggle="collapse">Or(CompositeFilter, string, FieldOperator, object)</a></h4>
+  <h3 id="SparkPlug_Contracts_Extensions_Or_SparkPlug_Contracts_CompositeFilter_System_String_SparkPlug_Contracts_FieldOperator_System_Object_" data-uid="SparkPlug.Contracts.Extensions.Or(SparkPlug.Contracts.CompositeFilter,System.String,SparkPlug.Contracts.FieldOperator,System.Object)">
+  Or(CompositeFilter, string, FieldOperator, object)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/natarajanganapathi/sparkplug/blob/76/merge/src/SparkPlug.Contracts/Filter/CompositeFilter.cs/#L102"><i class="bi bi-code-slash"></i></a>
+  </h3>
 
-  <div id="collapsible-SparkPlug_Contracts_Extensions_Or_SparkPlug_Contracts_CompositeFilter_System_String_SparkPlug_Contracts_FieldOperator_System_Object_" class="collapse in">
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
-    <pre><code class="lang- hljs">public static CompositeFilter Or(this CompositeFilter source, string field, FieldOperator op, object value)</code></pre>
+    <pre><code class="lang-csharp hljs">public static CompositeFilter Or(this CompositeFilter source, string field, FieldOperator op, object value)</code></pre>
   </div>
 
-  <h5 class="parameters">Parameters</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="SparkPlug.Contracts.CompositeFilter.html">CompositeFilter</a></span>
-        <span class="parametername">source</span>
-        <p></p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></span>
-        <span class="parametername">field</span>
-        <p></p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="SparkPlug.Contracts.FieldOperator.html">FieldOperator</a></span>
-        <span class="parametername">op</span>
-        <p></p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></span>
-        <span class="parametername">value</span>
-        <p></p>
-      </td>
-    </tr>
-  </table>
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>source</code> <a class="xref" href="SparkPlug.Contracts.CompositeFilter.html">CompositeFilter</a></dt>
+    <dd></dd>
+    <dt><code>field</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>op</code> <a class="xref" href="SparkPlug.Contracts.FieldOperator.html">FieldOperator</a></dt>
+    <dd></dd>
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+  </dl>
 
-  <h5 class="returns">Returns</h5>
-  <table>
-    <tr>
-      <td>
-      <a class="xref" href="SparkPlug.Contracts.CompositeFilter.html">CompositeFilter</a>
-        <p></p>
-      </td>
-    </tr>
-  </table>
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="SparkPlug.Contracts.CompositeFilter.html">CompositeFilter</a></dt>
+    <dd></dd>
+  </dl>
 
 
 
@@ -1660,63 +1018,36 @@
 
 
 
-  </div>
-
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/natarajanganapathi/sparkplug/new/75/merge/apiSpec/new?filename=SparkPlug_Contracts_Extensions_Or_SparkPlug_Contracts_CompositeFilter_System_String_SparkPlug_Contracts_UnaryOperator_.md&amp;value=---%0Auid%3A%20SparkPlug.Contracts.Extensions.Or(SparkPlug.Contracts.CompositeFilter%2CSystem.String%2CSparkPlug.Contracts.UnaryOperator)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Edit this page"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/natarajanganapathi/sparkplug/blob/75/merge/src/SparkPlug.Contracts/Filter/CompositeFilter.cs/#L98" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
 
   <a id="SparkPlug_Contracts_Extensions_Or_" data-uid="SparkPlug.Contracts.Extensions.Or*"></a>
 
-  <h4 id="SparkPlug_Contracts_Extensions_Or_SparkPlug_Contracts_CompositeFilter_System_String_SparkPlug_Contracts_UnaryOperator_" data-uid="SparkPlug.Contracts.Extensions.Or(SparkPlug.Contracts.CompositeFilter,System.String,SparkPlug.Contracts.UnaryOperator)"><a href="#collapsible-SparkPlug_Contracts_Extensions_Or_SparkPlug_Contracts_CompositeFilter_System_String_SparkPlug_Contracts_UnaryOperator_" class="expander" data-toggle="collapse">Or(CompositeFilter, string, UnaryOperator)</a></h4>
+  <h3 id="SparkPlug_Contracts_Extensions_Or_SparkPlug_Contracts_CompositeFilter_System_String_SparkPlug_Contracts_UnaryOperator_" data-uid="SparkPlug.Contracts.Extensions.Or(SparkPlug.Contracts.CompositeFilter,System.String,SparkPlug.Contracts.UnaryOperator)">
+  Or(CompositeFilter, string, UnaryOperator)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/natarajanganapathi/sparkplug/blob/76/merge/src/SparkPlug.Contracts/Filter/CompositeFilter.cs/#L98"><i class="bi bi-code-slash"></i></a>
+  </h3>
 
-  <div id="collapsible-SparkPlug_Contracts_Extensions_Or_SparkPlug_Contracts_CompositeFilter_System_String_SparkPlug_Contracts_UnaryOperator_" class="collapse in">
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
-    <pre><code class="lang- hljs">public static CompositeFilter Or(this CompositeFilter source, string field, UnaryOperator op)</code></pre>
+    <pre><code class="lang-csharp hljs">public static CompositeFilter Or(this CompositeFilter source, string field, UnaryOperator op)</code></pre>
   </div>
 
-  <h5 class="parameters">Parameters</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="SparkPlug.Contracts.CompositeFilter.html">CompositeFilter</a></span>
-        <span class="parametername">source</span>
-        <p></p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></span>
-        <span class="parametername">field</span>
-        <p></p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="SparkPlug.Contracts.UnaryOperator.html">UnaryOperator</a></span>
-        <span class="parametername">op</span>
-        <p></p>
-      </td>
-    </tr>
-  </table>
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>source</code> <a class="xref" href="SparkPlug.Contracts.CompositeFilter.html">CompositeFilter</a></dt>
+    <dd></dd>
+    <dt><code>field</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>op</code> <a class="xref" href="SparkPlug.Contracts.UnaryOperator.html">UnaryOperator</a></dt>
+    <dd></dd>
+  </dl>
 
-  <h5 class="returns">Returns</h5>
-  <table>
-    <tr>
-      <td>
-      <a class="xref" href="SparkPlug.Contracts.CompositeFilter.html">CompositeFilter</a>
-        <p></p>
-      </td>
-    </tr>
-  </table>
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="SparkPlug.Contracts.CompositeFilter.html">CompositeFilter</a></dt>
+    <dd></dd>
+  </dl>
 
 
 
@@ -1727,63 +1058,36 @@
 
 
 
-  </div>
-
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/natarajanganapathi/sparkplug/new/75/merge/apiSpec/new?filename=SparkPlug_Contracts_Extensions_OrEqual_SparkPlug_Contracts_CompositeFilter_System_String_System_Object_.md&amp;value=---%0Auid%3A%20SparkPlug.Contracts.Extensions.OrEqual(SparkPlug.Contracts.CompositeFilter%2CSystem.String%2CSystem.Object)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Edit this page"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/natarajanganapathi/sparkplug/blob/75/merge/src/SparkPlug.Contracts/Filter/CompositeFilter.cs/#L74" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
 
   <a id="SparkPlug_Contracts_Extensions_OrEqual_" data-uid="SparkPlug.Contracts.Extensions.OrEqual*"></a>
 
-  <h4 id="SparkPlug_Contracts_Extensions_OrEqual_SparkPlug_Contracts_CompositeFilter_System_String_System_Object_" data-uid="SparkPlug.Contracts.Extensions.OrEqual(SparkPlug.Contracts.CompositeFilter,System.String,System.Object)"><a href="#collapsible-SparkPlug_Contracts_Extensions_OrEqual_SparkPlug_Contracts_CompositeFilter_System_String_System_Object_" class="expander" data-toggle="collapse">OrEqual(CompositeFilter, string, object)</a></h4>
+  <h3 id="SparkPlug_Contracts_Extensions_OrEqual_SparkPlug_Contracts_CompositeFilter_System_String_System_Object_" data-uid="SparkPlug.Contracts.Extensions.OrEqual(SparkPlug.Contracts.CompositeFilter,System.String,System.Object)">
+  OrEqual(CompositeFilter, string, object)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/natarajanganapathi/sparkplug/blob/76/merge/src/SparkPlug.Contracts/Filter/CompositeFilter.cs/#L74"><i class="bi bi-code-slash"></i></a>
+  </h3>
 
-  <div id="collapsible-SparkPlug_Contracts_Extensions_OrEqual_SparkPlug_Contracts_CompositeFilter_System_String_System_Object_" class="collapse in">
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
-    <pre><code class="lang- hljs">public static CompositeFilter OrEqual(this CompositeFilter source, string field, object value)</code></pre>
+    <pre><code class="lang-csharp hljs">public static CompositeFilter OrEqual(this CompositeFilter source, string field, object value)</code></pre>
   </div>
 
-  <h5 class="parameters">Parameters</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="SparkPlug.Contracts.CompositeFilter.html">CompositeFilter</a></span>
-        <span class="parametername">source</span>
-        <p></p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></span>
-        <span class="parametername">field</span>
-        <p></p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></span>
-        <span class="parametername">value</span>
-        <p></p>
-      </td>
-    </tr>
-  </table>
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>source</code> <a class="xref" href="SparkPlug.Contracts.CompositeFilter.html">CompositeFilter</a></dt>
+    <dd></dd>
+    <dt><code>field</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+  </dl>
 
-  <h5 class="returns">Returns</h5>
-  <table>
-    <tr>
-      <td>
-      <a class="xref" href="SparkPlug.Contracts.CompositeFilter.html">CompositeFilter</a>
-        <p></p>
-      </td>
-    </tr>
-  </table>
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="SparkPlug.Contracts.CompositeFilter.html">CompositeFilter</a></dt>
+    <dd></dd>
+  </dl>
 
 
 
@@ -1794,63 +1098,36 @@
 
 
 
-  </div>
-
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/natarajanganapathi/sparkplug/new/75/merge/apiSpec/new?filename=SparkPlug_Contracts_Extensions_OrGreaterThan_SparkPlug_Contracts_CompositeFilter_System_String_System_Object_.md&amp;value=---%0Auid%3A%20SparkPlug.Contracts.Extensions.OrGreaterThan(SparkPlug.Contracts.CompositeFilter%2CSystem.String%2CSystem.Object)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Edit this page"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/natarajanganapathi/sparkplug/blob/75/merge/src/SparkPlug.Contracts/Filter/CompositeFilter.cs/#L78" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
 
   <a id="SparkPlug_Contracts_Extensions_OrGreaterThan_" data-uid="SparkPlug.Contracts.Extensions.OrGreaterThan*"></a>
 
-  <h4 id="SparkPlug_Contracts_Extensions_OrGreaterThan_SparkPlug_Contracts_CompositeFilter_System_String_System_Object_" data-uid="SparkPlug.Contracts.Extensions.OrGreaterThan(SparkPlug.Contracts.CompositeFilter,System.String,System.Object)"><a href="#collapsible-SparkPlug_Contracts_Extensions_OrGreaterThan_SparkPlug_Contracts_CompositeFilter_System_String_System_Object_" class="expander" data-toggle="collapse">OrGreaterThan(CompositeFilter, string, object)</a></h4>
+  <h3 id="SparkPlug_Contracts_Extensions_OrGreaterThan_SparkPlug_Contracts_CompositeFilter_System_String_System_Object_" data-uid="SparkPlug.Contracts.Extensions.OrGreaterThan(SparkPlug.Contracts.CompositeFilter,System.String,System.Object)">
+  OrGreaterThan(CompositeFilter, string, object)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/natarajanganapathi/sparkplug/blob/76/merge/src/SparkPlug.Contracts/Filter/CompositeFilter.cs/#L78"><i class="bi bi-code-slash"></i></a>
+  </h3>
 
-  <div id="collapsible-SparkPlug_Contracts_Extensions_OrGreaterThan_SparkPlug_Contracts_CompositeFilter_System_String_System_Object_" class="collapse in">
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
-    <pre><code class="lang- hljs">public static CompositeFilter OrGreaterThan(this CompositeFilter source, string field, object value)</code></pre>
+    <pre><code class="lang-csharp hljs">public static CompositeFilter OrGreaterThan(this CompositeFilter source, string field, object value)</code></pre>
   </div>
 
-  <h5 class="parameters">Parameters</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="SparkPlug.Contracts.CompositeFilter.html">CompositeFilter</a></span>
-        <span class="parametername">source</span>
-        <p></p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></span>
-        <span class="parametername">field</span>
-        <p></p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></span>
-        <span class="parametername">value</span>
-        <p></p>
-      </td>
-    </tr>
-  </table>
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>source</code> <a class="xref" href="SparkPlug.Contracts.CompositeFilter.html">CompositeFilter</a></dt>
+    <dd></dd>
+    <dt><code>field</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+  </dl>
 
-  <h5 class="returns">Returns</h5>
-  <table>
-    <tr>
-      <td>
-      <a class="xref" href="SparkPlug.Contracts.CompositeFilter.html">CompositeFilter</a>
-        <p></p>
-      </td>
-    </tr>
-  </table>
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="SparkPlug.Contracts.CompositeFilter.html">CompositeFilter</a></dt>
+    <dd></dd>
+  </dl>
 
 
 
@@ -1861,63 +1138,36 @@
 
 
 
-  </div>
-
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/natarajanganapathi/sparkplug/new/75/merge/apiSpec/new?filename=SparkPlug_Contracts_Extensions_OrGreaterThanOrEqual_SparkPlug_Contracts_CompositeFilter_System_String_System_Object_.md&amp;value=---%0Auid%3A%20SparkPlug.Contracts.Extensions.OrGreaterThanOrEqual(SparkPlug.Contracts.CompositeFilter%2CSystem.String%2CSystem.Object)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Edit this page"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/natarajanganapathi/sparkplug/blob/75/merge/src/SparkPlug.Contracts/Filter/CompositeFilter.cs/#L80" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
 
   <a id="SparkPlug_Contracts_Extensions_OrGreaterThanOrEqual_" data-uid="SparkPlug.Contracts.Extensions.OrGreaterThanOrEqual*"></a>
 
-  <h4 id="SparkPlug_Contracts_Extensions_OrGreaterThanOrEqual_SparkPlug_Contracts_CompositeFilter_System_String_System_Object_" data-uid="SparkPlug.Contracts.Extensions.OrGreaterThanOrEqual(SparkPlug.Contracts.CompositeFilter,System.String,System.Object)"><a href="#collapsible-SparkPlug_Contracts_Extensions_OrGreaterThanOrEqual_SparkPlug_Contracts_CompositeFilter_System_String_System_Object_" class="expander" data-toggle="collapse">OrGreaterThanOrEqual(CompositeFilter, string, object)</a></h4>
+  <h3 id="SparkPlug_Contracts_Extensions_OrGreaterThanOrEqual_SparkPlug_Contracts_CompositeFilter_System_String_System_Object_" data-uid="SparkPlug.Contracts.Extensions.OrGreaterThanOrEqual(SparkPlug.Contracts.CompositeFilter,System.String,System.Object)">
+  OrGreaterThanOrEqual(CompositeFilter, string, object)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/natarajanganapathi/sparkplug/blob/76/merge/src/SparkPlug.Contracts/Filter/CompositeFilter.cs/#L80"><i class="bi bi-code-slash"></i></a>
+  </h3>
 
-  <div id="collapsible-SparkPlug_Contracts_Extensions_OrGreaterThanOrEqual_SparkPlug_Contracts_CompositeFilter_System_String_System_Object_" class="collapse in">
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
-    <pre><code class="lang- hljs">public static CompositeFilter OrGreaterThanOrEqual(this CompositeFilter source, string field, object value)</code></pre>
+    <pre><code class="lang-csharp hljs">public static CompositeFilter OrGreaterThanOrEqual(this CompositeFilter source, string field, object value)</code></pre>
   </div>
 
-  <h5 class="parameters">Parameters</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="SparkPlug.Contracts.CompositeFilter.html">CompositeFilter</a></span>
-        <span class="parametername">source</span>
-        <p></p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></span>
-        <span class="parametername">field</span>
-        <p></p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></span>
-        <span class="parametername">value</span>
-        <p></p>
-      </td>
-    </tr>
-  </table>
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>source</code> <a class="xref" href="SparkPlug.Contracts.CompositeFilter.html">CompositeFilter</a></dt>
+    <dd></dd>
+    <dt><code>field</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+  </dl>
 
-  <h5 class="returns">Returns</h5>
-  <table>
-    <tr>
-      <td>
-      <a class="xref" href="SparkPlug.Contracts.CompositeFilter.html">CompositeFilter</a>
-        <p></p>
-      </td>
-    </tr>
-  </table>
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="SparkPlug.Contracts.CompositeFilter.html">CompositeFilter</a></dt>
+    <dd></dd>
+  </dl>
 
 
 
@@ -1928,63 +1178,36 @@
 
 
 
-  </div>
-
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/natarajanganapathi/sparkplug/new/75/merge/apiSpec/new?filename=SparkPlug_Contracts_Extensions_OrIn_SparkPlug_Contracts_CompositeFilter_System_String_System_Object___.md&amp;value=---%0Auid%3A%20SparkPlug.Contracts.Extensions.OrIn(SparkPlug.Contracts.CompositeFilter%2CSystem.String%2CSystem.Object%5B%5D)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Edit this page"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/natarajanganapathi/sparkplug/blob/75/merge/src/SparkPlug.Contracts/Filter/CompositeFilter.cs/#L86" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
 
   <a id="SparkPlug_Contracts_Extensions_OrIn_" data-uid="SparkPlug.Contracts.Extensions.OrIn*"></a>
 
-  <h4 id="SparkPlug_Contracts_Extensions_OrIn_SparkPlug_Contracts_CompositeFilter_System_String_System_Object___" data-uid="SparkPlug.Contracts.Extensions.OrIn(SparkPlug.Contracts.CompositeFilter,System.String,System.Object[])"><a href="#collapsible-SparkPlug_Contracts_Extensions_OrIn_SparkPlug_Contracts_CompositeFilter_System_String_System_Object___" class="expander" data-toggle="collapse">OrIn(CompositeFilter, string, object[])</a></h4>
+  <h3 id="SparkPlug_Contracts_Extensions_OrIn_SparkPlug_Contracts_CompositeFilter_System_String_System_Object___" data-uid="SparkPlug.Contracts.Extensions.OrIn(SparkPlug.Contracts.CompositeFilter,System.String,System.Object[])">
+  OrIn(CompositeFilter, string, object[])
+  <a class="header-action link-secondary" title="View source" href="https://github.com/natarajanganapathi/sparkplug/blob/76/merge/src/SparkPlug.Contracts/Filter/CompositeFilter.cs/#L86"><i class="bi bi-code-slash"></i></a>
+  </h3>
 
-  <div id="collapsible-SparkPlug_Contracts_Extensions_OrIn_SparkPlug_Contracts_CompositeFilter_System_String_System_Object___" class="collapse in">
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
-    <pre><code class="lang- hljs">public static CompositeFilter OrIn(this CompositeFilter source, string field, object[] values)</code></pre>
+    <pre><code class="lang-csharp hljs">public static CompositeFilter OrIn(this CompositeFilter source, string field, object[] values)</code></pre>
   </div>
 
-  <h5 class="parameters">Parameters</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="SparkPlug.Contracts.CompositeFilter.html">CompositeFilter</a></span>
-        <span class="parametername">source</span>
-        <p></p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></span>
-        <span class="parametername">field</span>
-        <p></p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>[]</span>
-        <span class="parametername">values</span>
-        <p></p>
-      </td>
-    </tr>
-  </table>
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>source</code> <a class="xref" href="SparkPlug.Contracts.CompositeFilter.html">CompositeFilter</a></dt>
+    <dd></dd>
+    <dt><code>field</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>values</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>[]</dt>
+    <dd></dd>
+  </dl>
 
-  <h5 class="returns">Returns</h5>
-  <table>
-    <tr>
-      <td>
-      <a class="xref" href="SparkPlug.Contracts.CompositeFilter.html">CompositeFilter</a>
-        <p></p>
-      </td>
-    </tr>
-  </table>
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="SparkPlug.Contracts.CompositeFilter.html">CompositeFilter</a></dt>
+    <dd></dd>
+  </dl>
 
 
 
@@ -1995,56 +1218,34 @@
 
 
 
-  </div>
-
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/natarajanganapathi/sparkplug/new/75/merge/apiSpec/new?filename=SparkPlug_Contracts_Extensions_OrIsNotNull_SparkPlug_Contracts_CompositeFilter_System_String_.md&amp;value=---%0Auid%3A%20SparkPlug.Contracts.Extensions.OrIsNotNull(SparkPlug.Contracts.CompositeFilter%2CSystem.String)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Edit this page"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/natarajanganapathi/sparkplug/blob/75/merge/src/SparkPlug.Contracts/Filter/CompositeFilter.cs/#L94" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
 
   <a id="SparkPlug_Contracts_Extensions_OrIsNotNull_" data-uid="SparkPlug.Contracts.Extensions.OrIsNotNull*"></a>
 
-  <h4 id="SparkPlug_Contracts_Extensions_OrIsNotNull_SparkPlug_Contracts_CompositeFilter_System_String_" data-uid="SparkPlug.Contracts.Extensions.OrIsNotNull(SparkPlug.Contracts.CompositeFilter,System.String)"><a href="#collapsible-SparkPlug_Contracts_Extensions_OrIsNotNull_SparkPlug_Contracts_CompositeFilter_System_String_" class="expander" data-toggle="collapse">OrIsNotNull(CompositeFilter, string)</a></h4>
+  <h3 id="SparkPlug_Contracts_Extensions_OrIsNotNull_SparkPlug_Contracts_CompositeFilter_System_String_" data-uid="SparkPlug.Contracts.Extensions.OrIsNotNull(SparkPlug.Contracts.CompositeFilter,System.String)">
+  OrIsNotNull(CompositeFilter, string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/natarajanganapathi/sparkplug/blob/76/merge/src/SparkPlug.Contracts/Filter/CompositeFilter.cs/#L94"><i class="bi bi-code-slash"></i></a>
+  </h3>
 
-  <div id="collapsible-SparkPlug_Contracts_Extensions_OrIsNotNull_SparkPlug_Contracts_CompositeFilter_System_String_" class="collapse in">
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
-    <pre><code class="lang- hljs">public static CompositeFilter OrIsNotNull(this CompositeFilter source, string field)</code></pre>
+    <pre><code class="lang-csharp hljs">public static CompositeFilter OrIsNotNull(this CompositeFilter source, string field)</code></pre>
   </div>
 
-  <h5 class="parameters">Parameters</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="SparkPlug.Contracts.CompositeFilter.html">CompositeFilter</a></span>
-        <span class="parametername">source</span>
-        <p></p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></span>
-        <span class="parametername">field</span>
-        <p></p>
-      </td>
-    </tr>
-  </table>
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>source</code> <a class="xref" href="SparkPlug.Contracts.CompositeFilter.html">CompositeFilter</a></dt>
+    <dd></dd>
+    <dt><code>field</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
 
-  <h5 class="returns">Returns</h5>
-  <table>
-    <tr>
-      <td>
-      <a class="xref" href="SparkPlug.Contracts.CompositeFilter.html">CompositeFilter</a>
-        <p></p>
-      </td>
-    </tr>
-  </table>
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="SparkPlug.Contracts.CompositeFilter.html">CompositeFilter</a></dt>
+    <dd></dd>
+  </dl>
 
 
 
@@ -2055,56 +1256,34 @@
 
 
 
-  </div>
-
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/natarajanganapathi/sparkplug/new/75/merge/apiSpec/new?filename=SparkPlug_Contracts_Extensions_OrIsNull_SparkPlug_Contracts_CompositeFilter_System_String_.md&amp;value=---%0Auid%3A%20SparkPlug.Contracts.Extensions.OrIsNull(SparkPlug.Contracts.CompositeFilter%2CSystem.String)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Edit this page"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/natarajanganapathi/sparkplug/blob/75/merge/src/SparkPlug.Contracts/Filter/CompositeFilter.cs/#L92" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
 
   <a id="SparkPlug_Contracts_Extensions_OrIsNull_" data-uid="SparkPlug.Contracts.Extensions.OrIsNull*"></a>
 
-  <h4 id="SparkPlug_Contracts_Extensions_OrIsNull_SparkPlug_Contracts_CompositeFilter_System_String_" data-uid="SparkPlug.Contracts.Extensions.OrIsNull(SparkPlug.Contracts.CompositeFilter,System.String)"><a href="#collapsible-SparkPlug_Contracts_Extensions_OrIsNull_SparkPlug_Contracts_CompositeFilter_System_String_" class="expander" data-toggle="collapse">OrIsNull(CompositeFilter, string)</a></h4>
+  <h3 id="SparkPlug_Contracts_Extensions_OrIsNull_SparkPlug_Contracts_CompositeFilter_System_String_" data-uid="SparkPlug.Contracts.Extensions.OrIsNull(SparkPlug.Contracts.CompositeFilter,System.String)">
+  OrIsNull(CompositeFilter, string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/natarajanganapathi/sparkplug/blob/76/merge/src/SparkPlug.Contracts/Filter/CompositeFilter.cs/#L92"><i class="bi bi-code-slash"></i></a>
+  </h3>
 
-  <div id="collapsible-SparkPlug_Contracts_Extensions_OrIsNull_SparkPlug_Contracts_CompositeFilter_System_String_" class="collapse in">
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
-    <pre><code class="lang- hljs">public static CompositeFilter OrIsNull(this CompositeFilter source, string field)</code></pre>
+    <pre><code class="lang-csharp hljs">public static CompositeFilter OrIsNull(this CompositeFilter source, string field)</code></pre>
   </div>
 
-  <h5 class="parameters">Parameters</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="SparkPlug.Contracts.CompositeFilter.html">CompositeFilter</a></span>
-        <span class="parametername">source</span>
-        <p></p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></span>
-        <span class="parametername">field</span>
-        <p></p>
-      </td>
-    </tr>
-  </table>
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>source</code> <a class="xref" href="SparkPlug.Contracts.CompositeFilter.html">CompositeFilter</a></dt>
+    <dd></dd>
+    <dt><code>field</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
 
-  <h5 class="returns">Returns</h5>
-  <table>
-    <tr>
-      <td>
-      <a class="xref" href="SparkPlug.Contracts.CompositeFilter.html">CompositeFilter</a>
-        <p></p>
-      </td>
-    </tr>
-  </table>
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="SparkPlug.Contracts.CompositeFilter.html">CompositeFilter</a></dt>
+    <dd></dd>
+  </dl>
 
 
 
@@ -2115,63 +1294,36 @@
 
 
 
-  </div>
-
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/natarajanganapathi/sparkplug/new/75/merge/apiSpec/new?filename=SparkPlug_Contracts_Extensions_OrLessThan_SparkPlug_Contracts_CompositeFilter_System_String_System_Object_.md&amp;value=---%0Auid%3A%20SparkPlug.Contracts.Extensions.OrLessThan(SparkPlug.Contracts.CompositeFilter%2CSystem.String%2CSystem.Object)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Edit this page"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/natarajanganapathi/sparkplug/blob/75/merge/src/SparkPlug.Contracts/Filter/CompositeFilter.cs/#L82" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
 
   <a id="SparkPlug_Contracts_Extensions_OrLessThan_" data-uid="SparkPlug.Contracts.Extensions.OrLessThan*"></a>
 
-  <h4 id="SparkPlug_Contracts_Extensions_OrLessThan_SparkPlug_Contracts_CompositeFilter_System_String_System_Object_" data-uid="SparkPlug.Contracts.Extensions.OrLessThan(SparkPlug.Contracts.CompositeFilter,System.String,System.Object)"><a href="#collapsible-SparkPlug_Contracts_Extensions_OrLessThan_SparkPlug_Contracts_CompositeFilter_System_String_System_Object_" class="expander" data-toggle="collapse">OrLessThan(CompositeFilter, string, object)</a></h4>
+  <h3 id="SparkPlug_Contracts_Extensions_OrLessThan_SparkPlug_Contracts_CompositeFilter_System_String_System_Object_" data-uid="SparkPlug.Contracts.Extensions.OrLessThan(SparkPlug.Contracts.CompositeFilter,System.String,System.Object)">
+  OrLessThan(CompositeFilter, string, object)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/natarajanganapathi/sparkplug/blob/76/merge/src/SparkPlug.Contracts/Filter/CompositeFilter.cs/#L82"><i class="bi bi-code-slash"></i></a>
+  </h3>
 
-  <div id="collapsible-SparkPlug_Contracts_Extensions_OrLessThan_SparkPlug_Contracts_CompositeFilter_System_String_System_Object_" class="collapse in">
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
-    <pre><code class="lang- hljs">public static CompositeFilter OrLessThan(this CompositeFilter source, string field, object value)</code></pre>
+    <pre><code class="lang-csharp hljs">public static CompositeFilter OrLessThan(this CompositeFilter source, string field, object value)</code></pre>
   </div>
 
-  <h5 class="parameters">Parameters</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="SparkPlug.Contracts.CompositeFilter.html">CompositeFilter</a></span>
-        <span class="parametername">source</span>
-        <p></p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></span>
-        <span class="parametername">field</span>
-        <p></p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></span>
-        <span class="parametername">value</span>
-        <p></p>
-      </td>
-    </tr>
-  </table>
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>source</code> <a class="xref" href="SparkPlug.Contracts.CompositeFilter.html">CompositeFilter</a></dt>
+    <dd></dd>
+    <dt><code>field</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+  </dl>
 
-  <h5 class="returns">Returns</h5>
-  <table>
-    <tr>
-      <td>
-      <a class="xref" href="SparkPlug.Contracts.CompositeFilter.html">CompositeFilter</a>
-        <p></p>
-      </td>
-    </tr>
-  </table>
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="SparkPlug.Contracts.CompositeFilter.html">CompositeFilter</a></dt>
+    <dd></dd>
+  </dl>
 
 
 
@@ -2182,63 +1334,36 @@
 
 
 
-  </div>
-
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/natarajanganapathi/sparkplug/new/75/merge/apiSpec/new?filename=SparkPlug_Contracts_Extensions_OrLessThanOrEqual_SparkPlug_Contracts_CompositeFilter_System_String_System_Object_.md&amp;value=---%0Auid%3A%20SparkPlug.Contracts.Extensions.OrLessThanOrEqual(SparkPlug.Contracts.CompositeFilter%2CSystem.String%2CSystem.Object)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Edit this page"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/natarajanganapathi/sparkplug/blob/75/merge/src/SparkPlug.Contracts/Filter/CompositeFilter.cs/#L84" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
 
   <a id="SparkPlug_Contracts_Extensions_OrLessThanOrEqual_" data-uid="SparkPlug.Contracts.Extensions.OrLessThanOrEqual*"></a>
 
-  <h4 id="SparkPlug_Contracts_Extensions_OrLessThanOrEqual_SparkPlug_Contracts_CompositeFilter_System_String_System_Object_" data-uid="SparkPlug.Contracts.Extensions.OrLessThanOrEqual(SparkPlug.Contracts.CompositeFilter,System.String,System.Object)"><a href="#collapsible-SparkPlug_Contracts_Extensions_OrLessThanOrEqual_SparkPlug_Contracts_CompositeFilter_System_String_System_Object_" class="expander" data-toggle="collapse">OrLessThanOrEqual(CompositeFilter, string, object)</a></h4>
+  <h3 id="SparkPlug_Contracts_Extensions_OrLessThanOrEqual_SparkPlug_Contracts_CompositeFilter_System_String_System_Object_" data-uid="SparkPlug.Contracts.Extensions.OrLessThanOrEqual(SparkPlug.Contracts.CompositeFilter,System.String,System.Object)">
+  OrLessThanOrEqual(CompositeFilter, string, object)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/natarajanganapathi/sparkplug/blob/76/merge/src/SparkPlug.Contracts/Filter/CompositeFilter.cs/#L84"><i class="bi bi-code-slash"></i></a>
+  </h3>
 
-  <div id="collapsible-SparkPlug_Contracts_Extensions_OrLessThanOrEqual_SparkPlug_Contracts_CompositeFilter_System_String_System_Object_" class="collapse in">
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
-    <pre><code class="lang- hljs">public static CompositeFilter OrLessThanOrEqual(this CompositeFilter source, string field, object value)</code></pre>
+    <pre><code class="lang-csharp hljs">public static CompositeFilter OrLessThanOrEqual(this CompositeFilter source, string field, object value)</code></pre>
   </div>
 
-  <h5 class="parameters">Parameters</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="SparkPlug.Contracts.CompositeFilter.html">CompositeFilter</a></span>
-        <span class="parametername">source</span>
-        <p></p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></span>
-        <span class="parametername">field</span>
-        <p></p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></span>
-        <span class="parametername">value</span>
-        <p></p>
-      </td>
-    </tr>
-  </table>
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>source</code> <a class="xref" href="SparkPlug.Contracts.CompositeFilter.html">CompositeFilter</a></dt>
+    <dd></dd>
+    <dt><code>field</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+  </dl>
 
-  <h5 class="returns">Returns</h5>
-  <table>
-    <tr>
-      <td>
-      <a class="xref" href="SparkPlug.Contracts.CompositeFilter.html">CompositeFilter</a>
-        <p></p>
-      </td>
-    </tr>
-  </table>
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="SparkPlug.Contracts.CompositeFilter.html">CompositeFilter</a></dt>
+    <dd></dd>
+  </dl>
 
 
 
@@ -2249,63 +1374,36 @@
 
 
 
-  </div>
-
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/natarajanganapathi/sparkplug/new/75/merge/apiSpec/new?filename=SparkPlug_Contracts_Extensions_OrNotEqual_SparkPlug_Contracts_CompositeFilter_System_String_System_Object_.md&amp;value=---%0Auid%3A%20SparkPlug.Contracts.Extensions.OrNotEqual(SparkPlug.Contracts.CompositeFilter%2CSystem.String%2CSystem.Object)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Edit this page"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/natarajanganapathi/sparkplug/blob/75/merge/src/SparkPlug.Contracts/Filter/CompositeFilter.cs/#L76" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
 
   <a id="SparkPlug_Contracts_Extensions_OrNotEqual_" data-uid="SparkPlug.Contracts.Extensions.OrNotEqual*"></a>
 
-  <h4 id="SparkPlug_Contracts_Extensions_OrNotEqual_SparkPlug_Contracts_CompositeFilter_System_String_System_Object_" data-uid="SparkPlug.Contracts.Extensions.OrNotEqual(SparkPlug.Contracts.CompositeFilter,System.String,System.Object)"><a href="#collapsible-SparkPlug_Contracts_Extensions_OrNotEqual_SparkPlug_Contracts_CompositeFilter_System_String_System_Object_" class="expander" data-toggle="collapse">OrNotEqual(CompositeFilter, string, object)</a></h4>
+  <h3 id="SparkPlug_Contracts_Extensions_OrNotEqual_SparkPlug_Contracts_CompositeFilter_System_String_System_Object_" data-uid="SparkPlug.Contracts.Extensions.OrNotEqual(SparkPlug.Contracts.CompositeFilter,System.String,System.Object)">
+  OrNotEqual(CompositeFilter, string, object)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/natarajanganapathi/sparkplug/blob/76/merge/src/SparkPlug.Contracts/Filter/CompositeFilter.cs/#L76"><i class="bi bi-code-slash"></i></a>
+  </h3>
 
-  <div id="collapsible-SparkPlug_Contracts_Extensions_OrNotEqual_SparkPlug_Contracts_CompositeFilter_System_String_System_Object_" class="collapse in">
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
-    <pre><code class="lang- hljs">public static CompositeFilter OrNotEqual(this CompositeFilter source, string field, object value)</code></pre>
+    <pre><code class="lang-csharp hljs">public static CompositeFilter OrNotEqual(this CompositeFilter source, string field, object value)</code></pre>
   </div>
 
-  <h5 class="parameters">Parameters</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="SparkPlug.Contracts.CompositeFilter.html">CompositeFilter</a></span>
-        <span class="parametername">source</span>
-        <p></p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></span>
-        <span class="parametername">field</span>
-        <p></p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></span>
-        <span class="parametername">value</span>
-        <p></p>
-      </td>
-    </tr>
-  </table>
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>source</code> <a class="xref" href="SparkPlug.Contracts.CompositeFilter.html">CompositeFilter</a></dt>
+    <dd></dd>
+    <dt><code>field</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+  </dl>
 
-  <h5 class="returns">Returns</h5>
-  <table>
-    <tr>
-      <td>
-      <a class="xref" href="SparkPlug.Contracts.CompositeFilter.html">CompositeFilter</a>
-        <p></p>
-      </td>
-    </tr>
-  </table>
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="SparkPlug.Contracts.CompositeFilter.html">CompositeFilter</a></dt>
+    <dd></dd>
+  </dl>
 
 
 
@@ -2316,63 +1414,36 @@
 
 
 
-  </div>
-
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/natarajanganapathi/sparkplug/new/75/merge/apiSpec/new?filename=SparkPlug_Contracts_Extensions_OrNotIn_SparkPlug_Contracts_CompositeFilter_System_String_System_Object___.md&amp;value=---%0Auid%3A%20SparkPlug.Contracts.Extensions.OrNotIn(SparkPlug.Contracts.CompositeFilter%2CSystem.String%2CSystem.Object%5B%5D)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Edit this page"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/natarajanganapathi/sparkplug/blob/75/merge/src/SparkPlug.Contracts/Filter/CompositeFilter.cs/#L88" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
 
   <a id="SparkPlug_Contracts_Extensions_OrNotIn_" data-uid="SparkPlug.Contracts.Extensions.OrNotIn*"></a>
 
-  <h4 id="SparkPlug_Contracts_Extensions_OrNotIn_SparkPlug_Contracts_CompositeFilter_System_String_System_Object___" data-uid="SparkPlug.Contracts.Extensions.OrNotIn(SparkPlug.Contracts.CompositeFilter,System.String,System.Object[])"><a href="#collapsible-SparkPlug_Contracts_Extensions_OrNotIn_SparkPlug_Contracts_CompositeFilter_System_String_System_Object___" class="expander" data-toggle="collapse">OrNotIn(CompositeFilter, string, object[])</a></h4>
+  <h3 id="SparkPlug_Contracts_Extensions_OrNotIn_SparkPlug_Contracts_CompositeFilter_System_String_System_Object___" data-uid="SparkPlug.Contracts.Extensions.OrNotIn(SparkPlug.Contracts.CompositeFilter,System.String,System.Object[])">
+  OrNotIn(CompositeFilter, string, object[])
+  <a class="header-action link-secondary" title="View source" href="https://github.com/natarajanganapathi/sparkplug/blob/76/merge/src/SparkPlug.Contracts/Filter/CompositeFilter.cs/#L88"><i class="bi bi-code-slash"></i></a>
+  </h3>
 
-  <div id="collapsible-SparkPlug_Contracts_Extensions_OrNotIn_SparkPlug_Contracts_CompositeFilter_System_String_System_Object___" class="collapse in">
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
-    <pre><code class="lang- hljs">public static CompositeFilter OrNotIn(this CompositeFilter source, string field, object[] values)</code></pre>
+    <pre><code class="lang-csharp hljs">public static CompositeFilter OrNotIn(this CompositeFilter source, string field, object[] values)</code></pre>
   </div>
 
-  <h5 class="parameters">Parameters</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="SparkPlug.Contracts.CompositeFilter.html">CompositeFilter</a></span>
-        <span class="parametername">source</span>
-        <p></p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></span>
-        <span class="parametername">field</span>
-        <p></p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>[]</span>
-        <span class="parametername">values</span>
-        <p></p>
-      </td>
-    </tr>
-  </table>
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>source</code> <a class="xref" href="SparkPlug.Contracts.CompositeFilter.html">CompositeFilter</a></dt>
+    <dd></dd>
+    <dt><code>field</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>values</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>[]</dt>
+    <dd></dd>
+  </dl>
 
-  <h5 class="returns">Returns</h5>
-  <table>
-    <tr>
-      <td>
-      <a class="xref" href="SparkPlug.Contracts.CompositeFilter.html">CompositeFilter</a>
-        <p></p>
-      </td>
-    </tr>
-  </table>
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="SparkPlug.Contracts.CompositeFilter.html">CompositeFilter</a></dt>
+    <dd></dd>
+  </dl>
 
 
 
@@ -2383,56 +1454,110 @@
 
 
 
+
+  <a id="SparkPlug_Contracts_Extensions_SetData_" data-uid="SparkPlug.Contracts.Extensions.SetData*"></a>
+
+  <h3 id="SparkPlug_Contracts_Extensions_SetData_SparkPlug_Contracts_IQueryResponse_System_Collections_Generic_IEnumerable_System_Object__" data-uid="SparkPlug.Contracts.Extensions.SetData(SparkPlug.Contracts.IQueryResponse,System.Collections.Generic.IEnumerable{System.Object})">
+  SetData(IQueryResponse, IEnumerable&lt;object&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/natarajanganapathi/sparkplug/blob/76/merge/src/SparkPlug.Contracts/Response/QueryResponse.cs/#L17"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IQueryResponse SetData(this IQueryResponse source, IEnumerable&lt;object&gt; data)</code></pre>
   </div>
 
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/natarajanganapathi/sparkplug/new/75/merge/apiSpec/new?filename=SparkPlug_Contracts_Extensions_SetTotal_SparkPlug_Contracts_PageContext_System_Int64_.md&amp;value=---%0Auid%3A%20SparkPlug.Contracts.Extensions.SetTotal(SparkPlug.Contracts.PageContext%2CSystem.Int64)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Edit this page"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/natarajanganapathi/sparkplug/blob/75/merge/src/SparkPlug.Contracts/Common/PageContext.cs/#L23" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>source</code> <a class="xref" href="SparkPlug.Contracts.IQueryResponse.html">IQueryResponse</a></dt>
+    <dd></dd>
+    <dt><code>data</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="SparkPlug.Contracts.IQueryResponse.html">IQueryResponse</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SparkPlug_Contracts_Extensions_SetPageContext_" data-uid="SparkPlug.Contracts.Extensions.SetPageContext*"></a>
+
+  <h3 id="SparkPlug_Contracts_Extensions_SetPageContext_SparkPlug_Contracts_IQueryResponse_SparkPlug_Contracts_IPageContext_" data-uid="SparkPlug.Contracts.Extensions.SetPageContext(SparkPlug.Contracts.IQueryResponse,SparkPlug.Contracts.IPageContext)">
+  SetPageContext(IQueryResponse, IPageContext)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/natarajanganapathi/sparkplug/blob/76/merge/src/SparkPlug.Contracts/Response/QueryResponse.cs/#L22"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IQueryResponse SetPageContext(this IQueryResponse source, IPageContext pc)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>source</code> <a class="xref" href="SparkPlug.Contracts.IQueryResponse.html">IQueryResponse</a></dt>
+    <dd></dd>
+    <dt><code>pc</code> <a class="xref" href="SparkPlug.Contracts.IPageContext.html">IPageContext</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="SparkPlug.Contracts.IQueryResponse.html">IQueryResponse</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
 
   <a id="SparkPlug_Contracts_Extensions_SetTotal_" data-uid="SparkPlug.Contracts.Extensions.SetTotal*"></a>
 
-  <h4 id="SparkPlug_Contracts_Extensions_SetTotal_SparkPlug_Contracts_PageContext_System_Int64_" data-uid="SparkPlug.Contracts.Extensions.SetTotal(SparkPlug.Contracts.PageContext,System.Int64)"><a href="#collapsible-SparkPlug_Contracts_Extensions_SetTotal_SparkPlug_Contracts_PageContext_System_Int64_" class="expander" data-toggle="collapse">SetTotal(PageContext, long)</a></h4>
+  <h3 id="SparkPlug_Contracts_Extensions_SetTotal_SparkPlug_Contracts_PageContext_System_Int64_" data-uid="SparkPlug.Contracts.Extensions.SetTotal(SparkPlug.Contracts.PageContext,System.Int64)">
+  SetTotal(PageContext, long)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/natarajanganapathi/sparkplug/blob/76/merge/src/SparkPlug.Contracts/Common/PageContext.cs/#L23"><i class="bi bi-code-slash"></i></a>
+  </h3>
 
-  <div id="collapsible-SparkPlug_Contracts_Extensions_SetTotal_SparkPlug_Contracts_PageContext_System_Int64_" class="collapse in">
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
 
   <div class="codewrapper">
-    <pre><code class="lang- hljs">public static PageContext SetTotal(this PageContext pc, long total)</code></pre>
+    <pre><code class="lang-csharp hljs">public static PageContext SetTotal(this PageContext pc, long total)</code></pre>
   </div>
 
-  <h5 class="parameters">Parameters</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="SparkPlug.Contracts.PageContext.html">PageContext</a></span>
-        <span class="parametername">pc</span>
-        <p></p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></span>
-        <span class="parametername">total</span>
-        <p></p>
-      </td>
-    </tr>
-  </table>
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>pc</code> <a class="xref" href="SparkPlug.Contracts.PageContext.html">PageContext</a></dt>
+    <dd></dd>
+    <dt><code>total</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd></dd>
+  </dl>
 
-  <h5 class="returns">Returns</h5>
-  <table>
-    <tr>
-      <td>
-      <a class="xref" href="SparkPlug.Contracts.PageContext.html">PageContext</a>
-        <p></p>
-      </td>
-    </tr>
-  </table>
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="SparkPlug.Contracts.PageContext.html">PageContext</a></dt>
+    <dd></dd>
+  </dl>
 
 
 
@@ -2442,43 +1567,31 @@
 
 
 
-
-  </div>
 
 
 
 </article>
-          </div>
-          <div class="contribution-panel mobile-hide">
-              <a href="https://github.com/natarajanganapathi/sparkplug/new/75/merge/apiSpec/new?filename=SparkPlug_Contracts_Extensions.md&amp;value=---%0Auid%3A%20SparkPlug.Contracts.Extensions%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Edit this page" class="fab btn-warning pull-right"><i class="glyphicon glyphicon-pencil"></i></a>
-              <a href="https://github.com/natarajanganapathi/sparkplug/blob/75/merge/src/SparkPlug.Contracts/Response/QueryResponse.cs/#L14" title="View Source" class="fab btn-info pull-right"><i class="fa fa-code"></i></a>
-          </div>
 
-          <div class="hidden-sm col-md-2" role="complementary">
-            <div class="sideaffix">
-              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-              </nav>
-            </div>
-          </div>
+        <div class="contribution d-print-none">
+          <a href="https://github.com/natarajanganapathi/sparkplug/blob/76/merge/src/SparkPlug.Contracts/Response/QueryResponse.cs/#L14" class="edit-link">Edit this page</a>
         </div>
+
+        
       </div>
 
-      <footer>
-        <div class="grad-bottom"></div>
-        <div class="footer">
-          <div class="container">
-            <span class="pull-right">
-              <a href="#top">Back to top</a>
-            </span>
-      
-      <span>Generated by <strong>DocFX</strong></span>
-          </div>
-        </div>
-      </footer>
-    </div>
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
 
-    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
-    <script type="text/javascript" src="../styles/docfx.js"></script>
-    <script type="text/javascript" src="../styles/main.js"></script>
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>

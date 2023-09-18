@@ -1,98 +1,143 @@
 ﻿<!DOCTYPE html>
-<!--[if IE]><![endif]-->
 <html>
-
   <head>
     <meta charset="utf-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
       <title>Class MongoRepository&lt;TId, TEntity&gt;
  </title>
-      <meta name="viewport" content="width=device-width">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class MongoRepository&lt;TId, TEntity&gt;
  ">
-    
-      <link rel="shortcut icon" href="../favicon.ico">
-      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
-      <link rel="stylesheet" href="../styles/docfx.css">
-      <link rel="stylesheet" href="../styles/main.css">
-      <meta property="docfx:navrel" content="../toc.html">
-      <meta property="docfx:tocrel" content="toc.html">
-    
-    <meta property="docfx:rel" content="../">
-    
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/natarajanganapathi/sparkplug/new/76/merge/apiSpec/new?filename=SparkPlug_Persistence_MongoDb_MongoRepository_2.md&amp;value=---%0Auid%3A%20SparkPlug.Persistence.MongoDb.MongoRepository%602%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
   </head>
-  <body data-spy="scroll" data-target="#affix" data-offset="120">
-    <div id="wrapper">
-      <header>
 
-        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
-          <div class="container">
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
+  <script type="module">
+    import options from './../public/main.js'
+    import { init } from './../public/docfx.min.js'
+    init(options)
+  </script>
 
-              <a class="navbar-brand" href="../index.html">
-                <img id="logo" class="svg" src="../logo.svg" alt="">
-              </a>
-            </div>
-            <div class="collapse navbar-collapse" id="navbar">
-              <form class="navbar-form navbar-right" role="search" id="search">
-                <div class="form-group">
-                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
-                </div>
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
               </form>
             </div>
           </div>
-        </nav>
-
-        <div class="subnav navbar navbar-default">
-          <div class="container hide-when-search" id="breadcrumb">
-            <ul class="breadcrumb">
-              <li></li>
-            </ul>
-          </div>
         </div>
-      </header>
-      <div class="container body-content">
+      </nav>
+    </header>
 
-        <div id="search-results">
-          <div class="search-list">Search Results for <span></span></div>
-          <div class="sr-items">
-            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
           </div>
-          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
         </div>
       </div>
-      <div role="main" class="container body-content hide-when-search">
 
-        <div class="sidenav hide-when-search">
-          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
-          <div class="sidetoggle collapse" id="sidetoggle">
-            <div id="sidetoc"></div>
-          </div>
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
         </div>
-        <div class="article row grid-right">
-          <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="SparkPlug.Persistence.MongoDb.MongoRepository`2">
 
-  <h1 id="SparkPlug_Persistence_MongoDb_MongoRepository_2" data-uid="SparkPlug.Persistence.MongoDb.MongoRepository`2">Class MongoRepository&lt;TId, TEntity&gt;
-</h1>
-  <div class="markdown level0 summary"></div>
-  <div class="markdown level0 conceptual"></div>
+        <article data-uid="SparkPlug.Persistence.MongoDb.MongoRepository`2">
 
-  <div class="inheritance">
-    <h5>Inheritance</h5>
-    <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
-    <div class="level1"><span class="xref">MongoRepository&lt;TId, TEntity&gt;</span></div>
+
+
+  <h1 id="SparkPlug_Persistence_MongoDb_MongoRepository_2" data-uid="SparkPlug.Persistence.MongoDb.MongoRepository`2" class="text-break">
+    Class MongoRepository&lt;TId, TEntity&gt;
+  <a class="header-action link-secondary" title="View source" href="https://github.com/natarajanganapathi/sparkplug/blob/76/merge/src/SparkPlug.Persistence.MongoDb/Repository/MongoRepository.cs/#L3"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="SparkPlug.html">SparkPlug</a>.<a class="xref" href="SparkPlug.Persistence.html">Persistence</a>.<a class="xref" href="SparkPlug.Persistence.MongoDb.html">MongoDb</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>SparkPlug.Persistence.MongoDb.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"></div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class MongoRepository&lt;TId, TEntity&gt; : IRepository&lt;TId, TEntity&gt; where TEntity : class, IBaseEntity&lt;TId&gt;, new()</code></pre>
   </div>
 
 
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TId</code></dt>
+    <dd></dd>
+    <dt><code>TEntity</code></dt>
+    <dd></dd>
+  </dl>
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">MongoRepository&lt;TId, TEntity&gt;</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="SparkPlug.Persistence.Abstractions.IRepository-2.html">IRepository</a>&lt;TId, TEntity&gt;</div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist derived">
+    <dt>Inherited Members</dt>
+    <dd>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
     </div>
@@ -114,1544 +159,994 @@
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
     </div>
-  </div>
-
-  <h6><strong>Namespace</strong>: <a class="xref" href="SparkPlug.html">SparkPlug</a>.<a class="xref" href="SparkPlug.Persistence.html">Persistence</a>.<a class="xref" href="SparkPlug.Persistence.MongoDb.html">MongoDb</a></h6>
-  <h6><strong>Assembly</strong>: SparkPlug.Persistence.MongoDb.dll</h6>
-
-  <h5 id="SparkPlug_Persistence_MongoDb_MongoRepository_2_syntax">Syntax</h5>
-  <div class="codewrapper">
-    <pre><code class="lang- hljs">public class MongoRepository&lt;TId, TEntity&gt; : IRepository&lt;TId, TEntity&gt; where TEntity : class, IBaseEntity&lt;TId&gt;, new()</code></pre>
-  </div>
-
-
-
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="parametername">TId</span>
-        <p></p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <span class="parametername">TEntity</span>
-        <p></p>
-      </td>
-    </tr>
-  </table>
-
-
-  <h3 id="constructors">Constructors
-</h3>
-
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/natarajanganapathi/sparkplug/new/75/merge/apiSpec/new?filename=SparkPlug_Persistence_MongoDb_MongoRepository_2__ctor_System_IServiceProvider_.md&amp;value=---%0Auid%3A%20SparkPlug.Persistence.MongoDb.MongoRepository%602.%23ctor(System.IServiceProvider)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Edit this page"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/natarajanganapathi/sparkplug/blob/75/merge/src/SparkPlug.Persistence.MongoDb/MongoRepository.cs/#L22" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-
-  <a id="SparkPlug_Persistence_MongoDb_MongoRepository_2__ctor_" data-uid="SparkPlug.Persistence.MongoDb.MongoRepository`2.#ctor*"></a>
-
-  <h4 id="SparkPlug_Persistence_MongoDb_MongoRepository_2__ctor_System_IServiceProvider_" data-uid="SparkPlug.Persistence.MongoDb.MongoRepository`2.#ctor(System.IServiceProvider)"><a href="#collapsible-SparkPlug_Persistence_MongoDb_MongoRepository_2__ctor_System_IServiceProvider_" class="expander" data-toggle="collapse">MongoRepository(IServiceProvider)</a></h4>
-
-  <div id="collapsible-SparkPlug_Persistence_MongoDb_MongoRepository_2__ctor_System_IServiceProvider_" class="collapse in">
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-
-  <div class="codewrapper">
-    <pre><code class="lang- hljs">public MongoRepository(IServiceProvider serviceProvider)</code></pre>
-  </div>
-
-  <h5 class="parameters">Parameters</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iserviceprovider">IServiceProvider</a></span>
-        <span class="parametername">serviceProvider</span>
-        <p></p>
-      </td>
-    </tr>
-  </table>
-
-
-
-
-
-
-
-
-
-
-
-  </div>
-  <h3 id="properties">Properties
-</h3>
-
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/natarajanganapathi/sparkplug/new/75/merge/apiSpec/new?filename=SparkPlug_Persistence_MongoDb_MongoRepository_2_Collection.md&amp;value=---%0Auid%3A%20SparkPlug.Persistence.MongoDb.MongoRepository%602.Collection%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Edit this page"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/natarajanganapathi/sparkplug/blob/75/merge/src/SparkPlug.Persistence.MongoDb/MongoRepository.cs/#L9" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-
-  <a id="SparkPlug_Persistence_MongoDb_MongoRepository_2_Collection_" data-uid="SparkPlug.Persistence.MongoDb.MongoRepository`2.Collection*"></a>
-
-  <h4 id="SparkPlug_Persistence_MongoDb_MongoRepository_2_Collection" data-uid="SparkPlug.Persistence.MongoDb.MongoRepository`2.Collection"><a href="#collapsible-SparkPlug_Persistence_MongoDb_MongoRepository_2_Collection" class="expander" data-toggle="collapse">Collection</a></h4>
-
-  <div id="collapsible-SparkPlug_Persistence_MongoDb_MongoRepository_2_Collection" class="collapse in">
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-
-  <div class="codewrapper">
-    <pre><code class="lang- hljs">public virtual IMongoCollection&lt;TEntity&gt; Collection { get; }</code></pre>
-  </div>
-
-
-
-
-
-  <h5 class="propertyValue">Property Value</h5>
-  <table>
-    <tr>
-      <td>
-      <span class="xref">IMongoCollection</span>&lt;TEntity&gt;
-        <p></p>
-      </td>
-    </tr>
-  </table>
-
-
-
-
-
-
-
-  </div>
-  <h3 id="methods">Methods
-</h3>
-
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/natarajanganapathi/sparkplug/new/75/merge/apiSpec/new?filename=SparkPlug_Persistence_MongoDb_MongoRepository_2_CountAsync_SparkPlug_Contracts_IQueryRequest_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20SparkPlug.Persistence.MongoDb.MongoRepository%602.CountAsync(SparkPlug.Contracts.IQueryRequest%2CSystem.Threading.CancellationToken)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Edit this page"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/natarajanganapathi/sparkplug/blob/75/merge/src/SparkPlug.Persistence.MongoDb/MongoRepository.cs/#L62" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-
-  <a id="SparkPlug_Persistence_MongoDb_MongoRepository_2_CountAsync_" data-uid="SparkPlug.Persistence.MongoDb.MongoRepository`2.CountAsync*"></a>
-
-  <h4 id="SparkPlug_Persistence_MongoDb_MongoRepository_2_CountAsync_SparkPlug_Contracts_IQueryRequest_System_Threading_CancellationToken_" data-uid="SparkPlug.Persistence.MongoDb.MongoRepository`2.CountAsync(SparkPlug.Contracts.IQueryRequest,System.Threading.CancellationToken)"><a href="#collapsible-SparkPlug_Persistence_MongoDb_MongoRepository_2_CountAsync_SparkPlug_Contracts_IQueryRequest_System_Threading_CancellationToken_" class="expander" data-toggle="collapse">CountAsync(IQueryRequest, CancellationToken)</a></h4>
-
-  <div id="collapsible-SparkPlug_Persistence_MongoDb_MongoRepository_2_CountAsync_SparkPlug_Contracts_IQueryRequest_System_Threading_CancellationToken_" class="collapse in">
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-
-  <div class="codewrapper">
-    <pre><code class="lang- hljs">public Task&lt;long&gt; CountAsync(IQueryRequest request, CancellationToken cancellationToken)</code></pre>
-  </div>
-
-  <h5 class="parameters">Parameters</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="SparkPlug.Contracts.IQueryRequest.html">IQueryRequest</a></span>
-        <span class="parametername">request</span>
-        <p></p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></span>
-        <span class="parametername">cancellationToken</span>
-        <p></p>
-      </td>
-    </tr>
-  </table>
-
-  <h5 class="returns">Returns</h5>
-  <table>
-    <tr>
-      <td>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a>&gt;
-        <p></p>
-      </td>
-    </tr>
-  </table>
-
-
-
-
-
-
-  <h5 class="implements">Implements</h5>
-      <div><a class="xref" href="SparkPlug.Persistence.Abstractions.IRepository-2.html#SparkPlug_Persistence_Abstractions_IRepository_2_CountAsync_SparkPlug_Contracts_IQueryRequest_System_Threading_CancellationToken_">IRepository&lt;TId, TEntity&gt;.CountAsync(IQueryRequest, CancellationToken)</a></div>
-
-
-
-
-  </div>
-
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/natarajanganapathi/sparkplug/new/75/merge/apiSpec/new?filename=SparkPlug_Persistence_MongoDb_MongoRepository_2_CreateAsync_SparkPlug_Contracts_ICommandRequest__1__System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20SparkPlug.Persistence.MongoDb.MongoRepository%602.CreateAsync(SparkPlug.Contracts.ICommandRequest%7B%601%7D%2CSystem.Threading.CancellationToken)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Edit this page"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/natarajanganapathi/sparkplug/blob/75/merge/src/SparkPlug.Persistence.MongoDb/MongoRepository.cs/#L95" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-
-  <a id="SparkPlug_Persistence_MongoDb_MongoRepository_2_CreateAsync_" data-uid="SparkPlug.Persistence.MongoDb.MongoRepository`2.CreateAsync*"></a>
-
-  <h4 id="SparkPlug_Persistence_MongoDb_MongoRepository_2_CreateAsync_SparkPlug_Contracts_ICommandRequest__1__System_Threading_CancellationToken_" data-uid="SparkPlug.Persistence.MongoDb.MongoRepository`2.CreateAsync(SparkPlug.Contracts.ICommandRequest{`1},System.Threading.CancellationToken)"><a href="#collapsible-SparkPlug_Persistence_MongoDb_MongoRepository_2_CreateAsync_SparkPlug_Contracts_ICommandRequest__1__System_Threading_CancellationToken_" class="expander" data-toggle="collapse">CreateAsync(ICommandRequest&lt;TEntity&gt;, CancellationToken)</a></h4>
-
-  <div id="collapsible-SparkPlug_Persistence_MongoDb_MongoRepository_2_CreateAsync_SparkPlug_Contracts_ICommandRequest__1__System_Threading_CancellationToken_" class="collapse in">
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-
-  <div class="codewrapper">
-    <pre><code class="lang- hljs">public Task&lt;TEntity&gt; CreateAsync(ICommandRequest&lt;TEntity&gt; request, CancellationToken cancellationToken)</code></pre>
-  </div>
-
-  <h5 class="parameters">Parameters</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="SparkPlug.Contracts.ICommandRequest-1.html">ICommandRequest</a>&lt;TEntity&gt;</span>
-        <span class="parametername">request</span>
-        <p></p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></span>
-        <span class="parametername">cancellationToken</span>
-        <p></p>
-      </td>
-    </tr>
-  </table>
-
-  <h5 class="returns">Returns</h5>
-  <table>
-    <tr>
-      <td>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;TEntity&gt;
-        <p></p>
-      </td>
-    </tr>
-  </table>
-
-
-
-
-
-
-  <h5 class="implements">Implements</h5>
-      <div><a class="xref" href="SparkPlug.Persistence.Abstractions.IRepository-2.html#SparkPlug_Persistence_Abstractions_IRepository_2_CreateAsync_SparkPlug_Contracts_ICommandRequest__1__System_Threading_CancellationToken_">IRepository&lt;TId, TEntity&gt;.CreateAsync(ICommandRequest&lt;TEntity&gt;, CancellationToken)</a></div>
-
-
-
-
-  </div>
-
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/natarajanganapathi/sparkplug/new/75/merge/apiSpec/new?filename=SparkPlug_Persistence_MongoDb_MongoRepository_2_CreateManyAsync_SparkPlug_Contracts_ICommandRequest__1____System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20SparkPlug.Persistence.MongoDb.MongoRepository%602.CreateManyAsync(SparkPlug.Contracts.ICommandRequest%7B%601%5B%5D%7D%2CSystem.Threading.CancellationToken)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Edit this page"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/natarajanganapathi/sparkplug/blob/75/merge/src/SparkPlug.Persistence.MongoDb/MongoRepository.cs/#L101" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-
-  <a id="SparkPlug_Persistence_MongoDb_MongoRepository_2_CreateManyAsync_" data-uid="SparkPlug.Persistence.MongoDb.MongoRepository`2.CreateManyAsync*"></a>
-
-  <h4 id="SparkPlug_Persistence_MongoDb_MongoRepository_2_CreateManyAsync_SparkPlug_Contracts_ICommandRequest__1____System_Threading_CancellationToken_" data-uid="SparkPlug.Persistence.MongoDb.MongoRepository`2.CreateManyAsync(SparkPlug.Contracts.ICommandRequest{`1[]},System.Threading.CancellationToken)"><a href="#collapsible-SparkPlug_Persistence_MongoDb_MongoRepository_2_CreateManyAsync_SparkPlug_Contracts_ICommandRequest__1____System_Threading_CancellationToken_" class="expander" data-toggle="collapse">CreateManyAsync(ICommandRequest&lt;TEntity[]&gt;, CancellationToken)</a></h4>
-
-  <div id="collapsible-SparkPlug_Persistence_MongoDb_MongoRepository_2_CreateManyAsync_SparkPlug_Contracts_ICommandRequest__1____System_Threading_CancellationToken_" class="collapse in">
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-
-  <div class="codewrapper">
-    <pre><code class="lang- hljs">public Task&lt;IEnumerable&lt;TEntity&gt;&gt; CreateManyAsync(ICommandRequest&lt;TEntity[]&gt; request, CancellationToken cancellationToken)</code></pre>
-  </div>
-
-  <h5 class="parameters">Parameters</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="SparkPlug.Contracts.ICommandRequest-1.html">ICommandRequest</a>&lt;TEntity[]&gt;</span>
-        <span class="parametername">request</span>
-        <p></p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></span>
-        <span class="parametername">cancellationToken</span>
-        <p></p>
-      </td>
-    </tr>
-  </table>
-
-  <h5 class="returns">Returns</h5>
-  <table>
-    <tr>
-      <td>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;TEntity&gt;&gt;
-        <p></p>
-      </td>
-    </tr>
-  </table>
-
-
-
-
-
-
-  <h5 class="implements">Implements</h5>
-      <div><a class="xref" href="SparkPlug.Persistence.Abstractions.IRepository-2.html#SparkPlug_Persistence_Abstractions_IRepository_2_CreateManyAsync_SparkPlug_Contracts_ICommandRequest__1____System_Threading_CancellationToken_">IRepository&lt;TId, TEntity&gt;.CreateManyAsync(ICommandRequest&lt;TEntity[]&gt;, CancellationToken)</a></div>
-
-
-
-
-  </div>
-
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/natarajanganapathi/sparkplug/new/75/merge/apiSpec/new?filename=SparkPlug_Persistence_MongoDb_MongoRepository_2_DeleteAsync__0_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20SparkPlug.Persistence.MongoDb.MongoRepository%602.DeleteAsync(%600%2CSystem.Threading.CancellationToken)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Edit this page"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/natarajanganapathi/sparkplug/blob/75/merge/src/SparkPlug.Persistence.MongoDb/MongoRepository.cs/#L138" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-
-  <a id="SparkPlug_Persistence_MongoDb_MongoRepository_2_DeleteAsync_" data-uid="SparkPlug.Persistence.MongoDb.MongoRepository`2.DeleteAsync*"></a>
-
-  <h4 id="SparkPlug_Persistence_MongoDb_MongoRepository_2_DeleteAsync__0_System_Threading_CancellationToken_" data-uid="SparkPlug.Persistence.MongoDb.MongoRepository`2.DeleteAsync(`0,System.Threading.CancellationToken)"><a href="#collapsible-SparkPlug_Persistence_MongoDb_MongoRepository_2_DeleteAsync__0_System_Threading_CancellationToken_" class="expander" data-toggle="collapse">DeleteAsync(TId, CancellationToken)</a></h4>
-
-  <div id="collapsible-SparkPlug_Persistence_MongoDb_MongoRepository_2_DeleteAsync__0_System_Threading_CancellationToken_" class="collapse in">
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-
-  <div class="codewrapper">
-    <pre><code class="lang- hljs">public Task&lt;TEntity&gt; DeleteAsync(TId id, CancellationToken cancellationToken)</code></pre>
-  </div>
-
-  <h5 class="parameters">Parameters</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="pull-right"><span class="xref">TId</span></span>
-        <span class="parametername">id</span>
-        <p></p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></span>
-        <span class="parametername">cancellationToken</span>
-        <p></p>
-      </td>
-    </tr>
-  </table>
-
-  <h5 class="returns">Returns</h5>
-  <table>
-    <tr>
-      <td>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;TEntity&gt;
-        <p></p>
-      </td>
-    </tr>
-  </table>
-
-
-
-
-
-
-  <h5 class="implements">Implements</h5>
-      <div><a class="xref" href="SparkPlug.Persistence.Abstractions.IRepository-2.html#SparkPlug_Persistence_Abstractions_IRepository_2_DeleteAsync__0_System_Threading_CancellationToken_">IRepository&lt;TId, TEntity&gt;.DeleteAsync(TId, CancellationToken)</a></div>
-
-
-
-
-  </div>
-
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/natarajanganapathi/sparkplug/new/75/merge/apiSpec/new?filename=SparkPlug_Persistence_MongoDb_MongoRepository_2_FindAsync_SparkPlug_Contracts_IQueryRequest_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20SparkPlug.Persistence.MongoDb.MongoRepository%602.FindAsync(SparkPlug.Contracts.IQueryRequest%2CSystem.Threading.CancellationToken)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Edit this page"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/natarajanganapathi/sparkplug/blob/75/merge/src/SparkPlug.Persistence.MongoDb/MongoRepository.cs/#L28" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-
-  <a id="SparkPlug_Persistence_MongoDb_MongoRepository_2_FindAsync_" data-uid="SparkPlug.Persistence.MongoDb.MongoRepository`2.FindAsync*"></a>
-
-  <h4 id="SparkPlug_Persistence_MongoDb_MongoRepository_2_FindAsync_SparkPlug_Contracts_IQueryRequest_System_Threading_CancellationToken_" data-uid="SparkPlug.Persistence.MongoDb.MongoRepository`2.FindAsync(SparkPlug.Contracts.IQueryRequest,System.Threading.CancellationToken)"><a href="#collapsible-SparkPlug_Persistence_MongoDb_MongoRepository_2_FindAsync_SparkPlug_Contracts_IQueryRequest_System_Threading_CancellationToken_" class="expander" data-toggle="collapse">FindAsync(IQueryRequest, CancellationToken)</a></h4>
-
-  <div id="collapsible-SparkPlug_Persistence_MongoDb_MongoRepository_2_FindAsync_SparkPlug_Contracts_IQueryRequest_System_Threading_CancellationToken_" class="collapse in">
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-
-  <div class="codewrapper">
-    <pre><code class="lang- hljs">public Task&lt;IList&lt;TEntity&gt;&gt; FindAsync(IQueryRequest request, CancellationToken cancellationToken)</code></pre>
-  </div>
-
-  <h5 class="parameters">Parameters</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="SparkPlug.Contracts.IQueryRequest.html">IQueryRequest</a></span>
-        <span class="parametername">request</span>
-        <p></p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></span>
-        <span class="parametername">cancellationToken</span>
-        <p></p>
-      </td>
-    </tr>
-  </table>
-
-  <h5 class="returns">Returns</h5>
-  <table>
-    <tr>
-      <td>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1">IList</a>&lt;TEntity&gt;&gt;
-        <p></p>
-      </td>
-    </tr>
-  </table>
-
-
-
-
-
-
-  <h5 class="implements">Implements</h5>
-      <div><a class="xref" href="SparkPlug.Persistence.Abstractions.IRepository-2.html#SparkPlug_Persistence_Abstractions_IRepository_2_FindAsync_SparkPlug_Contracts_IQueryRequest_System_Threading_CancellationToken_">IRepository&lt;TId, TEntity&gt;.FindAsync(IQueryRequest, CancellationToken)</a></div>
-
-
-
-
-  </div>
-
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/natarajanganapathi/sparkplug/new/75/merge/apiSpec/new?filename=SparkPlug_Persistence_MongoDb_MongoRepository_2_GetAsync__0_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20SparkPlug.Persistence.MongoDb.MongoRepository%602.GetAsync(%600%2CSystem.Threading.CancellationToken)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Edit this page"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/natarajanganapathi/sparkplug/blob/75/merge/src/SparkPlug.Persistence.MongoDb/MongoRepository.cs/#L69" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-
-  <a id="SparkPlug_Persistence_MongoDb_MongoRepository_2_GetAsync_" data-uid="SparkPlug.Persistence.MongoDb.MongoRepository`2.GetAsync*"></a>
-
-  <h4 id="SparkPlug_Persistence_MongoDb_MongoRepository_2_GetAsync__0_System_Threading_CancellationToken_" data-uid="SparkPlug.Persistence.MongoDb.MongoRepository`2.GetAsync(`0,System.Threading.CancellationToken)"><a href="#collapsible-SparkPlug_Persistence_MongoDb_MongoRepository_2_GetAsync__0_System_Threading_CancellationToken_" class="expander" data-toggle="collapse">GetAsync(TId, CancellationToken)</a></h4>
-
-  <div id="collapsible-SparkPlug_Persistence_MongoDb_MongoRepository_2_GetAsync__0_System_Threading_CancellationToken_" class="collapse in">
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-
-  <div class="codewrapper">
-    <pre><code class="lang- hljs">public Task&lt;TEntity&gt; GetAsync(TId id, CancellationToken cancellationToken)</code></pre>
-  </div>
-
-  <h5 class="parameters">Parameters</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="pull-right"><span class="xref">TId</span></span>
-        <span class="parametername">id</span>
-        <p></p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></span>
-        <span class="parametername">cancellationToken</span>
-        <p></p>
-      </td>
-    </tr>
-  </table>
-
-  <h5 class="returns">Returns</h5>
-  <table>
-    <tr>
-      <td>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;TEntity&gt;
-        <p></p>
-      </td>
-    </tr>
-  </table>
-
-
-
-
-
-
-  <h5 class="implements">Implements</h5>
-      <div><a class="xref" href="SparkPlug.Persistence.Abstractions.IRepository-2.html#SparkPlug_Persistence_Abstractions_IRepository_2_GetAsync__0_System_Threading_CancellationToken_">IRepository&lt;TId, TEntity&gt;.GetAsync(TId, CancellationToken)</a></div>
-
-
-
-
-  </div>
-
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/natarajanganapathi/sparkplug/new/75/merge/apiSpec/new?filename=SparkPlug_Persistence_MongoDb_MongoRepository_2_GetByFilter_MongoDB_Driver_FilterDefinition__1__.md&amp;value=---%0Auid%3A%20SparkPlug.Persistence.MongoDb.MongoRepository%602.GetByFilter(MongoDB.Driver.FilterDefinition%7B%601%7D)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Edit this page"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/natarajanganapathi/sparkplug/blob/75/merge/src/SparkPlug.Persistence.MongoDb/MongoRepository.cs/#L165" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-
-  <a id="SparkPlug_Persistence_MongoDb_MongoRepository_2_GetByFilter_" data-uid="SparkPlug.Persistence.MongoDb.MongoRepository`2.GetByFilter*"></a>
-
-  <h4 id="SparkPlug_Persistence_MongoDb_MongoRepository_2_GetByFilter_MongoDB_Driver_FilterDefinition__1__" data-uid="SparkPlug.Persistence.MongoDb.MongoRepository`2.GetByFilter(MongoDB.Driver.FilterDefinition{`1})"><a href="#collapsible-SparkPlug_Persistence_MongoDb_MongoRepository_2_GetByFilter_MongoDB_Driver_FilterDefinition__1__" class="expander" data-toggle="collapse">GetByFilter(FilterDefinition&lt;TEntity&gt;)</a></h4>
-
-  <div id="collapsible-SparkPlug_Persistence_MongoDb_MongoRepository_2_GetByFilter_MongoDB_Driver_FilterDefinition__1__" class="collapse in">
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-
-  <div class="codewrapper">
-    <pre><code class="lang- hljs">public IFindFluent&lt;TEntity, TEntity&gt; GetByFilter(FilterDefinition&lt;TEntity&gt; filter)</code></pre>
-  </div>
-
-  <h5 class="parameters">Parameters</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="pull-right"><span class="xref">FilterDefinition</span>&lt;TEntity&gt;</span>
-        <span class="parametername">filter</span>
-        <p></p>
-      </td>
-    </tr>
-  </table>
-
-  <h5 class="returns">Returns</h5>
-  <table>
-    <tr>
-      <td>
-      <span class="xref">IFindFluent</span>&lt;TEntity, TEntity&gt;
-        <p></p>
-      </td>
-    </tr>
-  </table>
-
-
-
-
-
-
-
-
-
-
-  </div>
-
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/natarajanganapathi/sparkplug/new/75/merge/apiSpec/new?filename=SparkPlug_Persistence_MongoDb_MongoRepository_2_GetChangeStreamCursor_MongoDB_Driver_ChangeStreamFullDocumentOption_.md&amp;value=---%0Auid%3A%20SparkPlug.Persistence.MongoDb.MongoRepository%602.GetChangeStreamCursor(MongoDB.Driver.ChangeStreamFullDocumentOption)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Edit this page"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/natarajanganapathi/sparkplug/blob/75/merge/src/SparkPlug.Persistence.MongoDb/MongoRepository.cs/#L203" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-
-  <a id="SparkPlug_Persistence_MongoDb_MongoRepository_2_GetChangeStreamCursor_" data-uid="SparkPlug.Persistence.MongoDb.MongoRepository`2.GetChangeStreamCursor*"></a>
-
-  <h4 id="SparkPlug_Persistence_MongoDb_MongoRepository_2_GetChangeStreamCursor_MongoDB_Driver_ChangeStreamFullDocumentOption_" data-uid="SparkPlug.Persistence.MongoDb.MongoRepository`2.GetChangeStreamCursor(MongoDB.Driver.ChangeStreamFullDocumentOption)"><a href="#collapsible-SparkPlug_Persistence_MongoDb_MongoRepository_2_GetChangeStreamCursor_MongoDB_Driver_ChangeStreamFullDocumentOption_" class="expander" data-toggle="collapse">GetChangeStreamCursor(ChangeStreamFullDocumentOption)</a></h4>
-
-  <div id="collapsible-SparkPlug_Persistence_MongoDb_MongoRepository_2_GetChangeStreamCursor_MongoDB_Driver_ChangeStreamFullDocumentOption_" class="collapse in">
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-
-  <div class="codewrapper">
-    <pre><code class="lang- hljs">public IChangeStreamCursor&lt;BsonDocument&gt; GetChangeStreamCursor(ChangeStreamFullDocumentOption fullDocOption = ChangeStreamFullDocumentOption.UpdateLookup)</code></pre>
-  </div>
-
-  <h5 class="parameters">Parameters</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="pull-right"><span class="xref">ChangeStreamFullDocumentOption</span></span>
-        <span class="parametername">fullDocOption</span>
-        <p></p>
-      </td>
-    </tr>
-  </table>
-
-  <h5 class="returns">Returns</h5>
-  <table>
-    <tr>
-      <td>
-      <span class="xref">IChangeStreamCursor</span>&lt;<span class="xref">BsonDocument</span>&gt;
-        <p></p>
-      </td>
-    </tr>
-  </table>
-
-
-
-
-
-
-
-
-
-
-  </div>
-
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/natarajanganapathi/sparkplug/new/75/merge/apiSpec/new?filename=SparkPlug_Persistence_MongoDb_MongoRepository_2_GetChangeStreamOptions_MongoDB_Driver_ChangeStreamFullDocumentOption_.md&amp;value=---%0Auid%3A%20SparkPlug.Persistence.MongoDb.MongoRepository%602.GetChangeStreamOptions(MongoDB.Driver.ChangeStreamFullDocumentOption)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Edit this page"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/natarajanganapathi/sparkplug/blob/75/merge/src/SparkPlug.Persistence.MongoDb/MongoRepository.cs/#L199" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-
-  <a id="SparkPlug_Persistence_MongoDb_MongoRepository_2_GetChangeStreamOptions_" data-uid="SparkPlug.Persistence.MongoDb.MongoRepository`2.GetChangeStreamOptions*"></a>
-
-  <h4 id="SparkPlug_Persistence_MongoDb_MongoRepository_2_GetChangeStreamOptions_MongoDB_Driver_ChangeStreamFullDocumentOption_" data-uid="SparkPlug.Persistence.MongoDb.MongoRepository`2.GetChangeStreamOptions(MongoDB.Driver.ChangeStreamFullDocumentOption)"><a href="#collapsible-SparkPlug_Persistence_MongoDb_MongoRepository_2_GetChangeStreamOptions_MongoDB_Driver_ChangeStreamFullDocumentOption_" class="expander" data-toggle="collapse">GetChangeStreamOptions(ChangeStreamFullDocumentOption)</a></h4>
-
-  <div id="collapsible-SparkPlug_Persistence_MongoDb_MongoRepository_2_GetChangeStreamOptions_MongoDB_Driver_ChangeStreamFullDocumentOption_" class="collapse in">
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-
-  <div class="codewrapper">
-    <pre><code class="lang- hljs">public ChangeStreamOptions GetChangeStreamOptions(ChangeStreamFullDocumentOption option)</code></pre>
-  </div>
-
-  <h5 class="parameters">Parameters</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="pull-right"><span class="xref">ChangeStreamFullDocumentOption</span></span>
-        <span class="parametername">option</span>
-        <p></p>
-      </td>
-    </tr>
-  </table>
-
-  <h5 class="returns">Returns</h5>
-  <table>
-    <tr>
-      <td>
-      <span class="xref">ChangeStreamOptions</span>
-        <p></p>
-      </td>
-    </tr>
-  </table>
-
-
-
-
-
-
-
-
-
-
-  </div>
-
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/natarajanganapathi/sparkplug/new/75/merge/apiSpec/new?filename=SparkPlug_Persistence_MongoDb_MongoRepository_2_GetFilterBuilder.md&amp;value=---%0Auid%3A%20SparkPlug.Persistence.MongoDb.MongoRepository%602.GetFilterBuilder%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Edit this page"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/natarajanganapathi/sparkplug/blob/75/merge/src/SparkPlug.Persistence.MongoDb/MongoRepository.cs/#L173" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-
-  <a id="SparkPlug_Persistence_MongoDb_MongoRepository_2_GetFilterBuilder_" data-uid="SparkPlug.Persistence.MongoDb.MongoRepository`2.GetFilterBuilder*"></a>
-
-  <h4 id="SparkPlug_Persistence_MongoDb_MongoRepository_2_GetFilterBuilder" data-uid="SparkPlug.Persistence.MongoDb.MongoRepository`2.GetFilterBuilder"><a href="#collapsible-SparkPlug_Persistence_MongoDb_MongoRepository_2_GetFilterBuilder" class="expander" data-toggle="collapse">GetFilterBuilder()</a></h4>
-
-  <div id="collapsible-SparkPlug_Persistence_MongoDb_MongoRepository_2_GetFilterBuilder" class="collapse in">
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-
-  <div class="codewrapper">
-    <pre><code class="lang- hljs">public FilterDefinitionBuilder&lt;TEntity&gt; GetFilterBuilder()</code></pre>
-  </div>
-
-
-  <h5 class="returns">Returns</h5>
-  <table>
-    <tr>
-      <td>
-      <span class="xref">FilterDefinitionBuilder</span>&lt;TEntity&gt;
-        <p></p>
-      </td>
-    </tr>
-  </table>
-
-
-
-
-
-
-
-
-
-
-  </div>
-
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/natarajanganapathi/sparkplug/new/75/merge/apiSpec/new?filename=SparkPlug_Persistence_MongoDb_MongoRepository_2_GetFindFluent_MongoDB_Driver_ProjectionDefinition__1__MongoDB_Driver_FilterDefinition__1__MongoDB_Driver_SortDefinition__1__SparkPlug_Contracts_IPageContext_.md&amp;value=---%0Auid%3A%20SparkPlug.Persistence.MongoDb.MongoRepository%602.GetFindFluent(MongoDB.Driver.ProjectionDefinition%7B%601%7D%2CMongoDB.Driver.FilterDefinition%7B%601%7D%2CMongoDB.Driver.SortDefinition%7B%601%7D%2CSparkPlug.Contracts.IPageContext)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Edit this page"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/natarajanganapathi/sparkplug/blob/75/merge/src/SparkPlug.Persistence.MongoDb/MongoRepository.cs/#L74" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-
-  <a id="SparkPlug_Persistence_MongoDb_MongoRepository_2_GetFindFluent_" data-uid="SparkPlug.Persistence.MongoDb.MongoRepository`2.GetFindFluent*"></a>
-
-  <h4 id="SparkPlug_Persistence_MongoDb_MongoRepository_2_GetFindFluent_MongoDB_Driver_ProjectionDefinition__1__MongoDB_Driver_FilterDefinition__1__MongoDB_Driver_SortDefinition__1__SparkPlug_Contracts_IPageContext_" data-uid="SparkPlug.Persistence.MongoDb.MongoRepository`2.GetFindFluent(MongoDB.Driver.ProjectionDefinition{`1},MongoDB.Driver.FilterDefinition{`1},MongoDB.Driver.SortDefinition{`1},SparkPlug.Contracts.IPageContext)"><a href="#collapsible-SparkPlug_Persistence_MongoDb_MongoRepository_2_GetFindFluent_MongoDB_Driver_ProjectionDefinition__1__MongoDB_Driver_FilterDefinition__1__MongoDB_Driver_SortDefinition__1__SparkPlug_Contracts_IPageContext_" class="expander" data-toggle="collapse">GetFindFluent(ProjectionDefinition&lt;TEntity&gt;?, FilterDefinition&lt;TEntity&gt;?, SortDefinition&lt;TEntity&gt;?, IPageContext?)</a></h4>
-
-  <div id="collapsible-SparkPlug_Persistence_MongoDb_MongoRepository_2_GetFindFluent_MongoDB_Driver_ProjectionDefinition__1__MongoDB_Driver_FilterDefinition__1__MongoDB_Driver_SortDefinition__1__SparkPlug_Contracts_IPageContext_" class="collapse in">
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-
-  <div class="codewrapper">
-    <pre><code class="lang- hljs">public IFindFluent&lt;TEntity, TEntity&gt; GetFindFluent(ProjectionDefinition&lt;TEntity&gt;? projection, FilterDefinition&lt;TEntity&gt;? filter = null, SortDefinition&lt;TEntity&gt;? sorts = null, IPageContext? pc = null)</code></pre>
-  </div>
-
-  <h5 class="parameters">Parameters</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="pull-right"><span class="xref">ProjectionDefinition</span>&lt;TEntity&gt;</span>
-        <span class="parametername">projection</span>
-        <p></p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <span class="pull-right"><span class="xref">FilterDefinition</span>&lt;TEntity&gt;</span>
-        <span class="parametername">filter</span>
-        <p></p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <span class="pull-right"><span class="xref">SortDefinition</span>&lt;TEntity&gt;</span>
-        <span class="parametername">sorts</span>
-        <p></p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="SparkPlug.Contracts.IPageContext.html">IPageContext</a></span>
-        <span class="parametername">pc</span>
-        <p></p>
-      </td>
-    </tr>
-  </table>
-
-  <h5 class="returns">Returns</h5>
-  <table>
-    <tr>
-      <td>
-      <span class="xref">IFindFluent</span>&lt;TEntity, TEntity&gt;
-        <p></p>
-      </td>
-    </tr>
-  </table>
-
-
-
-
-
-
-
-
-
-
-  </div>
-
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/natarajanganapathi/sparkplug/new/75/merge/apiSpec/new?filename=SparkPlug_Persistence_MongoDb_MongoRepository_2_GetIdFilterDefinition__0_.md&amp;value=---%0Auid%3A%20SparkPlug.Persistence.MongoDb.MongoRepository%602.GetIdFilterDefinition(%600)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Edit this page"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/natarajanganapathi/sparkplug/blob/75/merge/src/SparkPlug.Persistence.MongoDb/MongoRepository.cs/#L177" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-
-  <a id="SparkPlug_Persistence_MongoDb_MongoRepository_2_GetIdFilterDefinition_" data-uid="SparkPlug.Persistence.MongoDb.MongoRepository`2.GetIdFilterDefinition*"></a>
-
-  <h4 id="SparkPlug_Persistence_MongoDb_MongoRepository_2_GetIdFilterDefinition__0_" data-uid="SparkPlug.Persistence.MongoDb.MongoRepository`2.GetIdFilterDefinition(`0)"><a href="#collapsible-SparkPlug_Persistence_MongoDb_MongoRepository_2_GetIdFilterDefinition__0_" class="expander" data-toggle="collapse">GetIdFilterDefinition(TId)</a></h4>
-
-  <div id="collapsible-SparkPlug_Persistence_MongoDb_MongoRepository_2_GetIdFilterDefinition__0_" class="collapse in">
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-
-  <div class="codewrapper">
-    <pre><code class="lang- hljs">public virtual FilterDefinition&lt;TEntity&gt; GetIdFilterDefinition(TId id)</code></pre>
-  </div>
-
-  <h5 class="parameters">Parameters</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="pull-right"><span class="xref">TId</span></span>
-        <span class="parametername">id</span>
-        <p></p>
-      </td>
-    </tr>
-  </table>
-
-  <h5 class="returns">Returns</h5>
-  <table>
-    <tr>
-      <td>
-      <span class="xref">FilterDefinition</span>&lt;TEntity&gt;
-        <p></p>
-      </td>
-    </tr>
-  </table>
-
-
-
-
-
-
-
-
-
-
-  </div>
-
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/natarajanganapathi/sparkplug/new/75/merge/apiSpec/new?filename=SparkPlug_Persistence_MongoDb_MongoRepository_2_GetManyAsync__0___System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20SparkPlug.Persistence.MongoDb.MongoRepository%602.GetManyAsync(%600%5B%5D%2CSystem.Threading.CancellationToken)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Edit this page"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/natarajanganapathi/sparkplug/blob/75/merge/src/SparkPlug.Persistence.MongoDb/MongoRepository.cs/#L89" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-
-  <a id="SparkPlug_Persistence_MongoDb_MongoRepository_2_GetManyAsync_" data-uid="SparkPlug.Persistence.MongoDb.MongoRepository`2.GetManyAsync*"></a>
-
-  <h4 id="SparkPlug_Persistence_MongoDb_MongoRepository_2_GetManyAsync__0___System_Threading_CancellationToken_" data-uid="SparkPlug.Persistence.MongoDb.MongoRepository`2.GetManyAsync(`0[],System.Threading.CancellationToken)"><a href="#collapsible-SparkPlug_Persistence_MongoDb_MongoRepository_2_GetManyAsync__0___System_Threading_CancellationToken_" class="expander" data-toggle="collapse">GetManyAsync(TId[], CancellationToken)</a></h4>
-
-  <div id="collapsible-SparkPlug_Persistence_MongoDb_MongoRepository_2_GetManyAsync__0___System_Threading_CancellationToken_" class="collapse in">
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-
-  <div class="codewrapper">
-    <pre><code class="lang- hljs">public Task&lt;IEnumerable&lt;TEntity&gt;&gt; GetManyAsync(TId[] ids, CancellationToken cancellationToken)</code></pre>
-  </div>
-
-  <h5 class="parameters">Parameters</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="pull-right">TId[]</span>
-        <span class="parametername">ids</span>
-        <p></p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></span>
-        <span class="parametername">cancellationToken</span>
-        <p></p>
-      </td>
-    </tr>
-  </table>
-
-  <h5 class="returns">Returns</h5>
-  <table>
-    <tr>
-      <td>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;TEntity&gt;&gt;
-        <p></p>
-      </td>
-    </tr>
-  </table>
-
-
-
-
-
-
-  <h5 class="implements">Implements</h5>
-      <div><a class="xref" href="SparkPlug.Persistence.Abstractions.IRepository-2.html#SparkPlug_Persistence_Abstractions_IRepository_2_GetManyAsync__0___System_Threading_CancellationToken_">IRepository&lt;TId, TEntity&gt;.GetManyAsync(TId[], CancellationToken)</a></div>
-
-
-
-
-  </div>
-
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/natarajanganapathi/sparkplug/new/75/merge/apiSpec/new?filename=SparkPlug_Persistence_MongoDb_MongoRepository_2_GetPipelineDefinition.md&amp;value=---%0Auid%3A%20SparkPlug.Persistence.MongoDb.MongoRepository%602.GetPipelineDefinition%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Edit this page"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/natarajanganapathi/sparkplug/blob/75/merge/src/SparkPlug.Persistence.MongoDb/MongoRepository.cs/#L193" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-
-  <a id="SparkPlug_Persistence_MongoDb_MongoRepository_2_GetPipelineDefinition_" data-uid="SparkPlug.Persistence.MongoDb.MongoRepository`2.GetPipelineDefinition*"></a>
-
-  <h4 id="SparkPlug_Persistence_MongoDb_MongoRepository_2_GetPipelineDefinition" data-uid="SparkPlug.Persistence.MongoDb.MongoRepository`2.GetPipelineDefinition"><a href="#collapsible-SparkPlug_Persistence_MongoDb_MongoRepository_2_GetPipelineDefinition" class="expander" data-toggle="collapse">GetPipelineDefinition()</a></h4>
-
-  <div id="collapsible-SparkPlug_Persistence_MongoDb_MongoRepository_2_GetPipelineDefinition" class="collapse in">
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-
-  <div class="codewrapper">
-    <pre><code class="lang- hljs">public PipelineDefinition&lt;ChangeStreamDocument&lt;BsonDocument&gt;, BsonDocument&gt; GetPipelineDefinition()</code></pre>
-  </div>
-
-
-  <h5 class="returns">Returns</h5>
-  <table>
-    <tr>
-      <td>
-      <span class="xref">PipelineDefinition</span>&lt;<span class="xref">ChangeStreamDocument</span>&lt;<span class="xref">BsonDocument</span>&gt;, <span class="xref">BsonDocument</span>&gt;
-        <p></p>
-      </td>
-    </tr>
-  </table>
-
-
-
-
-
-
-
-
-
-
-  </div>
-
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/natarajanganapathi/sparkplug/new/75/merge/apiSpec/new?filename=SparkPlug_Persistence_MongoDb_MongoRepository_2_GetProjectionBuilder.md&amp;value=---%0Auid%3A%20SparkPlug.Persistence.MongoDb.MongoRepository%602.GetProjectionBuilder%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Edit this page"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/natarajanganapathi/sparkplug/blob/75/merge/src/SparkPlug.Persistence.MongoDb/MongoRepository.cs/#L189" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-
-  <a id="SparkPlug_Persistence_MongoDb_MongoRepository_2_GetProjectionBuilder_" data-uid="SparkPlug.Persistence.MongoDb.MongoRepository`2.GetProjectionBuilder*"></a>
-
-  <h4 id="SparkPlug_Persistence_MongoDb_MongoRepository_2_GetProjectionBuilder" data-uid="SparkPlug.Persistence.MongoDb.MongoRepository`2.GetProjectionBuilder"><a href="#collapsible-SparkPlug_Persistence_MongoDb_MongoRepository_2_GetProjectionBuilder" class="expander" data-toggle="collapse">GetProjectionBuilder()</a></h4>
-
-  <div id="collapsible-SparkPlug_Persistence_MongoDb_MongoRepository_2_GetProjectionBuilder" class="collapse in">
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-
-  <div class="codewrapper">
-    <pre><code class="lang- hljs">public ProjectionDefinitionBuilder&lt;TEntity&gt; GetProjectionBuilder()</code></pre>
-  </div>
-
-
-  <h5 class="returns">Returns</h5>
-  <table>
-    <tr>
-      <td>
-      <span class="xref">ProjectionDefinitionBuilder</span>&lt;TEntity&gt;
-        <p></p>
-      </td>
-    </tr>
-  </table>
-
-
-
-
-
-
-
-
-
-
-  </div>
-
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/natarajanganapathi/sparkplug/new/75/merge/apiSpec/new?filename=SparkPlug_Persistence_MongoDb_MongoRepository_2_GetQuery_SparkPlug_Contracts_IQueryRequest_.md&amp;value=---%0Auid%3A%20SparkPlug.Persistence.MongoDb.MongoRepository%602.GetQuery(SparkPlug.Contracts.IQueryRequest)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Edit this page"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/natarajanganapathi/sparkplug/blob/75/merge/src/SparkPlug.Persistence.MongoDb/MongoRepository.cs/#L55" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-
-  <a id="SparkPlug_Persistence_MongoDb_MongoRepository_2_GetQuery_" data-uid="SparkPlug.Persistence.MongoDb.MongoRepository`2.GetQuery*"></a>
-
-  <h4 id="SparkPlug_Persistence_MongoDb_MongoRepository_2_GetQuery_SparkPlug_Contracts_IQueryRequest_" data-uid="SparkPlug.Persistence.MongoDb.MongoRepository`2.GetQuery(SparkPlug.Contracts.IQueryRequest)"><a href="#collapsible-SparkPlug_Persistence_MongoDb_MongoRepository_2_GetQuery_SparkPlug_Contracts_IQueryRequest_" class="expander" data-toggle="collapse">GetQuery(IQueryRequest)</a></h4>
-
-  <div id="collapsible-SparkPlug_Persistence_MongoDb_MongoRepository_2_GetQuery_SparkPlug_Contracts_IQueryRequest_" class="collapse in">
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-
-  <div class="codewrapper">
-    <pre><code class="lang- hljs">public IFindFluent&lt;TEntity, TEntity&gt; GetQuery(IQueryRequest request)</code></pre>
-  </div>
-
-  <h5 class="parameters">Parameters</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="SparkPlug.Contracts.IQueryRequest.html">IQueryRequest</a></span>
-        <span class="parametername">request</span>
-        <p></p>
-      </td>
-    </tr>
-  </table>
-
-  <h5 class="returns">Returns</h5>
-  <table>
-    <tr>
-      <td>
-      <span class="xref">IFindFluent</span>&lt;TEntity, TEntity&gt;
-        <p></p>
-      </td>
-    </tr>
-  </table>
-
-
-
-
-
-
-
-
-
-
-  </div>
-
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/natarajanganapathi/sparkplug/new/75/merge/apiSpec/new?filename=SparkPlug_Persistence_MongoDb_MongoRepository_2_GetSortBuilder.md&amp;value=---%0Auid%3A%20SparkPlug.Persistence.MongoDb.MongoRepository%602.GetSortBuilder%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Edit this page"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/natarajanganapathi/sparkplug/blob/75/merge/src/SparkPlug.Persistence.MongoDb/MongoRepository.cs/#L169" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-
-  <a id="SparkPlug_Persistence_MongoDb_MongoRepository_2_GetSortBuilder_" data-uid="SparkPlug.Persistence.MongoDb.MongoRepository`2.GetSortBuilder*"></a>
-
-  <h4 id="SparkPlug_Persistence_MongoDb_MongoRepository_2_GetSortBuilder" data-uid="SparkPlug.Persistence.MongoDb.MongoRepository`2.GetSortBuilder"><a href="#collapsible-SparkPlug_Persistence_MongoDb_MongoRepository_2_GetSortBuilder" class="expander" data-toggle="collapse">GetSortBuilder()</a></h4>
-
-  <div id="collapsible-SparkPlug_Persistence_MongoDb_MongoRepository_2_GetSortBuilder" class="collapse in">
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-
-  <div class="codewrapper">
-    <pre><code class="lang- hljs">public SortDefinitionBuilder&lt;TEntity&gt; GetSortBuilder()</code></pre>
-  </div>
-
-
-  <h5 class="returns">Returns</h5>
-  <table>
-    <tr>
-      <td>
-      <span class="xref">SortDefinitionBuilder</span>&lt;TEntity&gt;
-        <p></p>
-      </td>
-    </tr>
-  </table>
-
-
-
-
-
-
-
-
-
-
-  </div>
-
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/natarajanganapathi/sparkplug/new/75/merge/apiSpec/new?filename=SparkPlug_Persistence_MongoDb_MongoRepository_2_GetUpdateBuilder.md&amp;value=---%0Auid%3A%20SparkPlug.Persistence.MongoDb.MongoRepository%602.GetUpdateBuilder%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Edit this page"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/natarajanganapathi/sparkplug/blob/75/merge/src/SparkPlug.Persistence.MongoDb/MongoRepository.cs/#L185" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-
-  <a id="SparkPlug_Persistence_MongoDb_MongoRepository_2_GetUpdateBuilder_" data-uid="SparkPlug.Persistence.MongoDb.MongoRepository`2.GetUpdateBuilder*"></a>
-
-  <h4 id="SparkPlug_Persistence_MongoDb_MongoRepository_2_GetUpdateBuilder" data-uid="SparkPlug.Persistence.MongoDb.MongoRepository`2.GetUpdateBuilder"><a href="#collapsible-SparkPlug_Persistence_MongoDb_MongoRepository_2_GetUpdateBuilder" class="expander" data-toggle="collapse">GetUpdateBuilder()</a></h4>
-
-  <div id="collapsible-SparkPlug_Persistence_MongoDb_MongoRepository_2_GetUpdateBuilder" class="collapse in">
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-
-  <div class="codewrapper">
-    <pre><code class="lang- hljs">public UpdateDefinitionBuilder&lt;TEntity&gt; GetUpdateBuilder()</code></pre>
-  </div>
-
-
-  <h5 class="returns">Returns</h5>
-  <table>
-    <tr>
-      <td>
-      <span class="xref">UpdateDefinitionBuilder</span>&lt;TEntity&gt;
-        <p></p>
-      </td>
-    </tr>
-  </table>
-
-
-
-
-
-
-
-
-
-
-  </div>
-
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/natarajanganapathi/sparkplug/new/75/merge/apiSpec/new?filename=SparkPlug_Persistence_MongoDb_MongoRepository_2_GetUpdateDef__1_System_Boolean_.md&amp;value=---%0Auid%3A%20SparkPlug.Persistence.MongoDb.MongoRepository%602.GetUpdateDef(%601%2CSystem.Boolean)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Edit this page"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/natarajanganapathi/sparkplug/blob/75/merge/src/SparkPlug.Persistence.MongoDb/MongoRepository.cs/#L145" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-
-  <a id="SparkPlug_Persistence_MongoDb_MongoRepository_2_GetUpdateDef_" data-uid="SparkPlug.Persistence.MongoDb.MongoRepository`2.GetUpdateDef*"></a>
-
-  <h4 id="SparkPlug_Persistence_MongoDb_MongoRepository_2_GetUpdateDef__1_System_Boolean_" data-uid="SparkPlug.Persistence.MongoDb.MongoRepository`2.GetUpdateDef(`1,System.Boolean)"><a href="#collapsible-SparkPlug_Persistence_MongoDb_MongoRepository_2_GetUpdateDef__1_System_Boolean_" class="expander" data-toggle="collapse">GetUpdateDef(TEntity, bool)</a></h4>
-
-  <div id="collapsible-SparkPlug_Persistence_MongoDb_MongoRepository_2_GetUpdateDef__1_System_Boolean_" class="collapse in">
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-
-  <div class="codewrapper">
-    <pre><code class="lang- hljs">public UpdateDefinition&lt;TEntity&gt; GetUpdateDef(TEntity data, bool patch = false)</code></pre>
-  </div>
-
-  <h5 class="parameters">Parameters</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="pull-right"><span class="xref">TEntity</span></span>
-        <span class="parametername">data</span>
-        <p></p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></span>
-        <span class="parametername">patch</span>
-        <p></p>
-      </td>
-    </tr>
-  </table>
-
-  <h5 class="returns">Returns</h5>
-  <table>
-    <tr>
-      <td>
-      <span class="xref">UpdateDefinition</span>&lt;TEntity&gt;
-        <p></p>
-      </td>
-    </tr>
-  </table>
-
-
-
-
-
-
-
-
-
-
-  </div>
-
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/natarajanganapathi/sparkplug/new/75/merge/apiSpec/new?filename=SparkPlug_Persistence_MongoDb_MongoRepository_2_PatchAsync__0_SparkPlug_Contracts_ICommandRequest_Microsoft_AspNetCore_JsonPatch_JsonPatchDocument__1___System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20SparkPlug.Persistence.MongoDb.MongoRepository%602.PatchAsync(%600%2CSparkPlug.Contracts.ICommandRequest%7BMicrosoft.AspNetCore.JsonPatch.JsonPatchDocument%7B%601%7D%7D%2CSystem.Threading.CancellationToken)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Edit this page"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/natarajanganapathi/sparkplug/blob/75/merge/src/SparkPlug.Persistence.MongoDb/MongoRepository.cs/#L121" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-
-  <a id="SparkPlug_Persistence_MongoDb_MongoRepository_2_PatchAsync_" data-uid="SparkPlug.Persistence.MongoDb.MongoRepository`2.PatchAsync*"></a>
-
-  <h4 id="SparkPlug_Persistence_MongoDb_MongoRepository_2_PatchAsync__0_SparkPlug_Contracts_ICommandRequest_Microsoft_AspNetCore_JsonPatch_JsonPatchDocument__1___System_Threading_CancellationToken_" data-uid="SparkPlug.Persistence.MongoDb.MongoRepository`2.PatchAsync(`0,SparkPlug.Contracts.ICommandRequest{Microsoft.AspNetCore.JsonPatch.JsonPatchDocument{`1}},System.Threading.CancellationToken)"><a href="#collapsible-SparkPlug_Persistence_MongoDb_MongoRepository_2_PatchAsync__0_SparkPlug_Contracts_ICommandRequest_Microsoft_AspNetCore_JsonPatch_JsonPatchDocument__1___System_Threading_CancellationToken_" class="expander" data-toggle="collapse">PatchAsync(TId, ICommandRequest&lt;JsonPatchDocument&lt;TEntity&gt;&gt;, CancellationToken)</a></h4>
-
-  <div id="collapsible-SparkPlug_Persistence_MongoDb_MongoRepository_2_PatchAsync__0_SparkPlug_Contracts_ICommandRequest_Microsoft_AspNetCore_JsonPatch_JsonPatchDocument__1___System_Threading_CancellationToken_" class="collapse in">
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-
-  <div class="codewrapper">
-    <pre><code class="lang- hljs">public Task&lt;TEntity&gt; PatchAsync(TId id, ICommandRequest&lt;JsonPatchDocument&lt;TEntity&gt;&gt; request, CancellationToken cancellationToken)</code></pre>
-  </div>
-
-  <h5 class="parameters">Parameters</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="pull-right"><span class="xref">TId</span></span>
-        <span class="parametername">id</span>
-        <p></p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="SparkPlug.Contracts.ICommandRequest-1.html">ICommandRequest</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.jsonpatch.jsonpatchdocument-1">JsonPatchDocument</a>&lt;TEntity&gt;&gt;</span>
-        <span class="parametername">request</span>
-        <p></p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></span>
-        <span class="parametername">cancellationToken</span>
-        <p></p>
-      </td>
-    </tr>
-  </table>
-
-  <h5 class="returns">Returns</h5>
-  <table>
-    <tr>
-      <td>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;TEntity&gt;
-        <p></p>
-      </td>
-    </tr>
-  </table>
-
-
-
-
-
-
-  <h5 class="implements">Implements</h5>
-      <div><a class="xref" href="SparkPlug.Persistence.Abstractions.IRepository-2.html#SparkPlug_Persistence_Abstractions_IRepository_2_PatchAsync__0_SparkPlug_Contracts_ICommandRequest_Microsoft_AspNetCore_JsonPatch_JsonPatchDocument__1___System_Threading_CancellationToken_">IRepository&lt;TId, TEntity&gt;.PatchAsync(TId, ICommandRequest&lt;JsonPatchDocument&lt;TEntity&gt;&gt;, CancellationToken)</a></div>
-
-
-
-
-  </div>
-
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/natarajanganapathi/sparkplug/new/75/merge/apiSpec/new?filename=SparkPlug_Persistence_MongoDb_MongoRepository_2_QueryAsync_SparkPlug_Contracts_IQueryRequest_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20SparkPlug.Persistence.MongoDb.MongoRepository%602.QueryAsync(SparkPlug.Contracts.IQueryRequest%2CSystem.Threading.CancellationToken)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Edit this page"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/natarajanganapathi/sparkplug/blob/75/merge/src/SparkPlug.Persistence.MongoDb/MongoRepository.cs/#L41" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-
-  <a id="SparkPlug_Persistence_MongoDb_MongoRepository_2_QueryAsync_" data-uid="SparkPlug.Persistence.MongoDb.MongoRepository`2.QueryAsync*"></a>
-
-  <h4 id="SparkPlug_Persistence_MongoDb_MongoRepository_2_QueryAsync_SparkPlug_Contracts_IQueryRequest_System_Threading_CancellationToken_" data-uid="SparkPlug.Persistence.MongoDb.MongoRepository`2.QueryAsync(SparkPlug.Contracts.IQueryRequest,System.Threading.CancellationToken)"><a href="#collapsible-SparkPlug_Persistence_MongoDb_MongoRepository_2_QueryAsync_SparkPlug_Contracts_IQueryRequest_System_Threading_CancellationToken_" class="expander" data-toggle="collapse">QueryAsync(IQueryRequest, CancellationToken)</a></h4>
-
-  <div id="collapsible-SparkPlug_Persistence_MongoDb_MongoRepository_2_QueryAsync_SparkPlug_Contracts_IQueryRequest_System_Threading_CancellationToken_" class="collapse in">
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-
-  <div class="codewrapper">
-    <pre><code class="lang- hljs">public Task&lt;IList&lt;JObject&gt;&gt; QueryAsync(IQueryRequest request, CancellationToken cancellationToken)</code></pre>
-  </div>
-
-  <h5 class="parameters">Parameters</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="SparkPlug.Contracts.IQueryRequest.html">IQueryRequest</a></span>
-        <span class="parametername">request</span>
-        <p></p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></span>
-        <span class="parametername">cancellationToken</span>
-        <p></p>
-      </td>
-    </tr>
-  </table>
-
-  <h5 class="returns">Returns</h5>
-  <table>
-    <tr>
-      <td>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1">IList</a>&lt;<span class="xref">JObject</span>&gt;&gt;
-        <p></p>
-      </td>
-    </tr>
-  </table>
-
-
-
-
-
-
-  <h5 class="implements">Implements</h5>
-      <div><a class="xref" href="SparkPlug.Persistence.Abstractions.IRepository-2.html#SparkPlug_Persistence_Abstractions_IRepository_2_QueryAsync_SparkPlug_Contracts_IQueryRequest_System_Threading_CancellationToken_">IRepository&lt;TId, TEntity&gt;.QueryAsync(IQueryRequest, CancellationToken)</a></div>
-
-
-
-
-  </div>
-
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/natarajanganapathi/sparkplug/new/75/merge/apiSpec/new?filename=SparkPlug_Persistence_MongoDb_MongoRepository_2_ReplaceAsync__0_SparkPlug_Contracts_ICommandRequest__1__System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20SparkPlug.Persistence.MongoDb.MongoRepository%602.ReplaceAsync(%600%2CSparkPlug.Contracts.ICommandRequest%7B%601%7D%2CSystem.Threading.CancellationToken)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Edit this page"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/natarajanganapathi/sparkplug/blob/75/merge/src/SparkPlug.Persistence.MongoDb/MongoRepository.cs/#L131" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-
-  <a id="SparkPlug_Persistence_MongoDb_MongoRepository_2_ReplaceAsync_" data-uid="SparkPlug.Persistence.MongoDb.MongoRepository`2.ReplaceAsync*"></a>
-
-  <h4 id="SparkPlug_Persistence_MongoDb_MongoRepository_2_ReplaceAsync__0_SparkPlug_Contracts_ICommandRequest__1__System_Threading_CancellationToken_" data-uid="SparkPlug.Persistence.MongoDb.MongoRepository`2.ReplaceAsync(`0,SparkPlug.Contracts.ICommandRequest{`1},System.Threading.CancellationToken)"><a href="#collapsible-SparkPlug_Persistence_MongoDb_MongoRepository_2_ReplaceAsync__0_SparkPlug_Contracts_ICommandRequest__1__System_Threading_CancellationToken_" class="expander" data-toggle="collapse">ReplaceAsync(TId, ICommandRequest&lt;TEntity&gt;, CancellationToken)</a></h4>
-
-  <div id="collapsible-SparkPlug_Persistence_MongoDb_MongoRepository_2_ReplaceAsync__0_SparkPlug_Contracts_ICommandRequest__1__System_Threading_CancellationToken_" class="collapse in">
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-
-  <div class="codewrapper">
-    <pre><code class="lang- hljs">public Task&lt;TEntity&gt; ReplaceAsync(TId id, ICommandRequest&lt;TEntity&gt; request, CancellationToken cancellationToken)</code></pre>
-  </div>
-
-  <h5 class="parameters">Parameters</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="pull-right"><span class="xref">TId</span></span>
-        <span class="parametername">id</span>
-        <p></p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="SparkPlug.Contracts.ICommandRequest-1.html">ICommandRequest</a>&lt;TEntity&gt;</span>
-        <span class="parametername">request</span>
-        <p></p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></span>
-        <span class="parametername">cancellationToken</span>
-        <p></p>
-      </td>
-    </tr>
-  </table>
-
-  <h5 class="returns">Returns</h5>
-  <table>
-    <tr>
-      <td>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;TEntity&gt;
-        <p></p>
-      </td>
-    </tr>
-  </table>
-
-
-
-
-
-
-  <h5 class="implements">Implements</h5>
-      <div><a class="xref" href="SparkPlug.Persistence.Abstractions.IRepository-2.html#SparkPlug_Persistence_Abstractions_IRepository_2_ReplaceAsync__0_SparkPlug_Contracts_ICommandRequest__1__System_Threading_CancellationToken_">IRepository&lt;TId, TEntity&gt;.ReplaceAsync(TId, ICommandRequest&lt;TEntity&gt;, CancellationToken)</a></div>
-
-
-
-
-  </div>
-
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/natarajanganapathi/sparkplug/new/75/merge/apiSpec/new?filename=SparkPlug_Persistence_MongoDb_MongoRepository_2_UpdateAsync_MongoDB_Driver_FilterDefinition__1__MongoDB_Driver_UpdateDefinition__1__.md&amp;value=---%0Auid%3A%20SparkPlug.Persistence.MongoDb.MongoRepository%602.UpdateAsync(MongoDB.Driver.FilterDefinition%7B%601%7D%2CMongoDB.Driver.UpdateDefinition%7B%601%7D)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Edit this page"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/natarajanganapathi/sparkplug/blob/75/merge/src/SparkPlug.Persistence.MongoDb/MongoRepository.cs/#L117" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-
-  <a id="SparkPlug_Persistence_MongoDb_MongoRepository_2_UpdateAsync_" data-uid="SparkPlug.Persistence.MongoDb.MongoRepository`2.UpdateAsync*"></a>
-
-  <h4 id="SparkPlug_Persistence_MongoDb_MongoRepository_2_UpdateAsync_MongoDB_Driver_FilterDefinition__1__MongoDB_Driver_UpdateDefinition__1__" data-uid="SparkPlug.Persistence.MongoDb.MongoRepository`2.UpdateAsync(MongoDB.Driver.FilterDefinition{`1},MongoDB.Driver.UpdateDefinition{`1})"><a href="#collapsible-SparkPlug_Persistence_MongoDb_MongoRepository_2_UpdateAsync_MongoDB_Driver_FilterDefinition__1__MongoDB_Driver_UpdateDefinition__1__" class="expander" data-toggle="collapse">UpdateAsync(FilterDefinition&lt;TEntity&gt;, UpdateDefinition&lt;TEntity&gt;)</a></h4>
-
-  <div id="collapsible-SparkPlug_Persistence_MongoDb_MongoRepository_2_UpdateAsync_MongoDB_Driver_FilterDefinition__1__MongoDB_Driver_UpdateDefinition__1__" class="collapse in">
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-
-  <div class="codewrapper">
-    <pre><code class="lang- hljs">public Task&lt;UpdateResult&gt; UpdateAsync(FilterDefinition&lt;TEntity&gt; filter, UpdateDefinition&lt;TEntity&gt; update)</code></pre>
-  </div>
-
-  <h5 class="parameters">Parameters</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="pull-right"><span class="xref">FilterDefinition</span>&lt;TEntity&gt;</span>
-        <span class="parametername">filter</span>
-        <p></p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <span class="pull-right"><span class="xref">UpdateDefinition</span>&lt;TEntity&gt;</span>
-        <span class="parametername">update</span>
-        <p></p>
-      </td>
-    </tr>
-  </table>
-
-  <h5 class="returns">Returns</h5>
-  <table>
-    <tr>
-      <td>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<span class="xref">UpdateResult</span>&gt;
-        <p></p>
-      </td>
-    </tr>
-  </table>
-
-
-
-
-
-
-
-
-
-
-  </div>
-
-  <span class="small pull-right mobile-hide">
-    <span class="divider"> </span>
-    <a href="https://github.com/natarajanganapathi/sparkplug/new/75/merge/apiSpec/new?filename=SparkPlug_Persistence_MongoDb_MongoRepository_2_UpdateAsync__0_SparkPlug_Contracts_ICommandRequest__1__System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20SparkPlug.Persistence.MongoDb.MongoRepository%602.UpdateAsync(%600%2CSparkPlug.Contracts.ICommandRequest%7B%601%7D%2CSystem.Threading.CancellationToken)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Edit this page"><i class="fa fa-pencil"></i></a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/natarajanganapathi/sparkplug/blob/75/merge/src/SparkPlug.Persistence.MongoDb/MongoRepository.cs/#L107" title="View Source"><i class="fa fa-code"></i></a>
-  </span>
-
-  <a id="SparkPlug_Persistence_MongoDb_MongoRepository_2_UpdateAsync_" data-uid="SparkPlug.Persistence.MongoDb.MongoRepository`2.UpdateAsync*"></a>
-
-  <h4 id="SparkPlug_Persistence_MongoDb_MongoRepository_2_UpdateAsync__0_SparkPlug_Contracts_ICommandRequest__1__System_Threading_CancellationToken_" data-uid="SparkPlug.Persistence.MongoDb.MongoRepository`2.UpdateAsync(`0,SparkPlug.Contracts.ICommandRequest{`1},System.Threading.CancellationToken)"><a href="#collapsible-SparkPlug_Persistence_MongoDb_MongoRepository_2_UpdateAsync__0_SparkPlug_Contracts_ICommandRequest__1__System_Threading_CancellationToken_" class="expander" data-toggle="collapse">UpdateAsync(TId, ICommandRequest&lt;TEntity&gt;, CancellationToken)</a></h4>
-
-  <div id="collapsible-SparkPlug_Persistence_MongoDb_MongoRepository_2_UpdateAsync__0_SparkPlug_Contracts_ICommandRequest__1__System_Threading_CancellationToken_" class="collapse in">
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-
-  <div class="codewrapper">
-    <pre><code class="lang- hljs">public Task&lt;TEntity&gt; UpdateAsync(TId id, ICommandRequest&lt;TEntity&gt; request, CancellationToken cancellationToken)</code></pre>
-  </div>
-
-  <h5 class="parameters">Parameters</h5>
-  <table>
-    <tr>
-      <td>
-        <span class="pull-right"><span class="xref">TId</span></span>
-        <span class="parametername">id</span>
-        <p></p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="SparkPlug.Contracts.ICommandRequest-1.html">ICommandRequest</a>&lt;TEntity&gt;</span>
-        <span class="parametername">request</span>
-        <p></p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <span class="pull-right"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></span>
-        <span class="parametername">cancellationToken</span>
-        <p></p>
-      </td>
-    </tr>
-  </table>
-
-  <h5 class="returns">Returns</h5>
-  <table>
-    <tr>
-      <td>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;TEntity&gt;
-        <p></p>
-      </td>
-    </tr>
-  </table>
-
-
-
-
-
-
-  <h5 class="implements">Implements</h5>
-      <div><a class="xref" href="SparkPlug.Persistence.Abstractions.IRepository-2.html#SparkPlug_Persistence_Abstractions_IRepository_2_UpdateAsync__0_SparkPlug_Contracts_ICommandRequest__1__System_Threading_CancellationToken_">IRepository&lt;TId, TEntity&gt;.UpdateAsync(TId, ICommandRequest&lt;TEntity&gt;, CancellationToken)</a></div>
-
-
-
-
-  </div>
-
-  <h3 id="extensionmethods">Extension Methods</h3>
+  </dd></dl>
+
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
   <div>
       <a class="xref" href="SparkPlug.Persistence.Abstractions.EntityExtentions.html#SparkPlug_Persistence_Abstractions_EntityExtentions_Auditable__2___1___0_System_DateTime_System_Boolean_">EntityExtentions.Auditable&lt;TId, TEntity&gt;(TEntity, TId, DateTime, bool)</a>
   </div>
+  </dd></dl>
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="SparkPlug_Persistence_MongoDb_MongoRepository_2__ctor_" data-uid="SparkPlug.Persistence.MongoDb.MongoRepository`2.#ctor*"></a>
+
+  <h3 id="SparkPlug_Persistence_MongoDb_MongoRepository_2__ctor_System_IServiceProvider_" data-uid="SparkPlug.Persistence.MongoDb.MongoRepository`2.#ctor(System.IServiceProvider)">
+  MongoRepository(IServiceProvider)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/natarajanganapathi/sparkplug/blob/76/merge/src/SparkPlug.Persistence.MongoDb/Repository/MongoRepository.cs/#L22"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MongoRepository(IServiceProvider serviceProvider)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>serviceProvider</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iserviceprovider">IServiceProvider</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="SparkPlug_Persistence_MongoDb_MongoRepository_2_Collection_" data-uid="SparkPlug.Persistence.MongoDb.MongoRepository`2.Collection*"></a>
+
+  <h3 id="SparkPlug_Persistence_MongoDb_MongoRepository_2_Collection" data-uid="SparkPlug.Persistence.MongoDb.MongoRepository`2.Collection">
+  Collection
+  <a class="header-action link-secondary" title="View source" href="https://github.com/natarajanganapathi/sparkplug/blob/76/merge/src/SparkPlug.Persistence.MongoDb/Repository/MongoRepository.cs/#L9"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual IMongoCollection&lt;TEntity&gt; Collection { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">IMongoCollection</span>&lt;TEntity&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="SparkPlug_Persistence_MongoDb_MongoRepository_2_CountAsync_" data-uid="SparkPlug.Persistence.MongoDb.MongoRepository`2.CountAsync*"></a>
+
+  <h3 id="SparkPlug_Persistence_MongoDb_MongoRepository_2_CountAsync_SparkPlug_Contracts_IQueryRequest_System_Threading_CancellationToken_" data-uid="SparkPlug.Persistence.MongoDb.MongoRepository`2.CountAsync(SparkPlug.Contracts.IQueryRequest,System.Threading.CancellationToken)">
+  CountAsync(IQueryRequest, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/natarajanganapathi/sparkplug/blob/76/merge/src/SparkPlug.Persistence.MongoDb/Repository/MongoRepository.cs/#L62"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;long&gt; CountAsync(IQueryRequest request, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>request</code> <a class="xref" href="SparkPlug.Contracts.IQueryRequest.html">IQueryRequest</a></dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SparkPlug_Persistence_MongoDb_MongoRepository_2_CreateAsync_" data-uid="SparkPlug.Persistence.MongoDb.MongoRepository`2.CreateAsync*"></a>
+
+  <h3 id="SparkPlug_Persistence_MongoDb_MongoRepository_2_CreateAsync_SparkPlug_Contracts_ICommandRequest__1__System_Threading_CancellationToken_" data-uid="SparkPlug.Persistence.MongoDb.MongoRepository`2.CreateAsync(SparkPlug.Contracts.ICommandRequest{`1},System.Threading.CancellationToken)">
+  CreateAsync(ICommandRequest&lt;TEntity&gt;, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/natarajanganapathi/sparkplug/blob/76/merge/src/SparkPlug.Persistence.MongoDb/Repository/MongoRepository.cs/#L95"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;TEntity&gt; CreateAsync(ICommandRequest&lt;TEntity&gt; request, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>request</code> <a class="xref" href="SparkPlug.Contracts.ICommandRequest-1.html">ICommandRequest</a>&lt;TEntity&gt;</dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;TEntity&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SparkPlug_Persistence_MongoDb_MongoRepository_2_CreateManyAsync_" data-uid="SparkPlug.Persistence.MongoDb.MongoRepository`2.CreateManyAsync*"></a>
+
+  <h3 id="SparkPlug_Persistence_MongoDb_MongoRepository_2_CreateManyAsync_SparkPlug_Contracts_ICommandRequest__1____System_Threading_CancellationToken_" data-uid="SparkPlug.Persistence.MongoDb.MongoRepository`2.CreateManyAsync(SparkPlug.Contracts.ICommandRequest{`1[]},System.Threading.CancellationToken)">
+  CreateManyAsync(ICommandRequest&lt;TEntity[]&gt;, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/natarajanganapathi/sparkplug/blob/76/merge/src/SparkPlug.Persistence.MongoDb/Repository/MongoRepository.cs/#L101"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;IEnumerable&lt;TEntity&gt;&gt; CreateManyAsync(ICommandRequest&lt;TEntity[]&gt; request, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>request</code> <a class="xref" href="SparkPlug.Contracts.ICommandRequest-1.html">ICommandRequest</a>&lt;TEntity[]&gt;</dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;TEntity&gt;&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SparkPlug_Persistence_MongoDb_MongoRepository_2_DeleteAsync_" data-uid="SparkPlug.Persistence.MongoDb.MongoRepository`2.DeleteAsync*"></a>
+
+  <h3 id="SparkPlug_Persistence_MongoDb_MongoRepository_2_DeleteAsync__0_System_Threading_CancellationToken_" data-uid="SparkPlug.Persistence.MongoDb.MongoRepository`2.DeleteAsync(`0,System.Threading.CancellationToken)">
+  DeleteAsync(TId, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/natarajanganapathi/sparkplug/blob/76/merge/src/SparkPlug.Persistence.MongoDb/Repository/MongoRepository.cs/#L138"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;TEntity&gt; DeleteAsync(TId id, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>id</code> <span class="xref">TId</span></dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;TEntity&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SparkPlug_Persistence_MongoDb_MongoRepository_2_FindAsync_" data-uid="SparkPlug.Persistence.MongoDb.MongoRepository`2.FindAsync*"></a>
+
+  <h3 id="SparkPlug_Persistence_MongoDb_MongoRepository_2_FindAsync_SparkPlug_Contracts_IQueryRequest_System_Threading_CancellationToken_" data-uid="SparkPlug.Persistence.MongoDb.MongoRepository`2.FindAsync(SparkPlug.Contracts.IQueryRequest,System.Threading.CancellationToken)">
+  FindAsync(IQueryRequest, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/natarajanganapathi/sparkplug/blob/76/merge/src/SparkPlug.Persistence.MongoDb/Repository/MongoRepository.cs/#L28"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;IList&lt;TEntity&gt;&gt; FindAsync(IQueryRequest request, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>request</code> <a class="xref" href="SparkPlug.Contracts.IQueryRequest.html">IQueryRequest</a></dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1">IList</a>&lt;TEntity&gt;&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SparkPlug_Persistence_MongoDb_MongoRepository_2_GetAsync_" data-uid="SparkPlug.Persistence.MongoDb.MongoRepository`2.GetAsync*"></a>
+
+  <h3 id="SparkPlug_Persistence_MongoDb_MongoRepository_2_GetAsync__0_System_Threading_CancellationToken_" data-uid="SparkPlug.Persistence.MongoDb.MongoRepository`2.GetAsync(`0,System.Threading.CancellationToken)">
+  GetAsync(TId, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/natarajanganapathi/sparkplug/blob/76/merge/src/SparkPlug.Persistence.MongoDb/Repository/MongoRepository.cs/#L69"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;TEntity&gt; GetAsync(TId id, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>id</code> <span class="xref">TId</span></dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;TEntity&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SparkPlug_Persistence_MongoDb_MongoRepository_2_GetByFilter_" data-uid="SparkPlug.Persistence.MongoDb.MongoRepository`2.GetByFilter*"></a>
+
+  <h3 id="SparkPlug_Persistence_MongoDb_MongoRepository_2_GetByFilter_MongoDB_Driver_FilterDefinition__1__" data-uid="SparkPlug.Persistence.MongoDb.MongoRepository`2.GetByFilter(MongoDB.Driver.FilterDefinition{`1})">
+  GetByFilter(FilterDefinition&lt;TEntity&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/natarajanganapathi/sparkplug/blob/76/merge/src/SparkPlug.Persistence.MongoDb/Repository/MongoRepository.cs/#L165"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IFindFluent&lt;TEntity, TEntity&gt; GetByFilter(FilterDefinition&lt;TEntity&gt; filter)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>filter</code> <span class="xref">FilterDefinition</span>&lt;TEntity&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">IFindFluent</span>&lt;TEntity, TEntity&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SparkPlug_Persistence_MongoDb_MongoRepository_2_GetChangeStreamCursor_" data-uid="SparkPlug.Persistence.MongoDb.MongoRepository`2.GetChangeStreamCursor*"></a>
+
+  <h3 id="SparkPlug_Persistence_MongoDb_MongoRepository_2_GetChangeStreamCursor_MongoDB_Driver_ChangeStreamFullDocumentOption_" data-uid="SparkPlug.Persistence.MongoDb.MongoRepository`2.GetChangeStreamCursor(MongoDB.Driver.ChangeStreamFullDocumentOption)">
+  GetChangeStreamCursor(ChangeStreamFullDocumentOption)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/natarajanganapathi/sparkplug/blob/76/merge/src/SparkPlug.Persistence.MongoDb/Repository/MongoRepository.cs/#L203"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IChangeStreamCursor&lt;BsonDocument&gt; GetChangeStreamCursor(ChangeStreamFullDocumentOption fullDocOption = ChangeStreamFullDocumentOption.UpdateLookup)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>fullDocOption</code> <span class="xref">ChangeStreamFullDocumentOption</span></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">IChangeStreamCursor</span>&lt;<span class="xref">BsonDocument</span>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SparkPlug_Persistence_MongoDb_MongoRepository_2_GetChangeStreamOptions_" data-uid="SparkPlug.Persistence.MongoDb.MongoRepository`2.GetChangeStreamOptions*"></a>
+
+  <h3 id="SparkPlug_Persistence_MongoDb_MongoRepository_2_GetChangeStreamOptions_MongoDB_Driver_ChangeStreamFullDocumentOption_" data-uid="SparkPlug.Persistence.MongoDb.MongoRepository`2.GetChangeStreamOptions(MongoDB.Driver.ChangeStreamFullDocumentOption)">
+  GetChangeStreamOptions(ChangeStreamFullDocumentOption)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/natarajanganapathi/sparkplug/blob/76/merge/src/SparkPlug.Persistence.MongoDb/Repository/MongoRepository.cs/#L199"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ChangeStreamOptions GetChangeStreamOptions(ChangeStreamFullDocumentOption option)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>option</code> <span class="xref">ChangeStreamFullDocumentOption</span></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">ChangeStreamOptions</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SparkPlug_Persistence_MongoDb_MongoRepository_2_GetFilterBuilder_" data-uid="SparkPlug.Persistence.MongoDb.MongoRepository`2.GetFilterBuilder*"></a>
+
+  <h3 id="SparkPlug_Persistence_MongoDb_MongoRepository_2_GetFilterBuilder" data-uid="SparkPlug.Persistence.MongoDb.MongoRepository`2.GetFilterBuilder">
+  GetFilterBuilder()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/natarajanganapathi/sparkplug/blob/76/merge/src/SparkPlug.Persistence.MongoDb/Repository/MongoRepository.cs/#L173"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public FilterDefinitionBuilder&lt;TEntity&gt; GetFilterBuilder()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">FilterDefinitionBuilder</span>&lt;TEntity&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SparkPlug_Persistence_MongoDb_MongoRepository_2_GetFindFluent_" data-uid="SparkPlug.Persistence.MongoDb.MongoRepository`2.GetFindFluent*"></a>
+
+  <h3 id="SparkPlug_Persistence_MongoDb_MongoRepository_2_GetFindFluent_MongoDB_Driver_ProjectionDefinition__1__MongoDB_Driver_FilterDefinition__1__MongoDB_Driver_SortDefinition__1__SparkPlug_Contracts_IPageContext_" data-uid="SparkPlug.Persistence.MongoDb.MongoRepository`2.GetFindFluent(MongoDB.Driver.ProjectionDefinition{`1},MongoDB.Driver.FilterDefinition{`1},MongoDB.Driver.SortDefinition{`1},SparkPlug.Contracts.IPageContext)">
+  GetFindFluent(ProjectionDefinition&lt;TEntity&gt;?, FilterDefinition&lt;TEntity&gt;?, SortDefinition&lt;TEntity&gt;?, IPageContext?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/natarajanganapathi/sparkplug/blob/76/merge/src/SparkPlug.Persistence.MongoDb/Repository/MongoRepository.cs/#L74"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IFindFluent&lt;TEntity, TEntity&gt; GetFindFluent(ProjectionDefinition&lt;TEntity&gt;? projection, FilterDefinition&lt;TEntity&gt;? filter = null, SortDefinition&lt;TEntity&gt;? sorts = null, IPageContext? pc = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>projection</code> <span class="xref">ProjectionDefinition</span>&lt;TEntity&gt;</dt>
+    <dd></dd>
+    <dt><code>filter</code> <span class="xref">FilterDefinition</span>&lt;TEntity&gt;</dt>
+    <dd></dd>
+    <dt><code>sorts</code> <span class="xref">SortDefinition</span>&lt;TEntity&gt;</dt>
+    <dd></dd>
+    <dt><code>pc</code> <a class="xref" href="SparkPlug.Contracts.IPageContext.html">IPageContext</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">IFindFluent</span>&lt;TEntity, TEntity&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SparkPlug_Persistence_MongoDb_MongoRepository_2_GetIdFilterDefinition_" data-uid="SparkPlug.Persistence.MongoDb.MongoRepository`2.GetIdFilterDefinition*"></a>
+
+  <h3 id="SparkPlug_Persistence_MongoDb_MongoRepository_2_GetIdFilterDefinition__0_" data-uid="SparkPlug.Persistence.MongoDb.MongoRepository`2.GetIdFilterDefinition(`0)">
+  GetIdFilterDefinition(TId)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/natarajanganapathi/sparkplug/blob/76/merge/src/SparkPlug.Persistence.MongoDb/Repository/MongoRepository.cs/#L177"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual FilterDefinition&lt;TEntity&gt; GetIdFilterDefinition(TId id)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>id</code> <span class="xref">TId</span></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">FilterDefinition</span>&lt;TEntity&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SparkPlug_Persistence_MongoDb_MongoRepository_2_GetManyAsync_" data-uid="SparkPlug.Persistence.MongoDb.MongoRepository`2.GetManyAsync*"></a>
+
+  <h3 id="SparkPlug_Persistence_MongoDb_MongoRepository_2_GetManyAsync__0___System_Threading_CancellationToken_" data-uid="SparkPlug.Persistence.MongoDb.MongoRepository`2.GetManyAsync(`0[],System.Threading.CancellationToken)">
+  GetManyAsync(TId[], CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/natarajanganapathi/sparkplug/blob/76/merge/src/SparkPlug.Persistence.MongoDb/Repository/MongoRepository.cs/#L89"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;IEnumerable&lt;TEntity&gt;&gt; GetManyAsync(TId[] ids, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>ids</code> TId[]</dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;TEntity&gt;&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SparkPlug_Persistence_MongoDb_MongoRepository_2_GetPipelineDefinition_" data-uid="SparkPlug.Persistence.MongoDb.MongoRepository`2.GetPipelineDefinition*"></a>
+
+  <h3 id="SparkPlug_Persistence_MongoDb_MongoRepository_2_GetPipelineDefinition" data-uid="SparkPlug.Persistence.MongoDb.MongoRepository`2.GetPipelineDefinition">
+  GetPipelineDefinition()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/natarajanganapathi/sparkplug/blob/76/merge/src/SparkPlug.Persistence.MongoDb/Repository/MongoRepository.cs/#L193"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PipelineDefinition&lt;ChangeStreamDocument&lt;BsonDocument&gt;, BsonDocument&gt; GetPipelineDefinition()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">PipelineDefinition</span>&lt;<span class="xref">ChangeStreamDocument</span>&lt;<span class="xref">BsonDocument</span>&gt;, <span class="xref">BsonDocument</span>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SparkPlug_Persistence_MongoDb_MongoRepository_2_GetProjectionBuilder_" data-uid="SparkPlug.Persistence.MongoDb.MongoRepository`2.GetProjectionBuilder*"></a>
+
+  <h3 id="SparkPlug_Persistence_MongoDb_MongoRepository_2_GetProjectionBuilder" data-uid="SparkPlug.Persistence.MongoDb.MongoRepository`2.GetProjectionBuilder">
+  GetProjectionBuilder()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/natarajanganapathi/sparkplug/blob/76/merge/src/SparkPlug.Persistence.MongoDb/Repository/MongoRepository.cs/#L189"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ProjectionDefinitionBuilder&lt;TEntity&gt; GetProjectionBuilder()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">ProjectionDefinitionBuilder</span>&lt;TEntity&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SparkPlug_Persistence_MongoDb_MongoRepository_2_GetQuery_" data-uid="SparkPlug.Persistence.MongoDb.MongoRepository`2.GetQuery*"></a>
+
+  <h3 id="SparkPlug_Persistence_MongoDb_MongoRepository_2_GetQuery_SparkPlug_Contracts_IQueryRequest_" data-uid="SparkPlug.Persistence.MongoDb.MongoRepository`2.GetQuery(SparkPlug.Contracts.IQueryRequest)">
+  GetQuery(IQueryRequest)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/natarajanganapathi/sparkplug/blob/76/merge/src/SparkPlug.Persistence.MongoDb/Repository/MongoRepository.cs/#L55"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IFindFluent&lt;TEntity, TEntity&gt; GetQuery(IQueryRequest request)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>request</code> <a class="xref" href="SparkPlug.Contracts.IQueryRequest.html">IQueryRequest</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">IFindFluent</span>&lt;TEntity, TEntity&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SparkPlug_Persistence_MongoDb_MongoRepository_2_GetSortBuilder_" data-uid="SparkPlug.Persistence.MongoDb.MongoRepository`2.GetSortBuilder*"></a>
+
+  <h3 id="SparkPlug_Persistence_MongoDb_MongoRepository_2_GetSortBuilder" data-uid="SparkPlug.Persistence.MongoDb.MongoRepository`2.GetSortBuilder">
+  GetSortBuilder()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/natarajanganapathi/sparkplug/blob/76/merge/src/SparkPlug.Persistence.MongoDb/Repository/MongoRepository.cs/#L169"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SortDefinitionBuilder&lt;TEntity&gt; GetSortBuilder()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">SortDefinitionBuilder</span>&lt;TEntity&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SparkPlug_Persistence_MongoDb_MongoRepository_2_GetUpdateBuilder_" data-uid="SparkPlug.Persistence.MongoDb.MongoRepository`2.GetUpdateBuilder*"></a>
+
+  <h3 id="SparkPlug_Persistence_MongoDb_MongoRepository_2_GetUpdateBuilder" data-uid="SparkPlug.Persistence.MongoDb.MongoRepository`2.GetUpdateBuilder">
+  GetUpdateBuilder()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/natarajanganapathi/sparkplug/blob/76/merge/src/SparkPlug.Persistence.MongoDb/Repository/MongoRepository.cs/#L185"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public UpdateDefinitionBuilder&lt;TEntity&gt; GetUpdateBuilder()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">UpdateDefinitionBuilder</span>&lt;TEntity&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SparkPlug_Persistence_MongoDb_MongoRepository_2_GetUpdateDef_" data-uid="SparkPlug.Persistence.MongoDb.MongoRepository`2.GetUpdateDef*"></a>
+
+  <h3 id="SparkPlug_Persistence_MongoDb_MongoRepository_2_GetUpdateDef__1_System_Boolean_" data-uid="SparkPlug.Persistence.MongoDb.MongoRepository`2.GetUpdateDef(`1,System.Boolean)">
+  GetUpdateDef(TEntity, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/natarajanganapathi/sparkplug/blob/76/merge/src/SparkPlug.Persistence.MongoDb/Repository/MongoRepository.cs/#L145"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public UpdateDefinition&lt;TEntity&gt; GetUpdateDef(TEntity data, bool patch = false)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>data</code> <span class="xref">TEntity</span></dt>
+    <dd></dd>
+    <dt><code>patch</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">UpdateDefinition</span>&lt;TEntity&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SparkPlug_Persistence_MongoDb_MongoRepository_2_PatchAsync_" data-uid="SparkPlug.Persistence.MongoDb.MongoRepository`2.PatchAsync*"></a>
+
+  <h3 id="SparkPlug_Persistence_MongoDb_MongoRepository_2_PatchAsync__0_SparkPlug_Contracts_ICommandRequest_Microsoft_AspNetCore_JsonPatch_JsonPatchDocument__1___System_Threading_CancellationToken_" data-uid="SparkPlug.Persistence.MongoDb.MongoRepository`2.PatchAsync(`0,SparkPlug.Contracts.ICommandRequest{Microsoft.AspNetCore.JsonPatch.JsonPatchDocument{`1}},System.Threading.CancellationToken)">
+  PatchAsync(TId, ICommandRequest&lt;JsonPatchDocument&lt;TEntity&gt;&gt;, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/natarajanganapathi/sparkplug/blob/76/merge/src/SparkPlug.Persistence.MongoDb/Repository/MongoRepository.cs/#L121"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;TEntity&gt; PatchAsync(TId id, ICommandRequest&lt;JsonPatchDocument&lt;TEntity&gt;&gt; request, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>id</code> <span class="xref">TId</span></dt>
+    <dd></dd>
+    <dt><code>request</code> <a class="xref" href="SparkPlug.Contracts.ICommandRequest-1.html">ICommandRequest</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.jsonpatch.jsonpatchdocument-1">JsonPatchDocument</a>&lt;TEntity&gt;&gt;</dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;TEntity&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SparkPlug_Persistence_MongoDb_MongoRepository_2_QueryAsync_" data-uid="SparkPlug.Persistence.MongoDb.MongoRepository`2.QueryAsync*"></a>
+
+  <h3 id="SparkPlug_Persistence_MongoDb_MongoRepository_2_QueryAsync_SparkPlug_Contracts_IQueryRequest_System_Threading_CancellationToken_" data-uid="SparkPlug.Persistence.MongoDb.MongoRepository`2.QueryAsync(SparkPlug.Contracts.IQueryRequest,System.Threading.CancellationToken)">
+  QueryAsync(IQueryRequest, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/natarajanganapathi/sparkplug/blob/76/merge/src/SparkPlug.Persistence.MongoDb/Repository/MongoRepository.cs/#L41"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;IList&lt;JObject&gt;&gt; QueryAsync(IQueryRequest request, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>request</code> <a class="xref" href="SparkPlug.Contracts.IQueryRequest.html">IQueryRequest</a></dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1">IList</a>&lt;<span class="xref">JObject</span>&gt;&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SparkPlug_Persistence_MongoDb_MongoRepository_2_ReplaceAsync_" data-uid="SparkPlug.Persistence.MongoDb.MongoRepository`2.ReplaceAsync*"></a>
+
+  <h3 id="SparkPlug_Persistence_MongoDb_MongoRepository_2_ReplaceAsync__0_SparkPlug_Contracts_ICommandRequest__1__System_Threading_CancellationToken_" data-uid="SparkPlug.Persistence.MongoDb.MongoRepository`2.ReplaceAsync(`0,SparkPlug.Contracts.ICommandRequest{`1},System.Threading.CancellationToken)">
+  ReplaceAsync(TId, ICommandRequest&lt;TEntity&gt;, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/natarajanganapathi/sparkplug/blob/76/merge/src/SparkPlug.Persistence.MongoDb/Repository/MongoRepository.cs/#L131"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;TEntity&gt; ReplaceAsync(TId id, ICommandRequest&lt;TEntity&gt; request, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>id</code> <span class="xref">TId</span></dt>
+    <dd></dd>
+    <dt><code>request</code> <a class="xref" href="SparkPlug.Contracts.ICommandRequest-1.html">ICommandRequest</a>&lt;TEntity&gt;</dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;TEntity&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SparkPlug_Persistence_MongoDb_MongoRepository_2_UpdateAsync_" data-uid="SparkPlug.Persistence.MongoDb.MongoRepository`2.UpdateAsync*"></a>
+
+  <h3 id="SparkPlug_Persistence_MongoDb_MongoRepository_2_UpdateAsync_MongoDB_Driver_FilterDefinition__1__MongoDB_Driver_UpdateDefinition__1__" data-uid="SparkPlug.Persistence.MongoDb.MongoRepository`2.UpdateAsync(MongoDB.Driver.FilterDefinition{`1},MongoDB.Driver.UpdateDefinition{`1})">
+  UpdateAsync(FilterDefinition&lt;TEntity&gt;, UpdateDefinition&lt;TEntity&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/natarajanganapathi/sparkplug/blob/76/merge/src/SparkPlug.Persistence.MongoDb/Repository/MongoRepository.cs/#L117"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;UpdateResult&gt; UpdateAsync(FilterDefinition&lt;TEntity&gt; filter, UpdateDefinition&lt;TEntity&gt; update)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>filter</code> <span class="xref">FilterDefinition</span>&lt;TEntity&gt;</dt>
+    <dd></dd>
+    <dt><code>update</code> <span class="xref">UpdateDefinition</span>&lt;TEntity&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<span class="xref">UpdateResult</span>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="SparkPlug_Persistence_MongoDb_MongoRepository_2_UpdateAsync_" data-uid="SparkPlug.Persistence.MongoDb.MongoRepository`2.UpdateAsync*"></a>
+
+  <h3 id="SparkPlug_Persistence_MongoDb_MongoRepository_2_UpdateAsync__0_SparkPlug_Contracts_ICommandRequest__1__System_Threading_CancellationToken_" data-uid="SparkPlug.Persistence.MongoDb.MongoRepository`2.UpdateAsync(`0,SparkPlug.Contracts.ICommandRequest{`1},System.Threading.CancellationToken)">
+  UpdateAsync(TId, ICommandRequest&lt;TEntity&gt;, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/natarajanganapathi/sparkplug/blob/76/merge/src/SparkPlug.Persistence.MongoDb/Repository/MongoRepository.cs/#L107"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;TEntity&gt; UpdateAsync(TId id, ICommandRequest&lt;TEntity&gt; request, CancellationToken cancellationToken = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>id</code> <span class="xref">TId</span></dt>
+    <dd></dd>
+    <dt><code>request</code> <a class="xref" href="SparkPlug.Contracts.ICommandRequest-1.html">ICommandRequest</a>&lt;TEntity&gt;</dt>
+    <dd></dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;TEntity&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
 
 
 </article>
-          </div>
-          <div class="contribution-panel mobile-hide">
-              <a href="https://github.com/natarajanganapathi/sparkplug/new/75/merge/apiSpec/new?filename=SparkPlug_Persistence_MongoDb_MongoRepository_2.md&amp;value=---%0Auid%3A%20SparkPlug.Persistence.MongoDb.MongoRepository%602%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" title="Edit this page" class="fab btn-warning pull-right"><i class="glyphicon glyphicon-pencil"></i></a>
-              <a href="https://github.com/natarajanganapathi/sparkplug/blob/75/merge/src/SparkPlug.Persistence.MongoDb/MongoRepository.cs/#L3" title="View Source" class="fab btn-info pull-right"><i class="fa fa-code"></i></a>
-          </div>
 
-          <div class="hidden-sm col-md-2" role="complementary">
-            <div class="sideaffix">
-              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-              </nav>
-            </div>
-          </div>
+        <div class="contribution d-print-none">
+          <a href="https://github.com/natarajanganapathi/sparkplug/blob/76/merge/src/SparkPlug.Persistence.MongoDb/Repository/MongoRepository.cs/#L3" class="edit-link">Edit this page</a>
         </div>
+
+        
       </div>
 
-      <footer>
-        <div class="grad-bottom"></div>
-        <div class="footer">
-          <div class="container">
-            <span class="pull-right">
-              <a href="#top">Back to top</a>
-            </span>
-      
-      <span>Generated by <strong>DocFX</strong></span>
-          </div>
-        </div>
-      </footer>
-    </div>
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
 
-    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
-    <script type="text/javascript" src="../styles/docfx.js"></script>
-    <script type="text/javascript" src="../styles/main.js"></script>
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
