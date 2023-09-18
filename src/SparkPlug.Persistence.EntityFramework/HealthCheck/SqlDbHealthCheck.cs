@@ -2,26 +2,17 @@ namespace SparkPlug.Persistence.EntityFramework.HealthCheck;
 
 public class SqlDbHealthCheck : IHealthCheck
 {
-    private readonly SqlDbOptions _options;
+    private readonly HomeDbContext _context;
 
-    public SqlDbHealthCheck(IOptions<SqlDbOptions> options)
+    public SqlDbHealthCheck(HomeDbContext context)
     {
-        _options = options.Value;
+        _context = context;
     }
 
     public async Task<HealthCheckResult> CheckHealthAsync(HealthCheckContext context, CancellationToken cancellationToken = default)
     {
-        try
-        {
-            if (_options.GetConnection == null) throw new ArgumentException("Connection is null");
-            using var connection = _options.GetConnection(_options.ConnectionString);
-            await connection.OpenAsync(cancellationToken);
-            await connection.CloseAsync();
-            return HealthCheckResult.Healthy();
-        }
-        catch (Exception ex)
-        {
-            return HealthCheckResult.Unhealthy(ex.Message, ex);
-        }
+            return await _context.Database.CanConnectAsync(cancellationToken) 
+            ? HealthCheckResult.Healthy() 
+            : HealthCheckResult.Unhealthy("Not able to connect database.");
     }
 }

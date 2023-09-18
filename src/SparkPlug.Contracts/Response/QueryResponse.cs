@@ -14,12 +14,12 @@ public class QueryResponse : ApiResponse, IQueryResponse
 public static partial class Extensions
 {
     #region QueryResponse
-    public static IQueryResponse AddData(this IQueryResponse source, IEnumerable<object> data)
+    public static IQueryResponse SetData(this IQueryResponse source, IEnumerable<object> data)
     {
         source.Data = data;
         return source;
     }
-    public static IQueryResponse AddPageContext(this IQueryResponse source, IPageContext pc)
+    public static IQueryResponse SetPageContext(this IQueryResponse source, IPageContext pc) 
     {
         source.Page = pc;
         return source;

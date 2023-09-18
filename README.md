@@ -1,5 +1,14 @@
 # sparkplug
 
+## Static Code Analysis Status
+
+|Quality and Overview Metrics|Code Quality Metrics|Defect Metrics|
+|----------------------------|--------------------|--------------|
+| [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=natarajanganapathi_sparkplug&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=natarajanganapathi_sparkplug) | [![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=natarajanganapathi_sparkplug&metric=code_smells)](https://sonarcloud.io/summary/new_code?id=natarajanganapathi_sparkplug) | [![Coverage](https://sonarcloud.io/api/project_badges/measure?project=natarajanganapathi_sparkplug&metric=coverage)](https://sonarcloud.io/summary/new_code?id=natarajanganapathi_sparkplug) |
+|[![Lines of Code](https://sonarcloud.io/api/project_badges/measure?project=natarajanganapathi_sparkplug&metric=ncloc)](https://sonarcloud.io/summary/new_code?id=natarajanganapathi_sparkplug) | [![Technical Debt](https://sonarcloud.io/api/project_badges/measure?project=natarajanganapathi_sparkplug&metric=sqale_index)](https://sonarcloud.io/summary/new_code?id=natarajanganapathi_sparkplug) | [![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=natarajanganapathi_sparkplug&metric=sqale_rating)](https://sonarcloud.io/summary/new_code?id=natarajanganapathi_sparkplug) |
+| [![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=natarajanganapathi_sparkplug&metric=security_rating)](https://sonarcloud.io/summary/new_code?id=natarajanganapathi_sparkplug) | [![Bugs](https://sonarcloud.io/api/project_badges/measure?project=natarajanganapathi_sparkplug&metric=bugs)](https://sonarcloud.io/summary/new_code?id=natarajanganapathi_sparkplug) | [![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=natarajanganapathi_sparkplug&metric=vulnerabilities)](https://sonarcloud.io/summary/new_code?id=natarajanganapathi_sparkplug) |
+|[![Duplicated Lines (%)](https://sonarcloud.io/api/project_badges/measure?project=natarajanganapathi_sparkplug&metric=duplicated_lines_density)](https://sonarcloud.io/summary/new_code?id=natarajanganapathi_sparkplug) | [![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=natarajanganapathi_sparkplug&metric=reliability_rating)](https://sonarcloud.io/summary/new_code?id=natarajanganapathi_sparkplug) | |
+
 ## Dotnet Tools
 
 The following global tools are required

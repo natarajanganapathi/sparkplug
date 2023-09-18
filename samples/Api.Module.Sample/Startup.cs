@@ -11,9 +11,9 @@ public class Startup
     public void ConfigureServices(IServiceCollection services)
     {
         services.AddDistributedMemoryCache();
-        services.AddWebApi(Configuration);
-        services.AddSqlDb(Configuration);
-        services.AddOptions<SqlDbOptions>().Configure((options) => options.GetConnection = (connectionString) => new NpgsqlConnection(connectionString));
+        // services.AddWebApi(Configuration);
+        // services.AddSqlDb(Configuration);
+        // services.AddOptions<SqlDbOptions>().Configure((options) => options.GetConnection = (connectionString) => new NpgsqlConnection(connectionString));
         services.AddScoped<IDbContextOptionsProvider, DbContextOptionsProvider>();
 
         services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
@@ -40,6 +40,6 @@ public class Startup
     public static void Configure(IApplicationBuilder app, IServiceProvider serviceProvider)
     {
         app.UseCors();
-        app.UseWebApi(serviceProvider);
+        // app.UseWebApi(serviceProvider);
     }
 }

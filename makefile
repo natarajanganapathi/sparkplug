@@ -39,3 +39,34 @@ swagger:
 angular:
 	npx @openapitools/openapi-generator-cli generate -i open-api.json -g typescript-angular -o client/angular
 	npx @openapitools/openapi-generator-cli generate -i open-api.json -g dotnet -o client/dotnet
+
+run-sample:
+	setx ASPNETCORE_ENVIRONMENT "Development"
+	dotnet run --project ./samples/Api.Module.Sample/Api.Module.Sample.csproj
+
+run:
+	setx ASPNETCORE_ENVIRONMENT "Development"
+	dotnet run --project ./src/SparkPlug.Hosts/SparkPlug.Hosts.csproj
+
+sdkk:
+	setx ASPNETCORE_ENVIRONMENT "Development"
+	dotnet run --project ./sdk/ClientSdkGenerator/ClientSdkGenerator.csproj	
+
+mig:
+	dotnet ef migrations add InitialCreate --startup-project ./sdk/ClientSdkGenerator --project ./src/SparkPlug.DesignTimeMigration --context HomeDbMigrationContext -o ../../migration
+
+tools:
+	dotnet tool list -g
+	dotnet tool update -g coverlet.console                
+	dotnet tool update -g docfx                           
+	dotnet tool update -g dotnet-counters                 
+	dotnet tool update -g dotnet-coverage                 
+	dotnet tool update -g dotnet-doc                      
+	dotnet tool update -g dotnet-ef                       
+	dotnet tool update -g dotnet-format                   
+	dotnet tool update -g dotnet-monitor                  
+	dotnet tool update -g dotnet-sonarscanner             
+	dotnet tool update -g dotnet-version-cli
+	dotnet tool update -g swashbuckle.aspnetcore.cli
+	dotnet tool update -g versionize
+	dotnet tool list -g

@@ -25,6 +25,8 @@
     <ProjectReference Include="..\..\modules\SparkPlug.Business.Tenancy\SparkPlug.Business.Tenancy.Repository.Sql\SparkPlug.Business.Tenancy.Repository.Sql.csproj" />
     <ProjectReference Include="..\..\modules\SparkPlug.Business.Menu\SparkPlug.Business.Menu.Api\SparkPlug.Business.Menu.Api.csproj" />
     <ProjectReference Include="..\..\modules\SparkPlug.Business.Menu\SparkPlug.Business.Menu.Repository.Sql\SparkPlug.Business.Menu.Repository.Sql.csproj" />
+    <ProjectReference Include="..\..\modules\SparkPlug.Business.RBAC\SparkPlug.Business.RBAC.Api\SparkPlug.Business.RBAC.Api.csproj" />
+    <ProjectReference Include="..\..\modules\SparkPlug.Business.RBAC\SparkPlug.Business.RBAC.Repository.Sql\SparkPlug.Business.RBAC.Repository.Sql.csproj" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="appsettings.json" Condition="Exists('appsettings.json')">
