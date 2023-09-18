@@ -1,4 +1,4 @@
-name: SAST - SonarCloud Analysis
+name: Sonar Cloud Analysis (SAST)
 
 on:
   push:
