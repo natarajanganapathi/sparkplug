@@ -9,6 +9,7 @@
   <ItemGroup>
     <ProjectReference Include="..\..\src\SparkPlug.Api\SparkPlug.Api.csproj" /> 
     <ProjectReference Include="..\..\src\SparkPlug.Hosts\SparkPlug.Hosts.csproj" />
+    <ProjectReference Include="..\..\src\SparkPlug.DesignTimeMigration\SparkPlug.DesignTimeMigration.csproj" />
     <ProjectReference Include="..\..\modules\SparkPlug.Business.Menu\SparkPlug.Business.Menu.Api\SparkPlug.Business.Menu.Api.csproj" />
     <ProjectReference Include="..\..\modules\SparkPlug.Business.Menu\SparkPlug.Business.Menu.Repository.Sql\SparkPlug.Business.Menu.Repository.Sql.csproj" />
   </ItemGroup>

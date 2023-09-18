@@ -4,4 +4,4 @@
 dotnet ef migrations --list
 ```
 
-dotnet ef migrations add InitialCreate --startup-project ./sdk/ClientSdkGenerator --project ./src/SparkPlug.Persistence.EntityFramework --context HomeDbContext
+dotnet ef migrations add InitialCreate --startup-project ./sdk/ClientSdkGenerator --project ./src/SparkPlug.DesignTimeMigration --context HomeDbMigrationContext

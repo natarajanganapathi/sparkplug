@@ -53,7 +53,7 @@ sdkk:
 	dotnet run --project ./sdk/ClientSdkGenerator/ClientSdkGenerator.csproj	
 
 mig:
-	dotnet ef migrations list --project ./src/SparkPlug.Persistence.EntityFramework --context SparkPlug.Persistence.EntityFramework.Context.HomeDbMigrationContext
+	dotnet ef migrations add InitialCreate --startup-project ./sdk/ClientSdkGenerator --project ./src/SparkPlug.DesignTimeMigration --context HomeDbMigrationContext -o ../../migration
 
 tools:
 	dotnet tool list -g
