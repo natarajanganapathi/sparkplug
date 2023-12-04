@@ -991,7 +991,7 @@
   },
   "articles/get-started.html": {
     "href": "articles/get-started.html",
-    "title": "Configuration",
+    "title": "",
     "keywords": "Configuration { \"Logging\": { \"LogLevel\": { \"Default\": \"Information\", \"Microsoft\": \"Warning\", \"Microsoft.Hosting.Lifetime\": \"Information\", \"SparkPlug.*\": \"Information\" } }, \"SparkPlug\": { \"Api\": { \"ApplicationName\": \"Web Api\", \"PathBase\": \"/api/v1\" }, \"SqlDb\": { \"ConnectionString\": \"\" } } } Additional connection string attribute required to ignore certificate issue in development Trust Server Certificate=true may required in connection string. SparkPlug.Api.PathBase This property refers to the application base path. If the path contains {tanant} then the application can handle multi tenant's request. The Tenat Id will be passed in the URL path. Also appsettings.json file connection string consider as tenant managemetn database. Single Tenant Application Ex. \"PathBase\" : \"/api/v1/\" Multi Tenant Application Ex. \"PathBase\" : \"/api/v1/{tanant}/\" TraceIdentifier vs CorrelationId utilizing TraceIdentifier for local request tracking within a service and CorrelationId for tracking across services in a distributed environment. Optimization dotnet counters monitor --name Api.Module.Sample --counters \"cpu-usage\" \"working-set\" dotnet-monitor collect 34136 --providers cpu memory"
   },
   "articles/intro.html": {
@@ -1031,7 +1031,7 @@
   },
   "examples/dotnet.html": {
     "href": "examples/dotnet.html",
-    "title": "HTTPS Certificate for Development",
+    "title": "Nuget Package publish",
     "keywords": "HTTPS Certificate for Development dotnet dev-certs https --trust Optimized build <PublishTrimmed>true</PublishTrimmed> will gives more compiletime waring. more works required. <PropertyGroup> <PublishTrimmed>true</PublishTrimmed> <PublishSingleFile>true</PublishSingleFile> <SelfContained>true</SelfContained> </PropertyGroup> Nuget Package publish Reference The project file should be like below. Readme and license file should be included in the project file and the path should have these files. <Project Sdk=\"Microsoft.NET.Sdk\"> <PropertyGroup> <TargetFramework>net7.0</TargetFramework> <ImplicitUsings>enable</ImplicitUsings> <Nullable>enable</Nullable> <AssemblyVersion>0.0.0.1</AssemblyVersion> <FileVersion>0.0.0.1</FileVersion> <Version>0.0.1-alpha1</Version> <PackageReadmeFile>README.md</PackageReadmeFile> <PackageLicenseFile>LICENSE.txt</PackageLicenseFile> </PropertyGroup> <ItemGroup> </ItemGroup> <ItemGroup> <None Include=\"README.md\" Pack=\"true\" PackagePath=\"README.md\"/> <None Include=\"LICENSE.txt\" Pack=\"true\" PackagePath=\"LICENSE.txt\"/> </ItemGroup> </Project>"
   },
   "examples/ef-entity-relationship.html": {
@@ -1066,7 +1066,7 @@
   },
   "examples/postgresql.html": {
     "href": "examples/postgresql.html",
-    "title": "Sample Connection String",
+    "title": "",
     "keywords": "Sample Connection String Server=sssssss.postgres.database.azure.com;Database=ddddddd;Port=5432;User Id=uuuuuuu;Password=ppppppp;Ssl Mode=Require;Trust Server Certificate=true;Search Path=tenant_1,public Note: Search Path denotes that tenants' schema if the the tenant is not using defalt schema. Search Path will containe comma separated schema names like example connection string Search Path=tenant_1,public. TenantOptions \"DbConfig:ConnectionString\" Create new Schema CREATE SCHEMA tenant_1; List Schema SELECT schema_name FROM information_schema.schemata; Switch Schema SET search_path TO tenant_1; SELECT * FROM Tenant_1.\"MenuItem\"; Converty the type of a column from one type to another ALTER TABLE tenant_1.\"MenuItem\" ALTER COLUMN \"Properties\" TYPE json USING \"Properties\"::json; Get the data type for a column SELECT column_name, data_type FROM information_schema.columns WHERE table_name = 'MenuItem' AND column_name = 'Properties'; JSON in postgresql .Net Reference Db Migration DB Migration Creating Separate Migration Project dotnet ef migrations add InitialCreate --output-dir Your/Directory"
   },
   "examples/rbac.html": {
@@ -1076,7 +1076,7 @@
   },
   "examples/sample-request.html": {
     "href": "examples/sample-request.html",
-    "title": "sample Query Request",
+    "title": "",
     "keywords": "sample Query Request { \"select\": [ \"PersonName\", \"Department\", \"Salary\", \"Id\" ], \"where\": { \"op\": 0, \"filterType\": 0, \"filters\": [{ \"filterType\": 1, \"field\": \"PersonName\", \"op\": 0, \"value\": \"Demo\" }] }, \"sort\": [ { \"field\": \"PersonName\", \"direction\": 1 }, { \"field\": \"Salary\", \"direction\": 1 } ], \"page\": { \"pageNo\": 2, \"pageSize\": 0 } } ## Sample request with Includes options. { \"select\": [ \"PersonName\", \"Department\", \"Salary\", \"Id\", \"Address\" ], \"includes\": [ { \"name\": \"Address\", \"select\": [\"Id\", \"Street\"] } ], \"where\": { \"op\": 1, \"filterType\": 0, \"filters\": [{ \"filterType\": 1, \"field\": \"PersonName\", \"op\": 0, \"value\": \"Demo1\" }, { \"filterType\": 1, \"field\": \"PersonName\", \"op\": 0, \"value\": \"Natarajan Ganapathi\" }] }, \"sort\": [ { \"field\": \"PersonName\", \"direction\": 1 }, { \"field\": \"Salary\", \"direction\": 1 } ], \"page\": { \"pageNo\": 1, \"pageSize\": 10 } } Sample Request with ENUM as String { \"select\": [\"personName\", \"Department\", \"Salary\", \"id\", \"address\"], \"includes\": [ { \"name\": \"Address\", \"select\": [\"Id\", \"Street\"] } ], \"where\": { \"filterType\": \"COMPOSITE\", \"op\": \"OR\", \"filters\": [ { \"filterType\": \"FIELD\", \"op\": \"EQUAL\", \"field\": \"department\", \"value\": \"IT\" }, { \"filterType\": \"FIELD\", \"op\": \"EQUAL\", \"field\": \"PersonName\", \"value\": \"Demo User\" } ] }, \"sort\": [ { \"field\": \"PersonName\", \"direction\": \"DESC\" }, { \"field\": \"Salary\", \"direction\": \"ASC\" } ], \"page\": { \"pageNo\": 1, \"pageSize\": 10 } } C# Include child tables var users = context.Users .Include(u => u.Address) .Include(u => u.Profile) .Select(u => new { u.Id, u.Name, Address = new { u.Address.Street, u.Address.City }, Profile = new { u.Profile.Bio, u.Profile.Age } }) .ToList(); var users = context.Users .Include(u => u.Address) .Select(u => new { u.Id, u.PersonName, u.MobileNo, Address = new { u.Address.Id, u.Address.FlatNo } }) .ToList(); Sample Request for Patch Document Sample Request object to update the MenuItem object { \"data\": [ { \"op\": \"replace\", \"path\": \"/moduleCode\", \"value\": \"App Developer Module\" }, { \"op\": \"replace\", \"path\": \"/menuCode\", \"value\": \"AppDev\" } ] }"
   },
   "index.html": {
