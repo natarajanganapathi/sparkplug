@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Api.Mongo", "Api.Mongo\Api.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Api.EntityFramework", "Api.EntityFramework\Api.EntityFramework.csproj", "{968307EC-5CDF-40E9-A4E1-2B0CFB3043C9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Api.Module.Sample", "Api.Module.Sample\Api.Module.Sample.csproj", "{A8F4319C-D1B9-4E6F-949B-86BD06F3191C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +26,9 @@ Global
 		{968307EC-5CDF-40E9-A4E1-2B0CFB3043C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{968307EC-5CDF-40E9-A4E1-2B0CFB3043C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{968307EC-5CDF-40E9-A4E1-2B0CFB3043C9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A8F4319C-D1B9-4E6F-949B-86BD06F3191C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8F4319C-D1B9-4E6F-949B-86BD06F3191C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8F4319C-D1B9-4E6F-949B-86BD06F3191C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8F4319C-D1B9-4E6F-949B-86BD06F3191C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
