@@ -1,6 +1,6 @@
 namespace SparkPlug.Contracts;
 
-public class CompositeResponse : ApiResponse, ICompositeResponse
+public record CompositeResponse : ApiResponse, ICompositeResponse
 {
     public CompositeResponse(Dictionary<string, IApiResponse>? data = null)
     {

@@ -1,6 +1,6 @@
 namespace SparkPlug.Contracts;
 
-public class QueryResponse : ApiResponse, IQueryResponse
+public record QueryResponse : ApiResponse, IQueryResponse
 {
     public QueryResponse(IEnumerable<object>? data = default, IPageContext? pc = default)
     {

@@ -7,6 +7,8 @@ public class ApiModule : IModule
         var policy = new AuthorizationPolicyBuilder()
             .RequireAuthenticatedUser()
             .Build();
+        services.AddExceptionHandler<GlobalExceptionHandler>();
+        services.AddProblemDetails();
         services.AddHttpContextAccessor();
         services.AddOptions();
         services.Configure<WebApiOptions>(configuration.GetSection(WebApiOptions.ConfigPath));
@@ -26,7 +28,7 @@ public class ApiModule : IModule
 
     public void UseModule(IApplicationBuilder app, IServiceProvider serviceProvider)
     {
-
+        app.UseExceptionHandler();
     }
 
     public void UseMiddelwares(IApplicationBuilder app)
