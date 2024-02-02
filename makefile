@@ -34,7 +34,7 @@ serve:
 	docfx docfx/docfx.json --serve
 
 swagger:
-	swagger tofile --output open-api.json ./samples/Api.Module.Sample/bin/Debug/net7.0/Api.Module.Sample.dll v1
+	swagger tofile --output open-api.json ./samples/Api.Module.Sample/bin/Debug/net8.0/Api.Module.Sample.dll v1
 
 angular:
 	npx @openapitools/openapi-generator-cli generate -i open-api.json -g typescript-angular -o client/angular

@@ -10,7 +10,7 @@ public class Startup
 
     public void ConfigureServices(IServiceCollection services)
     {
-        services.AddCustomModules(Configuration);
+        services.AddAllModules(Configuration);
         services.AddDistributedMemoryCache();
         services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
                 .AddMicrosoftIdentityWebApi(
@@ -36,6 +36,6 @@ public class Startup
     public static void Configure(IApplicationBuilder app, IServiceProvider serviceProvider)
     {
         app.UseCors();
-        app.UseCustomModules(serviceProvider);
+        app.UseAllModules(serviceProvider);
     }
 }
