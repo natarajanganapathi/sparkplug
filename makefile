@@ -70,7 +70,9 @@ tools:
 	dotnet tool update -g swashbuckle.aspnetcore.cli
 	dotnet tool update -g versionize
 	dotnet tool update -g dotnet-outdated-tool
+	dotnet tool update -g nbgv
 	dotnet tool list -g
 
 setup:
 	dotnet tool install --global dotnet-outdated-tool	
+	dotnet tool install -g nbgv
