@@ -21,6 +21,7 @@ public class ApiModule : IModule
             options.SerializerSettings.NullValueHandling = NullValueHandling.Ignore;
         });
         // services.AddHttpClient();
+        services.AddHealthChecks();
     }
 
     public void UseModule(IApplicationBuilder app, IServiceProvider serviceProvider)

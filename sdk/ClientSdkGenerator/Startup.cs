@@ -1,3 +1,6 @@
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.Identity.Web;
+
 using SparkPlug.Hosts;
 
 namespace SparkPlug.ClientSdkGenerator;

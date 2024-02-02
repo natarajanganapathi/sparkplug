@@ -53,7 +53,7 @@ sdkk:
 	dotnet run --project ./sdk/ClientSdkGenerator/ClientSdkGenerator.csproj	
 
 mig:
-	dotnet ef migrations add InitialCreate --startup-project ./sdk/ClientSdkGenerator --project ./src/SparkPlug.DesignTimeMigration --context HomeDbMigrationContext -o ../../migration
+	dotnet ef migrations add InitialCreate --startup-project ./sdk/ClientSdkGenerator --project ./src/SparkPlug.DesignTimeMigration --context HomeDbMigrationContext
 
 tools:
 	dotnet tool list -g
