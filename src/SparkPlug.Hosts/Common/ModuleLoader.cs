@@ -10,6 +10,7 @@ public static class ModuleLoader
 
     public static void AddCustomModules(this IServiceCollection services, IConfiguration configuration)
     {
+        Console.WriteLine($"{Path.GetDirectoryName(Assembly.GetEntryAssembly()?.Location)}: Total Modules (Add): {Modules.Count()}");
         foreach (var module in Modules)
         {
             module?.AddModule(services, configuration);
@@ -17,6 +18,8 @@ public static class ModuleLoader
     }
     public static void UseCustomModules(this IApplicationBuilder app, IServiceProvider serviceProvider)
     {
+        var logger = app.ApplicationServices.GetRequiredService<ILogger<Startup>>();
+        logger.LogInformation($"Total Modules (Use): {string.Join("," , Modules.Select(x => x?.GetType().Name))}");
         app.UseGlobalExceptionHandling();
         app.UseHttpsRedirection();
         app.UseHealthChecks();

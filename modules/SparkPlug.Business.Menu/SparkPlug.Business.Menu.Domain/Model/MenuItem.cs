@@ -11,7 +11,7 @@ public class MenuItem : IBaseEntity<long>, IConcurrencyEntity, IAuditableEntity<
     public string? ParentMenuCode { get; set; }
     public string? MenuType { get; set; }
     public string? MenuPosition { get; set; }
-    public string? Display { get; set; }
+    public string? Label { get; set; }
     public string? SRef { get; set; }
     public string? IconRef { get; set; }
     public int DisplayOrder { get; set; }

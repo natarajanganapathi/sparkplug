@@ -7,6 +7,10 @@
     <IsPackable>false</IsPackable>
   </PropertyGroup>
   <ItemGroup>
+    <PackageReference Include="Microsoft.Identity.Web" Version="2.10.0" />
+    <PackageReference Include="Microsoft.Extensions.Caching.Memory" Version="7.0.0" />
+  </ItemGroup>
+  <ItemGroup>
     <ProjectReference Include="..\..\src\SparkPlug.Api\SparkPlug.Api.csproj" /> 
     <ProjectReference Include="..\..\src\SparkPlug.Hosts\SparkPlug.Hosts.csproj" />
     <ProjectReference Include="..\..\src\SparkPlug.DesignTimeMigration\SparkPlug.DesignTimeMigration.csproj" />
