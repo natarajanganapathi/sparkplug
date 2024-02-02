@@ -1124,19 +1124,6 @@ references:
   isSpec: "True"
   fullName: SparkPlug.Business.Menu.Domain.MenuItem.CreatedBy
   nameWithType: MenuItem.CreatedBy
-- uid: SparkPlug.Business.Menu.Domain.MenuItem.Display
-  name: Display
-  href: api/SparkPlug.Business.Menu.Domain.MenuItem.html#SparkPlug_Business_Menu_Domain_MenuItem_Display
-  commentId: P:SparkPlug.Business.Menu.Domain.MenuItem.Display
-  fullName: SparkPlug.Business.Menu.Domain.MenuItem.Display
-  nameWithType: MenuItem.Display
-- uid: SparkPlug.Business.Menu.Domain.MenuItem.Display*
-  name: Display
-  href: api/SparkPlug.Business.Menu.Domain.MenuItem.html#SparkPlug_Business_Menu_Domain_MenuItem_Display_
-  commentId: Overload:SparkPlug.Business.Menu.Domain.MenuItem.Display
-  isSpec: "True"
-  fullName: SparkPlug.Business.Menu.Domain.MenuItem.Display
-  nameWithType: MenuItem.Display
 - uid: SparkPlug.Business.Menu.Domain.MenuItem.DisplayOrder
   name: DisplayOrder
   href: api/SparkPlug.Business.Menu.Domain.MenuItem.html#SparkPlug_Business_Menu_Domain_MenuItem_DisplayOrder
@@ -1176,6 +1163,19 @@ references:
   isSpec: "True"
   fullName: SparkPlug.Business.Menu.Domain.MenuItem.Id
   nameWithType: MenuItem.Id
+- uid: SparkPlug.Business.Menu.Domain.MenuItem.Label
+  name: Label
+  href: api/SparkPlug.Business.Menu.Domain.MenuItem.html#SparkPlug_Business_Menu_Domain_MenuItem_Label
+  commentId: P:SparkPlug.Business.Menu.Domain.MenuItem.Label
+  fullName: SparkPlug.Business.Menu.Domain.MenuItem.Label
+  nameWithType: MenuItem.Label
+- uid: SparkPlug.Business.Menu.Domain.MenuItem.Label*
+  name: Label
+  href: api/SparkPlug.Business.Menu.Domain.MenuItem.html#SparkPlug_Business_Menu_Domain_MenuItem_Label_
+  commentId: Overload:SparkPlug.Business.Menu.Domain.MenuItem.Label
+  isSpec: "True"
+  fullName: SparkPlug.Business.Menu.Domain.MenuItem.Label
+  nameWithType: MenuItem.Label
 - uid: SparkPlug.Business.Menu.Domain.MenuItem.MenuCode
   name: MenuCode
   href: api/SparkPlug.Business.Menu.Domain.MenuItem.html#SparkPlug_Business_Menu_Domain_MenuItem_MenuCode
