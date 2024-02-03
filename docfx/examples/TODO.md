@@ -42,3 +42,10 @@
 1. Inside AddService methods, how to access IOptions<SqlDbOptions> instance?
 2. Geting error if we call 2 times an api (same context object used.)
 3. 
+
+
+# Optimization Research
+1. Tenant Resolving and Api execution in each rquest can be parallely execute until the tenant details required in api execution.
+    Involved files:
+        1. SparkPlug.Business.Tenancy.Service\Middleware\TenantResolverMiddleware.cs
+        2. SparkPlug.Business.Tenancy.Api\Microsoft\Extensions\DependencyInjection\ServiceCollectionExtenstions.cs

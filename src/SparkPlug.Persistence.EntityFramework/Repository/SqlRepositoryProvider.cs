@@ -10,7 +10,7 @@ public class SqlRepositoryProvider : IRepositoryProvider
     public IRepository<TId, TEntity> GetRepository<TId, TEntity>() where TEntity : class, IBaseEntity<TId>, new()
     {
         var type = typeof(TEntity).GetCustomAttribute<HomeDbAttribute>();
-        return type == null
+        return type is null
                 ? _serviceProvider.GetRequiredService<TenantRepository<TId, TEntity>>()
                 : _serviceProvider.GetRequiredService<HomeRepository<TId, TEntity>>();
     }

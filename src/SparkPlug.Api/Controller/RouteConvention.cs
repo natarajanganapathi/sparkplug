@@ -16,7 +16,7 @@ public class RouteConvention : IApplicationModelConvention
             {
                 foreach (var selector in controller.Selectors)
                 {
-                    if (selector.AttributeRouteModel != null)
+                    if (selector.AttributeRouteModel is not null)
                     {
                         selector.AttributeRouteModel = AttributeRouteModel.CombineAttributeRouteModel(_centralPrefix, selector.AttributeRouteModel);
                     }

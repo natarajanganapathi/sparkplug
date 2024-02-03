@@ -33,9 +33,6 @@ public static class ModuleLoader
         app.UseAllMiddelwares();
 
         app.UseEndpoints(endpoints => endpoints.MapGet("/", async context => await context.Response.WriteAsync("Running!...")));
-        app.UseAuthentication();
-        app.UseAuthorization();
-        app.UseEndpoints(endpoints => endpoints.MapControllers());
     }
 
     public static void UseAllMiddelwares(this IApplicationBuilder app)
