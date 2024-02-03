@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Class Constants </title>
+      <title>Class GlobalExceptionHandler </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Class Constants ">
+      <meta name="title" content="Class GlobalExceptionHandler ">
       
       
       <link rel="icon" href="../favicon.ico">
@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/natarajanganapathi/sparkplug/new/97/merge/apiSpec/new?filename=SparkPlug_Api_Configuration_Constants.md&amp;value=---%0Auid%3A%20SparkPlug.Api.Configuration.Constants%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="docfx:docurl" content="https://github.com/natarajanganapathi/sparkplug/new/97/merge/apiSpec/new?filename=SparkPlug_Api_Handler_GlobalExceptionHandler.md&amp;value=---%0Auid%3A%20SparkPlug.Api.Handler.GlobalExceptionHandler%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -84,16 +84,16 @@
           <nav id="breadcrumb"></nav>
         </div>
 
-        <article data-uid="SparkPlug.Api.Configuration.Constants">
+        <article data-uid="SparkPlug.Api.Handler.GlobalExceptionHandler">
 
 
 
-  <h1 id="SparkPlug_Api_Configuration_Constants" data-uid="SparkPlug.Api.Configuration.Constants" class="text-break">
-Class Constants  <a class="header-action link-secondary" title="View source" href="https://github.com/natarajanganapathi/sparkplug/blob/97/merge/src/SparkPlug.Api/Configuration/WebApiConstants.cs/#L3"><i class="bi bi-code-slash"></i></a>
+  <h1 id="SparkPlug_Api_Handler_GlobalExceptionHandler" data-uid="SparkPlug.Api.Handler.GlobalExceptionHandler" class="text-break">
+Class GlobalExceptionHandler  <a class="header-action link-secondary" title="View source" href="https://github.com/natarajanganapathi/sparkplug/blob/97/merge/src/SparkPlug.Api/Handler/GlobalExceptionHandler.cs/#L3"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
-    <dl><dt>Namespace</dt><dd><a class="xref" href="SparkPlug.html">SparkPlug</a>.<a class="xref" href="SparkPlug.Api.html">Api</a>.<a class="xref" href="SparkPlug.Api.Configuration.html">Configuration</a></dd></dl>
+    <dl><dt>Namespace</dt><dd><a class="xref" href="SparkPlug.html">SparkPlug</a>.<a class="xref" href="SparkPlug.Api.html">Api</a>.<a class="xref" href="SparkPlug.Api.Handler.html">Handler</a></dd></dl>
   <dl><dt>Assembly</dt><dd>SparkPlug.Api.dll</dd></dl>
   </div>
 
@@ -101,7 +101,7 @@ Class Constants  <a class="header-action link-secondary" title="View source" hre
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static class Constants</code></pre>
+    <pre><code class="lang-csharp hljs">public class GlobalExceptionHandler : IExceptionHandler</code></pre>
   </div>
 
 
@@ -111,10 +111,16 @@ Class Constants  <a class="header-action link-secondary" title="View source" hre
     <dt>Inheritance</dt>
     <dd>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
-      <div><span class="xref">Constants</span></div>
+      <div><span class="xref">GlobalExceptionHandler</span></div>
     </dd>
   </dl>
 
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.diagnostics.iexceptionhandler">IExceptionHandler</a></div>
+    </dd>
+  </dl>
 
 
   <dl class="typelist inheritedMembers">
@@ -143,96 +149,61 @@ Class Constants  <a class="header-action link-secondary" title="View source" hre
     </div>
   </dd></dl>
 
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="SparkPlug.Persistence.Abstractions.EntityExtentions.html#SparkPlug_Persistence_Abstractions_EntityExtentions_Auditable__2___1___0_System_DateTime_System_Boolean_">EntityExtentions.Auditable&lt;TId, TEntity&gt;(TEntity, TId, DateTime, bool)</a>
+  </div>
+  </dd></dl>
 
 
 
 
 
-  <h2 class="section" id="fields">Fields
+  <h2 class="section" id="methods">Methods
 </h2>
 
 
+  <a id="SparkPlug_Api_Handler_GlobalExceptionHandler_TryHandleAsync_" data-uid="SparkPlug.Api.Handler.GlobalExceptionHandler.TryHandleAsync*"></a>
 
-  <h3 id="SparkPlug_Api_Configuration_Constants_JsonContentType" data-uid="SparkPlug.Api.Configuration.Constants.JsonContentType">
-  JsonContentType
-  <a class="header-action link-secondary" title="View source" href="https://github.com/natarajanganapathi/sparkplug/blob/97/merge/src/SparkPlug.Api/Configuration/WebApiConstants.cs/#L6"><i class="bi bi-code-slash"></i></a>
+  <h3 id="SparkPlug_Api_Handler_GlobalExceptionHandler_TryHandleAsync_Microsoft_AspNetCore_Http_HttpContext_System_Exception_System_Threading_CancellationToken_" data-uid="SparkPlug.Api.Handler.GlobalExceptionHandler.TryHandleAsync(Microsoft.AspNetCore.Http.HttpContext,System.Exception,System.Threading.CancellationToken)">
+  TryHandleAsync(HttpContext, Exception, CancellationToken)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/natarajanganapathi/sparkplug/blob/97/merge/src/SparkPlug.Api/Handler/GlobalExceptionHandler.cs/#L5"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Tries to handle the specified exception asynchronously within the ASP.NET Core pipeline.
+Implementations of this method can provide custom exception-handling logic for different scenarios.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public const string JsonContentType = &quot;application/json; charset=utf-8&quot;</code></pre>
+    <pre><code class="lang-csharp hljs">public ValueTask&lt;bool&gt; TryHandleAsync(HttpContext httpContext, Exception exception, CancellationToken cancellationToken)</code></pre>
   </div>
 
-
-
-
-  <h4 class="section">Field Value</h4>
+  <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dt><code>httpContext</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.http.httpcontext">HttpContext</a></dt>
+    <dd><p>The <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.http.httpcontext">HttpContext</a> for the request.</p>
+</dd>
+    <dt><code>exception</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a></dt>
+    <dd><p>The unhandled exception.</p>
+</dd>
+    <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
+    <dd><p>The cancellation token.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1">ValueTask</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd><p>A task that represents the asynchronous read operation. The value of its <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1.result">Result</a>
+property contains the result of the handling operation.
+<a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the exception was handled successfully; otherwise <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.</p>
+</dd>
   </dl>
 
 
-
-
-
-
-
-
-
-
-  <h3 id="SparkPlug_Api_Configuration_Constants_Tenant" data-uid="SparkPlug.Api.Configuration.Constants.Tenant">
-  Tenant
-  <a class="header-action link-secondary" title="View source" href="https://github.com/natarajanganapathi/sparkplug/blob/97/merge/src/SparkPlug.Api/Configuration/WebApiConstants.cs/#L5"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public const string Tenant = &quot;tenant&quot;</code></pre>
-  </div>
-
-
-
-
-  <h4 class="section">Field Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-  <h3 id="SparkPlug_Api_Configuration_Constants_XTraceId" data-uid="SparkPlug.Api.Configuration.Constants.XTraceId">
-  XTraceId
-  <a class="header-action link-secondary" title="View source" href="https://github.com/natarajanganapathi/sparkplug/blob/97/merge/src/SparkPlug.Api/Configuration/WebApiConstants.cs/#L7"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public const string XTraceId = &quot;X-Trace-Id&quot;</code></pre>
-  </div>
-
-
-
-
-  <h4 class="section">Field Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
-  </dl>
 
 
 
@@ -246,7 +217,7 @@ Class Constants  <a class="header-action link-secondary" title="View source" hre
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/natarajanganapathi/sparkplug/blob/97/merge/src/SparkPlug.Api/Configuration/WebApiConstants.cs/#L3" class="edit-link">Edit this page</a>
+          <a href="https://github.com/natarajanganapathi/sparkplug/blob/97/merge/src/SparkPlug.Api/Handler/GlobalExceptionHandler.cs/#L3" class="edit-link">Edit this page</a>
         </div>
 
 

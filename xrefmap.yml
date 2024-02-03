@@ -204,6 +204,31 @@ references:
   isSpec: "True"
   fullName: SparkPlug.Api.ApiModule.UseModule
   nameWithType: ApiModule.UseModule
+- uid: SparkPlug.Api.Common
+  name: SparkPlug.Api.Common
+  href: api/SparkPlug.Api.Common.html
+  commentId: N:SparkPlug.Api.Common
+  fullName: SparkPlug.Api.Common
+  nameWithType: SparkPlug.Api.Common
+- uid: SparkPlug.Api.Common.ExceptionWriter
+  name: ExceptionWriter
+  href: api/SparkPlug.Api.Common.ExceptionWriter.html
+  commentId: T:SparkPlug.Api.Common.ExceptionWriter
+  fullName: SparkPlug.Api.Common.ExceptionWriter
+  nameWithType: ExceptionWriter
+- uid: SparkPlug.Api.Common.ExceptionWriter.WriteInResponseAsync(Microsoft.AspNetCore.Http.HttpContext,System.Exception)
+  name: WriteInResponseAsync(HttpContext, Exception)
+  href: api/SparkPlug.Api.Common.ExceptionWriter.html#SparkPlug_Api_Common_ExceptionWriter_WriteInResponseAsync_Microsoft_AspNetCore_Http_HttpContext_System_Exception_
+  commentId: M:SparkPlug.Api.Common.ExceptionWriter.WriteInResponseAsync(Microsoft.AspNetCore.Http.HttpContext,System.Exception)
+  fullName: SparkPlug.Api.Common.ExceptionWriter.WriteInResponseAsync(Microsoft.AspNetCore.Http.HttpContext, System.Exception)
+  nameWithType: ExceptionWriter.WriteInResponseAsync(HttpContext, Exception)
+- uid: SparkPlug.Api.Common.ExceptionWriter.WriteInResponseAsync*
+  name: WriteInResponseAsync
+  href: api/SparkPlug.Api.Common.ExceptionWriter.html#SparkPlug_Api_Common_ExceptionWriter_WriteInResponseAsync_
+  commentId: Overload:SparkPlug.Api.Common.ExceptionWriter.WriteInResponseAsync
+  isSpec: "True"
+  fullName: SparkPlug.Api.Common.ExceptionWriter.WriteInResponseAsync
+  nameWithType: ExceptionWriter.WriteInResponseAsync
 - uid: SparkPlug.Api.Configuration
   name: SparkPlug.Api.Configuration
   href: api/SparkPlug.Api.Configuration.html
@@ -794,50 +819,56 @@ references:
   isSpec: "True"
   fullName: SparkPlug.Api.Controllers.RouteConvention.IsMultiTenant
   nameWithType: RouteConvention.IsMultiTenant
-- uid: SparkPlug.Api.Filters
-  name: SparkPlug.Api.Filters
-  href: api/SparkPlug.Api.Filters.html
-  commentId: N:SparkPlug.Api.Filters
-  fullName: SparkPlug.Api.Filters
-  nameWithType: SparkPlug.Api.Filters
-- uid: SparkPlug.Api.Filters.ApiExceptionFilterAttribute
+- uid: SparkPlug.Api.Filter
+  name: SparkPlug.Api.Filter
+  href: api/SparkPlug.Api.Filter.html
+  commentId: N:SparkPlug.Api.Filter
+  fullName: SparkPlug.Api.Filter
+  nameWithType: SparkPlug.Api.Filter
+- uid: SparkPlug.Api.Filter.ApiExceptionFilterAttribute
   name: ApiExceptionFilterAttribute
-  href: api/SparkPlug.Api.Filters.ApiExceptionFilterAttribute.html
-  commentId: T:SparkPlug.Api.Filters.ApiExceptionFilterAttribute
-  fullName: SparkPlug.Api.Filters.ApiExceptionFilterAttribute
+  href: api/SparkPlug.Api.Filter.ApiExceptionFilterAttribute.html
+  commentId: T:SparkPlug.Api.Filter.ApiExceptionFilterAttribute
+  fullName: SparkPlug.Api.Filter.ApiExceptionFilterAttribute
   nameWithType: ApiExceptionFilterAttribute
-- uid: SparkPlug.Api.Filters.ApiExceptionFilterAttribute.#ctor(Microsoft.Extensions.Logging.ILogger{SparkPlug.Api.Filters.ApiExceptionFilterAttribute})
-  name: ApiExceptionFilterAttribute(ILogger<ApiExceptionFilterAttribute>)
-  href: api/SparkPlug.Api.Filters.ApiExceptionFilterAttribute.html#SparkPlug_Api_Filters_ApiExceptionFilterAttribute__ctor_Microsoft_Extensions_Logging_ILogger_SparkPlug_Api_Filters_ApiExceptionFilterAttribute__
-  commentId: M:SparkPlug.Api.Filters.ApiExceptionFilterAttribute.#ctor(Microsoft.Extensions.Logging.ILogger{SparkPlug.Api.Filters.ApiExceptionFilterAttribute})
-  name.vb: New(ILogger(Of ApiExceptionFilterAttribute))
-  fullName: SparkPlug.Api.Filters.ApiExceptionFilterAttribute.ApiExceptionFilterAttribute(Microsoft.Extensions.Logging.ILogger<SparkPlug.Api.Filters.ApiExceptionFilterAttribute>)
-  fullName.vb: SparkPlug.Api.Filters.ApiExceptionFilterAttribute.New(Microsoft.Extensions.Logging.ILogger(Of SparkPlug.Api.Filters.ApiExceptionFilterAttribute))
-  nameWithType: ApiExceptionFilterAttribute.ApiExceptionFilterAttribute(ILogger<ApiExceptionFilterAttribute>)
-  nameWithType.vb: ApiExceptionFilterAttribute.New(ILogger(Of ApiExceptionFilterAttribute))
-- uid: SparkPlug.Api.Filters.ApiExceptionFilterAttribute.#ctor*
-  name: ApiExceptionFilterAttribute
-  href: api/SparkPlug.Api.Filters.ApiExceptionFilterAttribute.html#SparkPlug_Api_Filters_ApiExceptionFilterAttribute__ctor_
-  commentId: Overload:SparkPlug.Api.Filters.ApiExceptionFilterAttribute.#ctor
-  isSpec: "True"
-  name.vb: New
-  fullName: SparkPlug.Api.Filters.ApiExceptionFilterAttribute.ApiExceptionFilterAttribute
-  fullName.vb: SparkPlug.Api.Filters.ApiExceptionFilterAttribute.New
-  nameWithType: ApiExceptionFilterAttribute.ApiExceptionFilterAttribute
-  nameWithType.vb: ApiExceptionFilterAttribute.New
-- uid: SparkPlug.Api.Filters.ApiExceptionFilterAttribute.OnException(Microsoft.AspNetCore.Mvc.Filters.ExceptionContext)
+- uid: SparkPlug.Api.Filter.ApiExceptionFilterAttribute.OnException(Microsoft.AspNetCore.Mvc.Filters.ExceptionContext)
   name: OnException(ExceptionContext)
-  href: api/SparkPlug.Api.Filters.ApiExceptionFilterAttribute.html#SparkPlug_Api_Filters_ApiExceptionFilterAttribute_OnException_Microsoft_AspNetCore_Mvc_Filters_ExceptionContext_
-  commentId: M:SparkPlug.Api.Filters.ApiExceptionFilterAttribute.OnException(Microsoft.AspNetCore.Mvc.Filters.ExceptionContext)
-  fullName: SparkPlug.Api.Filters.ApiExceptionFilterAttribute.OnException(Microsoft.AspNetCore.Mvc.Filters.ExceptionContext)
+  href: api/SparkPlug.Api.Filter.ApiExceptionFilterAttribute.html#SparkPlug_Api_Filter_ApiExceptionFilterAttribute_OnException_Microsoft_AspNetCore_Mvc_Filters_ExceptionContext_
+  commentId: M:SparkPlug.Api.Filter.ApiExceptionFilterAttribute.OnException(Microsoft.AspNetCore.Mvc.Filters.ExceptionContext)
+  fullName: SparkPlug.Api.Filter.ApiExceptionFilterAttribute.OnException(Microsoft.AspNetCore.Mvc.Filters.ExceptionContext)
   nameWithType: ApiExceptionFilterAttribute.OnException(ExceptionContext)
-- uid: SparkPlug.Api.Filters.ApiExceptionFilterAttribute.OnException*
+- uid: SparkPlug.Api.Filter.ApiExceptionFilterAttribute.OnException*
   name: OnException
-  href: api/SparkPlug.Api.Filters.ApiExceptionFilterAttribute.html#SparkPlug_Api_Filters_ApiExceptionFilterAttribute_OnException_
-  commentId: Overload:SparkPlug.Api.Filters.ApiExceptionFilterAttribute.OnException
+  href: api/SparkPlug.Api.Filter.ApiExceptionFilterAttribute.html#SparkPlug_Api_Filter_ApiExceptionFilterAttribute_OnException_
+  commentId: Overload:SparkPlug.Api.Filter.ApiExceptionFilterAttribute.OnException
   isSpec: "True"
-  fullName: SparkPlug.Api.Filters.ApiExceptionFilterAttribute.OnException
+  fullName: SparkPlug.Api.Filter.ApiExceptionFilterAttribute.OnException
   nameWithType: ApiExceptionFilterAttribute.OnException
+- uid: SparkPlug.Api.Handler
+  name: SparkPlug.Api.Handler
+  href: api/SparkPlug.Api.Handler.html
+  commentId: N:SparkPlug.Api.Handler
+  fullName: SparkPlug.Api.Handler
+  nameWithType: SparkPlug.Api.Handler
+- uid: SparkPlug.Api.Handler.GlobalExceptionHandler
+  name: GlobalExceptionHandler
+  href: api/SparkPlug.Api.Handler.GlobalExceptionHandler.html
+  commentId: T:SparkPlug.Api.Handler.GlobalExceptionHandler
+  fullName: SparkPlug.Api.Handler.GlobalExceptionHandler
+  nameWithType: GlobalExceptionHandler
+- uid: SparkPlug.Api.Handler.GlobalExceptionHandler.TryHandleAsync(Microsoft.AspNetCore.Http.HttpContext,System.Exception,System.Threading.CancellationToken)
+  name: TryHandleAsync(HttpContext, Exception, CancellationToken)
+  href: api/SparkPlug.Api.Handler.GlobalExceptionHandler.html#SparkPlug_Api_Handler_GlobalExceptionHandler_TryHandleAsync_Microsoft_AspNetCore_Http_HttpContext_System_Exception_System_Threading_CancellationToken_
+  commentId: M:SparkPlug.Api.Handler.GlobalExceptionHandler.TryHandleAsync(Microsoft.AspNetCore.Http.HttpContext,System.Exception,System.Threading.CancellationToken)
+  fullName: SparkPlug.Api.Handler.GlobalExceptionHandler.TryHandleAsync(Microsoft.AspNetCore.Http.HttpContext, System.Exception, System.Threading.CancellationToken)
+  nameWithType: GlobalExceptionHandler.TryHandleAsync(HttpContext, Exception, CancellationToken)
+- uid: SparkPlug.Api.Handler.GlobalExceptionHandler.TryHandleAsync*
+  name: TryHandleAsync
+  href: api/SparkPlug.Api.Handler.GlobalExceptionHandler.html#SparkPlug_Api_Handler_GlobalExceptionHandler_TryHandleAsync_
+  commentId: Overload:SparkPlug.Api.Handler.GlobalExceptionHandler.TryHandleAsync
+  isSpec: "True"
+  fullName: SparkPlug.Api.Handler.GlobalExceptionHandler.TryHandleAsync
+  nameWithType: GlobalExceptionHandler.TryHandleAsync
 - uid: SparkPlug.Api.Middleware
   name: SparkPlug.Api.Middleware
   href: api/SparkPlug.Api.Middleware.html
@@ -850,15 +881,15 @@ references:
   commentId: T:SparkPlug.Api.Middleware.GlobalExceptionHandlingMiddleware
   fullName: SparkPlug.Api.Middleware.GlobalExceptionHandlingMiddleware
   nameWithType: GlobalExceptionHandlingMiddleware
-- uid: SparkPlug.Api.Middleware.GlobalExceptionHandlingMiddleware.#ctor(Microsoft.Extensions.Logging.ILogger{SparkPlug.Api.Middleware.GlobalExceptionHandlingMiddleware},Microsoft.AspNetCore.Http.RequestDelegate)
-  name: GlobalExceptionHandlingMiddleware(ILogger<GlobalExceptionHandlingMiddleware>, RequestDelegate)
-  href: api/SparkPlug.Api.Middleware.GlobalExceptionHandlingMiddleware.html#SparkPlug_Api_Middleware_GlobalExceptionHandlingMiddleware__ctor_Microsoft_Extensions_Logging_ILogger_SparkPlug_Api_Middleware_GlobalExceptionHandlingMiddleware__Microsoft_AspNetCore_Http_RequestDelegate_
-  commentId: M:SparkPlug.Api.Middleware.GlobalExceptionHandlingMiddleware.#ctor(Microsoft.Extensions.Logging.ILogger{SparkPlug.Api.Middleware.GlobalExceptionHandlingMiddleware},Microsoft.AspNetCore.Http.RequestDelegate)
-  name.vb: New(ILogger(Of GlobalExceptionHandlingMiddleware), RequestDelegate)
-  fullName: SparkPlug.Api.Middleware.GlobalExceptionHandlingMiddleware.GlobalExceptionHandlingMiddleware(Microsoft.Extensions.Logging.ILogger<SparkPlug.Api.Middleware.GlobalExceptionHandlingMiddleware>, Microsoft.AspNetCore.Http.RequestDelegate)
-  fullName.vb: SparkPlug.Api.Middleware.GlobalExceptionHandlingMiddleware.New(Microsoft.Extensions.Logging.ILogger(Of SparkPlug.Api.Middleware.GlobalExceptionHandlingMiddleware), Microsoft.AspNetCore.Http.RequestDelegate)
-  nameWithType: GlobalExceptionHandlingMiddleware.GlobalExceptionHandlingMiddleware(ILogger<GlobalExceptionHandlingMiddleware>, RequestDelegate)
-  nameWithType.vb: GlobalExceptionHandlingMiddleware.New(ILogger(Of GlobalExceptionHandlingMiddleware), RequestDelegate)
+- uid: SparkPlug.Api.Middleware.GlobalExceptionHandlingMiddleware.#ctor(Microsoft.AspNetCore.Http.RequestDelegate)
+  name: GlobalExceptionHandlingMiddleware(RequestDelegate)
+  href: api/SparkPlug.Api.Middleware.GlobalExceptionHandlingMiddleware.html#SparkPlug_Api_Middleware_GlobalExceptionHandlingMiddleware__ctor_Microsoft_AspNetCore_Http_RequestDelegate_
+  commentId: M:SparkPlug.Api.Middleware.GlobalExceptionHandlingMiddleware.#ctor(Microsoft.AspNetCore.Http.RequestDelegate)
+  name.vb: New(RequestDelegate)
+  fullName: SparkPlug.Api.Middleware.GlobalExceptionHandlingMiddleware.GlobalExceptionHandlingMiddleware(Microsoft.AspNetCore.Http.RequestDelegate)
+  fullName.vb: SparkPlug.Api.Middleware.GlobalExceptionHandlingMiddleware.New(Microsoft.AspNetCore.Http.RequestDelegate)
+  nameWithType: GlobalExceptionHandlingMiddleware.GlobalExceptionHandlingMiddleware(RequestDelegate)
+  nameWithType.vb: GlobalExceptionHandlingMiddleware.New(RequestDelegate)
 - uid: SparkPlug.Api.Middleware.GlobalExceptionHandlingMiddleware.#ctor*
   name: GlobalExceptionHandlingMiddleware
   href: api/SparkPlug.Api.Middleware.GlobalExceptionHandlingMiddleware.html#SparkPlug_Api_Middleware_GlobalExceptionHandlingMiddleware__ctor_
@@ -2594,6 +2625,25 @@ references:
   isSpec: "True"
   fullName: SparkPlug.Contracts.ConditionFilter.Field
   nameWithType: ConditionFilter.Field
+- uid: SparkPlug.Contracts.ContractsExtensions
+  name: ContractsExtensions
+  href: api/SparkPlug.Contracts.ContractsExtensions.html
+  commentId: T:SparkPlug.Contracts.ContractsExtensions
+  fullName: SparkPlug.Contracts.ContractsExtensions
+  nameWithType: ContractsExtensions
+- uid: SparkPlug.Contracts.ContractsExtensions.AddContracts(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+  name: AddContracts(IServiceCollection)
+  href: api/SparkPlug.Contracts.ContractsExtensions.html#SparkPlug_Contracts_ContractsExtensions_AddContracts_Microsoft_Extensions_DependencyInjection_IServiceCollection_
+  commentId: M:SparkPlug.Contracts.ContractsExtensions.AddContracts(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+  fullName: SparkPlug.Contracts.ContractsExtensions.AddContracts(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+  nameWithType: ContractsExtensions.AddContracts(IServiceCollection)
+- uid: SparkPlug.Contracts.ContractsExtensions.AddContracts*
+  name: AddContracts
+  href: api/SparkPlug.Contracts.ContractsExtensions.html#SparkPlug_Contracts_ContractsExtensions_AddContracts_
+  commentId: Overload:SparkPlug.Contracts.ContractsExtensions.AddContracts
+  isSpec: "True"
+  fullName: SparkPlug.Contracts.ContractsExtensions.AddContracts
+  nameWithType: ContractsExtensions.AddContracts
 - uid: SparkPlug.Contracts.ContractsModule
   name: ContractsModule
   href: api/SparkPlug.Contracts.ContractsModule.html
@@ -4833,45 +4883,45 @@ references:
   commentId: T:SparkPlug.Hosts.ModuleLoader
   fullName: SparkPlug.Hosts.ModuleLoader
   nameWithType: ModuleLoader
-- uid: SparkPlug.Hosts.ModuleLoader.AddCustomModules(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)
-  name: AddCustomModules(IServiceCollection, IConfiguration)
-  href: api/SparkPlug.Hosts.ModuleLoader.html#SparkPlug_Hosts_ModuleLoader_AddCustomModules_Microsoft_Extensions_DependencyInjection_IServiceCollection_Microsoft_Extensions_Configuration_IConfiguration_
-  commentId: M:SparkPlug.Hosts.ModuleLoader.AddCustomModules(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)
-  fullName: SparkPlug.Hosts.ModuleLoader.AddCustomModules(Microsoft.Extensions.DependencyInjection.IServiceCollection, Microsoft.Extensions.Configuration.IConfiguration)
-  nameWithType: ModuleLoader.AddCustomModules(IServiceCollection, IConfiguration)
-- uid: SparkPlug.Hosts.ModuleLoader.AddCustomModules*
-  name: AddCustomModules
-  href: api/SparkPlug.Hosts.ModuleLoader.html#SparkPlug_Hosts_ModuleLoader_AddCustomModules_
-  commentId: Overload:SparkPlug.Hosts.ModuleLoader.AddCustomModules
+- uid: SparkPlug.Hosts.ModuleLoader.AddAllModules(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)
+  name: AddAllModules(IServiceCollection, IConfiguration)
+  href: api/SparkPlug.Hosts.ModuleLoader.html#SparkPlug_Hosts_ModuleLoader_AddAllModules_Microsoft_Extensions_DependencyInjection_IServiceCollection_Microsoft_Extensions_Configuration_IConfiguration_
+  commentId: M:SparkPlug.Hosts.ModuleLoader.AddAllModules(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)
+  fullName: SparkPlug.Hosts.ModuleLoader.AddAllModules(Microsoft.Extensions.DependencyInjection.IServiceCollection, Microsoft.Extensions.Configuration.IConfiguration)
+  nameWithType: ModuleLoader.AddAllModules(IServiceCollection, IConfiguration)
+- uid: SparkPlug.Hosts.ModuleLoader.AddAllModules*
+  name: AddAllModules
+  href: api/SparkPlug.Hosts.ModuleLoader.html#SparkPlug_Hosts_ModuleLoader_AddAllModules_
+  commentId: Overload:SparkPlug.Hosts.ModuleLoader.AddAllModules
   isSpec: "True"
-  fullName: SparkPlug.Hosts.ModuleLoader.AddCustomModules
-  nameWithType: ModuleLoader.AddCustomModules
-- uid: SparkPlug.Hosts.ModuleLoader.UseCustomModules(Microsoft.AspNetCore.Builder.IApplicationBuilder,System.IServiceProvider)
-  name: UseCustomModules(IApplicationBuilder, IServiceProvider)
-  href: api/SparkPlug.Hosts.ModuleLoader.html#SparkPlug_Hosts_ModuleLoader_UseCustomModules_Microsoft_AspNetCore_Builder_IApplicationBuilder_System_IServiceProvider_
-  commentId: M:SparkPlug.Hosts.ModuleLoader.UseCustomModules(Microsoft.AspNetCore.Builder.IApplicationBuilder,System.IServiceProvider)
-  fullName: SparkPlug.Hosts.ModuleLoader.UseCustomModules(Microsoft.AspNetCore.Builder.IApplicationBuilder, System.IServiceProvider)
-  nameWithType: ModuleLoader.UseCustomModules(IApplicationBuilder, IServiceProvider)
-- uid: SparkPlug.Hosts.ModuleLoader.UseCustomModules*
-  name: UseCustomModules
-  href: api/SparkPlug.Hosts.ModuleLoader.html#SparkPlug_Hosts_ModuleLoader_UseCustomModules_
-  commentId: Overload:SparkPlug.Hosts.ModuleLoader.UseCustomModules
+  fullName: SparkPlug.Hosts.ModuleLoader.AddAllModules
+  nameWithType: ModuleLoader.AddAllModules
+- uid: SparkPlug.Hosts.ModuleLoader.UseAllMiddelwares(Microsoft.AspNetCore.Builder.IApplicationBuilder)
+  name: UseAllMiddelwares(IApplicationBuilder)
+  href: api/SparkPlug.Hosts.ModuleLoader.html#SparkPlug_Hosts_ModuleLoader_UseAllMiddelwares_Microsoft_AspNetCore_Builder_IApplicationBuilder_
+  commentId: M:SparkPlug.Hosts.ModuleLoader.UseAllMiddelwares(Microsoft.AspNetCore.Builder.IApplicationBuilder)
+  fullName: SparkPlug.Hosts.ModuleLoader.UseAllMiddelwares(Microsoft.AspNetCore.Builder.IApplicationBuilder)
+  nameWithType: ModuleLoader.UseAllMiddelwares(IApplicationBuilder)
+- uid: SparkPlug.Hosts.ModuleLoader.UseAllMiddelwares*
+  name: UseAllMiddelwares
+  href: api/SparkPlug.Hosts.ModuleLoader.html#SparkPlug_Hosts_ModuleLoader_UseAllMiddelwares_
+  commentId: Overload:SparkPlug.Hosts.ModuleLoader.UseAllMiddelwares
   isSpec: "True"
-  fullName: SparkPlug.Hosts.ModuleLoader.UseCustomModules
-  nameWithType: ModuleLoader.UseCustomModules
-- uid: SparkPlug.Hosts.ModuleLoader.UseCustomModulesMiddelwares(Microsoft.AspNetCore.Builder.IApplicationBuilder)
-  name: UseCustomModulesMiddelwares(IApplicationBuilder)
-  href: api/SparkPlug.Hosts.ModuleLoader.html#SparkPlug_Hosts_ModuleLoader_UseCustomModulesMiddelwares_Microsoft_AspNetCore_Builder_IApplicationBuilder_
-  commentId: M:SparkPlug.Hosts.ModuleLoader.UseCustomModulesMiddelwares(Microsoft.AspNetCore.Builder.IApplicationBuilder)
-  fullName: SparkPlug.Hosts.ModuleLoader.UseCustomModulesMiddelwares(Microsoft.AspNetCore.Builder.IApplicationBuilder)
-  nameWithType: ModuleLoader.UseCustomModulesMiddelwares(IApplicationBuilder)
-- uid: SparkPlug.Hosts.ModuleLoader.UseCustomModulesMiddelwares*
-  name: UseCustomModulesMiddelwares
-  href: api/SparkPlug.Hosts.ModuleLoader.html#SparkPlug_Hosts_ModuleLoader_UseCustomModulesMiddelwares_
-  commentId: Overload:SparkPlug.Hosts.ModuleLoader.UseCustomModulesMiddelwares
+  fullName: SparkPlug.Hosts.ModuleLoader.UseAllMiddelwares
+  nameWithType: ModuleLoader.UseAllMiddelwares
+- uid: SparkPlug.Hosts.ModuleLoader.UseAllModules(Microsoft.AspNetCore.Builder.IApplicationBuilder,System.IServiceProvider)
+  name: UseAllModules(IApplicationBuilder, IServiceProvider)
+  href: api/SparkPlug.Hosts.ModuleLoader.html#SparkPlug_Hosts_ModuleLoader_UseAllModules_Microsoft_AspNetCore_Builder_IApplicationBuilder_System_IServiceProvider_
+  commentId: M:SparkPlug.Hosts.ModuleLoader.UseAllModules(Microsoft.AspNetCore.Builder.IApplicationBuilder,System.IServiceProvider)
+  fullName: SparkPlug.Hosts.ModuleLoader.UseAllModules(Microsoft.AspNetCore.Builder.IApplicationBuilder, System.IServiceProvider)
+  nameWithType: ModuleLoader.UseAllModules(IApplicationBuilder, IServiceProvider)
+- uid: SparkPlug.Hosts.ModuleLoader.UseAllModules*
+  name: UseAllModules
+  href: api/SparkPlug.Hosts.ModuleLoader.html#SparkPlug_Hosts_ModuleLoader_UseAllModules_
+  commentId: Overload:SparkPlug.Hosts.ModuleLoader.UseAllModules
   isSpec: "True"
-  fullName: SparkPlug.Hosts.ModuleLoader.UseCustomModulesMiddelwares
-  nameWithType: ModuleLoader.UseCustomModulesMiddelwares
+  fullName: SparkPlug.Hosts.ModuleLoader.UseAllModules
+  nameWithType: ModuleLoader.UseAllModules
 - uid: SparkPlug.Hosts.Program
   name: Program
   href: api/SparkPlug.Hosts.Program.html

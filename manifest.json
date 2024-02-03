@@ -102,6 +102,26 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Api.Common.ExceptionWriter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Api.Common.ExceptionWriter.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Api.Common.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Api.Common.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/SparkPlug.Api.Configuration.ApiEventId.yml",
       "output": {
         ".html": {
@@ -222,20 +242,40 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/SparkPlug.Api.Filters.ApiExceptionFilterAttribute.yml",
+      "source_relative_path": "api/SparkPlug.Api.Filter.ApiExceptionFilterAttribute.yml",
       "output": {
         ".html": {
-          "relative_path": "api/SparkPlug.Api.Filters.ApiExceptionFilterAttribute.html"
+          "relative_path": "api/SparkPlug.Api.Filter.ApiExceptionFilterAttribute.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/SparkPlug.Api.Filters.yml",
+      "source_relative_path": "api/SparkPlug.Api.Filter.yml",
       "output": {
         ".html": {
-          "relative_path": "api/SparkPlug.Api.Filters.html"
+          "relative_path": "api/SparkPlug.Api.Filter.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Api.Handler.GlobalExceptionHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Api.Handler.GlobalExceptionHandler.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Api.Handler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Api.Handler.html"
         }
       },
       "version": ""
@@ -696,6 +736,16 @@
       "output": {
         ".html": {
           "relative_path": "api/SparkPlug.Contracts.ConditionFilter.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Contracts.ContractsExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Contracts.ContractsExtensions.html"
         }
       },
       "version": ""
