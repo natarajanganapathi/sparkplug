@@ -4,7 +4,7 @@ public class ContractsModule : IModule
 {
     public void AddModule(IServiceCollection services, IConfiguration configuration)
     {
-        services.AddSingleton<ISerializer, NewtonsoftSerializer>();
+        services.AddContracts();
     }
 
     public void UseMiddelwares(IApplicationBuilder app)

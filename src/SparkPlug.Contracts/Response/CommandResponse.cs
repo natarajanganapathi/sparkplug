@@ -1,6 +1,6 @@
 namespace SparkPlug.Contracts;
 
-public class CommandResponse : ApiResponse, ICommandResponse
+public record CommandResponse : ApiResponse, ICommandResponse
 {
     public CommandResponse(object? data = default)
     {

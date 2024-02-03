@@ -1,6 +1,6 @@
 namespace SparkPlug.Contracts;
 
-public class ErrorResponse : ApiResponse, IErrorResponse
+public record ErrorResponse : ApiResponse, IErrorResponse
 {
     public string? Message { get; set; }
     public string? Code { get; set; }

@@ -8,6 +8,7 @@ global using System.Transactions;
 
 global using Microsoft.AspNetCore.Authorization;
 global using Microsoft.AspNetCore.Builder;
+global using Microsoft.AspNetCore.Diagnostics;
 global using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 global using Microsoft.AspNetCore.Hosting;
 global using Microsoft.AspNetCore.Http;
@@ -28,9 +29,11 @@ global using Microsoft.OpenApi.Models;
 global using Newtonsoft.Json;
 global using Newtonsoft.Json.Linq;
 
+global using SparkPlug.Api.Common;
 global using SparkPlug.Api.Configuration;
 global using SparkPlug.Api.Controllers;
-global using SparkPlug.Api.Filters;
+global using SparkPlug.Api.Filter;
+global using SparkPlug.Api.Handler;
 global using SparkPlug.Api.Middleware;
 global using SparkPlug.Contracts;
 global using SparkPlug.Persistence.Abstractions;

@@ -6,7 +6,7 @@ public class GenericControllerRouteConvention : IControllerModelConvention
     private readonly AttributeRouteModel? _tenantPrefix;
     public GenericControllerRouteConvention(IRouteTemplateProvider? routeTemplateProvider)
     {
-        _tenantPrefix = routeTemplateProvider == null ? null : new AttributeRouteModel(routeTemplateProvider);
+        _tenantPrefix = routeTemplateProvider is null ? null : new AttributeRouteModel(routeTemplateProvider);
     }
     public void Apply(ControllerModel controller)
     {
@@ -15,7 +15,7 @@ public class GenericControllerRouteConvention : IControllerModelConvention
             var genericArguments = controller.ControllerType.GetGenericArguments();
             var type = genericArguments?.FirstOrDefault(x => x.IsDefined(apiAttributeType, inherit: false));
             var apiAttribute = type?.GetCustomAttribute<ApiAttribute>();
-            if (apiAttribute != null)
+            if (apiAttribute is not null)
             {
                 var route = new AttributeRouteModel(new RouteAttribute(apiAttribute.Route));
                 if (type?.GetCustomAttribute<TenantDbAttribute>() != null)

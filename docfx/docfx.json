@@ -27,7 +27,7 @@
   "build": {
     "assembly": [
     {
-        "name": "../samples/Api.Module.Sample/bin/Release/net7.0/Newtonsoft.Json.dll"
+        "name": "../samples/Api.Module.Sample/bin/Release/net8.0/Newtonsoft.Json.dll"
     }
     ],
     "content": [
