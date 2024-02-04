@@ -8,7 +8,7 @@ public abstract class SqlDbContext : DbContext
     {
         ModelConfigProvider.Configure(modelBuilder);
     }
-    public async Task<int> SaveChangesAsync<TId>(TId id, CancellationToken cancellationToken)
+    public async Task<int> SaveChangesAsync<TId>(TId userId, CancellationToken cancellationToken)
     {
         var entries = ChangeTracker.Entries()
                   .Where(x => (x.State == EntityState.Added || x.State == EntityState.Modified) && x.Entity is IAuditableEntity<TId>);
@@ -18,10 +18,10 @@ public abstract class SqlDbContext : DbContext
             if (entry.State == EntityState.Added)
             {
                 entry.Property(nameof(IAuditableEntity<TId>.CreatedAt)).CurrentValue = dateTime;
-                entry.Property(nameof(IAuditableEntity<TId>.CreatedBy)).CurrentValue = id;
+                entry.Property(nameof(IAuditableEntity<TId>.CreatedBy)).CurrentValue = userId;
             }
             entry.Property(nameof(IAuditableEntity<TId>.ModifiedAt)).CurrentValue = dateTime;
-            entry.Property(nameof(IAuditableEntity<TId>.ModifiedBy)).CurrentValue = id;
+            entry.Property(nameof(IAuditableEntity<TId>.ModifiedBy)).CurrentValue = userId;
         }
         return await SaveChangesAsync(cancellationToken);
     }

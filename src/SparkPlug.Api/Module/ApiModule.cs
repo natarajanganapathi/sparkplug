@@ -14,7 +14,7 @@ public class ApiModule : IModule
         services.Configure<WebApiOptions>(configuration.GetSection(WebApiOptions.ConfigPath));
         services.AddControllers(options =>
         {
-            options.Filters.Add(new AuthorizeFilter(policy));
+            // options.Filters.Add(new AuthorizeFilter(policy));
             options.Filters.Add<ApiExceptionFilterAttribute>();
         })
         .AddNewtonsoftJson(options =>
@@ -22,11 +22,11 @@ public class ApiModule : IModule
             options.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore;
             options.SerializerSettings.NullValueHandling = NullValueHandling.Ignore;
         });
-        // services.AddHttpClient();
+        services.AddHttpClient();
         services.AddHealthChecks();
     }
 
-    public void UseModule(IApplicationBuilder app, IServiceProvider serviceProvider)
+    public void UseModule(IApplicationBuilder app)
     {
         app.UseExceptionHandler();
     }

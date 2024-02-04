@@ -16,7 +16,7 @@ public static class ModuleLoader
             module?.AddModule(services, configuration);
         }
     }
-    public static void UseAllModules(this IApplicationBuilder app, IServiceProvider serviceProvider)
+    public static void UseAllModules(this IApplicationBuilder app)
     {
         var logger = app.ApplicationServices.GetRequiredService<ILogger<Startup>>();
         logger.LogInformation($"Total Modules (Use): {string.Join("," , Modules.Select(x => x?.GetType().Name))}");
@@ -28,7 +28,7 @@ public static class ModuleLoader
 
         foreach (var module in Modules)
         {
-            module?.UseModule(app, serviceProvider);
+            module?.UseModule(app);
         }
         app.UseAllMiddelwares();
 

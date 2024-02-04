@@ -6,7 +6,7 @@ public class TenancyDomainModule : IModule
     {
     }
 
-    public void UseModule(IApplicationBuilder app, IServiceProvider serviceProvider)
+    public void UseModule(IApplicationBuilder app)
     {
     }
 

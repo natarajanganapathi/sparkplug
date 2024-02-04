@@ -13,7 +13,7 @@ public class PersistanceAbstractionModule : IModule
     {
     }
 
-    public void UseModule(IApplicationBuilder app, IServiceProvider serviceProvider)
+    public void UseModule(IApplicationBuilder app)
     {
     }
 }

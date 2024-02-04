@@ -48,7 +48,7 @@ public abstract class SqlRepository<TId, TEntity> : IRepository<TId, TEntity> wh
     public async Task<TEntity> GetAsync(TId id, CancellationToken cancellationToken = default)
     {
         var tid = id ?? throw new QueryEntityException("Id is null");
-        var result = await DbSet.FindAsync(new object[] { tid }, cancellationToken);
+        var result = await DbSet.FindAsync([tid], cancellationToken);
         if (result is IDeletableEntity obj)
         {
             result = obj.Status == Status.Live ? result : null;

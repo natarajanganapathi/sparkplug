@@ -55,6 +55,9 @@ sdkk:
 mig:
 	dotnet ef migrations add InitialCreate --startup-project ./sdk/ClientSdkGenerator --project ./src/SparkPlug.DesignTimeMigration --context HomeDbMigrationContext
 
+host:
+	dotnet build ./src/SparkPlug.Hosts/SparkPlug.Hosts.csproj
+
 tools:
 	dotnet tool list -g
 	dotnet tool update -g coverlet.console                

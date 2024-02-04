@@ -8,7 +8,7 @@ public class RbacServiceModule : IModule
        services.AddScoped<ResourceService>();
     }
 
-    public void UseModule(IApplicationBuilder app, IServiceProvider serviceProvider)
+    public void UseModule(IApplicationBuilder app)
     {
     }
 

@@ -7,3 +7,4 @@ global using Microsoft.Extensions.Configuration;
 global using Microsoft.Identity.Web;
 
 global using SparkPlug.Contracts;
+global using SparkPlug.Api;
