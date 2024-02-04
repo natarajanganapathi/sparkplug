@@ -6,6 +6,6 @@ public class HomeDbContextFactory : IDesignTimeDbContextFactory<HomeDbMigrationC
     {
         var builder = new DbContextOptionsBuilder<HomeDbMigrationContext>();
         var options = builder.UseNpgsql("").Options;
-         return new HomeDbMigrationContext(options);
+        return new HomeDbMigrationContext(options);
     }
 }

@@ -11,8 +11,8 @@ public class SqlDbHealthCheck : IHealthCheck
 
     public async Task<HealthCheckResult> CheckHealthAsync(HealthCheckContext context, CancellationToken cancellationToken = default)
     {
-            return await _context.Database.CanConnectAsync(cancellationToken) 
-            ? HealthCheckResult.Healthy() 
-            : HealthCheckResult.Unhealthy("Not able to connect database.");
+        return await _context.Database.CanConnectAsync(cancellationToken)
+        ? HealthCheckResult.Healthy()
+        : HealthCheckResult.Unhealthy("Not able to connect database.");
     }
 }

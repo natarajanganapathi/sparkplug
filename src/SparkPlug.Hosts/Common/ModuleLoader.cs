@@ -19,7 +19,7 @@ public static class ModuleLoader
     public static void UseAllModules(this IApplicationBuilder app)
     {
         var logger = app.ApplicationServices.GetRequiredService<ILogger<Startup>>();
-        logger.LogInformation($"Total Modules (Use): {string.Join("," , Modules.Select(x => x?.GetType().Name))}");
+        logger.LogInformation($"Total Modules (Use): {string.Join(",", Modules.Select(x => x?.GetType().Name))}");
         app.UseGlobalExceptionHandling();
         app.UseHttpsRedirection();
         app.UseHealthChecks();
