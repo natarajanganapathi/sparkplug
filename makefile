@@ -7,6 +7,7 @@ format:
 
 clean:
 	-dotnet clean
+	-rimraf docs
 
 build: build-src build-modules build-samples
 
@@ -99,6 +100,7 @@ install:
 	dotnet tool list -g
 
 setup: install
+	-npm install -g rimraf
 
 host:
 	dotnet build ./src/SparkPlug.Hosts/SparkPlug.Hosts.csproj

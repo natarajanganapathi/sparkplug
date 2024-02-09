@@ -1,7 +1,7 @@
-namespace SparkPlug.Api.Configuration;
+// namespace SparkPlug.Api.Configuration;
 
-public enum ApiEventId
-{
-    UnknownGlobalException = 1000,
-    ExceptionFilter = 1001,
-}
+// public enum ApiEventId
+// {
+//     UnknownGlobalException = 1000,
+//     ExceptionFilter = 1001,
+// }
