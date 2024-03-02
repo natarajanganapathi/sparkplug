@@ -6,6 +6,7 @@ public class RbacServiceModule : IModule
     {
         services.AddScoped<PermissionService>();
         services.AddScoped<ResourceService>();
+        services.AddScoped<EndpointService>();
     }
 
     public void UseModule(IApplicationBuilder app)

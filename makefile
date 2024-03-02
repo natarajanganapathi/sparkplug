@@ -1,6 +1,10 @@
 all: clean format build tests
 	make packages -B
 	make docfx -B
+	make sdk -B
+	make swagger -B
+	make migration
+	make angular -B
 
 format:
 	- dotnet format
@@ -56,7 +60,7 @@ run:
 	-setx ASPNETCORE_ENVIRONMENT "Development"
 	-dotnet run --project ./src/SparkPlug.Hosts/SparkPlug.Hosts.csproj
 
-sdkk:
+sdk:
 	setx ASPNETCORE_ENVIRONMENT "Development"
 	dotnet run --project ./sdk/ClientSdkGenerator/ClientSdkGenerator.csproj	
 
