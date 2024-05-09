@@ -7,7 +7,7 @@ public class TenancyApiModule : IModule
         services.AddTenancyRouteAttribute();
     }
 
-    public void UseModule(IApplicationBuilder app, IServiceProvider serviceProvider)
+    public void UseModule(IApplicationBuilder app)
     {
     }
 

@@ -26,7 +26,7 @@ public static class ExceptionExtension
 #endif
         return error;
     }
-    
+
     public static ErrorResponse SetFromException(this ErrorResponse error, Exception ex)
     {
         error.SetMessage(ex.Message);

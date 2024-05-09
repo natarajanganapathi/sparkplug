@@ -2,16 +2,19 @@ namespace SparkPlug.Api.Controllers;
 
 public abstract class BaseController<TId, TEntity> : ControllerBase where TEntity : class, IBaseEntity<TId>, new()
 {
-    protected readonly BaseService<TId, TEntity> _service;
-    protected readonly ILogger<BaseController<TId, TEntity>> _logger;
-    protected readonly IServiceProvider _serviceProvider;
+    private readonly IServiceProvider _serviceProvider;
+    protected readonly BaseService<TId, TEntity> Service;
+    protected readonly ILogger<BaseController<TId, TEntity>> Logger;
 
     protected BaseController(IServiceProvider serviceProvider)
     {
         _serviceProvider = serviceProvider;
-        _service = serviceProvider.GetRequiredService<BaseService<TId, TEntity>>();
-        _logger = serviceProvider.GetRequiredService<ILogger<BaseController<TId, TEntity>>>();
+        Service = serviceProvider.GetRequiredService<BaseService<TId, TEntity>>();
+        Logger = serviceProvider.GetRequiredService<ILogger<BaseController<TId, TEntity>>>();
     }
+    public TService GetService<TService>() where TService : class
+                 => _serviceProvider.GetRequiredService<TService>();
+
     [NonAction]
     public OkObjectResult Ok([ActionResultObjectValue] IEnumerable<TEntity>? data, [ActionResultObjectValue] IPageContext? pagecontext)
     {

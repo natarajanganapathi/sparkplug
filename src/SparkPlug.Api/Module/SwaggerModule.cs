@@ -12,9 +12,12 @@ public class SwaggerModule : IModule
     {
     }
 
-    public void UseModule(IApplicationBuilder app, IServiceProvider serviceProvider)
+    public void UseModule(IApplicationBuilder app)
     {
-        var env = serviceProvider.GetRequiredService<IWebHostEnvironment>();
-        if (env.IsDevelopment()) { app.UseSwaggerApi(); }
+        var env = app.ApplicationServices.GetRequiredService<IWebHostEnvironment>();
+        if (env.IsDevelopment())
+        {
+            app.UseSwaggerApi();
+        }
     }
 }

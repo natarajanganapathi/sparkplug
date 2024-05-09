@@ -1,7 +1,15 @@
-namespace Microsoft.Extensions.DependencyInjection;
+namespace SparkPlug.Api;
 
-public static class HealthCheckServiceCollectionExtensions
+public static class ApiExtensions
 {
+    public static void UseCentralRoutePrefix(this MvcOptions opts, IRouteTemplateProvider routeAttribute)
+    {
+        opts.Conventions.Insert(0, new RouteConvention(routeAttribute));
+    }
+    public static IApplicationBuilder UseGlobalExceptionHandling(this IApplicationBuilder builder)
+    {
+        return builder.UseMiddleware<GlobalExceptionHandlingMiddleware>();
+    }
     public static void UseHealthChecks(this IApplicationBuilder app)
     {
         app.UseHealthChecks("/health/ready", new HealthCheckOptions
@@ -15,5 +23,9 @@ public static class HealthCheckServiceCollectionExtensions
             }
         });
         app.UseHealthChecks("/health/live", new HealthCheckOptions { Predicate = _ => false });
+    }
+    public static IApplicationBuilder UseTransactionMiddleware(this IApplicationBuilder app)
+    {
+        return app.UseMiddleware<TransactionMiddleware>();
     }
 }

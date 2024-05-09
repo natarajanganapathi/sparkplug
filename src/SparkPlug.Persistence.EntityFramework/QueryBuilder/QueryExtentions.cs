@@ -94,7 +94,7 @@ public static class QueryExtentions
     {
         select = select == null || select.Length == 0 ? GetProperties(elementType).ToArray() : select;
         var jObjectExpression = Expression.New(typeof(JObject));
-        var addMethodInfo = typeof(JObject).GetMethod(nameof(JObject.Add), new[] { typeof(string), typeof(JToken) });
+        var addMethodInfo = typeof(JObject).GetMethod(nameof(JObject.Add), [typeof(string), typeof(JToken)]);
         var jPropertiesExpressions = select.Select(property =>
         {
             var properties = property.Split(" ", StringSplitOptions.RemoveEmptyEntries).ToArray();

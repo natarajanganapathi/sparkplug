@@ -6,7 +6,7 @@ public class RbacDomainModule : IModule
     {
     }
 
-    public void UseModule(IApplicationBuilder app, IServiceProvider serviceProvider)
+    public void UseModule(IApplicationBuilder app)
     {
     }
 

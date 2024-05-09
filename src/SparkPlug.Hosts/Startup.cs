@@ -11,10 +11,16 @@ public class Startup
     public void ConfigureServices(IServiceCollection services)
     {
         services.AddAllModules(Configuration);
+        // services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+        // .AddCookie(options =>
+        // {
+        //     options.ExpireTimeSpan = TimeSpan.FromMinutes(20);
+        //     options.SlidingExpiration = true;
+        // });
         services.AddDistributedMemoryCache();
         services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
-                .AddMicrosoftIdentityWebApi(
-                    (bearerOptions) => {
+                .AddMicrosoftIdentityWebApi((bearerOptions) =>
+                    {
                         Configuration.Bind("SparkPlug:Api:AzureAdB2C", bearerOptions);
                         bearerOptions.TokenValidationParameters.NameClaimType = "name";
                     },
@@ -36,6 +42,9 @@ public class Startup
     public static void Configure(IApplicationBuilder app, IServiceProvider serviceProvider)
     {
         app.UseCors();
-        app.UseAllModules(serviceProvider);
+        app.UseAllModules();
+        // app.UseAuthentication();
+        // app.UseAuthorization();
+        // app.UseEndpoints(endpoints => endpoints.MapControllers());
     }
 }

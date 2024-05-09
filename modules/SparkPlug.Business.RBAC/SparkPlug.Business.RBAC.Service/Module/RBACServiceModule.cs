@@ -4,11 +4,12 @@ public class RbacServiceModule : IModule
 {
     public void AddModule(IServiceCollection services, IConfiguration configuration)
     {
-       services.AddScoped<PermissionService>();
-       services.AddScoped<ResourceService>();
+        services.AddScoped<PermissionService>();
+        services.AddScoped<ResourceService>();
+        services.AddScoped<EndpointService>();
     }
 
-    public void UseModule(IApplicationBuilder app, IServiceProvider serviceProvider)
+    public void UseModule(IApplicationBuilder app)
     {
     }
 

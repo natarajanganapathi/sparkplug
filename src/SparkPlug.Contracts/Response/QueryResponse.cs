@@ -19,7 +19,7 @@ public static partial class Extensions
         source.Data = data;
         return source;
     }
-    public static IQueryResponse SetPageContext(this IQueryResponse source, IPageContext pc) 
+    public static IQueryResponse SetPageContext(this IQueryResponse source, IPageContext pc)
     {
         source.Page = pc;
         return source;

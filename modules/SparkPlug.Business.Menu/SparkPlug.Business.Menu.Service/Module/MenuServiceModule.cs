@@ -7,7 +7,7 @@ public class MenuServiceModule : IModule
         services.AddScoped<MenuService>();
     }
 
-    public void UseModule(IApplicationBuilder app, IServiceProvider serviceProvider)
+    public void UseModule(IApplicationBuilder app)
     {
     }
 

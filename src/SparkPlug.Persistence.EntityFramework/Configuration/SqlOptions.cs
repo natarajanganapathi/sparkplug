@@ -3,7 +3,7 @@ namespace SparkPlug.Persistence.EntityFramework.Configuration;
 public class SqlDbOptions
 {
     public const string ConfigPath = "SparkPlug:SqlDb";
-    
+
     [Required]
     public string? ConnectionString { get; set; }
     // [Required]

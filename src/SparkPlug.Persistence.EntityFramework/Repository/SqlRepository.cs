@@ -48,17 +48,17 @@ public abstract class SqlRepository<TId, TEntity> : IRepository<TId, TEntity> wh
     public async Task<TEntity> GetAsync(TId id, CancellationToken cancellationToken = default)
     {
         var tid = id ?? throw new QueryEntityException("Id is null");
-        var result = await DbSet.FindAsync(new object[] { tid }, cancellationToken);
+        var result = await DbSet.FindAsync([tid], cancellationToken);
         if (result is IDeletableEntity obj)
         {
-            result = obj.Status == Status.Live ? result : null;
+            result = obj.Status == Status.Active ? result : null;
         }
         return result ?? throw new QueryEntityException($"Id '{id}' is not found");
     }
     public async Task<IEnumerable<TEntity>> GetManyAsync(TId[] ids, CancellationToken cancellationToken = default)
     {
         var results = await DbSet.AsNoTracking().Where(x => ids.Contains(x.Id)).ToListAsync(cancellationToken);
-        var deletedEntities = results.OfType<IDeletableEntity>().Where(x => x.Status != Status.Live);
+        var deletedEntities = results.OfType<IDeletableEntity>().Where(x => x.Status != Status.Active);
         if (deletedEntities.Any() || ids.Length != results.Count)
         {
             throw new QueryEntityException("One or more id is not found");
@@ -82,7 +82,7 @@ public abstract class SqlRepository<TId, TEntity> : IRepository<TId, TEntity> wh
     public async Task<TEntity> CreateAsync(ICommandRequest<TEntity> request, CancellationToken cancellationToken = default)
     {
         var entity = request.Data ?? throw new CreateEntityException("Entity is null");
-        if (entity is IDeletableEntity obj) { obj.Status = Status.Live; }
+        if (entity is IDeletableEntity obj) { obj.Status = Status.Active; }
         var entityEntry = await DbSet.AddAsync(entity, cancellationToken);
         await DbContext.SaveChangesAsync(requestContext.UserId, cancellationToken);
         return entityEntry.Entity;
@@ -92,7 +92,7 @@ public abstract class SqlRepository<TId, TEntity> : IRepository<TId, TEntity> wh
         var entities = request.Data ?? throw new CreateEntityException("Entities are null");
         foreach (var entity in entities)
         {
-            if (entity is IDeletableEntity obj) { obj.Status = Status.Live; }
+            if (entity is IDeletableEntity obj) { obj.Status = Status.Active; }
         }
         await DbSet.AddRangeAsync(entities, cancellationToken);
         await DbContext.SaveChangesAsync(requestContext.UserId, cancellationToken);
@@ -105,7 +105,7 @@ public abstract class SqlRepository<TId, TEntity> : IRepository<TId, TEntity> wh
         if (entity is IDeletableEntity)
         {
             var status = await GetStats(id, cancellationToken);
-            if (status != Status.Live)
+            if (status != Status.Active)
             {
                 throw new UpdateEntityException($"Entity with ID '{id}' is not live and cannot be updated.");
             }

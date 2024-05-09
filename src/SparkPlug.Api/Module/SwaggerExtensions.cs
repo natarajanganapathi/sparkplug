@@ -1,6 +1,6 @@
 namespace Microsoft.Extensions.DependencyInjection;
 
-public static class SwaggerServiceCollectionExtensions
+public static class SwaggerExtensions
 {
     private static readonly string?[] _apiVersions = AssemblyCache.Assemblies
             .SelectMany(assembly => assembly.GetTypes())
