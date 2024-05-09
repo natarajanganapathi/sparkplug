@@ -22,40 +22,10 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Microsoft.Extensions.DependencyInjection.GlobalExceptionHandlingMiddlewareExtensions.yml",
+      "source_relative_path": "api/Microsoft.Extensions.DependencyInjection.SwaggerExtensions.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Microsoft.Extensions.DependencyInjection.GlobalExceptionHandlingMiddlewareExtensions.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Microsoft.Extensions.DependencyInjection.HealthCheckServiceCollectionExtensions.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Microsoft.Extensions.DependencyInjection.HealthCheckServiceCollectionExtensions.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Microsoft.Extensions.DependencyInjection.MvcOptionsExtensions.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Microsoft.Extensions.DependencyInjection.MvcOptionsExtensions.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Microsoft.Extensions.DependencyInjection.SwaggerServiceCollectionExtensions.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Microsoft.Extensions.DependencyInjection.SwaggerServiceCollectionExtensions.html"
+          "relative_path": "api/Microsoft.Extensions.DependencyInjection.SwaggerExtensions.html"
         }
       },
       "version": ""
@@ -72,20 +42,20 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Microsoft.Extensions.DependencyInjection.TransactionMiddlewareExtensions.yml",
+      "source_relative_path": "api/Microsoft.Extensions.DependencyInjection.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Microsoft.Extensions.DependencyInjection.TransactionMiddlewareExtensions.html"
+          "relative_path": "api/Microsoft.Extensions.DependencyInjection.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Microsoft.Extensions.DependencyInjection.yml",
+      "source_relative_path": "api/SparkPlug.Api.ApiExtensions.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Microsoft.Extensions.DependencyInjection.html"
+          "relative_path": "api/SparkPlug.Api.ApiExtensions.html"
         }
       },
       "version": ""
@@ -116,16 +86,6 @@
       "output": {
         ".html": {
           "relative_path": "api/SparkPlug.Api.Common.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/SparkPlug.Api.Configuration.ApiEventId.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/SparkPlug.Api.Configuration.ApiEventId.html"
         }
       },
       "version": ""
@@ -1752,10 +1712,20 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/SparkPlug.Persistence.EntityFramework.PostgreSql.EntityFrameworkPostgreSql.yml",
+      "source_relative_path": "api/SparkPlug.Persistence.EntityFramework.PostgreSql.EntityFrameworkPostgreSqlExtensions.yml",
       "output": {
         ".html": {
-          "relative_path": "api/SparkPlug.Persistence.EntityFramework.PostgreSql.EntityFrameworkPostgreSql.html"
+          "relative_path": "api/SparkPlug.Persistence.EntityFramework.PostgreSql.EntityFrameworkPostgreSqlExtensions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Persistence.EntityFramework.PostgreSql.EntityFrameworkPostgreSqlModule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Persistence.EntityFramework.PostgreSql.EntityFrameworkPostgreSqlModule.html"
         }
       },
       "version": ""
@@ -1986,6 +1956,16 @@
       "output": {
         ".html": {
           "relative_path": "api/SparkPlug.Persistence.MongoDb.MongoRepositoryProvider.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SparkPlug.Persistence.MongoDb.PersistanceMongoDbExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SparkPlug.Persistence.MongoDb.PersistanceMongoDbExtensions.html"
         }
       },
       "version": ""

@@ -26,95 +26,38 @@ references:
   isSpec: "True"
   fullName: Microsoft.Extensions.DependencyInjection.ApiServiceCollectionExtenstions.AddTenancyRouteAttribute
   nameWithType: ApiServiceCollectionExtenstions.AddTenancyRouteAttribute
-- uid: Microsoft.Extensions.DependencyInjection.GlobalExceptionHandlingMiddlewareExtensions
-  name: GlobalExceptionHandlingMiddlewareExtensions
-  href: api/Microsoft.Extensions.DependencyInjection.GlobalExceptionHandlingMiddlewareExtensions.html
-  commentId: T:Microsoft.Extensions.DependencyInjection.GlobalExceptionHandlingMiddlewareExtensions
-  fullName: Microsoft.Extensions.DependencyInjection.GlobalExceptionHandlingMiddlewareExtensions
-  nameWithType: GlobalExceptionHandlingMiddlewareExtensions
-- uid: Microsoft.Extensions.DependencyInjection.GlobalExceptionHandlingMiddlewareExtensions.UseGlobalExceptionHandling(Microsoft.AspNetCore.Builder.IApplicationBuilder)
-  name: UseGlobalExceptionHandling(IApplicationBuilder)
-  href: api/Microsoft.Extensions.DependencyInjection.GlobalExceptionHandlingMiddlewareExtensions.html#Microsoft_Extensions_DependencyInjection_GlobalExceptionHandlingMiddlewareExtensions_UseGlobalExceptionHandling_Microsoft_AspNetCore_Builder_IApplicationBuilder_
-  commentId: M:Microsoft.Extensions.DependencyInjection.GlobalExceptionHandlingMiddlewareExtensions.UseGlobalExceptionHandling(Microsoft.AspNetCore.Builder.IApplicationBuilder)
-  fullName: Microsoft.Extensions.DependencyInjection.GlobalExceptionHandlingMiddlewareExtensions.UseGlobalExceptionHandling(Microsoft.AspNetCore.Builder.IApplicationBuilder)
-  nameWithType: GlobalExceptionHandlingMiddlewareExtensions.UseGlobalExceptionHandling(IApplicationBuilder)
-- uid: Microsoft.Extensions.DependencyInjection.GlobalExceptionHandlingMiddlewareExtensions.UseGlobalExceptionHandling*
-  name: UseGlobalExceptionHandling
-  href: api/Microsoft.Extensions.DependencyInjection.GlobalExceptionHandlingMiddlewareExtensions.html#Microsoft_Extensions_DependencyInjection_GlobalExceptionHandlingMiddlewareExtensions_UseGlobalExceptionHandling_
-  commentId: Overload:Microsoft.Extensions.DependencyInjection.GlobalExceptionHandlingMiddlewareExtensions.UseGlobalExceptionHandling
-  isSpec: "True"
-  fullName: Microsoft.Extensions.DependencyInjection.GlobalExceptionHandlingMiddlewareExtensions.UseGlobalExceptionHandling
-  nameWithType: GlobalExceptionHandlingMiddlewareExtensions.UseGlobalExceptionHandling
-- uid: Microsoft.Extensions.DependencyInjection.HealthCheckServiceCollectionExtensions
-  name: HealthCheckServiceCollectionExtensions
-  href: api/Microsoft.Extensions.DependencyInjection.HealthCheckServiceCollectionExtensions.html
-  commentId: T:Microsoft.Extensions.DependencyInjection.HealthCheckServiceCollectionExtensions
-  fullName: Microsoft.Extensions.DependencyInjection.HealthCheckServiceCollectionExtensions
-  nameWithType: HealthCheckServiceCollectionExtensions
-- uid: Microsoft.Extensions.DependencyInjection.HealthCheckServiceCollectionExtensions.UseHealthChecks(Microsoft.AspNetCore.Builder.IApplicationBuilder)
-  name: UseHealthChecks(IApplicationBuilder)
-  href: api/Microsoft.Extensions.DependencyInjection.HealthCheckServiceCollectionExtensions.html#Microsoft_Extensions_DependencyInjection_HealthCheckServiceCollectionExtensions_UseHealthChecks_Microsoft_AspNetCore_Builder_IApplicationBuilder_
-  commentId: M:Microsoft.Extensions.DependencyInjection.HealthCheckServiceCollectionExtensions.UseHealthChecks(Microsoft.AspNetCore.Builder.IApplicationBuilder)
-  fullName: Microsoft.Extensions.DependencyInjection.HealthCheckServiceCollectionExtensions.UseHealthChecks(Microsoft.AspNetCore.Builder.IApplicationBuilder)
-  nameWithType: HealthCheckServiceCollectionExtensions.UseHealthChecks(IApplicationBuilder)
-- uid: Microsoft.Extensions.DependencyInjection.HealthCheckServiceCollectionExtensions.UseHealthChecks*
-  name: UseHealthChecks
-  href: api/Microsoft.Extensions.DependencyInjection.HealthCheckServiceCollectionExtensions.html#Microsoft_Extensions_DependencyInjection_HealthCheckServiceCollectionExtensions_UseHealthChecks_
-  commentId: Overload:Microsoft.Extensions.DependencyInjection.HealthCheckServiceCollectionExtensions.UseHealthChecks
-  isSpec: "True"
-  fullName: Microsoft.Extensions.DependencyInjection.HealthCheckServiceCollectionExtensions.UseHealthChecks
-  nameWithType: HealthCheckServiceCollectionExtensions.UseHealthChecks
-- uid: Microsoft.Extensions.DependencyInjection.MvcOptionsExtensions
-  name: MvcOptionsExtensions
-  href: api/Microsoft.Extensions.DependencyInjection.MvcOptionsExtensions.html
-  commentId: T:Microsoft.Extensions.DependencyInjection.MvcOptionsExtensions
-  fullName: Microsoft.Extensions.DependencyInjection.MvcOptionsExtensions
-  nameWithType: MvcOptionsExtensions
-- uid: Microsoft.Extensions.DependencyInjection.MvcOptionsExtensions.UseCentralRoutePrefix(Microsoft.AspNetCore.Mvc.MvcOptions,Microsoft.AspNetCore.Mvc.Routing.IRouteTemplateProvider)
-  name: UseCentralRoutePrefix(MvcOptions, IRouteTemplateProvider)
-  href: api/Microsoft.Extensions.DependencyInjection.MvcOptionsExtensions.html#Microsoft_Extensions_DependencyInjection_MvcOptionsExtensions_UseCentralRoutePrefix_Microsoft_AspNetCore_Mvc_MvcOptions_Microsoft_AspNetCore_Mvc_Routing_IRouteTemplateProvider_
-  commentId: M:Microsoft.Extensions.DependencyInjection.MvcOptionsExtensions.UseCentralRoutePrefix(Microsoft.AspNetCore.Mvc.MvcOptions,Microsoft.AspNetCore.Mvc.Routing.IRouteTemplateProvider)
-  fullName: Microsoft.Extensions.DependencyInjection.MvcOptionsExtensions.UseCentralRoutePrefix(Microsoft.AspNetCore.Mvc.MvcOptions, Microsoft.AspNetCore.Mvc.Routing.IRouteTemplateProvider)
-  nameWithType: MvcOptionsExtensions.UseCentralRoutePrefix(MvcOptions, IRouteTemplateProvider)
-- uid: Microsoft.Extensions.DependencyInjection.MvcOptionsExtensions.UseCentralRoutePrefix*
-  name: UseCentralRoutePrefix
-  href: api/Microsoft.Extensions.DependencyInjection.MvcOptionsExtensions.html#Microsoft_Extensions_DependencyInjection_MvcOptionsExtensions_UseCentralRoutePrefix_
-  commentId: Overload:Microsoft.Extensions.DependencyInjection.MvcOptionsExtensions.UseCentralRoutePrefix
-  isSpec: "True"
-  fullName: Microsoft.Extensions.DependencyInjection.MvcOptionsExtensions.UseCentralRoutePrefix
-  nameWithType: MvcOptionsExtensions.UseCentralRoutePrefix
-- uid: Microsoft.Extensions.DependencyInjection.SwaggerServiceCollectionExtensions
-  name: SwaggerServiceCollectionExtensions
-  href: api/Microsoft.Extensions.DependencyInjection.SwaggerServiceCollectionExtensions.html
-  commentId: T:Microsoft.Extensions.DependencyInjection.SwaggerServiceCollectionExtensions
-  fullName: Microsoft.Extensions.DependencyInjection.SwaggerServiceCollectionExtensions
-  nameWithType: SwaggerServiceCollectionExtensions
-- uid: Microsoft.Extensions.DependencyInjection.SwaggerServiceCollectionExtensions.AddSwagger(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+- uid: Microsoft.Extensions.DependencyInjection.SwaggerExtensions
+  name: SwaggerExtensions
+  href: api/Microsoft.Extensions.DependencyInjection.SwaggerExtensions.html
+  commentId: T:Microsoft.Extensions.DependencyInjection.SwaggerExtensions
+  fullName: Microsoft.Extensions.DependencyInjection.SwaggerExtensions
+  nameWithType: SwaggerExtensions
+- uid: Microsoft.Extensions.DependencyInjection.SwaggerExtensions.AddSwagger(Microsoft.Extensions.DependencyInjection.IServiceCollection)
   name: AddSwagger(IServiceCollection)
-  href: api/Microsoft.Extensions.DependencyInjection.SwaggerServiceCollectionExtensions.html#Microsoft_Extensions_DependencyInjection_SwaggerServiceCollectionExtensions_AddSwagger_Microsoft_Extensions_DependencyInjection_IServiceCollection_
-  commentId: M:Microsoft.Extensions.DependencyInjection.SwaggerServiceCollectionExtensions.AddSwagger(Microsoft.Extensions.DependencyInjection.IServiceCollection)
-  fullName: Microsoft.Extensions.DependencyInjection.SwaggerServiceCollectionExtensions.AddSwagger(Microsoft.Extensions.DependencyInjection.IServiceCollection)
-  nameWithType: SwaggerServiceCollectionExtensions.AddSwagger(IServiceCollection)
-- uid: Microsoft.Extensions.DependencyInjection.SwaggerServiceCollectionExtensions.AddSwagger*
+  href: api/Microsoft.Extensions.DependencyInjection.SwaggerExtensions.html#Microsoft_Extensions_DependencyInjection_SwaggerExtensions_AddSwagger_Microsoft_Extensions_DependencyInjection_IServiceCollection_
+  commentId: M:Microsoft.Extensions.DependencyInjection.SwaggerExtensions.AddSwagger(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+  fullName: Microsoft.Extensions.DependencyInjection.SwaggerExtensions.AddSwagger(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+  nameWithType: SwaggerExtensions.AddSwagger(IServiceCollection)
+- uid: Microsoft.Extensions.DependencyInjection.SwaggerExtensions.AddSwagger*
   name: AddSwagger
-  href: api/Microsoft.Extensions.DependencyInjection.SwaggerServiceCollectionExtensions.html#Microsoft_Extensions_DependencyInjection_SwaggerServiceCollectionExtensions_AddSwagger_
-  commentId: Overload:Microsoft.Extensions.DependencyInjection.SwaggerServiceCollectionExtensions.AddSwagger
+  href: api/Microsoft.Extensions.DependencyInjection.SwaggerExtensions.html#Microsoft_Extensions_DependencyInjection_SwaggerExtensions_AddSwagger_
+  commentId: Overload:Microsoft.Extensions.DependencyInjection.SwaggerExtensions.AddSwagger
   isSpec: "True"
-  fullName: Microsoft.Extensions.DependencyInjection.SwaggerServiceCollectionExtensions.AddSwagger
-  nameWithType: SwaggerServiceCollectionExtensions.AddSwagger
-- uid: Microsoft.Extensions.DependencyInjection.SwaggerServiceCollectionExtensions.UseSwaggerApi(Microsoft.AspNetCore.Builder.IApplicationBuilder)
+  fullName: Microsoft.Extensions.DependencyInjection.SwaggerExtensions.AddSwagger
+  nameWithType: SwaggerExtensions.AddSwagger
+- uid: Microsoft.Extensions.DependencyInjection.SwaggerExtensions.UseSwaggerApi(Microsoft.AspNetCore.Builder.IApplicationBuilder)
   name: UseSwaggerApi(IApplicationBuilder)
-  href: api/Microsoft.Extensions.DependencyInjection.SwaggerServiceCollectionExtensions.html#Microsoft_Extensions_DependencyInjection_SwaggerServiceCollectionExtensions_UseSwaggerApi_Microsoft_AspNetCore_Builder_IApplicationBuilder_
-  commentId: M:Microsoft.Extensions.DependencyInjection.SwaggerServiceCollectionExtensions.UseSwaggerApi(Microsoft.AspNetCore.Builder.IApplicationBuilder)
-  fullName: Microsoft.Extensions.DependencyInjection.SwaggerServiceCollectionExtensions.UseSwaggerApi(Microsoft.AspNetCore.Builder.IApplicationBuilder)
-  nameWithType: SwaggerServiceCollectionExtensions.UseSwaggerApi(IApplicationBuilder)
-- uid: Microsoft.Extensions.DependencyInjection.SwaggerServiceCollectionExtensions.UseSwaggerApi*
+  href: api/Microsoft.Extensions.DependencyInjection.SwaggerExtensions.html#Microsoft_Extensions_DependencyInjection_SwaggerExtensions_UseSwaggerApi_Microsoft_AspNetCore_Builder_IApplicationBuilder_
+  commentId: M:Microsoft.Extensions.DependencyInjection.SwaggerExtensions.UseSwaggerApi(Microsoft.AspNetCore.Builder.IApplicationBuilder)
+  fullName: Microsoft.Extensions.DependencyInjection.SwaggerExtensions.UseSwaggerApi(Microsoft.AspNetCore.Builder.IApplicationBuilder)
+  nameWithType: SwaggerExtensions.UseSwaggerApi(IApplicationBuilder)
+- uid: Microsoft.Extensions.DependencyInjection.SwaggerExtensions.UseSwaggerApi*
   name: UseSwaggerApi
-  href: api/Microsoft.Extensions.DependencyInjection.SwaggerServiceCollectionExtensions.html#Microsoft_Extensions_DependencyInjection_SwaggerServiceCollectionExtensions_UseSwaggerApi_
-  commentId: Overload:Microsoft.Extensions.DependencyInjection.SwaggerServiceCollectionExtensions.UseSwaggerApi
+  href: api/Microsoft.Extensions.DependencyInjection.SwaggerExtensions.html#Microsoft_Extensions_DependencyInjection_SwaggerExtensions_UseSwaggerApi_
+  commentId: Overload:Microsoft.Extensions.DependencyInjection.SwaggerExtensions.UseSwaggerApi
   isSpec: "True"
-  fullName: Microsoft.Extensions.DependencyInjection.SwaggerServiceCollectionExtensions.UseSwaggerApi
-  nameWithType: SwaggerServiceCollectionExtensions.UseSwaggerApi
+  fullName: Microsoft.Extensions.DependencyInjection.SwaggerExtensions.UseSwaggerApi
+  nameWithType: SwaggerExtensions.UseSwaggerApi
 - uid: Microsoft.Extensions.DependencyInjection.TenantResolverMiddlewareExtensions
   name: TenantResolverMiddlewareExtensions
   href: api/Microsoft.Extensions.DependencyInjection.TenantResolverMiddlewareExtensions.html
@@ -134,31 +77,70 @@ references:
   isSpec: "True"
   fullName: Microsoft.Extensions.DependencyInjection.TenantResolverMiddlewareExtensions.UseTenantResolverMiddleware
   nameWithType: TenantResolverMiddlewareExtensions.UseTenantResolverMiddleware
-- uid: Microsoft.Extensions.DependencyInjection.TransactionMiddlewareExtensions
-  name: TransactionMiddlewareExtensions
-  href: api/Microsoft.Extensions.DependencyInjection.TransactionMiddlewareExtensions.html
-  commentId: T:Microsoft.Extensions.DependencyInjection.TransactionMiddlewareExtensions
-  fullName: Microsoft.Extensions.DependencyInjection.TransactionMiddlewareExtensions
-  nameWithType: TransactionMiddlewareExtensions
-- uid: Microsoft.Extensions.DependencyInjection.TransactionMiddlewareExtensions.UseTransactionMiddleware(Microsoft.AspNetCore.Builder.IApplicationBuilder)
-  name: UseTransactionMiddleware(IApplicationBuilder)
-  href: api/Microsoft.Extensions.DependencyInjection.TransactionMiddlewareExtensions.html#Microsoft_Extensions_DependencyInjection_TransactionMiddlewareExtensions_UseTransactionMiddleware_Microsoft_AspNetCore_Builder_IApplicationBuilder_
-  commentId: M:Microsoft.Extensions.DependencyInjection.TransactionMiddlewareExtensions.UseTransactionMiddleware(Microsoft.AspNetCore.Builder.IApplicationBuilder)
-  fullName: Microsoft.Extensions.DependencyInjection.TransactionMiddlewareExtensions.UseTransactionMiddleware(Microsoft.AspNetCore.Builder.IApplicationBuilder)
-  nameWithType: TransactionMiddlewareExtensions.UseTransactionMiddleware(IApplicationBuilder)
-- uid: Microsoft.Extensions.DependencyInjection.TransactionMiddlewareExtensions.UseTransactionMiddleware*
-  name: UseTransactionMiddleware
-  href: api/Microsoft.Extensions.DependencyInjection.TransactionMiddlewareExtensions.html#Microsoft_Extensions_DependencyInjection_TransactionMiddlewareExtensions_UseTransactionMiddleware_
-  commentId: Overload:Microsoft.Extensions.DependencyInjection.TransactionMiddlewareExtensions.UseTransactionMiddleware
-  isSpec: "True"
-  fullName: Microsoft.Extensions.DependencyInjection.TransactionMiddlewareExtensions.UseTransactionMiddleware
-  nameWithType: TransactionMiddlewareExtensions.UseTransactionMiddleware
 - uid: SparkPlug.Api
   name: SparkPlug.Api
   href: api/SparkPlug.Api.html
   commentId: N:SparkPlug.Api
   fullName: SparkPlug.Api
   nameWithType: SparkPlug.Api
+- uid: SparkPlug.Api.ApiExtensions
+  name: ApiExtensions
+  href: api/SparkPlug.Api.ApiExtensions.html
+  commentId: T:SparkPlug.Api.ApiExtensions
+  fullName: SparkPlug.Api.ApiExtensions
+  nameWithType: ApiExtensions
+- uid: SparkPlug.Api.ApiExtensions.UseCentralRoutePrefix(Microsoft.AspNetCore.Mvc.MvcOptions,Microsoft.AspNetCore.Mvc.Routing.IRouteTemplateProvider)
+  name: UseCentralRoutePrefix(MvcOptions, IRouteTemplateProvider)
+  href: api/SparkPlug.Api.ApiExtensions.html#SparkPlug_Api_ApiExtensions_UseCentralRoutePrefix_Microsoft_AspNetCore_Mvc_MvcOptions_Microsoft_AspNetCore_Mvc_Routing_IRouteTemplateProvider_
+  commentId: M:SparkPlug.Api.ApiExtensions.UseCentralRoutePrefix(Microsoft.AspNetCore.Mvc.MvcOptions,Microsoft.AspNetCore.Mvc.Routing.IRouteTemplateProvider)
+  fullName: SparkPlug.Api.ApiExtensions.UseCentralRoutePrefix(Microsoft.AspNetCore.Mvc.MvcOptions, Microsoft.AspNetCore.Mvc.Routing.IRouteTemplateProvider)
+  nameWithType: ApiExtensions.UseCentralRoutePrefix(MvcOptions, IRouteTemplateProvider)
+- uid: SparkPlug.Api.ApiExtensions.UseCentralRoutePrefix*
+  name: UseCentralRoutePrefix
+  href: api/SparkPlug.Api.ApiExtensions.html#SparkPlug_Api_ApiExtensions_UseCentralRoutePrefix_
+  commentId: Overload:SparkPlug.Api.ApiExtensions.UseCentralRoutePrefix
+  isSpec: "True"
+  fullName: SparkPlug.Api.ApiExtensions.UseCentralRoutePrefix
+  nameWithType: ApiExtensions.UseCentralRoutePrefix
+- uid: SparkPlug.Api.ApiExtensions.UseGlobalExceptionHandling(Microsoft.AspNetCore.Builder.IApplicationBuilder)
+  name: UseGlobalExceptionHandling(IApplicationBuilder)
+  href: api/SparkPlug.Api.ApiExtensions.html#SparkPlug_Api_ApiExtensions_UseGlobalExceptionHandling_Microsoft_AspNetCore_Builder_IApplicationBuilder_
+  commentId: M:SparkPlug.Api.ApiExtensions.UseGlobalExceptionHandling(Microsoft.AspNetCore.Builder.IApplicationBuilder)
+  fullName: SparkPlug.Api.ApiExtensions.UseGlobalExceptionHandling(Microsoft.AspNetCore.Builder.IApplicationBuilder)
+  nameWithType: ApiExtensions.UseGlobalExceptionHandling(IApplicationBuilder)
+- uid: SparkPlug.Api.ApiExtensions.UseGlobalExceptionHandling*
+  name: UseGlobalExceptionHandling
+  href: api/SparkPlug.Api.ApiExtensions.html#SparkPlug_Api_ApiExtensions_UseGlobalExceptionHandling_
+  commentId: Overload:SparkPlug.Api.ApiExtensions.UseGlobalExceptionHandling
+  isSpec: "True"
+  fullName: SparkPlug.Api.ApiExtensions.UseGlobalExceptionHandling
+  nameWithType: ApiExtensions.UseGlobalExceptionHandling
+- uid: SparkPlug.Api.ApiExtensions.UseHealthChecks(Microsoft.AspNetCore.Builder.IApplicationBuilder)
+  name: UseHealthChecks(IApplicationBuilder)
+  href: api/SparkPlug.Api.ApiExtensions.html#SparkPlug_Api_ApiExtensions_UseHealthChecks_Microsoft_AspNetCore_Builder_IApplicationBuilder_
+  commentId: M:SparkPlug.Api.ApiExtensions.UseHealthChecks(Microsoft.AspNetCore.Builder.IApplicationBuilder)
+  fullName: SparkPlug.Api.ApiExtensions.UseHealthChecks(Microsoft.AspNetCore.Builder.IApplicationBuilder)
+  nameWithType: ApiExtensions.UseHealthChecks(IApplicationBuilder)
+- uid: SparkPlug.Api.ApiExtensions.UseHealthChecks*
+  name: UseHealthChecks
+  href: api/SparkPlug.Api.ApiExtensions.html#SparkPlug_Api_ApiExtensions_UseHealthChecks_
+  commentId: Overload:SparkPlug.Api.ApiExtensions.UseHealthChecks
+  isSpec: "True"
+  fullName: SparkPlug.Api.ApiExtensions.UseHealthChecks
+  nameWithType: ApiExtensions.UseHealthChecks
+- uid: SparkPlug.Api.ApiExtensions.UseTransactionMiddleware(Microsoft.AspNetCore.Builder.IApplicationBuilder)
+  name: UseTransactionMiddleware(IApplicationBuilder)
+  href: api/SparkPlug.Api.ApiExtensions.html#SparkPlug_Api_ApiExtensions_UseTransactionMiddleware_Microsoft_AspNetCore_Builder_IApplicationBuilder_
+  commentId: M:SparkPlug.Api.ApiExtensions.UseTransactionMiddleware(Microsoft.AspNetCore.Builder.IApplicationBuilder)
+  fullName: SparkPlug.Api.ApiExtensions.UseTransactionMiddleware(Microsoft.AspNetCore.Builder.IApplicationBuilder)
+  nameWithType: ApiExtensions.UseTransactionMiddleware(IApplicationBuilder)
+- uid: SparkPlug.Api.ApiExtensions.UseTransactionMiddleware*
+  name: UseTransactionMiddleware
+  href: api/SparkPlug.Api.ApiExtensions.html#SparkPlug_Api_ApiExtensions_UseTransactionMiddleware_
+  commentId: Overload:SparkPlug.Api.ApiExtensions.UseTransactionMiddleware
+  isSpec: "True"
+  fullName: SparkPlug.Api.ApiExtensions.UseTransactionMiddleware
+  nameWithType: ApiExtensions.UseTransactionMiddleware
 - uid: SparkPlug.Api.ApiModule
   name: ApiModule
   href: api/SparkPlug.Api.ApiModule.html
@@ -191,12 +173,12 @@ references:
   isSpec: "True"
   fullName: SparkPlug.Api.ApiModule.UseMiddelwares
   nameWithType: ApiModule.UseMiddelwares
-- uid: SparkPlug.Api.ApiModule.UseModule(Microsoft.AspNetCore.Builder.IApplicationBuilder,System.IServiceProvider)
-  name: UseModule(IApplicationBuilder, IServiceProvider)
-  href: api/SparkPlug.Api.ApiModule.html#SparkPlug_Api_ApiModule_UseModule_Microsoft_AspNetCore_Builder_IApplicationBuilder_System_IServiceProvider_
-  commentId: M:SparkPlug.Api.ApiModule.UseModule(Microsoft.AspNetCore.Builder.IApplicationBuilder,System.IServiceProvider)
-  fullName: SparkPlug.Api.ApiModule.UseModule(Microsoft.AspNetCore.Builder.IApplicationBuilder, System.IServiceProvider)
-  nameWithType: ApiModule.UseModule(IApplicationBuilder, IServiceProvider)
+- uid: SparkPlug.Api.ApiModule.UseModule(Microsoft.AspNetCore.Builder.IApplicationBuilder)
+  name: UseModule(IApplicationBuilder)
+  href: api/SparkPlug.Api.ApiModule.html#SparkPlug_Api_ApiModule_UseModule_Microsoft_AspNetCore_Builder_IApplicationBuilder_
+  commentId: M:SparkPlug.Api.ApiModule.UseModule(Microsoft.AspNetCore.Builder.IApplicationBuilder)
+  fullName: SparkPlug.Api.ApiModule.UseModule(Microsoft.AspNetCore.Builder.IApplicationBuilder)
+  nameWithType: ApiModule.UseModule(IApplicationBuilder)
 - uid: SparkPlug.Api.ApiModule.UseModule*
   name: UseModule
   href: api/SparkPlug.Api.ApiModule.html#SparkPlug_Api_ApiModule_UseModule_
@@ -235,24 +217,6 @@ references:
   commentId: N:SparkPlug.Api.Configuration
   fullName: SparkPlug.Api.Configuration
   nameWithType: SparkPlug.Api.Configuration
-- uid: SparkPlug.Api.Configuration.ApiEventId
-  name: ApiEventId
-  href: api/SparkPlug.Api.Configuration.ApiEventId.html
-  commentId: T:SparkPlug.Api.Configuration.ApiEventId
-  fullName: SparkPlug.Api.Configuration.ApiEventId
-  nameWithType: ApiEventId
-- uid: SparkPlug.Api.Configuration.ApiEventId.ExceptionFilter
-  name: ExceptionFilter
-  href: api/SparkPlug.Api.Configuration.ApiEventId.html#SparkPlug_Api_Configuration_ApiEventId_ExceptionFilter
-  commentId: F:SparkPlug.Api.Configuration.ApiEventId.ExceptionFilter
-  fullName: SparkPlug.Api.Configuration.ApiEventId.ExceptionFilter
-  nameWithType: ApiEventId.ExceptionFilter
-- uid: SparkPlug.Api.Configuration.ApiEventId.UnknownGlobalException
-  name: UnknownGlobalException
-  href: api/SparkPlug.Api.Configuration.ApiEventId.html#SparkPlug_Api_Configuration_ApiEventId_UnknownGlobalException
-  commentId: F:SparkPlug.Api.Configuration.ApiEventId.UnknownGlobalException
-  fullName: SparkPlug.Api.Configuration.ApiEventId.UnknownGlobalException
-  nameWithType: ApiEventId.UnknownGlobalException
 - uid: SparkPlug.Api.Configuration.Constants
   name: Constants
   href: api/SparkPlug.Api.Configuration.Constants.html
@@ -630,6 +594,32 @@ references:
   fullName.vb: SparkPlug.Api.Controllers.BaseController(Of TId, TEntity).New
   nameWithType: BaseController<TId, TEntity>.BaseController
   nameWithType.vb: BaseController(Of TId, TEntity).New
+- uid: SparkPlug.Api.Controllers.BaseController`2.GetService*
+  name: GetService
+  href: api/SparkPlug.Api.Controllers.BaseController-2.html#SparkPlug_Api_Controllers_BaseController_2_GetService_
+  commentId: Overload:SparkPlug.Api.Controllers.BaseController`2.GetService
+  isSpec: "True"
+  fullName: SparkPlug.Api.Controllers.BaseController<TId, TEntity>.GetService
+  fullName.vb: SparkPlug.Api.Controllers.BaseController(Of TId, TEntity).GetService
+  nameWithType: BaseController<TId, TEntity>.GetService
+  nameWithType.vb: BaseController(Of TId, TEntity).GetService
+- uid: SparkPlug.Api.Controllers.BaseController`2.GetService``1
+  name: GetService<TService>()
+  href: api/SparkPlug.Api.Controllers.BaseController-2.html#SparkPlug_Api_Controllers_BaseController_2_GetService__1
+  commentId: M:SparkPlug.Api.Controllers.BaseController`2.GetService``1
+  name.vb: GetService(Of TService)()
+  fullName: SparkPlug.Api.Controllers.BaseController<TId, TEntity>.GetService<TService>()
+  fullName.vb: SparkPlug.Api.Controllers.BaseController(Of TId, TEntity).GetService(Of TService)()
+  nameWithType: BaseController<TId, TEntity>.GetService<TService>()
+  nameWithType.vb: BaseController(Of TId, TEntity).GetService(Of TService)()
+- uid: SparkPlug.Api.Controllers.BaseController`2.Logger
+  name: Logger
+  href: api/SparkPlug.Api.Controllers.BaseController-2.html#SparkPlug_Api_Controllers_BaseController_2_Logger
+  commentId: F:SparkPlug.Api.Controllers.BaseController`2.Logger
+  fullName: SparkPlug.Api.Controllers.BaseController<TId, TEntity>.Logger
+  fullName.vb: SparkPlug.Api.Controllers.BaseController(Of TId, TEntity).Logger
+  nameWithType: BaseController<TId, TEntity>.Logger
+  nameWithType.vb: BaseController(Of TId, TEntity).Logger
 - uid: SparkPlug.Api.Controllers.BaseController`2.Ok(System.Collections.Generic.IEnumerable{Newtonsoft.Json.Linq.JObject},SparkPlug.Contracts.IPageContext)
   name: Ok(IEnumerable<JObject>, IPageContext?)
   href: api/SparkPlug.Api.Controllers.BaseController-2.html#SparkPlug_Api_Controllers_BaseController_2_Ok_System_Collections_Generic_IEnumerable_Newtonsoft_Json_Linq_JObject__SparkPlug_Contracts_IPageContext_
@@ -665,30 +655,14 @@ references:
   fullName.vb: SparkPlug.Api.Controllers.BaseController(Of TId, TEntity).Ok
   nameWithType: BaseController<TId, TEntity>.Ok
   nameWithType.vb: BaseController(Of TId, TEntity).Ok
-- uid: SparkPlug.Api.Controllers.BaseController`2._logger
-  name: _logger
-  href: api/SparkPlug.Api.Controllers.BaseController-2.html#SparkPlug_Api_Controllers_BaseController_2__logger
-  commentId: F:SparkPlug.Api.Controllers.BaseController`2._logger
-  fullName: SparkPlug.Api.Controllers.BaseController<TId, TEntity>._logger
-  fullName.vb: SparkPlug.Api.Controllers.BaseController(Of TId, TEntity)._logger
-  nameWithType: BaseController<TId, TEntity>._logger
-  nameWithType.vb: BaseController(Of TId, TEntity)._logger
-- uid: SparkPlug.Api.Controllers.BaseController`2._service
-  name: _service
-  href: api/SparkPlug.Api.Controllers.BaseController-2.html#SparkPlug_Api_Controllers_BaseController_2__service
-  commentId: F:SparkPlug.Api.Controllers.BaseController`2._service
-  fullName: SparkPlug.Api.Controllers.BaseController<TId, TEntity>._service
-  fullName.vb: SparkPlug.Api.Controllers.BaseController(Of TId, TEntity)._service
-  nameWithType: BaseController<TId, TEntity>._service
-  nameWithType.vb: BaseController(Of TId, TEntity)._service
-- uid: SparkPlug.Api.Controllers.BaseController`2._serviceProvider
-  name: _serviceProvider
-  href: api/SparkPlug.Api.Controllers.BaseController-2.html#SparkPlug_Api_Controllers_BaseController_2__serviceProvider
-  commentId: F:SparkPlug.Api.Controllers.BaseController`2._serviceProvider
-  fullName: SparkPlug.Api.Controllers.BaseController<TId, TEntity>._serviceProvider
-  fullName.vb: SparkPlug.Api.Controllers.BaseController(Of TId, TEntity)._serviceProvider
-  nameWithType: BaseController<TId, TEntity>._serviceProvider
-  nameWithType.vb: BaseController(Of TId, TEntity)._serviceProvider
+- uid: SparkPlug.Api.Controllers.BaseController`2.Service
+  name: Service
+  href: api/SparkPlug.Api.Controllers.BaseController-2.html#SparkPlug_Api_Controllers_BaseController_2_Service
+  commentId: F:SparkPlug.Api.Controllers.BaseController`2.Service
+  fullName: SparkPlug.Api.Controllers.BaseController<TId, TEntity>.Service
+  fullName.vb: SparkPlug.Api.Controllers.BaseController(Of TId, TEntity).Service
+  nameWithType: BaseController<TId, TEntity>.Service
+  nameWithType.vb: BaseController(Of TId, TEntity).Service
 - uid: SparkPlug.Api.Controllers.CompositeController
   name: CompositeController
   href: api/SparkPlug.Api.Controllers.CompositeController.html
@@ -983,12 +957,12 @@ references:
   isSpec: "True"
   fullName: SparkPlug.Api.SwaggerModule.UseMiddelwares
   nameWithType: SwaggerModule.UseMiddelwares
-- uid: SparkPlug.Api.SwaggerModule.UseModule(Microsoft.AspNetCore.Builder.IApplicationBuilder,System.IServiceProvider)
-  name: UseModule(IApplicationBuilder, IServiceProvider)
-  href: api/SparkPlug.Api.SwaggerModule.html#SparkPlug_Api_SwaggerModule_UseModule_Microsoft_AspNetCore_Builder_IApplicationBuilder_System_IServiceProvider_
-  commentId: M:SparkPlug.Api.SwaggerModule.UseModule(Microsoft.AspNetCore.Builder.IApplicationBuilder,System.IServiceProvider)
-  fullName: SparkPlug.Api.SwaggerModule.UseModule(Microsoft.AspNetCore.Builder.IApplicationBuilder, System.IServiceProvider)
-  nameWithType: SwaggerModule.UseModule(IApplicationBuilder, IServiceProvider)
+- uid: SparkPlug.Api.SwaggerModule.UseModule(Microsoft.AspNetCore.Builder.IApplicationBuilder)
+  name: UseModule(IApplicationBuilder)
+  href: api/SparkPlug.Api.SwaggerModule.html#SparkPlug_Api_SwaggerModule_UseModule_Microsoft_AspNetCore_Builder_IApplicationBuilder_
+  commentId: M:SparkPlug.Api.SwaggerModule.UseModule(Microsoft.AspNetCore.Builder.IApplicationBuilder)
+  fullName: SparkPlug.Api.SwaggerModule.UseModule(Microsoft.AspNetCore.Builder.IApplicationBuilder)
+  nameWithType: SwaggerModule.UseModule(IApplicationBuilder)
 - uid: SparkPlug.Api.SwaggerModule.UseModule*
   name: UseModule
   href: api/SparkPlug.Api.SwaggerModule.html#SparkPlug_Api_SwaggerModule_UseModule_
@@ -1034,12 +1008,12 @@ references:
   isSpec: "True"
   fullName: SparkPlug.Business.Menu.Api.MenuApiModule.UseMiddelwares
   nameWithType: MenuApiModule.UseMiddelwares
-- uid: SparkPlug.Business.Menu.Api.MenuApiModule.UseModule(Microsoft.AspNetCore.Builder.IApplicationBuilder,System.IServiceProvider)
-  name: UseModule(IApplicationBuilder, IServiceProvider)
-  href: api/SparkPlug.Business.Menu.Api.MenuApiModule.html#SparkPlug_Business_Menu_Api_MenuApiModule_UseModule_Microsoft_AspNetCore_Builder_IApplicationBuilder_System_IServiceProvider_
-  commentId: M:SparkPlug.Business.Menu.Api.MenuApiModule.UseModule(Microsoft.AspNetCore.Builder.IApplicationBuilder,System.IServiceProvider)
-  fullName: SparkPlug.Business.Menu.Api.MenuApiModule.UseModule(Microsoft.AspNetCore.Builder.IApplicationBuilder, System.IServiceProvider)
-  nameWithType: MenuApiModule.UseModule(IApplicationBuilder, IServiceProvider)
+- uid: SparkPlug.Business.Menu.Api.MenuApiModule.UseModule(Microsoft.AspNetCore.Builder.IApplicationBuilder)
+  name: UseModule(IApplicationBuilder)
+  href: api/SparkPlug.Business.Menu.Api.MenuApiModule.html#SparkPlug_Business_Menu_Api_MenuApiModule_UseModule_Microsoft_AspNetCore_Builder_IApplicationBuilder_
+  commentId: M:SparkPlug.Business.Menu.Api.MenuApiModule.UseModule(Microsoft.AspNetCore.Builder.IApplicationBuilder)
+  fullName: SparkPlug.Business.Menu.Api.MenuApiModule.UseModule(Microsoft.AspNetCore.Builder.IApplicationBuilder)
+  nameWithType: MenuApiModule.UseModule(IApplicationBuilder)
 - uid: SparkPlug.Business.Menu.Api.MenuApiModule.UseModule*
   name: UseModule
   href: api/SparkPlug.Business.Menu.Api.MenuApiModule.html#SparkPlug_Business_Menu_Api_MenuApiModule_UseModule_
@@ -1110,12 +1084,12 @@ references:
   isSpec: "True"
   fullName: SparkPlug.Business.Menu.Domain.MenuDomainModule.UseMiddelwares
   nameWithType: MenuDomainModule.UseMiddelwares
-- uid: SparkPlug.Business.Menu.Domain.MenuDomainModule.UseModule(Microsoft.AspNetCore.Builder.IApplicationBuilder,System.IServiceProvider)
-  name: UseModule(IApplicationBuilder, IServiceProvider)
-  href: api/SparkPlug.Business.Menu.Domain.MenuDomainModule.html#SparkPlug_Business_Menu_Domain_MenuDomainModule_UseModule_Microsoft_AspNetCore_Builder_IApplicationBuilder_System_IServiceProvider_
-  commentId: M:SparkPlug.Business.Menu.Domain.MenuDomainModule.UseModule(Microsoft.AspNetCore.Builder.IApplicationBuilder,System.IServiceProvider)
-  fullName: SparkPlug.Business.Menu.Domain.MenuDomainModule.UseModule(Microsoft.AspNetCore.Builder.IApplicationBuilder, System.IServiceProvider)
-  nameWithType: MenuDomainModule.UseModule(IApplicationBuilder, IServiceProvider)
+- uid: SparkPlug.Business.Menu.Domain.MenuDomainModule.UseModule(Microsoft.AspNetCore.Builder.IApplicationBuilder)
+  name: UseModule(IApplicationBuilder)
+  href: api/SparkPlug.Business.Menu.Domain.MenuDomainModule.html#SparkPlug_Business_Menu_Domain_MenuDomainModule_UseModule_Microsoft_AspNetCore_Builder_IApplicationBuilder_
+  commentId: M:SparkPlug.Business.Menu.Domain.MenuDomainModule.UseModule(Microsoft.AspNetCore.Builder.IApplicationBuilder)
+  fullName: SparkPlug.Business.Menu.Domain.MenuDomainModule.UseModule(Microsoft.AspNetCore.Builder.IApplicationBuilder)
+  nameWithType: MenuDomainModule.UseModule(IApplicationBuilder)
 - uid: SparkPlug.Business.Menu.Domain.MenuDomainModule.UseModule*
   name: UseModule
   href: api/SparkPlug.Business.Menu.Domain.MenuDomainModule.html#SparkPlug_Business_Menu_Domain_MenuDomainModule_UseModule_
@@ -1401,12 +1375,12 @@ references:
   isSpec: "True"
   fullName: SparkPlug.Business.Menu.Repository.MenuRepositorySqlModule.UseMiddelwares
   nameWithType: MenuRepositorySqlModule.UseMiddelwares
-- uid: SparkPlug.Business.Menu.Repository.MenuRepositorySqlModule.UseModule(Microsoft.AspNetCore.Builder.IApplicationBuilder,System.IServiceProvider)
-  name: UseModule(IApplicationBuilder, IServiceProvider)
-  href: api/SparkPlug.Business.Menu.Repository.MenuRepositorySqlModule.html#SparkPlug_Business_Menu_Repository_MenuRepositorySqlModule_UseModule_Microsoft_AspNetCore_Builder_IApplicationBuilder_System_IServiceProvider_
-  commentId: M:SparkPlug.Business.Menu.Repository.MenuRepositorySqlModule.UseModule(Microsoft.AspNetCore.Builder.IApplicationBuilder,System.IServiceProvider)
-  fullName: SparkPlug.Business.Menu.Repository.MenuRepositorySqlModule.UseModule(Microsoft.AspNetCore.Builder.IApplicationBuilder, System.IServiceProvider)
-  nameWithType: MenuRepositorySqlModule.UseModule(IApplicationBuilder, IServiceProvider)
+- uid: SparkPlug.Business.Menu.Repository.MenuRepositorySqlModule.UseModule(Microsoft.AspNetCore.Builder.IApplicationBuilder)
+  name: UseModule(IApplicationBuilder)
+  href: api/SparkPlug.Business.Menu.Repository.MenuRepositorySqlModule.html#SparkPlug_Business_Menu_Repository_MenuRepositorySqlModule_UseModule_Microsoft_AspNetCore_Builder_IApplicationBuilder_
+  commentId: M:SparkPlug.Business.Menu.Repository.MenuRepositorySqlModule.UseModule(Microsoft.AspNetCore.Builder.IApplicationBuilder)
+  fullName: SparkPlug.Business.Menu.Repository.MenuRepositorySqlModule.UseModule(Microsoft.AspNetCore.Builder.IApplicationBuilder)
+  nameWithType: MenuRepositorySqlModule.UseModule(IApplicationBuilder)
 - uid: SparkPlug.Business.Menu.Repository.MenuRepositorySqlModule.UseModule*
   name: UseModule
   href: api/SparkPlug.Business.Menu.Repository.MenuRepositorySqlModule.html#SparkPlug_Business_Menu_Repository_MenuRepositorySqlModule_UseModule_
@@ -1505,12 +1479,12 @@ references:
   isSpec: "True"
   fullName: SparkPlug.Business.Menu.Service.MenuServiceModule.UseMiddelwares
   nameWithType: MenuServiceModule.UseMiddelwares
-- uid: SparkPlug.Business.Menu.Service.MenuServiceModule.UseModule(Microsoft.AspNetCore.Builder.IApplicationBuilder,System.IServiceProvider)
-  name: UseModule(IApplicationBuilder, IServiceProvider)
-  href: api/SparkPlug.Business.Menu.Service.MenuServiceModule.html#SparkPlug_Business_Menu_Service_MenuServiceModule_UseModule_Microsoft_AspNetCore_Builder_IApplicationBuilder_System_IServiceProvider_
-  commentId: M:SparkPlug.Business.Menu.Service.MenuServiceModule.UseModule(Microsoft.AspNetCore.Builder.IApplicationBuilder,System.IServiceProvider)
-  fullName: SparkPlug.Business.Menu.Service.MenuServiceModule.UseModule(Microsoft.AspNetCore.Builder.IApplicationBuilder, System.IServiceProvider)
-  nameWithType: MenuServiceModule.UseModule(IApplicationBuilder, IServiceProvider)
+- uid: SparkPlug.Business.Menu.Service.MenuServiceModule.UseModule(Microsoft.AspNetCore.Builder.IApplicationBuilder)
+  name: UseModule(IApplicationBuilder)
+  href: api/SparkPlug.Business.Menu.Service.MenuServiceModule.html#SparkPlug_Business_Menu_Service_MenuServiceModule_UseModule_Microsoft_AspNetCore_Builder_IApplicationBuilder_
+  commentId: M:SparkPlug.Business.Menu.Service.MenuServiceModule.UseModule(Microsoft.AspNetCore.Builder.IApplicationBuilder)
+  fullName: SparkPlug.Business.Menu.Service.MenuServiceModule.UseModule(Microsoft.AspNetCore.Builder.IApplicationBuilder)
+  nameWithType: MenuServiceModule.UseModule(IApplicationBuilder)
 - uid: SparkPlug.Business.Menu.Service.MenuServiceModule.UseModule*
   name: UseModule
   href: api/SparkPlug.Business.Menu.Service.MenuServiceModule.html#SparkPlug_Business_Menu_Service_MenuServiceModule_UseModule_
@@ -1556,12 +1530,12 @@ references:
   isSpec: "True"
   fullName: SparkPlug.Business.Tenancy.Api.TenancyApiModule.UseMiddelwares
   nameWithType: TenancyApiModule.UseMiddelwares
-- uid: SparkPlug.Business.Tenancy.Api.TenancyApiModule.UseModule(Microsoft.AspNetCore.Builder.IApplicationBuilder,System.IServiceProvider)
-  name: UseModule(IApplicationBuilder, IServiceProvider)
-  href: api/SparkPlug.Business.Tenancy.Api.TenancyApiModule.html#SparkPlug_Business_Tenancy_Api_TenancyApiModule_UseModule_Microsoft_AspNetCore_Builder_IApplicationBuilder_System_IServiceProvider_
-  commentId: M:SparkPlug.Business.Tenancy.Api.TenancyApiModule.UseModule(Microsoft.AspNetCore.Builder.IApplicationBuilder,System.IServiceProvider)
-  fullName: SparkPlug.Business.Tenancy.Api.TenancyApiModule.UseModule(Microsoft.AspNetCore.Builder.IApplicationBuilder, System.IServiceProvider)
-  nameWithType: TenancyApiModule.UseModule(IApplicationBuilder, IServiceProvider)
+- uid: SparkPlug.Business.Tenancy.Api.TenancyApiModule.UseModule(Microsoft.AspNetCore.Builder.IApplicationBuilder)
+  name: UseModule(IApplicationBuilder)
+  href: api/SparkPlug.Business.Tenancy.Api.TenancyApiModule.html#SparkPlug_Business_Tenancy_Api_TenancyApiModule_UseModule_Microsoft_AspNetCore_Builder_IApplicationBuilder_
+  commentId: M:SparkPlug.Business.Tenancy.Api.TenancyApiModule.UseModule(Microsoft.AspNetCore.Builder.IApplicationBuilder)
+  fullName: SparkPlug.Business.Tenancy.Api.TenancyApiModule.UseModule(Microsoft.AspNetCore.Builder.IApplicationBuilder)
+  nameWithType: TenancyApiModule.UseModule(IApplicationBuilder)
 - uid: SparkPlug.Business.Tenancy.Api.TenancyApiModule.UseModule*
   name: UseModule
   href: api/SparkPlug.Business.Tenancy.Api.TenancyApiModule.html#SparkPlug_Business_Tenancy_Api_TenancyApiModule_UseModule_
@@ -1632,12 +1606,12 @@ references:
   isSpec: "True"
   fullName: SparkPlug.Business.Tenancy.Domain.TenancyDomainModule.UseMiddelwares
   nameWithType: TenancyDomainModule.UseMiddelwares
-- uid: SparkPlug.Business.Tenancy.Domain.TenancyDomainModule.UseModule(Microsoft.AspNetCore.Builder.IApplicationBuilder,System.IServiceProvider)
-  name: UseModule(IApplicationBuilder, IServiceProvider)
-  href: api/SparkPlug.Business.Tenancy.Domain.TenancyDomainModule.html#SparkPlug_Business_Tenancy_Domain_TenancyDomainModule_UseModule_Microsoft_AspNetCore_Builder_IApplicationBuilder_System_IServiceProvider_
-  commentId: M:SparkPlug.Business.Tenancy.Domain.TenancyDomainModule.UseModule(Microsoft.AspNetCore.Builder.IApplicationBuilder,System.IServiceProvider)
-  fullName: SparkPlug.Business.Tenancy.Domain.TenancyDomainModule.UseModule(Microsoft.AspNetCore.Builder.IApplicationBuilder, System.IServiceProvider)
-  nameWithType: TenancyDomainModule.UseModule(IApplicationBuilder, IServiceProvider)
+- uid: SparkPlug.Business.Tenancy.Domain.TenancyDomainModule.UseModule(Microsoft.AspNetCore.Builder.IApplicationBuilder)
+  name: UseModule(IApplicationBuilder)
+  href: api/SparkPlug.Business.Tenancy.Domain.TenancyDomainModule.html#SparkPlug_Business_Tenancy_Domain_TenancyDomainModule_UseModule_Microsoft_AspNetCore_Builder_IApplicationBuilder_
+  commentId: M:SparkPlug.Business.Tenancy.Domain.TenancyDomainModule.UseModule(Microsoft.AspNetCore.Builder.IApplicationBuilder)
+  fullName: SparkPlug.Business.Tenancy.Domain.TenancyDomainModule.UseModule(Microsoft.AspNetCore.Builder.IApplicationBuilder)
+  nameWithType: TenancyDomainModule.UseModule(IApplicationBuilder)
 - uid: SparkPlug.Business.Tenancy.Domain.TenancyDomainModule.UseModule*
   name: UseModule
   href: api/SparkPlug.Business.Tenancy.Domain.TenancyDomainModule.html#SparkPlug_Business_Tenancy_Domain_TenancyDomainModule_UseModule_
@@ -1968,12 +1942,12 @@ references:
   isSpec: "True"
   fullName: SparkPlug.Business.Tenancy.Repository.Mongo.TenancyRepositoryMongoModule.UseMiddelwares
   nameWithType: TenancyRepositoryMongoModule.UseMiddelwares
-- uid: SparkPlug.Business.Tenancy.Repository.Mongo.TenancyRepositoryMongoModule.UseModule(Microsoft.AspNetCore.Builder.IApplicationBuilder,System.IServiceProvider)
-  name: UseModule(IApplicationBuilder, IServiceProvider)
-  href: api/SparkPlug.Business.Tenancy.Repository.Mongo.TenancyRepositoryMongoModule.html#SparkPlug_Business_Tenancy_Repository_Mongo_TenancyRepositoryMongoModule_UseModule_Microsoft_AspNetCore_Builder_IApplicationBuilder_System_IServiceProvider_
-  commentId: M:SparkPlug.Business.Tenancy.Repository.Mongo.TenancyRepositoryMongoModule.UseModule(Microsoft.AspNetCore.Builder.IApplicationBuilder,System.IServiceProvider)
-  fullName: SparkPlug.Business.Tenancy.Repository.Mongo.TenancyRepositoryMongoModule.UseModule(Microsoft.AspNetCore.Builder.IApplicationBuilder, System.IServiceProvider)
-  nameWithType: TenancyRepositoryMongoModule.UseModule(IApplicationBuilder, IServiceProvider)
+- uid: SparkPlug.Business.Tenancy.Repository.Mongo.TenancyRepositoryMongoModule.UseModule(Microsoft.AspNetCore.Builder.IApplicationBuilder)
+  name: UseModule(IApplicationBuilder)
+  href: api/SparkPlug.Business.Tenancy.Repository.Mongo.TenancyRepositoryMongoModule.html#SparkPlug_Business_Tenancy_Repository_Mongo_TenancyRepositoryMongoModule_UseModule_Microsoft_AspNetCore_Builder_IApplicationBuilder_
+  commentId: M:SparkPlug.Business.Tenancy.Repository.Mongo.TenancyRepositoryMongoModule.UseModule(Microsoft.AspNetCore.Builder.IApplicationBuilder)
+  fullName: SparkPlug.Business.Tenancy.Repository.Mongo.TenancyRepositoryMongoModule.UseModule(Microsoft.AspNetCore.Builder.IApplicationBuilder)
+  nameWithType: TenancyRepositoryMongoModule.UseModule(IApplicationBuilder)
 - uid: SparkPlug.Business.Tenancy.Repository.Mongo.TenancyRepositoryMongoModule.UseModule*
   name: UseModule
   href: api/SparkPlug.Business.Tenancy.Repository.Mongo.TenancyRepositoryMongoModule.html#SparkPlug_Business_Tenancy_Repository_Mongo_TenancyRepositoryMongoModule_UseModule_
@@ -2019,12 +1993,12 @@ references:
   isSpec: "True"
   fullName: SparkPlug.Business.Tenancy.Repository.Sql.TenancyRepositorySqlModule.UseMiddelwares
   nameWithType: TenancyRepositorySqlModule.UseMiddelwares
-- uid: SparkPlug.Business.Tenancy.Repository.Sql.TenancyRepositorySqlModule.UseModule(Microsoft.AspNetCore.Builder.IApplicationBuilder,System.IServiceProvider)
-  name: UseModule(IApplicationBuilder, IServiceProvider)
-  href: api/SparkPlug.Business.Tenancy.Repository.Sql.TenancyRepositorySqlModule.html#SparkPlug_Business_Tenancy_Repository_Sql_TenancyRepositorySqlModule_UseModule_Microsoft_AspNetCore_Builder_IApplicationBuilder_System_IServiceProvider_
-  commentId: M:SparkPlug.Business.Tenancy.Repository.Sql.TenancyRepositorySqlModule.UseModule(Microsoft.AspNetCore.Builder.IApplicationBuilder,System.IServiceProvider)
-  fullName: SparkPlug.Business.Tenancy.Repository.Sql.TenancyRepositorySqlModule.UseModule(Microsoft.AspNetCore.Builder.IApplicationBuilder, System.IServiceProvider)
-  nameWithType: TenancyRepositorySqlModule.UseModule(IApplicationBuilder, IServiceProvider)
+- uid: SparkPlug.Business.Tenancy.Repository.Sql.TenancyRepositorySqlModule.UseModule(Microsoft.AspNetCore.Builder.IApplicationBuilder)
+  name: UseModule(IApplicationBuilder)
+  href: api/SparkPlug.Business.Tenancy.Repository.Sql.TenancyRepositorySqlModule.html#SparkPlug_Business_Tenancy_Repository_Sql_TenancyRepositorySqlModule_UseModule_Microsoft_AspNetCore_Builder_IApplicationBuilder_
+  commentId: M:SparkPlug.Business.Tenancy.Repository.Sql.TenancyRepositorySqlModule.UseModule(Microsoft.AspNetCore.Builder.IApplicationBuilder)
+  fullName: SparkPlug.Business.Tenancy.Repository.Sql.TenancyRepositorySqlModule.UseModule(Microsoft.AspNetCore.Builder.IApplicationBuilder)
+  nameWithType: TenancyRepositorySqlModule.UseModule(IApplicationBuilder)
 - uid: SparkPlug.Business.Tenancy.Repository.Sql.TenancyRepositorySqlModule.UseModule*
   name: UseModule
   href: api/SparkPlug.Business.Tenancy.Repository.Sql.TenancyRepositorySqlModule.html#SparkPlug_Business_Tenancy_Repository_Sql_TenancyRepositorySqlModule_UseModule_
@@ -2149,12 +2123,12 @@ references:
   isSpec: "True"
   fullName: SparkPlug.Business.Tenancy.Service.TenancyServiceModule.UseMiddelwares
   nameWithType: TenancyServiceModule.UseMiddelwares
-- uid: SparkPlug.Business.Tenancy.Service.TenancyServiceModule.UseModule(Microsoft.AspNetCore.Builder.IApplicationBuilder,System.IServiceProvider)
-  name: UseModule(IApplicationBuilder, IServiceProvider)
-  href: api/SparkPlug.Business.Tenancy.Service.TenancyServiceModule.html#SparkPlug_Business_Tenancy_Service_TenancyServiceModule_UseModule_Microsoft_AspNetCore_Builder_IApplicationBuilder_System_IServiceProvider_
-  commentId: M:SparkPlug.Business.Tenancy.Service.TenancyServiceModule.UseModule(Microsoft.AspNetCore.Builder.IApplicationBuilder,System.IServiceProvider)
-  fullName: SparkPlug.Business.Tenancy.Service.TenancyServiceModule.UseModule(Microsoft.AspNetCore.Builder.IApplicationBuilder, System.IServiceProvider)
-  nameWithType: TenancyServiceModule.UseModule(IApplicationBuilder, IServiceProvider)
+- uid: SparkPlug.Business.Tenancy.Service.TenancyServiceModule.UseModule(Microsoft.AspNetCore.Builder.IApplicationBuilder)
+  name: UseModule(IApplicationBuilder)
+  href: api/SparkPlug.Business.Tenancy.Service.TenancyServiceModule.html#SparkPlug_Business_Tenancy_Service_TenancyServiceModule_UseModule_Microsoft_AspNetCore_Builder_IApplicationBuilder_
+  commentId: M:SparkPlug.Business.Tenancy.Service.TenancyServiceModule.UseModule(Microsoft.AspNetCore.Builder.IApplicationBuilder)
+  fullName: SparkPlug.Business.Tenancy.Service.TenancyServiceModule.UseModule(Microsoft.AspNetCore.Builder.IApplicationBuilder)
+  nameWithType: TenancyServiceModule.UseModule(IApplicationBuilder)
 - uid: SparkPlug.Business.Tenancy.Service.TenancyServiceModule.UseModule*
   name: UseModule
   href: api/SparkPlug.Business.Tenancy.Service.TenancyServiceModule.html#SparkPlug_Business_Tenancy_Service_TenancyServiceModule_UseModule_
@@ -2676,12 +2650,12 @@ references:
   isSpec: "True"
   fullName: SparkPlug.Contracts.ContractsModule.UseMiddelwares
   nameWithType: ContractsModule.UseMiddelwares
-- uid: SparkPlug.Contracts.ContractsModule.UseModule(Microsoft.AspNetCore.Builder.IApplicationBuilder,System.IServiceProvider)
-  name: UseModule(IApplicationBuilder, IServiceProvider)
-  href: api/SparkPlug.Contracts.ContractsModule.html#SparkPlug_Contracts_ContractsModule_UseModule_Microsoft_AspNetCore_Builder_IApplicationBuilder_System_IServiceProvider_
-  commentId: M:SparkPlug.Contracts.ContractsModule.UseModule(Microsoft.AspNetCore.Builder.IApplicationBuilder,System.IServiceProvider)
-  fullName: SparkPlug.Contracts.ContractsModule.UseModule(Microsoft.AspNetCore.Builder.IApplicationBuilder, System.IServiceProvider)
-  nameWithType: ContractsModule.UseModule(IApplicationBuilder, IServiceProvider)
+- uid: SparkPlug.Contracts.ContractsModule.UseModule(Microsoft.AspNetCore.Builder.IApplicationBuilder)
+  name: UseModule(IApplicationBuilder)
+  href: api/SparkPlug.Contracts.ContractsModule.html#SparkPlug_Contracts_ContractsModule_UseModule_Microsoft_AspNetCore_Builder_IApplicationBuilder_
+  commentId: M:SparkPlug.Contracts.ContractsModule.UseModule(Microsoft.AspNetCore.Builder.IApplicationBuilder)
+  fullName: SparkPlug.Contracts.ContractsModule.UseModule(Microsoft.AspNetCore.Builder.IApplicationBuilder)
+  nameWithType: ContractsModule.UseModule(IApplicationBuilder)
 - uid: SparkPlug.Contracts.ContractsModule.UseModule*
   name: UseModule
   href: api/SparkPlug.Contracts.ContractsModule.html#SparkPlug_Contracts_ContractsModule_UseModule_
@@ -3974,12 +3948,12 @@ references:
   isSpec: "True"
   fullName: SparkPlug.Contracts.IModule.UseMiddelwares
   nameWithType: IModule.UseMiddelwares
-- uid: SparkPlug.Contracts.IModule.UseModule(Microsoft.AspNetCore.Builder.IApplicationBuilder,System.IServiceProvider)
-  name: UseModule(IApplicationBuilder, IServiceProvider)
-  href: api/SparkPlug.Contracts.IModule.html#SparkPlug_Contracts_IModule_UseModule_Microsoft_AspNetCore_Builder_IApplicationBuilder_System_IServiceProvider_
-  commentId: M:SparkPlug.Contracts.IModule.UseModule(Microsoft.AspNetCore.Builder.IApplicationBuilder,System.IServiceProvider)
-  fullName: SparkPlug.Contracts.IModule.UseModule(Microsoft.AspNetCore.Builder.IApplicationBuilder, System.IServiceProvider)
-  nameWithType: IModule.UseModule(IApplicationBuilder, IServiceProvider)
+- uid: SparkPlug.Contracts.IModule.UseModule(Microsoft.AspNetCore.Builder.IApplicationBuilder)
+  name: UseModule(IApplicationBuilder)
+  href: api/SparkPlug.Contracts.IModule.html#SparkPlug_Contracts_IModule_UseModule_Microsoft_AspNetCore_Builder_IApplicationBuilder_
+  commentId: M:SparkPlug.Contracts.IModule.UseModule(Microsoft.AspNetCore.Builder.IApplicationBuilder)
+  fullName: SparkPlug.Contracts.IModule.UseModule(Microsoft.AspNetCore.Builder.IApplicationBuilder)
+  nameWithType: IModule.UseModule(IApplicationBuilder)
 - uid: SparkPlug.Contracts.IModule.UseModule*
   name: UseModule
   href: api/SparkPlug.Contracts.IModule.html#SparkPlug_Contracts_IModule_UseModule_
@@ -4909,12 +4883,12 @@ references:
   isSpec: "True"
   fullName: SparkPlug.Hosts.ModuleLoader.UseAllMiddelwares
   nameWithType: ModuleLoader.UseAllMiddelwares
-- uid: SparkPlug.Hosts.ModuleLoader.UseAllModules(Microsoft.AspNetCore.Builder.IApplicationBuilder,System.IServiceProvider)
-  name: UseAllModules(IApplicationBuilder, IServiceProvider)
-  href: api/SparkPlug.Hosts.ModuleLoader.html#SparkPlug_Hosts_ModuleLoader_UseAllModules_Microsoft_AspNetCore_Builder_IApplicationBuilder_System_IServiceProvider_
-  commentId: M:SparkPlug.Hosts.ModuleLoader.UseAllModules(Microsoft.AspNetCore.Builder.IApplicationBuilder,System.IServiceProvider)
-  fullName: SparkPlug.Hosts.ModuleLoader.UseAllModules(Microsoft.AspNetCore.Builder.IApplicationBuilder, System.IServiceProvider)
-  nameWithType: ModuleLoader.UseAllModules(IApplicationBuilder, IServiceProvider)
+- uid: SparkPlug.Hosts.ModuleLoader.UseAllModules(Microsoft.AspNetCore.Builder.IApplicationBuilder)
+  name: UseAllModules(IApplicationBuilder)
+  href: api/SparkPlug.Hosts.ModuleLoader.html#SparkPlug_Hosts_ModuleLoader_UseAllModules_Microsoft_AspNetCore_Builder_IApplicationBuilder_
+  commentId: M:SparkPlug.Hosts.ModuleLoader.UseAllModules(Microsoft.AspNetCore.Builder.IApplicationBuilder)
+  fullName: SparkPlug.Hosts.ModuleLoader.UseAllModules(Microsoft.AspNetCore.Builder.IApplicationBuilder)
+  nameWithType: ModuleLoader.UseAllModules(IApplicationBuilder)
 - uid: SparkPlug.Hosts.ModuleLoader.UseAllModules*
   name: UseAllModules
   href: api/SparkPlug.Hosts.ModuleLoader.html#SparkPlug_Hosts_ModuleLoader_UseAllModules_
@@ -6061,12 +6035,12 @@ references:
   isSpec: "True"
   fullName: SparkPlug.Persistence.Abstractions.PersistanceAbstractionModule.UseMiddelwares
   nameWithType: PersistanceAbstractionModule.UseMiddelwares
-- uid: SparkPlug.Persistence.Abstractions.PersistanceAbstractionModule.UseModule(Microsoft.AspNetCore.Builder.IApplicationBuilder,System.IServiceProvider)
-  name: UseModule(IApplicationBuilder, IServiceProvider)
-  href: api/SparkPlug.Persistence.Abstractions.PersistanceAbstractionModule.html#SparkPlug_Persistence_Abstractions_PersistanceAbstractionModule_UseModule_Microsoft_AspNetCore_Builder_IApplicationBuilder_System_IServiceProvider_
-  commentId: M:SparkPlug.Persistence.Abstractions.PersistanceAbstractionModule.UseModule(Microsoft.AspNetCore.Builder.IApplicationBuilder,System.IServiceProvider)
-  fullName: SparkPlug.Persistence.Abstractions.PersistanceAbstractionModule.UseModule(Microsoft.AspNetCore.Builder.IApplicationBuilder, System.IServiceProvider)
-  nameWithType: PersistanceAbstractionModule.UseModule(IApplicationBuilder, IServiceProvider)
+- uid: SparkPlug.Persistence.Abstractions.PersistanceAbstractionModule.UseModule(Microsoft.AspNetCore.Builder.IApplicationBuilder)
+  name: UseModule(IApplicationBuilder)
+  href: api/SparkPlug.Persistence.Abstractions.PersistanceAbstractionModule.html#SparkPlug_Persistence_Abstractions_PersistanceAbstractionModule_UseModule_Microsoft_AspNetCore_Builder_IApplicationBuilder_
+  commentId: M:SparkPlug.Persistence.Abstractions.PersistanceAbstractionModule.UseModule(Microsoft.AspNetCore.Builder.IApplicationBuilder)
+  fullName: SparkPlug.Persistence.Abstractions.PersistanceAbstractionModule.UseModule(Microsoft.AspNetCore.Builder.IApplicationBuilder)
+  nameWithType: PersistanceAbstractionModule.UseModule(IApplicationBuilder)
 - uid: SparkPlug.Persistence.Abstractions.PersistanceAbstractionModule.UseModule*
   name: UseModule
   href: api/SparkPlug.Persistence.Abstractions.PersistanceAbstractionModule.html#SparkPlug_Persistence_Abstractions_PersistanceAbstractionModule_UseModule_
@@ -6192,18 +6166,18 @@ references:
   commentId: T:SparkPlug.Persistence.Abstractions.Status
   fullName: SparkPlug.Persistence.Abstractions.Status
   nameWithType: Status
+- uid: SparkPlug.Persistence.Abstractions.Status.Active
+  name: Active
+  href: api/SparkPlug.Persistence.Abstractions.Status.html#SparkPlug_Persistence_Abstractions_Status_Active
+  commentId: F:SparkPlug.Persistence.Abstractions.Status.Active
+  fullName: SparkPlug.Persistence.Abstractions.Status.Active
+  nameWithType: Status.Active
 - uid: SparkPlug.Persistence.Abstractions.Status.Deleted
   name: Deleted
   href: api/SparkPlug.Persistence.Abstractions.Status.html#SparkPlug_Persistence_Abstractions_Status_Deleted
   commentId: F:SparkPlug.Persistence.Abstractions.Status.Deleted
   fullName: SparkPlug.Persistence.Abstractions.Status.Deleted
   nameWithType: Status.Deleted
-- uid: SparkPlug.Persistence.Abstractions.Status.Live
-  name: Live
-  href: api/SparkPlug.Persistence.Abstractions.Status.html#SparkPlug_Persistence_Abstractions_Status_Live
-  commentId: F:SparkPlug.Persistence.Abstractions.Status.Live
-  fullName: SparkPlug.Persistence.Abstractions.Status.Live
-  nameWithType: Status.Live
 - uid: SparkPlug.Persistence.Abstractions.TenantDbAttribute
   name: TenantDbAttribute
   href: api/SparkPlug.Persistence.Abstractions.TenantDbAttribute.html
@@ -6966,12 +6940,25 @@ references:
   commentId: T:SparkPlug.Persistence.EntityFramework.PersistanceEntityFrameworkExtensions
   fullName: SparkPlug.Persistence.EntityFramework.PersistanceEntityFrameworkExtensions
   nameWithType: PersistanceEntityFrameworkExtensions
-- uid: SparkPlug.Persistence.EntityFramework.PersistanceEntityFrameworkExtensions.ApplyMigrations(Microsoft.AspNetCore.Builder.IApplicationBuilder,System.IServiceProvider)
-  name: ApplyMigrations(IApplicationBuilder, IServiceProvider)
-  href: api/SparkPlug.Persistence.EntityFramework.PersistanceEntityFrameworkExtensions.html#SparkPlug_Persistence_EntityFramework_PersistanceEntityFrameworkExtensions_ApplyMigrations_Microsoft_AspNetCore_Builder_IApplicationBuilder_System_IServiceProvider_
-  commentId: M:SparkPlug.Persistence.EntityFramework.PersistanceEntityFrameworkExtensions.ApplyMigrations(Microsoft.AspNetCore.Builder.IApplicationBuilder,System.IServiceProvider)
-  fullName: SparkPlug.Persistence.EntityFramework.PersistanceEntityFrameworkExtensions.ApplyMigrations(Microsoft.AspNetCore.Builder.IApplicationBuilder, System.IServiceProvider)
-  nameWithType: PersistanceEntityFrameworkExtensions.ApplyMigrations(IApplicationBuilder, IServiceProvider)
+- uid: SparkPlug.Persistence.EntityFramework.PersistanceEntityFrameworkExtensions.AddPersistanceEntityFramework(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)
+  name: AddPersistanceEntityFramework(IServiceCollection, IConfiguration)
+  href: api/SparkPlug.Persistence.EntityFramework.PersistanceEntityFrameworkExtensions.html#SparkPlug_Persistence_EntityFramework_PersistanceEntityFrameworkExtensions_AddPersistanceEntityFramework_Microsoft_Extensions_DependencyInjection_IServiceCollection_Microsoft_Extensions_Configuration_IConfiguration_
+  commentId: M:SparkPlug.Persistence.EntityFramework.PersistanceEntityFrameworkExtensions.AddPersistanceEntityFramework(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)
+  fullName: SparkPlug.Persistence.EntityFramework.PersistanceEntityFrameworkExtensions.AddPersistanceEntityFramework(Microsoft.Extensions.DependencyInjection.IServiceCollection, Microsoft.Extensions.Configuration.IConfiguration)
+  nameWithType: PersistanceEntityFrameworkExtensions.AddPersistanceEntityFramework(IServiceCollection, IConfiguration)
+- uid: SparkPlug.Persistence.EntityFramework.PersistanceEntityFrameworkExtensions.AddPersistanceEntityFramework*
+  name: AddPersistanceEntityFramework
+  href: api/SparkPlug.Persistence.EntityFramework.PersistanceEntityFrameworkExtensions.html#SparkPlug_Persistence_EntityFramework_PersistanceEntityFrameworkExtensions_AddPersistanceEntityFramework_
+  commentId: Overload:SparkPlug.Persistence.EntityFramework.PersistanceEntityFrameworkExtensions.AddPersistanceEntityFramework
+  isSpec: "True"
+  fullName: SparkPlug.Persistence.EntityFramework.PersistanceEntityFrameworkExtensions.AddPersistanceEntityFramework
+  nameWithType: PersistanceEntityFrameworkExtensions.AddPersistanceEntityFramework
+- uid: SparkPlug.Persistence.EntityFramework.PersistanceEntityFrameworkExtensions.ApplyMigrations(Microsoft.AspNetCore.Builder.IApplicationBuilder)
+  name: ApplyMigrations(IApplicationBuilder)
+  href: api/SparkPlug.Persistence.EntityFramework.PersistanceEntityFrameworkExtensions.html#SparkPlug_Persistence_EntityFramework_PersistanceEntityFrameworkExtensions_ApplyMigrations_Microsoft_AspNetCore_Builder_IApplicationBuilder_
+  commentId: M:SparkPlug.Persistence.EntityFramework.PersistanceEntityFrameworkExtensions.ApplyMigrations(Microsoft.AspNetCore.Builder.IApplicationBuilder)
+  fullName: SparkPlug.Persistence.EntityFramework.PersistanceEntityFrameworkExtensions.ApplyMigrations(Microsoft.AspNetCore.Builder.IApplicationBuilder)
+  nameWithType: PersistanceEntityFrameworkExtensions.ApplyMigrations(IApplicationBuilder)
 - uid: SparkPlug.Persistence.EntityFramework.PersistanceEntityFrameworkExtensions.ApplyMigrations*
   name: ApplyMigrations
   href: api/SparkPlug.Persistence.EntityFramework.PersistanceEntityFrameworkExtensions.html#SparkPlug_Persistence_EntityFramework_PersistanceEntityFrameworkExtensions_ApplyMigrations_
@@ -7011,12 +6998,12 @@ references:
   isSpec: "True"
   fullName: SparkPlug.Persistence.EntityFramework.PersistanceEntityFrameworkModule.UseMiddelwares
   nameWithType: PersistanceEntityFrameworkModule.UseMiddelwares
-- uid: SparkPlug.Persistence.EntityFramework.PersistanceEntityFrameworkModule.UseModule(Microsoft.AspNetCore.Builder.IApplicationBuilder,System.IServiceProvider)
-  name: UseModule(IApplicationBuilder, IServiceProvider)
-  href: api/SparkPlug.Persistence.EntityFramework.PersistanceEntityFrameworkModule.html#SparkPlug_Persistence_EntityFramework_PersistanceEntityFrameworkModule_UseModule_Microsoft_AspNetCore_Builder_IApplicationBuilder_System_IServiceProvider_
-  commentId: M:SparkPlug.Persistence.EntityFramework.PersistanceEntityFrameworkModule.UseModule(Microsoft.AspNetCore.Builder.IApplicationBuilder,System.IServiceProvider)
-  fullName: SparkPlug.Persistence.EntityFramework.PersistanceEntityFrameworkModule.UseModule(Microsoft.AspNetCore.Builder.IApplicationBuilder, System.IServiceProvider)
-  nameWithType: PersistanceEntityFrameworkModule.UseModule(IApplicationBuilder, IServiceProvider)
+- uid: SparkPlug.Persistence.EntityFramework.PersistanceEntityFrameworkModule.UseModule(Microsoft.AspNetCore.Builder.IApplicationBuilder)
+  name: UseModule(IApplicationBuilder)
+  href: api/SparkPlug.Persistence.EntityFramework.PersistanceEntityFrameworkModule.html#SparkPlug_Persistence_EntityFramework_PersistanceEntityFrameworkModule_UseModule_Microsoft_AspNetCore_Builder_IApplicationBuilder_
+  commentId: M:SparkPlug.Persistence.EntityFramework.PersistanceEntityFrameworkModule.UseModule(Microsoft.AspNetCore.Builder.IApplicationBuilder)
+  fullName: SparkPlug.Persistence.EntityFramework.PersistanceEntityFrameworkModule.UseModule(Microsoft.AspNetCore.Builder.IApplicationBuilder)
+  nameWithType: PersistanceEntityFrameworkModule.UseModule(IApplicationBuilder)
 - uid: SparkPlug.Persistence.EntityFramework.PersistanceEntityFrameworkModule.UseModule*
   name: UseModule
   href: api/SparkPlug.Persistence.EntityFramework.PersistanceEntityFrameworkModule.html#SparkPlug_Persistence_EntityFramework_PersistanceEntityFrameworkModule_UseModule_
@@ -7052,51 +7039,70 @@ references:
   isSpec: "True"
   fullName: SparkPlug.Persistence.EntityFramework.PostgreSql.DbContextOptionsProvider.GetDbContextOption
   nameWithType: DbContextOptionsProvider.GetDbContextOption
-- uid: SparkPlug.Persistence.EntityFramework.PostgreSql.EntityFrameworkPostgreSql
-  name: EntityFrameworkPostgreSql
-  href: api/SparkPlug.Persistence.EntityFramework.PostgreSql.EntityFrameworkPostgreSql.html
-  commentId: T:SparkPlug.Persistence.EntityFramework.PostgreSql.EntityFrameworkPostgreSql
-  fullName: SparkPlug.Persistence.EntityFramework.PostgreSql.EntityFrameworkPostgreSql
-  nameWithType: EntityFrameworkPostgreSql
-- uid: SparkPlug.Persistence.EntityFramework.PostgreSql.EntityFrameworkPostgreSql.AddModule(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)
+- uid: SparkPlug.Persistence.EntityFramework.PostgreSql.EntityFrameworkPostgreSqlExtensions
+  name: EntityFrameworkPostgreSqlExtensions
+  href: api/SparkPlug.Persistence.EntityFramework.PostgreSql.EntityFrameworkPostgreSqlExtensions.html
+  commentId: T:SparkPlug.Persistence.EntityFramework.PostgreSql.EntityFrameworkPostgreSqlExtensions
+  fullName: SparkPlug.Persistence.EntityFramework.PostgreSql.EntityFrameworkPostgreSqlExtensions
+  nameWithType: EntityFrameworkPostgreSqlExtensions
+- uid: SparkPlug.Persistence.EntityFramework.PostgreSql.EntityFrameworkPostgreSqlExtensions.AddEntityFrameworkPostgreSql(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)
+  name: AddEntityFrameworkPostgreSql(IServiceCollection, IConfiguration)
+  href: api/SparkPlug.Persistence.EntityFramework.PostgreSql.EntityFrameworkPostgreSqlExtensions.html#SparkPlug_Persistence_EntityFramework_PostgreSql_EntityFrameworkPostgreSqlExtensions_AddEntityFrameworkPostgreSql_Microsoft_Extensions_DependencyInjection_IServiceCollection_Microsoft_Extensions_Configuration_IConfiguration_
+  commentId: M:SparkPlug.Persistence.EntityFramework.PostgreSql.EntityFrameworkPostgreSqlExtensions.AddEntityFrameworkPostgreSql(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)
+  fullName: SparkPlug.Persistence.EntityFramework.PostgreSql.EntityFrameworkPostgreSqlExtensions.AddEntityFrameworkPostgreSql(Microsoft.Extensions.DependencyInjection.IServiceCollection, Microsoft.Extensions.Configuration.IConfiguration)
+  nameWithType: EntityFrameworkPostgreSqlExtensions.AddEntityFrameworkPostgreSql(IServiceCollection, IConfiguration)
+- uid: SparkPlug.Persistence.EntityFramework.PostgreSql.EntityFrameworkPostgreSqlExtensions.AddEntityFrameworkPostgreSql*
+  name: AddEntityFrameworkPostgreSql
+  href: api/SparkPlug.Persistence.EntityFramework.PostgreSql.EntityFrameworkPostgreSqlExtensions.html#SparkPlug_Persistence_EntityFramework_PostgreSql_EntityFrameworkPostgreSqlExtensions_AddEntityFrameworkPostgreSql_
+  commentId: Overload:SparkPlug.Persistence.EntityFramework.PostgreSql.EntityFrameworkPostgreSqlExtensions.AddEntityFrameworkPostgreSql
+  isSpec: "True"
+  fullName: SparkPlug.Persistence.EntityFramework.PostgreSql.EntityFrameworkPostgreSqlExtensions.AddEntityFrameworkPostgreSql
+  nameWithType: EntityFrameworkPostgreSqlExtensions.AddEntityFrameworkPostgreSql
+- uid: SparkPlug.Persistence.EntityFramework.PostgreSql.EntityFrameworkPostgreSqlModule
+  name: EntityFrameworkPostgreSqlModule
+  href: api/SparkPlug.Persistence.EntityFramework.PostgreSql.EntityFrameworkPostgreSqlModule.html
+  commentId: T:SparkPlug.Persistence.EntityFramework.PostgreSql.EntityFrameworkPostgreSqlModule
+  fullName: SparkPlug.Persistence.EntityFramework.PostgreSql.EntityFrameworkPostgreSqlModule
+  nameWithType: EntityFrameworkPostgreSqlModule
+- uid: SparkPlug.Persistence.EntityFramework.PostgreSql.EntityFrameworkPostgreSqlModule.AddModule(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)
   name: AddModule(IServiceCollection, IConfiguration)
-  href: api/SparkPlug.Persistence.EntityFramework.PostgreSql.EntityFrameworkPostgreSql.html#SparkPlug_Persistence_EntityFramework_PostgreSql_EntityFrameworkPostgreSql_AddModule_Microsoft_Extensions_DependencyInjection_IServiceCollection_Microsoft_Extensions_Configuration_IConfiguration_
-  commentId: M:SparkPlug.Persistence.EntityFramework.PostgreSql.EntityFrameworkPostgreSql.AddModule(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)
-  fullName: SparkPlug.Persistence.EntityFramework.PostgreSql.EntityFrameworkPostgreSql.AddModule(Microsoft.Extensions.DependencyInjection.IServiceCollection, Microsoft.Extensions.Configuration.IConfiguration)
-  nameWithType: EntityFrameworkPostgreSql.AddModule(IServiceCollection, IConfiguration)
-- uid: SparkPlug.Persistence.EntityFramework.PostgreSql.EntityFrameworkPostgreSql.AddModule*
+  href: api/SparkPlug.Persistence.EntityFramework.PostgreSql.EntityFrameworkPostgreSqlModule.html#SparkPlug_Persistence_EntityFramework_PostgreSql_EntityFrameworkPostgreSqlModule_AddModule_Microsoft_Extensions_DependencyInjection_IServiceCollection_Microsoft_Extensions_Configuration_IConfiguration_
+  commentId: M:SparkPlug.Persistence.EntityFramework.PostgreSql.EntityFrameworkPostgreSqlModule.AddModule(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)
+  fullName: SparkPlug.Persistence.EntityFramework.PostgreSql.EntityFrameworkPostgreSqlModule.AddModule(Microsoft.Extensions.DependencyInjection.IServiceCollection, Microsoft.Extensions.Configuration.IConfiguration)
+  nameWithType: EntityFrameworkPostgreSqlModule.AddModule(IServiceCollection, IConfiguration)
+- uid: SparkPlug.Persistence.EntityFramework.PostgreSql.EntityFrameworkPostgreSqlModule.AddModule*
   name: AddModule
-  href: api/SparkPlug.Persistence.EntityFramework.PostgreSql.EntityFrameworkPostgreSql.html#SparkPlug_Persistence_EntityFramework_PostgreSql_EntityFrameworkPostgreSql_AddModule_
-  commentId: Overload:SparkPlug.Persistence.EntityFramework.PostgreSql.EntityFrameworkPostgreSql.AddModule
+  href: api/SparkPlug.Persistence.EntityFramework.PostgreSql.EntityFrameworkPostgreSqlModule.html#SparkPlug_Persistence_EntityFramework_PostgreSql_EntityFrameworkPostgreSqlModule_AddModule_
+  commentId: Overload:SparkPlug.Persistence.EntityFramework.PostgreSql.EntityFrameworkPostgreSqlModule.AddModule
   isSpec: "True"
-  fullName: SparkPlug.Persistence.EntityFramework.PostgreSql.EntityFrameworkPostgreSql.AddModule
-  nameWithType: EntityFrameworkPostgreSql.AddModule
-- uid: SparkPlug.Persistence.EntityFramework.PostgreSql.EntityFrameworkPostgreSql.UseMiddelwares(Microsoft.AspNetCore.Builder.IApplicationBuilder)
+  fullName: SparkPlug.Persistence.EntityFramework.PostgreSql.EntityFrameworkPostgreSqlModule.AddModule
+  nameWithType: EntityFrameworkPostgreSqlModule.AddModule
+- uid: SparkPlug.Persistence.EntityFramework.PostgreSql.EntityFrameworkPostgreSqlModule.UseMiddelwares(Microsoft.AspNetCore.Builder.IApplicationBuilder)
   name: UseMiddelwares(IApplicationBuilder)
-  href: api/SparkPlug.Persistence.EntityFramework.PostgreSql.EntityFrameworkPostgreSql.html#SparkPlug_Persistence_EntityFramework_PostgreSql_EntityFrameworkPostgreSql_UseMiddelwares_Microsoft_AspNetCore_Builder_IApplicationBuilder_
-  commentId: M:SparkPlug.Persistence.EntityFramework.PostgreSql.EntityFrameworkPostgreSql.UseMiddelwares(Microsoft.AspNetCore.Builder.IApplicationBuilder)
-  fullName: SparkPlug.Persistence.EntityFramework.PostgreSql.EntityFrameworkPostgreSql.UseMiddelwares(Microsoft.AspNetCore.Builder.IApplicationBuilder)
-  nameWithType: EntityFrameworkPostgreSql.UseMiddelwares(IApplicationBuilder)
-- uid: SparkPlug.Persistence.EntityFramework.PostgreSql.EntityFrameworkPostgreSql.UseMiddelwares*
+  href: api/SparkPlug.Persistence.EntityFramework.PostgreSql.EntityFrameworkPostgreSqlModule.html#SparkPlug_Persistence_EntityFramework_PostgreSql_EntityFrameworkPostgreSqlModule_UseMiddelwares_Microsoft_AspNetCore_Builder_IApplicationBuilder_
+  commentId: M:SparkPlug.Persistence.EntityFramework.PostgreSql.EntityFrameworkPostgreSqlModule.UseMiddelwares(Microsoft.AspNetCore.Builder.IApplicationBuilder)
+  fullName: SparkPlug.Persistence.EntityFramework.PostgreSql.EntityFrameworkPostgreSqlModule.UseMiddelwares(Microsoft.AspNetCore.Builder.IApplicationBuilder)
+  nameWithType: EntityFrameworkPostgreSqlModule.UseMiddelwares(IApplicationBuilder)
+- uid: SparkPlug.Persistence.EntityFramework.PostgreSql.EntityFrameworkPostgreSqlModule.UseMiddelwares*
   name: UseMiddelwares
-  href: api/SparkPlug.Persistence.EntityFramework.PostgreSql.EntityFrameworkPostgreSql.html#SparkPlug_Persistence_EntityFramework_PostgreSql_EntityFrameworkPostgreSql_UseMiddelwares_
-  commentId: Overload:SparkPlug.Persistence.EntityFramework.PostgreSql.EntityFrameworkPostgreSql.UseMiddelwares
+  href: api/SparkPlug.Persistence.EntityFramework.PostgreSql.EntityFrameworkPostgreSqlModule.html#SparkPlug_Persistence_EntityFramework_PostgreSql_EntityFrameworkPostgreSqlModule_UseMiddelwares_
+  commentId: Overload:SparkPlug.Persistence.EntityFramework.PostgreSql.EntityFrameworkPostgreSqlModule.UseMiddelwares
   isSpec: "True"
-  fullName: SparkPlug.Persistence.EntityFramework.PostgreSql.EntityFrameworkPostgreSql.UseMiddelwares
-  nameWithType: EntityFrameworkPostgreSql.UseMiddelwares
-- uid: SparkPlug.Persistence.EntityFramework.PostgreSql.EntityFrameworkPostgreSql.UseModule(Microsoft.AspNetCore.Builder.IApplicationBuilder,System.IServiceProvider)
-  name: UseModule(IApplicationBuilder, IServiceProvider)
-  href: api/SparkPlug.Persistence.EntityFramework.PostgreSql.EntityFrameworkPostgreSql.html#SparkPlug_Persistence_EntityFramework_PostgreSql_EntityFrameworkPostgreSql_UseModule_Microsoft_AspNetCore_Builder_IApplicationBuilder_System_IServiceProvider_
-  commentId: M:SparkPlug.Persistence.EntityFramework.PostgreSql.EntityFrameworkPostgreSql.UseModule(Microsoft.AspNetCore.Builder.IApplicationBuilder,System.IServiceProvider)
-  fullName: SparkPlug.Persistence.EntityFramework.PostgreSql.EntityFrameworkPostgreSql.UseModule(Microsoft.AspNetCore.Builder.IApplicationBuilder, System.IServiceProvider)
-  nameWithType: EntityFrameworkPostgreSql.UseModule(IApplicationBuilder, IServiceProvider)
-- uid: SparkPlug.Persistence.EntityFramework.PostgreSql.EntityFrameworkPostgreSql.UseModule*
+  fullName: SparkPlug.Persistence.EntityFramework.PostgreSql.EntityFrameworkPostgreSqlModule.UseMiddelwares
+  nameWithType: EntityFrameworkPostgreSqlModule.UseMiddelwares
+- uid: SparkPlug.Persistence.EntityFramework.PostgreSql.EntityFrameworkPostgreSqlModule.UseModule(Microsoft.AspNetCore.Builder.IApplicationBuilder)
+  name: UseModule(IApplicationBuilder)
+  href: api/SparkPlug.Persistence.EntityFramework.PostgreSql.EntityFrameworkPostgreSqlModule.html#SparkPlug_Persistence_EntityFramework_PostgreSql_EntityFrameworkPostgreSqlModule_UseModule_Microsoft_AspNetCore_Builder_IApplicationBuilder_
+  commentId: M:SparkPlug.Persistence.EntityFramework.PostgreSql.EntityFrameworkPostgreSqlModule.UseModule(Microsoft.AspNetCore.Builder.IApplicationBuilder)
+  fullName: SparkPlug.Persistence.EntityFramework.PostgreSql.EntityFrameworkPostgreSqlModule.UseModule(Microsoft.AspNetCore.Builder.IApplicationBuilder)
+  nameWithType: EntityFrameworkPostgreSqlModule.UseModule(IApplicationBuilder)
+- uid: SparkPlug.Persistence.EntityFramework.PostgreSql.EntityFrameworkPostgreSqlModule.UseModule*
   name: UseModule
-  href: api/SparkPlug.Persistence.EntityFramework.PostgreSql.EntityFrameworkPostgreSql.html#SparkPlug_Persistence_EntityFramework_PostgreSql_EntityFrameworkPostgreSql_UseModule_
-  commentId: Overload:SparkPlug.Persistence.EntityFramework.PostgreSql.EntityFrameworkPostgreSql.UseModule
+  href: api/SparkPlug.Persistence.EntityFramework.PostgreSql.EntityFrameworkPostgreSqlModule.html#SparkPlug_Persistence_EntityFramework_PostgreSql_EntityFrameworkPostgreSqlModule_UseModule_
+  commentId: Overload:SparkPlug.Persistence.EntityFramework.PostgreSql.EntityFrameworkPostgreSqlModule.UseModule
   isSpec: "True"
-  fullName: SparkPlug.Persistence.EntityFramework.PostgreSql.EntityFrameworkPostgreSql.UseModule
-  nameWithType: EntityFrameworkPostgreSql.UseModule
+  fullName: SparkPlug.Persistence.EntityFramework.PostgreSql.EntityFrameworkPostgreSqlModule.UseModule
+  nameWithType: EntityFrameworkPostgreSqlModule.UseModule
 - uid: SparkPlug.Persistence.EntityFramework.QueryBuilder`1
   name: QueryBuilder<TEntity>
   href: api/SparkPlug.Persistence.EntityFramework.QueryBuilder-1.html
@@ -8772,6 +8778,25 @@ references:
   fullName.vb: SparkPlug.Persistence.MongoDb.MongoRepository(Of TId, TEntity).UpdateAsync
   nameWithType: MongoRepository<TId, TEntity>.UpdateAsync
   nameWithType.vb: MongoRepository(Of TId, TEntity).UpdateAsync
+- uid: SparkPlug.Persistence.MongoDb.PersistanceMongoDbExtensions
+  name: PersistanceMongoDbExtensions
+  href: api/SparkPlug.Persistence.MongoDb.PersistanceMongoDbExtensions.html
+  commentId: T:SparkPlug.Persistence.MongoDb.PersistanceMongoDbExtensions
+  fullName: SparkPlug.Persistence.MongoDb.PersistanceMongoDbExtensions
+  nameWithType: PersistanceMongoDbExtensions
+- uid: SparkPlug.Persistence.MongoDb.PersistanceMongoDbExtensions.AddPersistanceMongoDb(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)
+  name: AddPersistanceMongoDb(IServiceCollection, IConfiguration)
+  href: api/SparkPlug.Persistence.MongoDb.PersistanceMongoDbExtensions.html#SparkPlug_Persistence_MongoDb_PersistanceMongoDbExtensions_AddPersistanceMongoDb_Microsoft_Extensions_DependencyInjection_IServiceCollection_Microsoft_Extensions_Configuration_IConfiguration_
+  commentId: M:SparkPlug.Persistence.MongoDb.PersistanceMongoDbExtensions.AddPersistanceMongoDb(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)
+  fullName: SparkPlug.Persistence.MongoDb.PersistanceMongoDbExtensions.AddPersistanceMongoDb(Microsoft.Extensions.DependencyInjection.IServiceCollection, Microsoft.Extensions.Configuration.IConfiguration)
+  nameWithType: PersistanceMongoDbExtensions.AddPersistanceMongoDb(IServiceCollection, IConfiguration)
+- uid: SparkPlug.Persistence.MongoDb.PersistanceMongoDbExtensions.AddPersistanceMongoDb*
+  name: AddPersistanceMongoDb
+  href: api/SparkPlug.Persistence.MongoDb.PersistanceMongoDbExtensions.html#SparkPlug_Persistence_MongoDb_PersistanceMongoDbExtensions_AddPersistanceMongoDb_
+  commentId: Overload:SparkPlug.Persistence.MongoDb.PersistanceMongoDbExtensions.AddPersistanceMongoDb
+  isSpec: "True"
+  fullName: SparkPlug.Persistence.MongoDb.PersistanceMongoDbExtensions.AddPersistanceMongoDb
+  nameWithType: PersistanceMongoDbExtensions.AddPersistanceMongoDb
 - uid: SparkPlug.Persistence.MongoDb.PersistanceMongoDbModule
   name: PersistanceMongoDbModule
   href: api/SparkPlug.Persistence.MongoDb.PersistanceMongoDbModule.html
@@ -8804,12 +8829,12 @@ references:
   isSpec: "True"
   fullName: SparkPlug.Persistence.MongoDb.PersistanceMongoDbModule.UseMiddelwares
   nameWithType: PersistanceMongoDbModule.UseMiddelwares
-- uid: SparkPlug.Persistence.MongoDb.PersistanceMongoDbModule.UseModule(Microsoft.AspNetCore.Builder.IApplicationBuilder,System.IServiceProvider)
-  name: UseModule(IApplicationBuilder, IServiceProvider)
-  href: api/SparkPlug.Persistence.MongoDb.PersistanceMongoDbModule.html#SparkPlug_Persistence_MongoDb_PersistanceMongoDbModule_UseModule_Microsoft_AspNetCore_Builder_IApplicationBuilder_System_IServiceProvider_
-  commentId: M:SparkPlug.Persistence.MongoDb.PersistanceMongoDbModule.UseModule(Microsoft.AspNetCore.Builder.IApplicationBuilder,System.IServiceProvider)
-  fullName: SparkPlug.Persistence.MongoDb.PersistanceMongoDbModule.UseModule(Microsoft.AspNetCore.Builder.IApplicationBuilder, System.IServiceProvider)
-  nameWithType: PersistanceMongoDbModule.UseModule(IApplicationBuilder, IServiceProvider)
+- uid: SparkPlug.Persistence.MongoDb.PersistanceMongoDbModule.UseModule(Microsoft.AspNetCore.Builder.IApplicationBuilder)
+  name: UseModule(IApplicationBuilder)
+  href: api/SparkPlug.Persistence.MongoDb.PersistanceMongoDbModule.html#SparkPlug_Persistence_MongoDb_PersistanceMongoDbModule_UseModule_Microsoft_AspNetCore_Builder_IApplicationBuilder_
+  commentId: M:SparkPlug.Persistence.MongoDb.PersistanceMongoDbModule.UseModule(Microsoft.AspNetCore.Builder.IApplicationBuilder)
+  fullName: SparkPlug.Persistence.MongoDb.PersistanceMongoDbModule.UseModule(Microsoft.AspNetCore.Builder.IApplicationBuilder)
+  nameWithType: PersistanceMongoDbModule.UseModule(IApplicationBuilder)
 - uid: SparkPlug.Persistence.MongoDb.PersistanceMongoDbModule.UseModule*
   name: UseModule
   href: api/SparkPlug.Persistence.MongoDb.PersistanceMongoDbModule.html#SparkPlug_Persistence_MongoDb_PersistanceMongoDbModule_UseModule_
